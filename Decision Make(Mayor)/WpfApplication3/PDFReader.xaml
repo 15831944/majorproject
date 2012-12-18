@@ -1,0 +1,9 @@
+﻿<Window x:Class="WpfApplication3.PDFReader"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="PDFReader" Height="497" Width="900">
+        <Grid>
+        <WebBrowser Name="webBrower1"/>
+    </Grid>
+    
+</Window>
