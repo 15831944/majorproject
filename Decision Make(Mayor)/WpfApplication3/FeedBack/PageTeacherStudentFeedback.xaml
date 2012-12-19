@@ -124,7 +124,7 @@
             		<DropShadowEffect/>
             	</Rectangle.Effect>
             	<Rectangle.Fill>
-            		<SolidColorBrush Color="{DynamicResource #235235235}"/>
+            		<SolidColorBrush Color="{DynamicResource Mainbg}"/>
             	</Rectangle.Fill>
             </Rectangle>
             <Grid Grid.Row="0">
@@ -196,7 +196,7 @@
             				<DropShadowEffect/>
             			</Rectangle.Effect>
             			<Rectangle.Fill>
-            				<SolidColorBrush Color="{DynamicResource #235235235}"/>
+            				<SolidColorBrush Color="{DynamicResource Mainbg}"/>
             			</Rectangle.Fill>
             		</Rectangle>
             		<Label VerticalAlignment="Top" Content="文件内容" Style="{DynamicResource Labeltopheader}"/>
@@ -257,7 +257,7 @@
                 		<DropShadowEffect/>
                 	</Rectangle.Effect>
                 	<Rectangle.Fill>
-                		<SolidColorBrush Color="{DynamicResource #235235235}"/>
+                		<SolidColorBrush Color="{DynamicResource Mainbg}"/>
                 	</Rectangle.Fill>
                 </Rectangle>
                 <Label Content="抄送部门" Style="{DynamicResource Labeltopheader}" VerticalAlignment="Top"/>
@@ -419,7 +419,7 @@
                 		<DropShadowEffect/>
                 	</Rectangle.Effect>
                 	<Rectangle.Fill>
-                		<SolidColorBrush Color="{DynamicResource #235235235}"/>
+                		<SolidColorBrush Color="{DynamicResource Mainbg}"/>
                 	</Rectangle.Fill>
                 </Rectangle>
                 <Label VerticalAlignment="Top" Content="批示区" Style="{DynamicResource Labeltopheader}"/>

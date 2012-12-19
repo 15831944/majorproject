@@ -32,8 +32,8 @@ namespace WpfApplication3
             di = new DirectoryInfo(System.Environment.CurrentDirectory);
             strPATH = di.Parent.Parent.FullName;
             ds = new EmergencyBasic();
-            webBrowsermaxmap.Navigate(new Uri(strPATH + @"/html/MaxEmergency.htm", UriKind.RelativeOrAbsolute));
-            //webBrowsermaxmap.Navigate(new Uri(strPATH + @"/html/GreenDetect.htm", UriKind.RelativeOrAbsolute));
+            //webBrowsermaxmap.Navigate(new Uri(strPATH + @"/html/MaxEmergency.htm", UriKind.RelativeOrAbsolute));
+            webBrowsermaxmap.Navigate(new Uri(strPATH + @"/html/GreenDetect.htm", UriKind.RelativeOrAbsolute));
             webBrowsermaxmap.ObjectForScripting = ds;
         }
 
@@ -98,11 +98,56 @@ namespace WpfApplication3
             public void ClickEvent(string strlocation)
             {
 
+                if (strlocation.Equals("绿色监测"))
+                {
+                    List<GreenDetect> m_greenDetectlist = new List<GreenDetect> { 
+                    new GreenDetect{
+                    Latitude=31.288236,
+                    Longitude=121.508837,
+                    Energy="23",
+                    Water="23",
+                    Name="水耗能耗"
+                    },
+                    new GreenDetect{
+                    Latitude=31.289236,
+                    Longitude=121.505837,
+                    Energy="23",
+                    Water="23",
+                    Name="水耗能耗"
+                    },
+                    new GreenDetect{
+                    Latitude=31.288236,
+                    Longitude=121.506837,
+                    Energy="23",
+                    Water="23",
+                    Name="水耗能耗"
+                    },
+                    new GreenDetect{
+                    Latitude=31.287236,
+                    Longitude=121.508837,
+                    Energy="23",
+                    Water="23",
+                    Name="水耗能耗"
+                    },
+                    new GreenDetect{
+                    Latitude=31.286236,
+                    Longitude=121.507837,
+                    Energy="23",
+                    Water="23",
+                    Name="水耗能耗"
+                    },
+                    };
+
+                    strlocation = ToJsJson(m_greenDetectlist);
+                    this.Name = strlocation;
+                    return;
+                }
+
                 int ijudge = 0;
                 if (strlocation == "突发事件")
-                {
                     ijudge = 1;
-                }
+                else if (strlocation == "自然灾害")
+                    ijudge = 2;
                 DataTable dt = new DataTable();
                 SQLHelper.getPointsByCategory(ijudge, out dt);
                 List<Location> m_list = new List<Location>();

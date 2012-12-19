@@ -17,12 +17,15 @@
         		<RowDefinition Height="46.656"/>
         		<RowDefinition/>
         	</Grid.RowDefinitions>
-    		<Rectangle Fill="#FFF4F4F5" RadiusX="8" RadiusY="8" Grid.RowSpan="2" d:LayoutOverrides="GridBox">
+    		<Rectangle RadiusX="8" RadiusY="8" Grid.RowSpan="2" d:LayoutOverrides="GridBox">
+    			<Rectangle.Fill>
+    				<SolidColorBrush Color="{DynamicResource Mainbg}"/>
+    			</Rectangle.Fill>
     			<Rectangle.Effect>
     				<DropShadowEffect/>
     			</Rectangle.Effect>
     		</Rectangle>
-    		<Label Style="{DynamicResource Labeltopheader}" Content="日程安排" Margin="0,0,0,5.833" d:LayoutOverrides="Height"/>
+    		<Label Style="{DynamicResource Labeltopheader}" Content="日程安排" Margin="0,0,0,5.833" d:LayoutOverrides="Height" VerticalAlignment="Top"/>
     		<WebBrowser Margin="20,20,20,40" x:Name="webBrowser_GoogleCalendar" Visibility="Visible" Grid.Row="1" ScrollViewer.HorizontalScrollBarVisibility="Visible" />
     	</Grid>
         <Grid Grid.Column="1">
@@ -37,7 +40,10 @@
                 <RowDefinition Height="20*"/>
                 <RowDefinition Height="50"/>
             </Grid.RowDefinitions>
-            <Rectangle Fill="#FFF4F4F5" RadiusX="8" RadiusY="8" Grid.RowSpan="7">
+            <Rectangle RadiusX="8" RadiusY="8" Grid.RowSpan="9">
+            	<Rectangle.Fill>
+            		<SolidColorBrush Color="{DynamicResource Mainbg}"/>
+            	</Rectangle.Fill>
             	<Rectangle.Effect>
             		<DropShadowEffect/>
             	</Rectangle.Effect>

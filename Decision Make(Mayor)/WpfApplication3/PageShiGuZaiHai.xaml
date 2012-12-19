@@ -62,11 +62,14 @@
         	</Grid.RowDefinitions>
             <Grid x:Name="grid_ZiRanZaiHai_ShiJianGaiKuang" Margin="0,0,5,15" Loaded="Grid_Loaded" >
                 <Rectangle RadiusY="8" RadiusX="8" StrokeThickness="2">
-                    <Rectangle.Fill>
-                        <SolidColorBrush Color="{DynamicResource #235235235}"/>
-                    </Rectangle.Fill>
+                	<Rectangle.Effect>
+                		<DropShadowEffect/>
+                	</Rectangle.Effect>
+                	<Rectangle.Fill>
+                		<SolidColorBrush Color="{DynamicResource Mainbg}"/>
+                	</Rectangle.Fill>
                 </Rectangle>
-                <Label Height="40.834" Style="{DynamicResource Labeltopheader}" VerticalAlignment="Top" FontFamily="Helvetica" FontSize="14" FontWeight="Bold" Content="事件概况"/>
+                <Label Style="{DynamicResource Labeltopheader}" VerticalAlignment="Top" FontFamily="Helvetica" FontSize="14" FontWeight="Bold" Content="事件概况"/>
                 <Grid Margin="30,67,42,30.236">
                 	<Grid.ColumnDefinitions>
                 		<ColumnDefinition Width="0.589*"/>
@@ -113,12 +116,29 @@
             	</Grid.ColumnDefinitions>
             	<Grid x:Name="grid_ZiRanZaiHai_tabcontrol" Margin="0,0,10,0" >
             		<Rectangle RadiusY="8" RadiusX="8" StrokeThickness="2">
+            			<Rectangle.Effect>
+            				<DropShadowEffect/>
+            			</Rectangle.Effect>
             			<Rectangle.Fill>
-            				<SolidColorBrush Color="{DynamicResource #235235235}"/>
+            				<SolidColorBrush Color="{DynamicResource Mainbg}"/>
             			</Rectangle.Fill>
             		</Rectangle>
+            		<Grid Height="33" VerticalAlignment="Top" d:LayoutOverrides="HorizontalAlignment">
+            			<Grid.ColumnDefinitions>
+            				<ColumnDefinition/>
+            			</Grid.ColumnDefinitions>
+            			<Rectangle Grid.Column="0" HorizontalAlignment="Stretch" Height="20" VerticalAlignment="Bottom" Width="Auto">
+            				<Rectangle.Fill>
+            					<LinearGradientBrush EndPoint="1.01,0.508" StartPoint="-0.011,0.431">
+            						<GradientStop Color="#FF323232" Offset="0"/>
+            						<GradientStop Color="#FF323232" Offset="1"/>
+            						<GradientStop Color="#FF646464" Offset="0.5"/>
+            					</LinearGradientBrush>
+            				</Rectangle.Fill>
+            			</Rectangle>
+            		</Grid>
             		<TabControl x:Name="tabControl_ZiRanZaiHai" Style="{DynamicResource TabControlStyle2}">
-            			<TabItem Header="应急预案" Style="{DynamicResource TabItemFirst}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-2,-2,0,0">
+            			<TabItem x:Name="tabItem1" Header="应急预案" Style="{DynamicResource TabItemFirst}" HorizontalAlignment="Left" VerticalAlignment="Top" Height="33" Width="90" Margin="-2,-2,0,0">
             				<Grid Margin="0">
             					<Label Content="火灾应急预案" Height="34" HorizontalAlignment="Left" Margin="5,5,0,0" x:Name="label_ZiRanZaiHai_YingJiYuAn_Title" VerticalAlignment="Top" Width="124" d:LayoutOverrides="HorizontalAlignment" FontSize="14" FontFamily="Helvetica" FontWeight="Bold" />
             					<TabControl Style="{DynamicResource TabControlSubContent}" Background="{x:Null}">
@@ -142,38 +162,29 @@
             					<ListBox HorizontalAlignment="Left" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Height="25"/>
             				</Grid>
             			</TabItem>
-            			<TabItem Header="历史记录" Style="{DynamicResource TabItemMiddle}" Width="100" Height="40" Margin="-2.1,-2,1.918,1.959">
+            			<TabItem x:Name="tabItem2" Header="历史记录" Style="{DynamicResource TabItemMiddle}" Width="100" Height="33" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="-25.833,-2,0,0">
             				<Grid/>
             			</TabItem>
-            			<TabItem Header="重大危险源" Style="{DynamicResource TabItemMiddle}" Width="100" Height="40" Margin="-2.1,-2,1.918,1.959">
+            			<TabItem x:Name="tabItem3" Header="重大危险源" Style="{DynamicResource TabItemThird}" Height="33" VerticalAlignment="Top" Margin="-51.352,-2,0,0" HorizontalAlignment="Left" Width="100">
             				<Grid x:Name="Gridzdwxy">
             					<TextBlock x:Name="textBlockzdwxy" Text="TextBlock" Margin="0,0,20,60" />
             				</Grid>
             			</TabItem>
-            			<TabItem Header="案例链接" Style="{DynamicResource TabItemMiddle}" Width="100" Height="40" Margin="-2.1,-2,1.918,1.959">
+            			<TabItem x:Name="tabItem4" Header="案例链接" Style="{DynamicResource TabItemFourth}" Width="100" Height="33" HorizontalAlignment="Left" Margin="-76.361,-2,0,0" VerticalAlignment="Top" d:LayoutOverrides="HorizontalAlignment" MouseDown="tabItem4_MouseDown">
             				<Grid/>
             			</TabItem>
             		</TabControl>
-            		<Grid Margin="390,0,0.08,0" Height="40" VerticalAlignment="Top">
-            			<Grid.ColumnDefinitions>
-            				<ColumnDefinition/>
-            			</Grid.ColumnDefinitions>
-            			<Path Grid.ColumnSpan="1" Grid.Column="0" Data="M0,3.0013325E-11 L1.6560059,3.0013325E-11 C6.0814209,-1.1935911E-05 9.6689453,3.5817131 9.6689453,7.9999956 L9.6151123,8.5333151 9.6689453,8.5333151 9.6689453,15.999991 1.6560059,15.999991 0,15.999991 z" Fill="#FF7A7A7A" HorizontalAlignment="Right" IsEnabled="False" Style="{DynamicResource PathStyle1}" Stretch="Fill" Visibility="Visible" VerticalAlignment="Top" Width="9.638"/>
-            			<Rectangle Grid.Column="0" Fill="#FF7A7A7A" HorizontalAlignment="Stretch" Height="16" Margin="0,0,8,0" VerticalAlignment="Top" Width="Auto" Grid.ColumnSpan="1"/>
-            			<Rectangle Height="2" Margin="5,0,16,0" VerticalAlignment="Bottom">
-            				<Rectangle.Fill>
-            					<SolidColorBrush Color="{DynamicResource LineColor#184184184}"/>
-            				</Rectangle.Fill>
-            			</Rectangle>
-            		</Grid>
             	</Grid>
             	<Grid x:Name="grid_ZiRanZaiHai_YuAnQiDong" Grid.Column="1">
             		<Rectangle RadiusY="8" RadiusX="8" StrokeThickness="2">
+            			<Rectangle.Effect>
+            				<DropShadowEffect/>
+            			</Rectangle.Effect>
             			<Rectangle.Fill>
-            				<SolidColorBrush Color="{DynamicResource #235235235}"/>
+            				<SolidColorBrush Color="{DynamicResource Mainbg}"/>
             			</Rectangle.Fill>
             		</Rectangle>
-            		<Label Content="预案启动" Height="40.834" Style="{DynamicResource Labeltopheader}" VerticalAlignment="Top" FontFamily="Helvetica" FontSize="14" FontWeight="Bold"/>
+            		<Label Content="预案启动" Style="{DynamicResource Labeltopheader}" VerticalAlignment="Top" FontFamily="Helvetica" FontSize="14" FontWeight="Bold"/>
             		<Grid Margin="0,80,0,0" VerticalAlignment="Top" d:LayoutOverrides="Width" >
             			<Grid.RowDefinitions>
             				<RowDefinition Height="321.13"/>

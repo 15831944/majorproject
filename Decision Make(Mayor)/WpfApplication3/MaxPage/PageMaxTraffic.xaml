@@ -52,12 +52,28 @@
     </Page.Resources>
 
     <Grid Margin="0,0,5,0">
-        <Rectangle Stroke="Black" Margin="-1,0" StrokeThickness="2">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Rectangle Grid.Row="0" Grid.RowSpan="2" StrokeThickness="2" RadiusX="8" RadiusY="8">
             <Rectangle.Fill>
-                <SolidColorBrush Color="{DynamicResource Contentbg}"/>
+                <SolidColorBrush Color="{DynamicResource Mainbg}"/>
             </Rectangle.Fill>
         </Rectangle>
-        <WebBrowser Height="980" HorizontalAlignment="Left" Margin="8,31,0,0" x:Name="webBrowsermaxtraffic" VerticalAlignment="Top" Width="1272" />
-        <Button Content="Min" Height="23" HorizontalAlignment="Left" Margin="8,4,8,0" x:Name="btn_mintraffic" VerticalAlignment="Top" Click="btn_minTraffic_Click"  Style="{DynamicResource ButtonStyle7}" VerticalContentAlignment="Top" FontSize="14" FontWeight="Bold"/>
+        <Grid Grid.Row="1">
+            <TabControl Margin="5">
+                <TabItem Header="即将开始" Style="{DynamicResource TabItemHomePage}" Width="85" FontSize="16">
+                    <WebBrowser x:Name="webbrowserMaxTraffic" Margin="0" />
+                </TabItem>
+                <TabItem Header="正在进行" Style="{DynamicResource TabItemHomePage}" Width="85" FontSize="16">
+                    <WebBrowser x:Name="webbrowserMaxTraffic1" Margin="0" />
+                </TabItem>
+            </TabControl>
+        </Grid>
+        <Grid Grid.Row="0">
+            <Button Content="-" Height="15" HorizontalAlignment="Left" Margin="10,11,8,0" x:Name="btn_minTraffic" VerticalAlignment="Top" Style="{DynamicResource ButtonFeedbacknormal}" VerticalContentAlignment="Top" FontWeight="Bold" Click="btn_minTraffic_Click" Width="15" Padding="1,-3,1,1" Cursor="Hand" FontSize="14"/>
+        </Grid>
+
     </Grid>
 </Page>

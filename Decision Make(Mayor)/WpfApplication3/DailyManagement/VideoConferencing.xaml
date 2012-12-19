@@ -220,10 +220,10 @@
         				<DropShadowEffect/>
         			</Rectangle.Effect>
         			<Rectangle.Fill>
-        				<SolidColorBrush Color="{DynamicResource #235235235}"/>
+        				<SolidColorBrush Color="{DynamicResource Mainbg}"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Label Content="视频会议" Style="{DynamicResource Labeltopheader}" Grid.ColumnSpan="2" Margin="0,0,0,4.166" d:LayoutOverrides="Height"/>
+        		<Label Content="视频会议" Style="{DynamicResource Labeltopheader}" Grid.ColumnSpan="2" Margin="0,0,0,4.166" d:LayoutOverrides="Height" VerticalAlignment="Top"/>
         		<Grid Grid.ColumnSpan="2" Grid.Row="1" Margin="5,0,5,5">
         			<Grid.RowDefinitions>
         				<RowDefinition/>
@@ -292,7 +292,7 @@
             			<DropShadowEffect/>
             		</Rectangle.Effect>
             		<Rectangle.Fill>
-            			<SolidColorBrush Color="{DynamicResource #235235235}"/>
+            			<SolidColorBrush Color="{DynamicResource Mainbg}"/>
             		</Rectangle.Fill>
             	</Rectangle>
             	<Label VerticalAlignment="Top" Content="发演讲稿" Style="{DynamicResource Labeltopheader}"/>
@@ -311,7 +311,7 @@
         			<DropShadowEffect/>
         		</Rectangle.Effect>
         		<Rectangle.Fill>
-        			<SolidColorBrush Color="{DynamicResource #235235235}"/>
+        			<SolidColorBrush Color="{DynamicResource Mainbg}"/>
         		</Rectangle.Fill>
         	</Rectangle>
         	<Label VerticalAlignment="Top" Content="相关材料" Style="{DynamicResource LabelRightContent}" d:LayoutOverrides="VerticalAlignment"/>

@@ -1807,270 +1807,229 @@
                 <RowDefinition Height="260" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            <Rectangle IsEnabled="False" Stroke="#FF414141" RadiusY="8" RadiusX="8" Style="{DynamicResource RectangleStyle216}" VerticalAlignment="Stretch" Grid.RowSpan="2">
+            <Rectangle IsEnabled="False" Stroke="#FF414141" RadiusY="8" RadiusX="8" Grid.Row="1">
+            	<Rectangle.Fill>
+            		<LinearGradientBrush EndPoint="1.003,0.493" StartPoint="-0.017,0.493">
+            			<GradientStop Color="{DynamicResource s_side}" Offset="1"/>
+            			<GradientStop Color="{DynamicResource m_middle}" Offset="0.51"/>
+            			<GradientStop Color="#FF656560"/>
+            		</LinearGradientBrush>
+            	</Rectangle.Fill>
                 <Rectangle.Effect>
                     <DropShadowEffect/>
                 </Rectangle.Effect>
             </Rectangle>
-            <Grid x:Name="logodatesearch" Grid.Row="0">
-                <Rectangle Height="260" VerticalAlignment="Top" RadiusY="8" RadiusX="8" Fill="{DynamicResource leftcontent}">
-                    <Rectangle.Effect>
-                        <DropShadowEffect Color="#FF383838"/>
-                    </Rectangle.Effect>
-                </Rectangle>
-                <Grid x:Name="Logo1" HorizontalAlignment="Left" VerticalAlignment="Top" Height="82">
-                    <Rectangle IsEnabled="False" Stroke="#FF414141" Fill="#A4000000" Visibility="Collapsed" d:IsLocked="True"/>
-                    <TextBlock x:Name="textBlock2" Height="35" Margin="43.653,27,29.313,19.999" TextWrapping="Wrap" Width="217" Foreground="Black" FontFamily="Lao UI" FontSize="18.667"><Run Text="Decision Making "/><Run Text="System"/></TextBlock>
-                    <Image x:Name="Images_logo_png1" Height="27" Source="Images/logo.png" Stretch="Fill" Width="27" Margin="19,16.5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" d:IsHidden="True" Visibility="Collapsed" d:IsLocked="True"/>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <Grid x:Name="Menu1" Grid.Row="1" Margin="0,-20,0,0">
+            	<Grid.RowDefinitions>
+            		<RowDefinition Height="20"/>
+            		<RowDefinition Height="70"/>
+            		<RowDefinition/>
+            	</Grid.RowDefinitions>
+                <Rectangle x:Name="MenuBg0" Style="{DynamicResource RectangleStyle1}" Fill="{DynamicResource leftcontent}" Grid.RowSpan="2"/>
+                <Grid Margin="0" Grid.Row="1" ScrollViewer.VerticalScrollBarVisibility="Auto" >
+                	<Grid x:Name="Home" Height="70" VerticalAlignment="Top">
+                		<Grid>
+                			<Grid Width="29" Height="27" HorizontalAlignment="Center" VerticalAlignment="Center">
+                				<Grid.RowDefinitions>
+                					<RowDefinition Height="Auto" MinHeight="27"/>
+                					<RowDefinition Height="Auto"/>
+                				</Grid.RowDefinitions>
+                				<Border Margin="-0.957,-1.334,-0.952,0" Width="30.909" Height="28.334">
+                					<Border.Effect>
+                						<DropShadowEffect ShadowDepth="1" BlurRadius="2"/>
+                					</Border.Effect>
+                					<Grid Width="30" Height="28">
+                						<ed:BlockArrow Margin="0,1.334,0,0" Orientation="Up" Stroke="#FFD0D0D0" HorizontalAlignment="Center" Width="26.418" VerticalAlignment="Top" Height="27" StrokeThickness="1.6" ArrowBodySize="0.85" ArrowheadAngle="105"/>
+                						<Path Data="M181.5,905.33333 L164.83333,918.33333" HorizontalAlignment="Left" Height="14.169" Stretch="Fill" Stroke="#FFD0D0D0" StrokeThickness="3.5" VerticalAlignment="Top" Width="17.5" Margin="0,1.334,0,0" StrokeEndLineCap="Round"/>
+                						<Path Data="M181.5,905.33333 L164.83333,918.33333" HorizontalAlignment="Right" Height="14.169" Stretch="Fill" Stroke="#FFD0D0D0" StrokeThickness="3.5" VerticalAlignment="Top" Width="17.5" Margin="0,1.334,0,0" StrokeEndLineCap="Round" RenderTransformOrigin="0.5,0.5">
+                							<Path.RenderTransform>
+                								<TransformGroup>
+                									<ScaleTransform ScaleX="-1"/>
+                									<SkewTransform/>
+                									<RotateTransform/>
+                									<TranslateTransform/>
+                								</TransformGroup>
+                							</Path.RenderTransform>
+                						</Path>
+                						<Path Data="M23.125,1.75 L23.125,15.879977" Height="9.5" Stretch="Fill" StrokeEndLineCap="Round" Stroke="#FFD0D0D0" StrokeThickness="3.5" Width="3.5" HorizontalAlignment="Left" VerticalAlignment="Top" d:LayoutOverrides="VerticalAlignment" Margin="21.206,0,0,0"/>
+                						<Rectangle RadiusY="8" Stroke="#FFD0D0D0" StrokeThickness="2" Fill="#FFD0D0D0" Height="8" VerticalAlignment="Bottom" Margin="0,0,0,0.25" HorizontalAlignment="Center" Width="6"/>
+                					</Grid>
+                				</Border>
+                			</Grid>
+                			<Button x:Name="Home1" Opacity="0" Click="Home_Click" Cursor="Hand"/>
+                		</Grid>
+                	</Grid>
                 </Grid>
-                <Grid x:Name="search" VerticalAlignment="Top" Height="90" Margin="0,170,0,0">
-                    <Grid Margin="25,25,0,0" Width="200" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top">
-                        <Rectangle IsEnabled="False" Stroke="#FF414141" Fill="#FF9E9F91" Margin="0" RadiusY="6" RadiusX="6">
-                            <Rectangle.Effect>
-                                <BlurEffect Radius="1"/>
-                            </Rectangle.Effect>
-                        </Rectangle>
-                        <TextBox TextWrapping="Wrap" Background="{x:Null}" BorderBrush="{x:Null}" Margin="4"/>
-                        <Border HorizontalAlignment="Right" Margin="0,4,-42.996,4.041" Width="28.249">
-                            <Grid>
-                                <Path Data="M10,0.99999994 C5.0294371,1 1,4.8987045 0.99999994,9.7080002 1,14.517296 5.0294371,18.416 10,18.416 14.970563,18.416 19,14.517296 19,9.7080002 19,4.8987045 14.970563,1 10,0.99999994 z M10,0 C15.522847,0 20,4.3372416 20,9.6875 20,15.037759 15.522847,19.375 10,19.375 4.4771523,19.375 0,15.037759 0,9.6875 0,4.3372416 4.4771523,0 10,0 z" Margin="0,0,8.249,12.584" Stretch="Fill">
-                                    <Path.Fill>
-                                        <LinearGradientBrush EndPoint="-0.339,0.781" StartPoint="0.655,0.165">
-                                            <GradientStop Color="#FF444444" Offset="1"/>
-                                            <GradientStop Color="#FFC8C8C8" Offset="0.19"/>
-                                        </LinearGradientBrush>
-                                    </Path.Fill>
-                                    <Path.Effect>
-                                        <DropShadowEffect ShadowDepth="1" BlurRadius="1" Color="#FF626262"/>
-                                    </Path.Effect>
-                                </Path>
-                                <Path Data="M252.33333,33.5 L266.66667,49.833333" Fill="White" HorizontalAlignment="Right" Height="13" Stretch="Fill" VerticalAlignment="Bottom" Width="12" StrokeThickness="4.5" StrokeStartLineCap="Round" StrokeEndLineCap="Round" d:LayoutOverrides="VerticalAlignment">
-                                    <Path.Stroke>
-                                        <LinearGradientBrush EndPoint="-0.177,0.679" StartPoint="0.655,0.165">
-                                            <GradientStop Color="#FF444444" Offset="0.754"/>
-                                            <GradientStop Color="#FFC8C8C8" Offset="0.155"/>
-                                        </LinearGradientBrush>
-                                    </Path.Stroke>
-                                    <Path.Effect>
-                                        <DropShadowEffect BlurRadius="1" ShadowDepth="1" Color="#FF5E5E5E"/>
-                                    </Path.Effect>
-                                </Path>
-                                <Button x:Name="weibo_search_Copy" Content="Button" Opacity="0" Cursor="Hand"/>
-                            </Grid>
-                        </Border>
-                    </Grid>
-                </Grid>
-            </Grid>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            <Grid x:Name="Menu1" Grid.Row="1">
-                <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0">
-                    <ScrollViewer.Content>
-                        <StackPanel x:Name="Menu_1">
-                            <StackPanel x:Name="Home">
-                                <Grid Height="70">
-                                    <Rectangle x:Name="MenuBg0" Stroke="#FF414141" Style="{DynamicResource RectangleStyle1}"/>
-                                    <Grid Width="29" Height="27" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                        <Grid.RowDefinitions>
-                                        	<RowDefinition Height="Auto" MinHeight="27"/>
-                                        	<RowDefinition Height="Auto"/>
-                                        </Grid.RowDefinitions>
-                                    	<Border Margin="-0.957,-1.334,-0.952,0" Width="30.909" Height="28.334">
-                                    		<Border.Effect>
-                                    			<DropShadowEffect ShadowDepth="1" BlurRadius="2"/>
-                                    		</Border.Effect>
-                                    		<Grid Width="30" Height="28">
-                                    			<ed:BlockArrow Margin="0,1.334,0,0" Orientation="Up" Stroke="#FFD0D0D0" HorizontalAlignment="Center" Width="26.418" VerticalAlignment="Top" Height="27" StrokeThickness="1.6" ArrowBodySize="0.85" ArrowheadAngle="105"/>
-                                    			<Path Data="M181.5,905.33333 L164.83333,918.33333" HorizontalAlignment="Left" Height="14.169" Stretch="Fill" Stroke="#FFD0D0D0" StrokeThickness="3.5" VerticalAlignment="Top" Width="17.5" Margin="0,1.334,0,0" StrokeEndLineCap="Round"/>
-                                    			<Path Data="M181.5,905.33333 L164.83333,918.33333" HorizontalAlignment="Right" Height="14.169" Stretch="Fill" Stroke="#FFD0D0D0" StrokeThickness="3.5" VerticalAlignment="Top" Width="17.5" Margin="0,1.334,0,0" StrokeEndLineCap="Round" RenderTransformOrigin="0.5,0.5">
-                                    				<Path.RenderTransform>
-                                    					<TransformGroup>
-                                    						<ScaleTransform ScaleX="-1"/>
-                                    						<SkewTransform/>
-                                    						<RotateTransform/>
-                                    						<TranslateTransform/>
-                                    					</TransformGroup>
-                                    				</Path.RenderTransform>
-                                    			</Path>
-                                    			<Path Data="M23.125,1.75 L23.125,15.879977" Height="9.5" Stretch="Fill" StrokeEndLineCap="Round" Stroke="#FFD0D0D0" StrokeThickness="3.5" Width="3.5" HorizontalAlignment="Left" VerticalAlignment="Top" d:LayoutOverrides="VerticalAlignment" Margin="21.206,0,0,0"/>
-                                    			<Rectangle RadiusY="8" Stroke="#FFD0D0D0" StrokeThickness="2" Fill="#FFD0D0D0" Height="8" VerticalAlignment="Bottom" Margin="0,0,0,0.25" HorizontalAlignment="Center" Width="6"/>
-                                    		</Grid>
-                                    	</Border>
-                                    </Grid>
-                                    <Button x:Name="Home1" Opacity="0" Click="Home_Click" Cursor="Hand"/>
-                                </Grid>
-                            </StackPanel>
-                        </StackPanel>
-                    </ScrollViewer.Content>
-                </ScrollViewer>
-                <ListBox Background="{x:Null}" Style="{DynamicResource ListBoxMenu}" BorderThickness="0" Margin="0,70,0,0">
-                	<ListBoxItem x:Name="menutitle1" Content="发展业绩" Height="70" Style="{DynamicResource ListBoxItemStyle1}" FontSize="16" Selected="menutitle1_Selected"/>
+                <ListBox Background="{x:Null}" Style="{DynamicResource ListBoxMenu}" BorderThickness="0" Grid.Row="2">
+                	<ListBoxItem x:Name="menutitle1" Content="发展业绩" Height="70" Style="{DynamicResource ListBoxItemMainMenu}" FontSize="16" Selected="menutitle1_Selected"/>
                 	<ListBox x:Name="menu1" Background="{x:Null}" BorderBrush="{x:Null}" Style="{DynamicResource ListBoxMenu}" Width="292" BorderThickness="0" Margin="-2,0,0,0" Visibility="Collapsed">
-                		<ListBoxItem x:Name="menu1_1" Content="人才培养" Style="{DynamicResource ListBoxItemleftSubmenu}" Height="70" FontSize="16" Selected="TalentC">
+                		<ListBoxItem x:Name="menu1_1" Content="人才培养" Style="{DynamicResource ListBoxMainMenuSubmenu}" Height="70" FontSize="16" Selected="TalentC">
                 			<ListBoxItem.Foreground>
                 				<SolidColorBrush Color="{DynamicResource #646464}"/>
                 			</ListBoxItem.Foreground>
                 		</ListBoxItem>
-                		<ListBoxItem x:Name="menu1_2" Content="科学研究" Style="{DynamicResource ListBoxItemleftSubmenu}" Height="70" FontSize="16" Selected="ScientificR">
+                		<ListBoxItem x:Name="menu1_2" Content="科学研究" Style="{DynamicResource ListBoxMainMenuSubmenu}" Height="70" FontSize="16" Selected="ScientificR">
                 			<ListBoxItem.Foreground>
                 				<SolidColorBrush Color="{DynamicResource #646464}"/>
                 			</ListBoxItem.Foreground>
                 		</ListBoxItem>
-                		<ListBoxItem x:Name="menu1_3" Content="综合声誉" Style="{DynamicResource ListBoxItemleftSubmenu}" Height="70" FontSize="16" Selected="ComprehensiveR">
+                		<ListBoxItem x:Name="menu1_3" Content="综合声誉" Style="{DynamicResource ListBoxMainMenuSubmenu}" Height="70" FontSize="16" Selected="ComprehensiveR">
                 			<ListBoxItem.Foreground>
                 				<SolidColorBrush Color="{DynamicResource #646464}"/>
                 			</ListBoxItem.Foreground>
                 		</ListBoxItem>
-                		<ListBoxItem x:Name="menu1_4" Content="绿色校园" Style="{DynamicResource ListBoxItemleftSubmenu}" Height="70" FontSize="16" Selected="GreenC">
+                		<ListBoxItem x:Name="menu1_4" Content="绿色校园" Style="{DynamicResource ListBoxMainMenuSubmenu}" Height="70" FontSize="16" Selected="GreenC">
                 			<ListBoxItem.Foreground>
                 				<SolidColorBrush Color="{DynamicResource #646464}"/>
                 			</ListBoxItem.Foreground>
                 		</ListBoxItem>
                 	</ListBox>
-                	<ListBoxItem x:Name="menutitle2" Content="资源统筹" Height="70" Style="{DynamicResource ListBoxItemStyle1}" FontSize="16" Selected="menutitle2_Selected"/>
+                	<ListBoxItem x:Name="menutitle2" Content="资源统筹" Height="70" Style="{DynamicResource ListBoxItemMainMenu}" FontSize="16" Selected="menutitle2_Selected"/>
                 	<ListBox x:Name="menu2" Background="{x:Null}" BorderBrush="{x:Null}" Style="{DynamicResource ListBoxMenu}" Width="292" BorderThickness="0" Margin="-2,0,0,0" Visibility="Collapsed">
-                		<ListBoxItem x:Name="menu2_1" Content="空间资源" Style="{DynamicResource ListBoxItemleftSubmenu}" Height="70" FontSize="16" Selected="menu2_1_Selected">
+                		<ListBoxItem x:Name="menu2_1" Content="空间资源" Style="{DynamicResource ListBoxMainMenuSubmenu}" Height="70" FontSize="16" Selected="menu2_1_Selected">
                 			<ListBoxItem.Foreground>
                 				<SolidColorBrush Color="{DynamicResource #646464}"/>
                 			</ListBoxItem.Foreground>
                 		</ListBoxItem>
-                		<ListBoxItem x:Name="menu2_2" Content="组织构架" Style="{DynamicResource ListBoxItemleftSubmenu}" Height="70" FontSize="16" Selected="menu2_2_Selected">
+                		<ListBoxItem x:Name="menu2_2" Content="组织构架" Style="{DynamicResource ListBoxMainMenuSubmenu}" Height="70" FontSize="16" Selected="menu2_2_Selected">
                 			<ListBoxItem.Foreground>
                 				<SolidColorBrush Color="{DynamicResource #646464}"/>
                 			</ListBoxItem.Foreground>
                 		</ListBoxItem>
-                		<ListBoxItem x:Name="menu2_3" Content="经费资源" Style="{DynamicResource ListBoxItemleftSubmenu}" Height="70" FontSize="16">
+                		<ListBoxItem x:Name="menu2_3" Content="经费资源" Style="{DynamicResource ListBoxMainMenuSubmenu}" Height="70" FontSize="16">
                 			<ListBoxItem.Foreground>
                 				<SolidColorBrush Color="{DynamicResource #646464}"/>
                 			</ListBoxItem.Foreground>
                 		</ListBoxItem>
-                		<ListBoxItem x:Name="menu2_4" Content="设备资源" Style="{DynamicResource ListBoxItemleftSubmenu}" Height="70" FontSize="16">
+                		<ListBoxItem x:Name="menu2_4" Content="设备资源" Style="{DynamicResource ListBoxMainMenuSubmenu}" Height="70" FontSize="16">
                 			<ListBoxItem.Foreground>
                 				<SolidColorBrush Color="{DynamicResource #646464}"/>
                 			</ListBoxItem.Foreground>
                 		</ListBoxItem>
                 	</ListBox>
-                	<ListBoxItem x:Name="menutitle3" Content="向上联络" Height="70" Style="{DynamicResource ListBoxItemStyle1}" FontSize="16" Selected="menutitle3_Selected"/>
+                	<ListBoxItem x:Name="menutitle3" Content="向上联络" Height="70" Style="{DynamicResource ListBoxItemMainMenu}" FontSize="16" Selected="menutitle3_Selected"/>
                 	<ListBox x:Name="menu3" Background="{x:Null}" BorderBrush="{x:Null}" Style="{DynamicResource ListBoxMenu}" Width="292" BorderThickness="0" Margin="-2,0,0,0" Visibility="Collapsed">
-                        <ListBoxItem x:Name="menu3_1" Content="下发文件" Style="{DynamicResource ListBoxItemleftSubmenu}" Height="70" FontSize="16" Selected="menu4_2_Selected">
+                		<ListBoxItem x:Name="menu3_1" Content="下发文件" Style="{DynamicResource ListBoxMainMenuSubmenu}" Height="70" FontSize="16" Selected="menu4_2_Selected">
                 			<ListBoxItem.Foreground>
                 				<SolidColorBrush Color="{DynamicResource #646464}"/>
                 			</ListBoxItem.Foreground>
                 		</ListBoxItem>
-                		<ListBoxItem x:Name="menu3_2" Content="市局沟通" Style="{DynamicResource ListBoxItemleftSubmenu}" Height="70" FontSize="16">
+                		<ListBoxItem x:Name="menu3_2" Content="市局沟通" Style="{DynamicResource ListBoxMainMenuSubmenu}" Height="70" FontSize="16">
                 			<ListBoxItem.Foreground>
                 				<SolidColorBrush Color="{DynamicResource #646464}"/>
                 			</ListBoxItem.Foreground>
                 		</ListBoxItem>
                 	</ListBox>
-                	<ListBoxItem x:Name="menutitle4" Content="日常管理" Height="70" Style="{DynamicResource ListBoxItemStyle1}" FontSize="16" Selected="menutitle4_Selected"/>
+                	<ListBoxItem x:Name="menutitle4" Content="日常管理" Height="70" Style="{DynamicResource ListBoxItemMainMenu}" FontSize="16" Selected="menutitle4_Selected"/>
                 	<ListBox x:Name="menu4" Background="{x:Null}" BorderBrush="{x:Null}" Style="{DynamicResource ListBoxMenu}" Width="292" BorderThickness="0" Margin="-2,0,0,0" Visibility="Collapsed">
-                		<ListBoxItem x:Name="menu4_1" Content="日程管理" Style="{DynamicResource ListBoxItemleftSubmenu}" Height="70" FontSize="16" Selected="menu4_1_Selected">
+                		<ListBoxItem x:Name="menu4_1" Content="日程管理" Style="{DynamicResource ListBoxMainMenuSubmenu}" Height="70" FontSize="16" Selected="menu4_1_Selected">
                 			<ListBoxItem.Foreground>
                 				<SolidColorBrush Color="{DynamicResource #646464}"/>
                 			</ListBoxItem.Foreground>
                 		</ListBoxItem>
-                		<ListBoxItem x:Name="menu4_2" Content="文件批阅" Style="{DynamicResource ListBoxItemleftSubmenu}" Height="70" FontSize="16" Selected="menu4_2_Selected">
+                		<ListBoxItem x:Name="menu4_2" Content="文件批阅" Style="{DynamicResource ListBoxMainMenuSubmenu}" Height="70" FontSize="16" Selected="menu4_2_Selected">
                 			<ListBoxItem.Foreground>
                 				<SolidColorBrush Color="{DynamicResource #646464}"/>
                 			</ListBoxItem.Foreground>
                 		</ListBoxItem>
-                		<ListBoxItem x:Name="menu4_3" Content="远程会议" Style="{DynamicResource ListBoxItemleftSubmenu}" Height="70" FontSize="16" Selected="menu4_3_Selected">
+                		<ListBoxItem x:Name="menu4_3" Content="远程会议" Style="{DynamicResource ListBoxMainMenuSubmenu}" Height="70" FontSize="16" Selected="menu4_3_Selected">
                 			<ListBoxItem.Foreground>
                 				<SolidColorBrush Color="{DynamicResource #646464}"/>
                 			</ListBoxItem.Foreground>
                 		</ListBoxItem>
                 	</ListBox>
-                	<ListBoxItem x:Name="menutitle5" Content="案例剖析" Height="70" Style="{DynamicResource ListBoxItemStyle1}" FontSize="16" Selected="menutitle5_Selected"/>
+                	<ListBoxItem x:Name="menutitle5" Content="案例剖析" Height="70" Style="{DynamicResource ListBoxItemMainMenu}" FontSize="16" Selected="menutitle5_Selected"/>
                 	<ListBox x:Name="menu5" Background="{x:Null}" BorderBrush="{x:Null}" Style="{DynamicResource ListBoxMenu}" Width="292" BorderThickness="0" Margin="-2,0,0,0" Visibility="Collapsed">
-                		<ListBoxItem x:Name="menu5_1" Content="城市发展案例库" Style="{DynamicResource ListBoxItemleftSubmenu}" Height="70" FontSize="16" Selected="menu5_1_Selected">
+                		<ListBoxItem x:Name="menu5_1" Content="城市发展案例库" Style="{DynamicResource ListBoxMainMenuSubmenu}" Height="70" FontSize="16" Selected="menu5_1_Selected">
                 			<ListBoxItem.Foreground>
                 				<SolidColorBrush Color="{DynamicResource #646464}"/>
                 			</ListBoxItem.Foreground>
                 		</ListBoxItem>
-                		<ListBoxItem x:Name="menu5_2" Content="城市百科知识库" Style="{DynamicResource ListBoxItemleftSubmenu}" Height="70" FontSize="16">
+                		<ListBoxItem x:Name="menu5_2" Content="城市百科知识库" Style="{DynamicResource ListBoxMainMenuSubmenu}" Height="70" FontSize="16">
                 			<ListBoxItem.Foreground>
                 				<SolidColorBrush Color="{DynamicResource #646464}"/>
                 			</ListBoxItem.Foreground>
                 		</ListBoxItem>
-                		<ListBoxItem x:Name="menu5_3" Content="城市数据知识库" Style="{DynamicResource ListBoxItemleftSubmenu}" Height="70" FontSize="16">
+                		<ListBoxItem x:Name="menu5_3" Content="城市数据知识库" Style="{DynamicResource ListBoxMainMenuSubmenu}" Height="70" FontSize="16">
                 			<ListBoxItem.Foreground>
                 				<SolidColorBrush Color="{DynamicResource #646464}"/>
                 			</ListBoxItem.Foreground>
                 		</ListBoxItem>
                 	</ListBox>
-                	<ListBoxItem x:Name="menutitle6" Content="突发事件" Height="70" Style="{DynamicResource ListBoxItemStyle1}" FontSize="16" Selected="menutitle6_Selected"/>
+                	<ListBoxItem x:Name="menutitle6" Content="突发事件" Height="70" Style="{DynamicResource ListBoxItemMainMenu}" FontSize="16" Selected="menutitle6_Selected"/>
                 	<ListBox x:Name="menu6" Background="{x:Null}" BorderBrush="{x:Null}" Style="{DynamicResource ListBoxMenu}" Width="292" BorderThickness="0" Margin="-2,0,0,0" Visibility="Collapsed">
-                		<ListBoxItem x:Name="menu6_1" Content="自然灾害" Style="{DynamicResource ListBoxItemleftSubmenu}" Height="70" FontSize="16" Selected="menu6_1_Selected">
+                		<ListBoxItem x:Name="menu6_1" Content="自然灾害" Style="{DynamicResource ListBoxMainMenuSubmenu}" Height="70" FontSize="16" Selected="menu6_1_Selected">
                 			<ListBoxItem.Foreground>
                 				<SolidColorBrush Color="{DynamicResource #646464}"/>
                 			</ListBoxItem.Foreground>
                 		</ListBoxItem>
-                		<ListBoxItem x:Name="menu6_2" Content="社会安全" Style="{DynamicResource ListBoxItemleftSubmenu}" Height="70" FontSize="16">
+                		<ListBoxItem x:Name="menu6_2" Content="社会安全" Style="{DynamicResource ListBoxMainMenuSubmenu}" Height="70" FontSize="16">
                 			<ListBoxItem.Foreground>
                 				<SolidColorBrush Color="{DynamicResource #646464}"/>
                 			</ListBoxItem.Foreground>
                 		</ListBoxItem>
-                		<ListBoxItem x:Name="menu6_3" Content="事故灾害" Style="{DynamicResource ListBoxItemleftSubmenu}" Height="70" FontSize="16" >
+                		<ListBoxItem x:Name="menu6_3" Content="事故灾害" Style="{DynamicResource ListBoxMainMenuSubmenu}" Height="70" FontSize="16" >
                 			<ListBoxItem.Foreground>
                 				<SolidColorBrush Color="{DynamicResource #646464}"/>
                 			</ListBoxItem.Foreground>
                 		</ListBoxItem>
-                		<ListBoxItem x:Name="menu6_4" Content="公共卫生" Style="{DynamicResource ListBoxItemleftSubmenu}" Height="70" FontSize="16">
+                		<ListBoxItem x:Name="menu6_4" Content="公共卫生" Style="{DynamicResource ListBoxMainMenuSubmenu}" Height="70" FontSize="16">
                 			<ListBoxItem.Foreground>
                 				<SolidColorBrush Color="{DynamicResource #646464}"/>
                 			</ListBoxItem.Foreground>
                 		</ListBoxItem>
                 	</ListBox>
-                	<ListBoxItem x:Name="menutitle7" Content="意见汇聚" Height="70" Style="{DynamicResource ListBoxItemStyle1}" FontSize="16" Selected="menutitle7_Selected"/>
+                	<ListBoxItem x:Name="menutitle7" Content="意见汇聚" Height="70" Style="{DynamicResource ListBoxItemMainMenu}" FontSize="16" Selected="menutitle7_Selected"/>
                 	<ListBox x:Name="menu7" Background="{x:Null}" BorderBrush="{x:Null}" Style="{DynamicResource ListBoxMenu}" Width="292" BorderThickness="0" Margin="-2,0,0,0" Visibility="Collapsed">
-                		<ListBoxItem x:Name="menu7_1" Content="市民信息反馈" Style="{DynamicResource ListBoxItemleftSubmenu}" Height="70" FontSize="16" Selected="menu7_1_Selected">
+                		<ListBoxItem x:Name="menu7_1" Content="市民信息反馈" Style="{DynamicResource ListBoxMainMenuSubmenu}" Height="70" FontSize="16" Selected="menu7_1_Selected">
                 			<ListBoxItem.Foreground>
                 				<SolidColorBrush Color="{DynamicResource #646464}"/>
                 			</ListBoxItem.Foreground>
                 		</ListBoxItem>
-                		<ListBoxItem x:Name="menu7_2" Content="政府机构反馈" Style="{DynamicResource ListBoxItemleftSubmenu}" Height="70" FontSize="16">
+                		<ListBoxItem x:Name="menu7_2" Content="政府机构反馈" Style="{DynamicResource ListBoxMainMenuSubmenu}" Height="70" FontSize="16">
                 			<ListBoxItem.Foreground>
                 				<SolidColorBrush Color="{DynamicResource #646464}"/>
                 			</ListBoxItem.Foreground>
                 		</ListBoxItem>
-                		<ListBoxItem x:Name="menu7_3" Content="企业联盟反馈" Style="{DynamicResource ListBoxItemleftSubmenu}" Height="70" FontSize="16">
+                		<ListBoxItem x:Name="menu7_3" Content="企业联盟反馈" Style="{DynamicResource ListBoxMainMenuSubmenu}" Height="70" FontSize="16">
                 			<ListBoxItem.Foreground>
                 				<SolidColorBrush Color="{DynamicResource #646464}"/>
                 			</ListBoxItem.Foreground>
                 		</ListBoxItem>
                 	</ListBox>
-                	<ListBoxItem x:Name="menutitle8" Content="重大项目" Height="70" Style="{DynamicResource ListBoxItemStyle1}" FontSize="16" Selected="menutitle8_Selected"/>
+                	<ListBoxItem x:Name="menutitle8" Content="重大项目" Height="70" Style="{DynamicResource ListBoxItemMainMenu}" FontSize="16" Selected="menutitle8_Selected"/>
                 	<ListBox x:Name="menu8" Background="{x:Null}" BorderBrush="{x:Null}" Style="{DynamicResource ListBoxMenu}" Width="292" BorderThickness="0" Margin="-2,0,0,0" Visibility="Collapsed">
-                		<ListBoxItem x:Name="menu8_1" Content="世博会项目" Style="{DynamicResource ListBoxItemleftSubmenu}" Height="70" FontSize="16" Selected="menu8_1_Selected">
+                		<ListBoxItem x:Name="menu8_1" Content="世博会项目" Style="{DynamicResource ListBoxMainMenuSubmenu}" Height="70" FontSize="16" Selected="menu8_1_Selected">
                 			<ListBoxItem.Foreground>
                 				<SolidColorBrush Color="{DynamicResource #646464}"/>
                 			</ListBoxItem.Foreground>
                 		</ListBoxItem>
-                		<ListBoxItem x:Name="menu8_2" Content="经济适用房项目" Style="{DynamicResource ListBoxItemleftSubmenu}" Height="70" FontSize="16">
+                		<ListBoxItem x:Name="menu8_2" Content="经济适用房项目" Style="{DynamicResource ListBoxMainMenuSubmenu}" Height="70" FontSize="16">
                 			<ListBoxItem.Foreground>
                 				<SolidColorBrush Color="{DynamicResource #646464}"/>
                 			</ListBoxItem.Foreground>
                 		</ListBoxItem>
-                		<ListBoxItem x:Name="menu8_3" Content="迪斯尼项目" Style="{DynamicResource ListBoxItemleftSubmenu}" Height="70" FontSize="16">
+                		<ListBoxItem x:Name="menu8_3" Content="迪斯尼项目" Style="{DynamicResource ListBoxMainMenuSubmenu}" Height="70" FontSize="16">
                 			<ListBoxItem.Foreground>
                 				<SolidColorBrush Color="{DynamicResource #646464}"/>
                 			</ListBoxItem.Foreground>
@@ -2078,6 +2037,93 @@
                 	</ListBox>
                 </ListBox>
                 
+            </Grid>
+            <Grid x:Name="logodatesearch" Grid.Row="0">
+            	<Grid.RowDefinitions>
+            		<RowDefinition Height="0.315*"/>
+            		<RowDefinition Height="0.339*"/>
+            		<RowDefinition Height="0.346*"/>
+            	</Grid.RowDefinitions>
+            	<Rectangle Height="260" VerticalAlignment="Top" RadiusY="8" RadiusX="8" Grid.RowSpan="3">
+            		<Rectangle.Fill>
+            			<LinearGradientBrush EndPoint="1.086,0.462" MappingMode="RelativeToBoundingBox" StartPoint="-0.105,0.458">
+            				<GradientStop Color="{DynamicResource middle}" Offset="0.522"/>
+            				<GradientStop Color="#FFD8D9C8" Offset="0.888"/>
+            				<GradientStop Offset="0.112" Color="#FFD8D9C8"/>
+            				<GradientStop Color="#FFD2D2AF" Offset="0.297"/>
+            				<GradientStop Color="#FFD2D2AF" Offset="0.75"/>
+            			</LinearGradientBrush>
+            		</Rectangle.Fill>
+            		<Rectangle.Effect>
+            			<DropShadowEffect Color="#FF383838"/>
+            		</Rectangle.Effect>
+            	</Rectangle>
+            	<Grid x:Name="Logo1" HorizontalAlignment="Left">
+            		<TextBlock x:Name="textBlock2" Height="35" Margin="43.653,27,29.313,19.999" TextWrapping="Wrap" Width="217" Foreground="Black" FontFamily="Lao UI" FontSize="18.667"><Run Text="Decision Making "/><Run Text="System"/></TextBlock>
+            	</Grid>
+            	<Grid x:Name="Date1" Width="292" Height="90" Grid.Row="1" VerticalAlignment="Top">
+            		<Rectangle Margin="0,0,0,0" Stroke="#FF414141">
+            			<Rectangle.Effect>
+            				<BlurEffect Radius="2" />
+            			</Rectangle.Effect>
+            			<Rectangle.Fill>
+            				<LinearGradientBrush EndPoint="1.003,0.493" StartPoint="-0.017,0.493">
+            					<GradientStop Color="{DynamicResource s_side}" Offset="1" />
+            					<GradientStop Color="{DynamicResource m_middle}" Offset="0.51" />
+            					<GradientStop Color="{DynamicResource s_side}" />
+            				</LinearGradientBrush>
+            			</Rectangle.Fill>
+            		</Rectangle>
+            		<StackPanel Orientation="Horizontal" Margin="0,10,0,0" Width="290" HorizontalAlignment="Center">
+            			<StackPanel Margin="0,8,0,0" Orientation="Vertical" d:LayoutOverrides="Height">
+            				<Label x:Name="label_month_zh" Content="十一月" HorizontalAlignment="Center" Height="28" VerticalAlignment="Top" FontSize="15" FontFamily="Arial Black">
+            					<Label.Foreground>
+            						<SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}" />
+            					</Label.Foreground>
+            				</Label>
+            				<Label x:Name="label_month" Content="Nov." HorizontalAlignment="Center" Height="28" Margin="0" VerticalAlignment="Top" FontSize="15">
+            					<Label.Foreground>
+            						<SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}" />
+            					</Label.Foreground>
+            				</Label>
+            			</StackPanel>
+            			<Label x:Name="label_day" Content="01" Height="63" VerticalAlignment="Top" FontSize="44" d:LayoutOverrides="HorizontalAlignment">
+            				<Label.Foreground>
+            					<SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}" />
+            				</Label.Foreground>
+            			</Label>
+            			<StackPanel Margin="0,8,0,2" Orientation="Vertical" d:LayoutOverrides="Height">
+            				<Label x:Name="label_dayofweek_zh" Content="星期四" HorizontalAlignment="Left" Height="28" FontFamily="Arial Black" FontSize="15" VerticalAlignment="Top">
+            					<Label.Foreground>
+            						<SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}" />
+            					</Label.Foreground>
+            				</Label>
+            				<Label x:Name="label_dayofweek" Content="Thur." Height="28" Margin="0" VerticalAlignment="Top" FontSize="15" HorizontalAlignment="Center">
+            					<Label.Foreground>
+            						<SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}" />
+            					</Label.Foreground>
+            				</Label>
+            			</StackPanel>
+            			<Label x:Name="labe_time" Content="12:00" FontSize="44" d:LayoutOverrides="GridBox" VerticalAlignment="Top" HorizontalAlignment="Left">
+            				<Label.Foreground>
+            					<SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}" />
+            				</Label.Foreground>
+            			</Label>
+            		</StackPanel>
+            	</Grid>
+            	<Grid x:Name="search" VerticalAlignment="Top" Height="90" Grid.Row="2">
+            		<Grid Margin="25,25,0,0" Width="200" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top">
+            			<Rectangle IsEnabled="False" Stroke="#FF414141" Fill="#FF9E9F91" Margin="0" RadiusY="6" RadiusX="6">
+            				<Rectangle.Effect>
+            					<BlurEffect Radius="1"/>
+            				</Rectangle.Effect>
+            			</Rectangle>
+            			<TextBox TextWrapping="Wrap" Background="{x:Null}" BorderBrush="{x:Null}" Margin="4"/>
+            			<Grid HorizontalAlignment="Right" Margin="0,4,-42.996,4.041" Width="28.249">
+            				<Button x:Name="weibo_search_Copy" Content="Button" Cursor="Hand" Style="{DynamicResource ButtonSearch}"/>
+            			</Grid>
+            		</Grid>
+            	</Grid>
             </Grid>
         </Grid>
         <Grid Grid.Column="1" Name="MiddleContent" Margin="29,30,0,40">
@@ -2093,6 +2139,9 @@
             		<DropShadowEffect/>
             	</Grid.Effect>
                 <Rectangle RadiusX="8" RadiusY="8" Height="970" Style="{DynamicResource RectangleStyle1}">
+                	<Rectangle.Fill>
+                		<SolidColorBrush Color="{DynamicResource Mainbg}"/>
+                	</Rectangle.Fill>
                     <Rectangle.Effect>
                         <DropShadowEffect/>
                     </Rectangle.Effect>
@@ -2154,15 +2203,18 @@
                 <Grid x:Name="RssNews" Width="286" HorizontalAlignment="Left" Margin="2,261.5,0,10">
                     <ListView x:Name="Rsslist" ItemTemplate="{DynamicResource DataTemplate1}" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Margin="0" />
                 </Grid>
-                <Label Content="媒  体" Height="40.834" Style="{DynamicResource LabelRightContent}" VerticalAlignment="Top" FontFamily="Helvetica" FontSize="14" FontWeight="Bold"/>
+                <Label Content="媒  体" Style="{DynamicResource LabelRightContent}" VerticalAlignment="Top" FontFamily="Helvetica" FontSize="14" FontWeight="Bold"/>
             </Grid>
             <Grid Grid.Row="1" Name="Weibo" >
             	<Grid.RowDefinitions>
-            		<RowDefinition Height="48.816"/>
+            		<RowDefinition/>
             		<RowDefinition Height="57.861"/>
             		<RowDefinition Height="325.323"/>
             	</Grid.RowDefinitions>
                 <Rectangle RadiusX="8" RadiusY="8" Style="{DynamicResource RectangleStyle1}" Grid.RowSpan="3">
+                	<Rectangle.Fill>
+                		<SolidColorBrush Color="{DynamicResource Mainbg}"/>
+                	</Rectangle.Fill>
                     <Rectangle.Effect>
                         <DropShadowEffect/>
                     </Rectangle.Effect>
@@ -2173,64 +2225,18 @@
                 		<ColumnDefinition Width="69.31"/>
                 	</Grid.ColumnDefinitions>
                     <Grid Margin="13,10,0,0" Width="200" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top">
-                        <Rectangle IsEnabled="False" Margin="0" RadiusY="6" RadiusX="6" Stroke="#EABCB9B9" Fill="{DynamicResource searchbox}"/>
+                        <Rectangle IsEnabled="False" Stroke="#FF414141" Fill="#FF9E9F91" RadiusY="6" RadiusX="6">
+                        	<Rectangle.Effect>
+                        		<BlurEffect Radius="1"/>
+                        	</Rectangle.Effect>
+                        </Rectangle>
                         <TextBox x:Name="weibo_topic" TextWrapping="Wrap" Background="{x:Null}" Margin="4" BorderBrush="{x:Null}" Text="请输入关键词。。" Padding="0" GotMouseCapture="weibo_topic_GotMouseCapture" KeyDown="weibo_topic_KeyDown" Foreground="{DynamicResource ButtonNormalBackground}" Style="{DynamicResource TextBoxtest}"/>
                     </Grid>
-                    <Button x:Name="weibo_search" Content="Button" Click="weibo_search_Click" Cursor="Hand" Style="{DynamicResource ButtonSearch}" Margin="8.501,10,30.667,10" Grid.Column="1"/>
+                    <Button x:Name="weibo_search" Content="Button" Click="weibo_search_Click" Cursor="Hand" Style="{DynamicResource ButtonSearch}" Margin="8,7,27.501,8" Grid.Column="1"/>
                 </Grid>
                 <WebBrowser Width="278" x:Name="wb_weibo" HorizontalAlignment="Left" Margin="6,0,0,20" Height="298" VerticalAlignment="Bottom" Grid.Row="2" />
-                <Label Content="微  博" Style="{DynamicResource LabelRightContent}" FontFamily="Helvetica" FontSize="14" FontWeight="Bold" Margin="0,0,0,6.916"/>
+                <Label Content="微  博" Style="{DynamicResource LabelRightContent}" FontFamily="Helvetica" FontSize="14" FontWeight="Bold" Height="33" VerticalAlignment="Top"/>
             </Grid>
-        </Grid>
-        <Grid x:Name="Date1" HorizontalAlignment="Left" Width="290" Margin="0,118,0,833" d:LayoutOverrides="GridBox" Height="90">
-            <Rectangle HorizontalAlignment="Left" Height="96" Margin="0,0,0,0" VerticalAlignment="Top" Width="290" Stroke="#FF414141">
-                <Rectangle.Effect>
-                    <BlurEffect Radius="2" />
-                </Rectangle.Effect>
-                <Rectangle.Fill>
-                    <LinearGradientBrush EndPoint="1.003,0.493" StartPoint="-0.017,0.493">
-                        <GradientStop Color="{DynamicResource s_side}" Offset="1" />
-                        <GradientStop Color="{DynamicResource m_middle}" Offset="0.51" />
-                        <GradientStop Color="{DynamicResource s_side}" />
-                    </LinearGradientBrush>
-                </Rectangle.Fill>
-            </Rectangle>
-            <StackPanel Orientation="Horizontal" Margin="0,10,0,0" Width="290" HorizontalAlignment="Center">
-                <StackPanel Margin="0,8,0,0" Orientation="Vertical" d:LayoutOverrides="Height">
-                    <Label x:Name="label_month_zh" Content="十一月" HorizontalAlignment="Center" Height="28" VerticalAlignment="Top" FontSize="15" FontFamily="Arial Black">
-                        <Label.Foreground>
-                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}" />
-                        </Label.Foreground>
-                    </Label>
-                    <Label x:Name="label_month" Content="Nov." HorizontalAlignment="Center" Height="28" Margin="0" VerticalAlignment="Top" FontSize="15">
-                        <Label.Foreground>
-                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}" />
-                        </Label.Foreground>
-                    </Label>
-                </StackPanel>
-                <Label x:Name="label_day" Content="01" Height="63" VerticalAlignment="Top" FontSize="44" d:LayoutOverrides="HorizontalAlignment">
-                    <Label.Foreground>
-                        <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}" />
-                    </Label.Foreground>
-                </Label>
-                <StackPanel Margin="0,8,0,2" Orientation="Vertical" d:LayoutOverrides="Height">
-                    <Label x:Name="label_dayofweek_zh" Content="星期四" HorizontalAlignment="Left" Height="28" FontFamily="Arial Black" FontSize="15" VerticalAlignment="Top">
-                        <Label.Foreground>
-                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}" />
-                        </Label.Foreground>
-                    </Label>
-                    <Label x:Name="label_dayofweek" Content="Thur." Height="28" Margin="0" VerticalAlignment="Top" FontSize="15" HorizontalAlignment="Center">
-                        <Label.Foreground>
-                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}" />
-                        </Label.Foreground>
-                    </Label>
-                </StackPanel>
-                <Label x:Name="labe_time" Content="12:00" FontSize="44" d:LayoutOverrides="GridBox" VerticalAlignment="Top" HorizontalAlignment="Left">
-                    <Label.Foreground>
-                        <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}" />
-                    </Label.Foreground>
-                </Label>
-            </StackPanel>
         </Grid>
     </Grid>
 </Window>

@@ -129,7 +129,7 @@
         			<DropShadowEffect/>
         		</Rectangle.Effect>
         		<Rectangle.Fill>
-        			<SolidColorBrush Color="{DynamicResource #235235235}"/>
+        			<SolidColorBrush Color="{DynamicResource Mainbg}"/>
         		</Rectangle.Fill>
         	</Rectangle>
         		<Label VerticalAlignment="Top" Style="{DynamicResource Labeltopheader}" Content="项目进度"/>
@@ -204,7 +204,7 @@
         				<DropShadowEffect/>
         			</Rectangle.Effect>
         			<Rectangle.Fill>
-        				<SolidColorBrush Color="{DynamicResource #235235235}"/>
+        				<SolidColorBrush Color="{DynamicResource Mainbg}"/>
         			</Rectangle.Fill>
         		</Rectangle>
         		<Label VerticalAlignment="Top" Style="{DynamicResource Labeltopheader}" Content="相关信息"/>
@@ -284,7 +284,7 @@
             				<DropShadowEffect/>
             			</Rectangle.Effect>
             			<Rectangle.Fill>
-            				<SolidColorBrush Color="{DynamicResource #235235235}"/>
+            				<SolidColorBrush Color="{DynamicResource Mainbg}"/>
             			</Rectangle.Fill>
             		</Rectangle>
             		<Label VerticalAlignment="Top" Style="{DynamicResource LabelRightContent}" Content="项目机构" Margin="0,0,-0.001,0"/>
@@ -345,7 +345,7 @@
             				<DropShadowEffect/>
             			</Rectangle.Effect>
             			<Rectangle.Fill>
-            				<SolidColorBrush Color="{DynamicResource #235235235}"/>
+            				<SolidColorBrush Color="{DynamicResource Mainbg}"/>
             			</Rectangle.Fill>
             		</Rectangle>
             		<Label VerticalAlignment="Top" Style="{DynamicResource Labeltopheader}" Content="项目现场"/>

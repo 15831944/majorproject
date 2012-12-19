@@ -37,6 +37,7 @@ namespace WpfApplication3.ResourcesAndManpower
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                this.Close();
             }
         }
 

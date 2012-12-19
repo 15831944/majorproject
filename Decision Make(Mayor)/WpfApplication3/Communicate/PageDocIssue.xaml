@@ -119,14 +119,28 @@
             </Grid.RowDefinitions>
             <Rectangle RadiusX="8" RadiusY="8" Grid.RowSpan="2">
             	<Rectangle.Fill>
-            		<SolidColorBrush Color="{DynamicResource #235235235}"/>
+            		<SolidColorBrush Color="{DynamicResource Mainbg}"/>
             	</Rectangle.Fill>
         		<Rectangle.Effect>
         			<DropShadowEffect/>
         		</Rectangle.Effect>
         	</Rectangle>
+            <Grid Height="33" VerticalAlignment="Top" d:LayoutOverrides="HorizontalAlignment">
+            	<Grid.ColumnDefinitions>
+            		<ColumnDefinition/>
+            	</Grid.ColumnDefinitions>
+            	<Rectangle Grid.Column="0" HorizontalAlignment="Stretch" Height="20" VerticalAlignment="Bottom" Width="Auto">
+            		<Rectangle.Fill>
+            			<LinearGradientBrush EndPoint="1.01,0.508" StartPoint="-0.011,0.431">
+            				<GradientStop Color="#FF323232" Offset="0"/>
+            				<GradientStop Color="#FF323232" Offset="1"/>
+            				<GradientStop Color="#FF646464" Offset="0.5"/>
+            			</LinearGradientBrush>
+            		</Rectangle.Fill>
+            	</Rectangle>
+            </Grid>
             <TabControl Grid.RowSpan="1" Style="{DynamicResource TabControlStyle2}" BorderBrush="{x:Null}" Background="{x:Null}">
-                <TabItem x:Name="Already" Header="已批阅文件" Margin="-2,-2,2,2">
+                <TabItem x:Name="Already" Header="已批阅文件" Margin="-2,-2,2,2" Style="{DynamicResource TabItemFirst}" VerticalAlignment="Top">
             		<Grid x:Name="GridAlready" Loaded="GridAlready_Loaded">
             			<Grid.RowDefinitions>
             				<RowDefinition Height="0.399*"/>
@@ -216,7 +230,7 @@
             			</Grid>
             		</Grid>
             	</TabItem>
-            	<TabItem x:Name="NotYet" Header="待批阅文件" Style="{DynamicResource TabItemMiddle}" Margin="0,-2,0,2">
+            	<TabItem x:Name="NotYet" Header="待批阅文件" Style="{DynamicResource TabItemMiddle}" Margin="-22.67,-2,22.67,0" VerticalAlignment="Top">
             		<Grid x:Name="GridNotYet" Loaded="GridNotYet_Loaded">
             			<Grid.RowDefinitions>
             				<RowDefinition Height="0.399*"/>
@@ -352,18 +366,6 @@
             		</Grid>
             	</Grid>
             </Grid>
-            <Grid Height="40" VerticalAlignment="Top" Margin="192,0,0,0">
-            	<Grid.ColumnDefinitions>
-            		<ColumnDefinition/>
-            	</Grid.ColumnDefinitions>
-            	<Path Grid.ColumnSpan="1" Grid.Column="0" Data="M0,3.0013325E-11 L1.6560059,3.0013325E-11 C6.0814209,-1.1935911E-05 9.6689453,3.5817131 9.6689453,7.9999956 L9.6151123,8.5333151 9.6689453,8.5333151 9.6689453,15.999991 1.6560059,15.999991 0,15.999991 z" Fill="#FF7A7A7A" HorizontalAlignment="Right" IsEnabled="False" Style="{DynamicResource PathStyle1}" Stretch="Fill" Visibility="Visible" VerticalAlignment="Top" Width="9.638"/>
-            	<Rectangle Grid.Column="0" Fill="#FF7A7A7A" HorizontalAlignment="Stretch" Height="16" Margin="0,0,8,0" VerticalAlignment="Top" Width="Auto" Grid.ColumnSpan="1"/>
-            	<Rectangle Height="2" Margin="5,0,16,0" VerticalAlignment="Bottom">
-            		<Rectangle.Fill>
-            			<SolidColorBrush Color="{DynamicResource LineColor#184184184}"/>
-            		</Rectangle.Fill>
-            	</Rectangle>
-            </Grid>
         </Grid>
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
@@ -378,7 +380,7 @@
                 </Grid.RowDefinitions>
                 <Rectangle RadiusX="8" RadiusY="8" Grid.RowSpan="2">
                 	<Rectangle.Fill>
-                		<SolidColorBrush Color="{DynamicResource #235235235}"/>
+                		<SolidColorBrush Color="{DynamicResource Mainbg}"/>
                 	</Rectangle.Fill>
                 	<Rectangle.Effect>
                 		<DropShadowEffect/>
@@ -399,7 +401,7 @@
             			<DropShadowEffect/>
             		</Rectangle.Effect>
             		<Rectangle.Fill>
-            			<SolidColorBrush Color="{DynamicResource #235235235}"/>
+            			<SolidColorBrush Color="{DynamicResource Mainbg}"/>
             		</Rectangle.Fill>
             	</Rectangle>
             	<Label Content="抄送部门" Style="{DynamicResource Labeltopheader}" VerticalAlignment="Top"/>
@@ -556,7 +558,7 @@
             			<DropShadowEffect/>
             		</Rectangle.Effect>
             		<Rectangle.Fill>
-            			<SolidColorBrush Color="{DynamicResource #235235235}"/>
+            			<SolidColorBrush Color="{DynamicResource Mainbg}"/>
             		</Rectangle.Fill>
             	</Rectangle>
             	<Label VerticalAlignment="Top" Content="批示区" Style="{DynamicResource Labeltopheader}"/>

@@ -151,5 +151,10 @@ namespace WpfApplication3
         {
             textBlockzysx.Text = "注意事项内容";
         }
+
+        private void tabItem4_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+        	// TODO: Add event handler implementation here.
+        }
     }
 }

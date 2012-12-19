@@ -18,8 +18,11 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <Rectangle RadiusY="8" RadiusX="8" StrokeThickness="2" Grid.RowSpan="2">
+            	<Rectangle.Effect>
+            		<DropShadowEffect/>
+            	</Rectangle.Effect>
         		<Rectangle.Fill>
-        			<SolidColorBrush Color="{DynamicResource #235235235}"/>
+        			<SolidColorBrush Color="{DynamicResource Mainbg}"/>
         		</Rectangle.Fill>
         	</Rectangle>
             <Label VerticalAlignment="Top" Style="{DynamicResource Labeltopheader}" Content="检索"/>
@@ -193,8 +196,11 @@
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="0" Margin="0,0,10,0">
                 <Rectangle RadiusY="8" RadiusX="8" StrokeThickness="2">
+                	<Rectangle.Effect>
+                		<DropShadowEffect/>
+                	</Rectangle.Effect>
                 	<Rectangle.Fill>
-                		<SolidColorBrush Color="{DynamicResource #235235235}"/>
+                		<SolidColorBrush Color="{DynamicResource Mainbg}"/>
                 	</Rectangle.Fill>
                 </Rectangle>
                 <Label VerticalAlignment="Top" Style="{DynamicResource Labeltopheader}" Content="案例库" d:LayoutOverrides="VerticalAlignment"/>
@@ -221,11 +227,14 @@
                     <RowDefinition Height="50"/>
                 </Grid.RowDefinitions>
                 <Rectangle RadiusY="8" RadiusX="8" StrokeThickness="2" Grid.RowSpan="4">
+                	<Rectangle.Effect>
+                		<DropShadowEffect/>
+                	</Rectangle.Effect>
                 	<Rectangle.Fill>
-                		<SolidColorBrush Color="{DynamicResource #235235235}"/>
+                		<SolidColorBrush Color="{DynamicResource Mainbg}"/>
                 	</Rectangle.Fill>
                 </Rectangle>
-                <Label Style="{DynamicResource Labeltopheader}" Content="案例" Margin="0,0,0,2.547" d:LayoutOverrides="Height"/>
+                <Label Style="{DynamicResource Labeltopheader}" Content="案例" Margin="0,0,0,2.547" d:LayoutOverrides="Height" VerticalAlignment="Top"/>
                 <Grid Grid.Row="1" VerticalAlignment="Center">
                 	<Grid.ColumnDefinitions>
                 		<ColumnDefinition Width="97.335"/>
