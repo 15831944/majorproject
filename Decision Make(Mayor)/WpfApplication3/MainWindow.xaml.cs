@@ -427,13 +427,27 @@ namespace WpfApplication3
 
         private void menu2_2_Selected(object sender, RoutedEventArgs e)
         {
-            ResourcesAndManpower.PageOrganizationStructure m_OrganizationStructure = new ResourcesAndManpower.PageOrganizationStructure();
+            //ResourcesAndManpower.PageOrganizationStructure m_OrganizationStructure = new ResourcesAndManpower.PageOrganizationStructure();
+            //FrameMiddleContent.Navigate(m_OrganizationStructure);
+            ResourcesAndManpower.PageOrgnization m_OrganizationStructure = new ResourcesAndManpower.PageOrgnization();
             FrameMiddleContent.Navigate(m_OrganizationStructure);
         }
 
         private void menu2_1_Selected(object sender, RoutedEventArgs e)
         {
             ResourcesAndManpower.PageSpatialResource m_Page = new ResourcesAndManpower.PageSpatialResource();
+            FrameMiddleContent.Navigate(m_Page);
+        }
+
+        private void menu2_3_Selected(object sender, RoutedEventArgs e)
+        {
+            ResourcesAndManpower.PageHumanResource m_Page = new ResourcesAndManpower.PageHumanResource();
+            FrameMiddleContent.Navigate(m_Page);
+        }
+
+        private void menu2_4_Selected(object sender, RoutedEventArgs e)
+        {
+            ResourcesAndManpower.PageFinacialReource m_Page = new ResourcesAndManpower.PageFinacialReource();
             FrameMiddleContent.Navigate(m_Page);
         }
 		

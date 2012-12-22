@@ -16,7 +16,8 @@
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
-    <ApplicationIcon>Application.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
     <Utf8Output>true</Utf8Output>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
@@ -259,14 +260,26 @@
     <Compile Include="ResourcesAndManpower\PageFacultyStructureMenu.xaml.cs">
       <DependentUpon>PageFacultyStructureMenu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ResourcesAndManpower\PageFinacialReource.xaml.cs">
+      <DependentUpon>PageFinacialReource.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ResourcesAndManpower\PageHumanResource.xaml.cs">
+      <DependentUpon>PageHumanResource.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ResourcesAndManpower\PageOrganizationStructure.xaml.cs">
       <DependentUpon>PageOrganizationStructure.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ResourcesAndManpower\PageOrgnization.xaml.cs">
+      <DependentUpon>PageOrgnization.xaml</DependentUpon>
     </Compile>
     <Compile Include="ResourcesAndManpower\PageSpatialResource.xaml.cs">
       <DependentUpon>PageSpatialResource.xaml</DependentUpon>
     </Compile>
     <Compile Include="ResourcesAndManpower\WindowFacultyMember.xaml.cs">
       <DependentUpon>WindowFacultyMember.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ResourcesAndManpower\WindowHuman.xaml.cs">
+      <DependentUpon>WindowHuman.xaml</DependentUpon>
     </Compile>
     <Compile Include="Service References\WeatherWebService\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -382,7 +395,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ResourcesAndManpower\PageFinacialReource.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ResourcesAndManpower\PageHumanResource.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ResourcesAndManpower\PageOrganizationStructure.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ResourcesAndManpower\PageOrgnization.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -391,6 +416,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ResourcesAndManpower\WindowFacultyMember.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ResourcesAndManpower\WindowHuman.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -678,6 +707,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Images\yusuan.png" />
+    <Resource Include="Images\zhichu.png" />
     <Resource Include="Images\图书馆.jpg" />
     <Resource Include="Images\文远楼.jpg" />
     <Resource Include="Images\游泳馆.jpg" />
