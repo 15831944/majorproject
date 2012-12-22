@@ -140,7 +140,7 @@
             		<TabControl x:Name="tabControl_ZiRanZaiHai" Style="{DynamicResource TabControlStyle2}">
             			<TabItem x:Name="tabItem1" Header="应急预案" Style="{DynamicResource TabItemFirst}" HorizontalAlignment="Left" VerticalAlignment="Top" Height="33" Width="90" Margin="-2,-2,0,0">
             				<Grid Margin="0">
-            					<Label Content="火灾应急预案" Height="34" HorizontalAlignment="Left" Margin="5,5,0,0" x:Name="label_ZiRanZaiHai_YingJiYuAn_Title" VerticalAlignment="Top" Width="124" d:LayoutOverrides="HorizontalAlignment" FontSize="14" FontFamily="Helvetica" FontWeight="Bold" />
+            					<Label Content="自然灾害应急预案" Height="34" HorizontalAlignment="Left" Margin="5,5,0,0" x:Name="label_ZiRanZaiHai_YingJiYuAn_Title" VerticalAlignment="Top" Width="124" d:LayoutOverrides="HorizontalAlignment" FontSize="14" FontFamily="Helvetica" FontWeight="Bold" />
             					<TabControl Style="{DynamicResource TabControlSubContent}" Background="{x:Null}">
             						<TabItem Header="组织实施" Style="{DynamicResource TabItem2ndmenuMIddle}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="86" Height="25" Margin="340,0,-340,0">
             							<Grid x:Name="Gridzzss" Loaded="Gridzzss_Loaded">

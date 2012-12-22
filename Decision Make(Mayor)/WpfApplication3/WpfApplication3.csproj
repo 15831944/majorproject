@@ -707,6 +707,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Images\工业布局规划.jpg" />
+    <Resource Include="Images\总体规划.jpg" />
     <Resource Include="Images\yusuan.png" />
     <Resource Include="Images\zhichu.png" />
     <Resource Include="Images\图书馆.jpg" />

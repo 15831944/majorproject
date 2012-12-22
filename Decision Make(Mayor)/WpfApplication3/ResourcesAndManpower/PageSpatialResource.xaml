@@ -7,127 +7,66 @@
       d:DesignHeight="972" d:DesignWidth="1265"
 	Title="PageSpatialResource" Loaded="Page_Loaded">
 
-    <Grid Margin="0,0,5,0">
-    	<Grid.RowDefinitions>
-    		<RowDefinition Height="19.44"/>
-    		<RowDefinition/>
-    	</Grid.RowDefinitions>
-        <Rectangle RadiusX="8" RadiusY="8" Grid.RowSpan="2">
-        	<Rectangle.Effect>
-        		<DropShadowEffect/>
-        	</Rectangle.Effect>
-        	<Rectangle.Fill>
-        		<SolidColorBrush Color="{DynamicResource Mainbg}"/>
-        	</Rectangle.Fill>
-        </Rectangle>
-        <Grid Margin="0,0,0,2.837">
-        	<Grid.ColumnDefinitions>
-        		<ColumnDefinition/>
-        	</Grid.ColumnDefinitions>
-        	<Path Grid.ColumnSpan="1" Grid.Column="0" Data="M0,3.0013325E-11 L1.6560059,3.0013325E-11 C6.0814209,-1.1935911E-05 9.6689453,3.5817131 9.6689453,7.9999956 L9.6151123,8.5333151 9.6689453,8.5333151 9.6689453,15.999991 1.6560059,15.999991 0,15.999991 z" Fill="#FF7A7A7A" HorizontalAlignment="Right" IsEnabled="False" Style="{DynamicResource PathStyle1}" Stretch="Fill" Visibility="Visible" VerticalAlignment="Top" Width="9.638"/>
-        	<Rectangle Grid.Column="0" Fill="#FF7A7A7A" HorizontalAlignment="Stretch" Height="16" Margin="8,0" VerticalAlignment="Top" Width="Auto" Grid.ColumnSpan="1"/>
-        	<Path Grid.ColumnSpan="1" Grid.Column="0" Data="M0,3.0013325E-11 L1.6560059,3.0013325E-11 C6.0814209,-1.1935911E-05 9.6689453,3.5817131 9.6689453,7.9999956 L9.6151123,8.5333151 9.6689453,8.5333151 9.6689453,15.999991 1.6560059,15.999991 0,15.999991 z" Fill="#FF7A7A7A" HorizontalAlignment="Left" IsEnabled="False" Style="{DynamicResource PathStyle1}" Stretch="Fill" Visibility="Visible" VerticalAlignment="Top" Width="9.638" RenderTransformOrigin="0.5,0.5">
-        		<Path.RenderTransform>
-        			<TransformGroup>
-        				<ScaleTransform ScaleY="1" ScaleX="-1"/>
-        				<SkewTransform AngleY="0" AngleX="0"/>
-        				<RotateTransform Angle="0"/>
-        				<TranslateTransform/>
-        			</TransformGroup>
-        		</Path.RenderTransform>
-        	</Path>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="75*"/>
+            <ColumnDefinition Width="25*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="80*"/>
+                <RowDefinition Height="10*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="40*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Button Name="btnOverallPlan" Content="总体规划" Visibility="Visible" Click="btnOverallPlan_Click" />
+                </Grid>
+                <Grid Grid.Column="1">
+                    <Button Name="btnLandUsePlan" Content="土地使用规划" Visibility="Visible" Click="btnLandUsePlan_Click" />
+                </Grid>
+                <Grid Grid.Column="2">
+                    <Button Name="btnIndustrialLayout" Content="工业布局规划" Visibility="Visible" Click="btnIndustrialLayout_Click" />
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="1">
+                <WebBrowser Name="webbrowserContent"/>
+            </Grid>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="40*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Button Name="btnSatellite" Content="卫星图" Click="btnSatellite_Click" />
+                </Grid>
+                <Grid Grid.Column="1">
+                    <Button Name="btnRoadMap" Content="地图" Click="btnRoadMap_Click" />
+                </Grid>
+                <Grid Grid.Column="2">
+                    <Button Name="btnPlan" Content="规划" Click="btnPlan_Click" />
+                </Grid>
+            </Grid>
         </Grid>
-        <Grid Margin="0,0,0,10" Grid.Row="1">
-        	<TabControl x:Name="tabControl1" BorderBrush="{x:Null}" Style="{DynamicResource TabControlStyle2}" >
-        		<TabItem Header="同济大学四平路校区" x:Name="tabItem1" Style="{DynamicResource TabItemResource}" Margin="10,0,-10,0" Width="160" FontSize="16">
-        			<Grid>
-        				<Grid.ColumnDefinitions>
-        					<ColumnDefinition Width="70*"/>
-        					<ColumnDefinition Width="30*"/>
-        				</Grid.ColumnDefinitions>
-        				<Grid Grid.Column="0">
-        					<Grid.RowDefinitions>
-        						<RowDefinition Height="85*"/>
-        						<RowDefinition Height="15*"/>
-        					</Grid.RowDefinitions>
-        					<Grid Grid.Row="0">
-        						<Viewbox Margin="10,10,10,10" Stretch="Fill">
-        							<Canvas x:Name="canvasMap" Width="800" Height="700">
-        								<Canvas.Background>
-        									<ImageBrush ImageSource="/WpfApplication3;component/Images/校长-资源统筹-map-15.jpg" />
-        								</Canvas.Background>
-        							</Canvas>
-        						</Viewbox>
-        					</Grid>
-        					<Grid Grid.Row="1">
-        						<Grid.ColumnDefinitions>
-        							<ColumnDefinition Width="20*"/>
-        							<ColumnDefinition Width="20*"/>
-        							<ColumnDefinition Width="20*"/>
-        							<ColumnDefinition Width="20*"/>
-        							<ColumnDefinition Width="20*"/>
-        						</Grid.ColumnDefinitions>
-        						<Button Content="显示全部" HorizontalAlignment="Center" x:Name="chbxAll" VerticalAlignment="Center" Click="btnAll_Click" Style="{DynamicResource ButtonFeedbacknormal}" Width="84" Height="25"  />
-        						<Button Content="教学班公用楼" HorizontalAlignment="Center" x:Name="chbxTeachingOffice" VerticalAlignment="Center" Click="btnTeachingOffice_Click" Grid.Column="1" Style="{DynamicResource ButtonFeedbacknormal}" Width="120" Height="25" />
-        						<Button Content="食宿用楼" HorizontalAlignment="Center" x:Name="chbxAccommodation" VerticalAlignment="Center" Click="btnAccommodation_Click" Grid.Column="2" Style="{DynamicResource ButtonFeedbacknormal}" Width="84" Height="25" />
-        						<Button Content="设施和实验室" HorizontalAlignment="Center" x:Name="chbxFacilitiesAndLaboratories" VerticalAlignment="Center" Click="btnFacilitiesAndLaboratories_Click" Grid.Column="3" Style="{DynamicResource ButtonFeedbacknormal}" Height="25" Width="120" />
-        						<Button Content="体育场馆" HorizontalAlignment="Center" x:Name="chbxStadium" VerticalAlignment="Center" Click="btnStadium_Click" Grid.Column="4" Width="82" Height="25" Style="{DynamicResource ButtonFeedbacknormal}" />
-        					</Grid>
-        				</Grid>
-        				<Grid Grid.Column="1">
-        					<Grid.RowDefinitions>
-        						<RowDefinition Height="30*"/>
-        						<RowDefinition Height="70*"/>
-        					</Grid.RowDefinitions>
-        					<Grid Grid.Row="0">
-        						<Image x:Name="imageBuilding" Margin="5,5,5,5" Stretch="Fill" />
-        					</Grid>
-        					<Grid Grid.Row="1">
-        						<StackPanel x:Name="stackPanel1" Margin="5,5,5,5">
-        							<Expander Header="建筑概况" x:Name="expander1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ExpandDirection="Down" IsExpanded="True" Style="{DynamicResource ExpanderSpatial}">
-        								<Expander.Foreground>
-        									<SolidColorBrush Color="{DynamicResource Foregroundgray}"/>
-        								</Expander.Foreground>
-        								<Grid>
-        									<TextBlock x:Name="TextBlock1" FontSize="12" />
-        								</Grid>
-        							</Expander>
-        							<Expander Header="使用现状" x:Name="expander2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ExpandDirection="Down">
-        								<Expander.Foreground>
-        									<SolidColorBrush Color="{DynamicResource Foregroundgray}"/>
-        								</Expander.Foreground>
-        								<Grid>
-        									<TextBlock x:Name="TextBlock2" FontSize="12" />
-        								</Grid>
-        							</Expander>
-        							<Expander Header="组织机构" x:Name="expander3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ExpandDirection="Down" IsExpanded="True">
-        								<Expander.Foreground>
-        									<SolidColorBrush Color="{DynamicResource Foregroundgray}"/>
-        								</Expander.Foreground>
-        								<Grid>
-        									<TextBlock x:Name="TextBlock3" FontSize="12" />
-        								</Grid>
-        							</Expander>
-        							<Expander Header="近期活动" x:Name="expander4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ExpandDirection="Down" IsExpanded="True">
-        								<Expander.Foreground>
-        									<SolidColorBrush Color="{DynamicResource Foregroundgray}"/>
-        								</Expander.Foreground>
-        								<Grid>
-        									<TextBlock x:Name="TextBlock4" FontSize="12" />
-        								</Grid>
-        							</Expander>
-        						</StackPanel>
-        					</Grid>
-        				</Grid>
-        			</Grid>
-        		</TabItem>
-        		<TabItem Header="彰武路校区" x:Name="tabItem2" Style="{DynamicResource TabItemResource}" Margin="10,0,-10,0" Width="100" FontSize="16">
-        			<Grid />
-        		</TabItem>
-        		<TabItem Header="嘉定校区" x:Name="tabItem3" Style="{DynamicResource TabItemResource}" Width="80" Margin="10,0,-10,0" FontSize="16">
-        			<Grid />
-        		</TabItem>
-        	</TabControl>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="90*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Label FontSize="24" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="概况说明"/>
+            </Grid>
+            <Grid Grid.Row="1">
+                <TextBlock Name="tblAnnotation" TextWrapping="WrapWithOverflow" Background="White" Margin="10,10,10,10"/>
+            </Grid>
         </Grid>
     </Grid>
 </Page>

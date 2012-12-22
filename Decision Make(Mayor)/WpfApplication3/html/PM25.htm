@@ -2,61 +2,41 @@
 <!-- saved from url=(0014)about:internet -->
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>PM2.5</title>
-    <style type="text/css">
-        body
-        {
-            margin: 0px auto;
-            text-align: center;
-        }
-        #divTop
-        {
-            height: 132px;
-            width: 1024px;
-            margin: 0px auto;
-        }
-        #line
-        {
-            background: url(images/aa.jpg) repeat-x;
-            display: block;
-            height: 19px;
-            width: 1024px;
-            margin: 0 auto;
-        }
-        #line1
-        {
-            background: #FFF url(images/aa1.jpg) no-repeat;
-            display: none;
-            height: 64px;
-            width: 1024px;
-            margin: 0 auto;
-        }
-        #divMain
-        {
-        }
-        
-        #diviframe
-        {
-            background: #FFF;
-            height: 580px;
-            width: 1024px;
-            margin: 0 auto;
-        }
-        #ifmswf
-        {
-            height: 630px;
-            width: 100%;
-            border: 0px;
-        }
-    </style>
 </head>
 <body scroll="no">
-    <div>
-        <div id="divMain">
-            <div id="diviframe">
-                <iframe id="ifmswf" frameborder="0" marginheight="0" marginwidth="0" src="http://202.136.217.188:9090/ssfb/ssfb/querypm25.html" style="margin-left:-1000px;margin-top:0px;padding-left:-400px;padding-top:-30px;">
-                </iframe>
+    <div class="right">
+        <div class="ssrb_top">
+            <div class="ssrb_contain" style="height: 10px;margin-left:-270px;">
+                <div style="width: 800; text-align: center;">
+                    <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="800" height="280"
+                        id="chart_value">
+                        <param name="movie" value="http://www.semc.gov.cn/aqi/flexline/chart_value01.swf" />
+                        <param name="quality" value="high" />
+                        <param name="bgcolor" value="transparent" />
+                        <param name="allowScriptAccess" value="sameDomain" />
+                        <param name="allowFullScreen" value="true" />
+                        <param name="wmode" value="transparent" />
+                        <object type="application/x-shockwave-flash" data="http://www.semc.gov.cn/aqi/flexline/chart_value01.swf"
+                            width="100%" height="280">
+                            <param name="quality" value="high" />
+                            <param name="bgcolor" value="transparent" />
+                            <param name="allowScriptAccess" value="sameDomain" />
+                            <param name="allowFullScreen" value="true" />
+                        </object>
+                    </object>
+                    <div style="width: 100%; text-align: right; margin-top: 0px; padding-left: 25px;">
+                        <div style="font-size: 12px; cursor: hand; color: #5B5B5B; float: left;">
+                            *注:CO为毫克/立方米</div>
+                        <div onclick="showValDJDiv();" style="font-size: 12px; cursor: hand; color: #5B5B5B;
+                            float: left; margin-left: 50px;">
+                            标准参考</div>
+                        <div style="font-size: 12px; color: #969696; float: left; margin-left: 155px;">
+                            实时发布小时浓度数据为未审核数据，仅供参考</div>
+                    </div>
+                </div>
+            </div>
+            <div class="ssrb_bottom">
             </div>
         </div>
     </div>

@@ -76,7 +76,7 @@ namespace WpfApplication3
                 if (strlocation == "突发事件")
                     ijudge = 1;
                 else if (strlocation == "自然灾害")
-                    ijudge = 2;
+                    ijudge = 3;
                 DataTable dt = new DataTable();
                 SQLHelper.getPointsByCategory(ijudge, out dt);
                 List<Location> m_list = new List<Location>();
@@ -99,8 +99,8 @@ namespace WpfApplication3
         }
         private void Grid_Loaded(object sender, RoutedEventArgs e)
         {
-            tbx_ZiRanZaiHai_ShiJianShiShiGengXin.Text = "事件实时更新\r\n发生时间：2012年8月13日，13：56\r\n发生地点：同济大学体育馆工地西北\r\n事件情况：";
-            tbx_ZiRanZaiHai_ShiJianQingKuang.Text = "（v1208131359）施工操作不当，引发施工现场起火，火势较大。\r\n（v1208131403）建筑中有工人被困，大约为6-9人。\r\n（v1208131411）第一辆救火车赶到现场，开始进行灭火操作，人员全部安全转移，初步确定无伤亡。\r\n（v1208131417）第二辆救火车和救护车赶到现场\r\n（v1208131422）。。。";
+            tbx_ZiRanZaiHai_ShiJianShiShiGengXin.Text = "事件实时更新\r\n发生时间：2012年8月13日，13：56\r\n发生地点：邯郸路大白树立交路口\r\n事件情况：";
+            tbx_ZiRanZaiHai_ShiJianQingKuang.Text = "（v1208131359）路面出现深达60米的塌陷。\r\n（v1208131403）围观群众越来越多，地区交通中断。\r\n（v1208131411）第一辆工程抢险车赶到现场，开始进行围观操作，围观群众情绪稳定，初步确定无伤亡。\r\n（v1208131417）第二辆工程抢险车赶到现场，继续围观\r\n（v1208131422）。。。";
             DirectoryInfo di = new DirectoryInfo(System.Environment.CurrentDirectory);
             string pathEmergency = di.Parent.Parent.FullName;
             ds = new EmergencyBasic();
