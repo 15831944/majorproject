@@ -259,83 +259,142 @@ namespace WpfApplication3
 			menutitle8.IsSelected=false;			
 		}
 		        
-		private void menutitle1_Selected(object sender, System.Windows.RoutedEventArgs e)
+        private void menutitle1_PreviewMouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-        	// TODO: Add event handler implementation here.
-			HideMenu();
-				HideMenuTitle();
-				menu1.Visibility = System.Windows.Visibility.Visible;
-				menutitle1.Visibility = System.Windows.Visibility.Visible;
+            if (menu1.Visibility == System.Windows.Visibility.Visible)
+            {
+                HideMenu();
+                UnselectMenus();
+                VisibleMenuTitle();
+            }
+            else
+            {
+                HideMenu();
+                HideMenuTitle();
+                menu1.Visibility = System.Windows.Visibility.Visible;
+                menutitle1.Visibility = System.Windows.Visibility.Visible;
+            }
         }
-
-				
-		private void menutitle2_Selected(object sender, System.Windows.RoutedEventArgs e)
+		
+		private void menutitle2_PreviewMouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-        	// TODO: Add event handler implementation here.
-			HideMenu();
-				HideMenuTitle();
-				menu2.Visibility = System.Windows.Visibility.Visible;
-				menutitle2.Visibility = System.Windows.Visibility.Visible;
-
+            if (menu2.Visibility == System.Windows.Visibility.Visible)
+            {
+                HideMenu();
+                UnselectMenus();
+                VisibleMenuTitle();
+            }
+            else
+            {
+                HideMenu();
+                HideMenuTitle();
+                menu2.Visibility = System.Windows.Visibility.Visible;
+                menutitle2.Visibility = System.Windows.Visibility.Visible;
+            }
         }
-
-
-        private void menutitle3_Selected(object sender, System.Windows.RoutedEventArgs e)
+		
+		private void menutitle3_PreviewMouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-        	// TODO: Add event handler implementation here.
-			HideMenu();
-				HideMenuTitle();
-				menu3.Visibility = System.Windows.Visibility.Visible;
-				menutitle3.Visibility = System.Windows.Visibility.Visible;
+            if (menu3.Visibility == System.Windows.Visibility.Visible)
+            {
+                HideMenu();
+                UnselectMenus();
+                VisibleMenuTitle();
+            }
+            else
+            {
+                HideMenu();
+                HideMenuTitle();
+                menu3.Visibility = System.Windows.Visibility.Visible;
+                menutitle3.Visibility = System.Windows.Visibility.Visible;
+            }
         }
-				        
-		private void menutitle4_Selected(object sender, System.Windows.RoutedEventArgs e)
+		
+		private void menutitle4_PreviewMouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-        	// TODO: Add event handler implementation here.
-			HideMenu();
-			if (menu4.Visibility == System.Windows.Visibility.Collapsed)
-				HideMenuTitle();
-				menu4.Visibility = System.Windows.Visibility.Visible;
-				menutitle4.Visibility = System.Windows.Visibility.Visible;
+            if (menu4.Visibility == System.Windows.Visibility.Visible)
+            {
+                HideMenu();
+                UnselectMenus();
+                VisibleMenuTitle();
+            }
+            else
+            {
+                HideMenu();
+                HideMenuTitle();
+                menu4.Visibility = System.Windows.Visibility.Visible;
+                menutitle4.Visibility = System.Windows.Visibility.Visible;
+            }
         }
-		        
-		private void menutitle5_Selected(object sender, System.Windows.RoutedEventArgs e)
+		
+		private void menutitle5_PreviewMouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-        	// TODO: Add event handler implementation here.
-			HideMenu();
-				HideMenuTitle();
-				menu5.Visibility = System.Windows.Visibility.Visible;
-				menutitle5.Visibility = System.Windows.Visibility.Visible;
+            if (menu5.Visibility == System.Windows.Visibility.Visible)
+            {
+                HideMenu();
+                UnselectMenus();
+                VisibleMenuTitle();
+            }
+            else
+            {
+                HideMenu();
+                HideMenuTitle();
+                menu5.Visibility = System.Windows.Visibility.Visible;
+                menutitle5.Visibility = System.Windows.Visibility.Visible;
+            }
         }
-		        
-		private void menutitle6_Selected(object sender, System.Windows.RoutedEventArgs e)
+		
+		private void menutitle6_PreviewMouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-        	// TODO: Add event handler implementation here.
-			HideMenu();
-				HideMenuTitle();
-				menu6.Visibility = System.Windows.Visibility.Visible;
-				menutitle6.Visibility = System.Windows.Visibility.Visible;
+            if (menu6.Visibility == System.Windows.Visibility.Visible)
+            {
+                HideMenu();
+                UnselectMenus();
+                VisibleMenuTitle();
+            }
+            else
+            {
+                HideMenu();
+                HideMenuTitle();
+                menu6.Visibility = System.Windows.Visibility.Visible;
+                menutitle6.Visibility = System.Windows.Visibility.Visible;
+            }
         }
-		        
-		private void menutitle7_Selected(object sender, System.Windows.RoutedEventArgs e)
+		
+		private void menutitle7_PreviewMouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-        	// TODO: Add event handler implementation here.
-			HideMenu();
-				HideMenuTitle();
-				menu7.Visibility = System.Windows.Visibility.Visible;
-				menutitle7.Visibility = System.Windows.Visibility.Visible;
-
+            if (menu7.Visibility == System.Windows.Visibility.Visible)
+            {
+                HideMenu();
+                UnselectMenus();
+                VisibleMenuTitle();
+            }
+            else
+            {
+                HideMenu();
+                HideMenuTitle();
+                menu7.Visibility = System.Windows.Visibility.Visible;
+                menutitle7.Visibility = System.Windows.Visibility.Visible;
+            }
         }
-		        
-		private void menutitle8_Selected(object sender, System.Windows.RoutedEventArgs e)
+		
+		private void menutitle8_PreviewMouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-        	// TODO: Add event handler implementation here.
-			HideMenu();
-				HideMenuTitle();
-				menu8.Visibility = System.Windows.Visibility.Visible;
-				menutitle8.Visibility = System.Windows.Visibility.Visible;
+            if (menu8.Visibility == System.Windows.Visibility.Visible)
+            {
+                HideMenu();
+                UnselectMenus();
+                VisibleMenuTitle();
+            }
+            else
+            {
+                HideMenu();
+                HideMenuTitle();
+                menu8.Visibility = System.Windows.Visibility.Visible;
+                menutitle8.Visibility = System.Windows.Visibility.Visible;
+            }
         }
-
+		
         private void TalentC(object sender, System.Windows.RoutedEventArgs e)
         {
             // TODO: Add event handler implementation here.

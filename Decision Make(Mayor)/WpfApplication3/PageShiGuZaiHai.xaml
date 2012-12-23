@@ -83,19 +83,11 @@
                 			<RowDefinition Height="0.616*"/>
                 		</Grid.RowDefinitions>
                 		<StackPanel x:Name="Shijianshishigengxin" Margin="0,0,0,23.5">
-                			<Label Content="事件实时更新:" x:Name="label_ZiRanZaiHai_ShiJianShiShiGengXin" VerticalAlignment="Center" Padding="5,1" Style="{DynamicResource LabelNormal}" Background="{x:Null}" Height="23" HorizontalAlignment="Left" >
-                				<Label.Foreground>
-                					<SolidColorBrush Color="{DynamicResource #235235235}"/>
-                				</Label.Foreground>
-                			</Label>
+                			<Label Content="事件实时更新:" x:Name="label_ZiRanZaiHai_ShiJianShiShiGengXin" VerticalAlignment="Center" Padding="5,1" Style="{DynamicResource LabelNormal}" Background="{x:Null}" Height="23" HorizontalAlignment="Left" />
                 			<TextBox Height="88.167" x:Name="tbx_ZiRanZaiHai_ShiJianShiShiGengXin" VerticalAlignment="Top" TextWrapping="Wrap" Style="{DynamicResource TextBoxStyle4}" Margin="0,10,0,0" BorderBrush="{x:Null}" Background="{x:Null}" />
                 		</StackPanel>
                 		<StackPanel x:Name="Shijianqingkuang" Margin="0,-0.166,0,0" Orientation="Vertical" Grid.Row="1">
-                			<Label HorizontalAlignment="Left" x:Name="label_ZiRanZaiHai_ShiJianQingKuang" VerticalAlignment="Top" Padding="5,1" Background="{x:Null}" Content="事件情况：" Style="{DynamicResource LabelNormal}" d:LayoutOverrides="HorizontalAlignment" >
-                				<Label.Foreground>
-                					<SolidColorBrush Color="{DynamicResource #235235235}"/>
-                				</Label.Foreground>
-                			</Label>
+                			<Label HorizontalAlignment="Left" x:Name="label_ZiRanZaiHai_ShiJianQingKuang" VerticalAlignment="Top" Padding="5,1" Background="{x:Null}" Content="事件情况：" Style="{DynamicResource LabelNormal}" d:LayoutOverrides="HorizontalAlignment" />
                 			<TextBox x:Name="tbx_ZiRanZaiHai_ShiJianQingKuang" TextWrapping="Wrap" Height="199.337"  Margin="0,10,0,0" Background="{x:Null}" BorderBrush="{x:Null}" />
                 		</StackPanel>
                 	</Grid>
@@ -140,21 +132,25 @@
             		<TabControl x:Name="tabControl_ZiRanZaiHai" Style="{DynamicResource TabControlStyle2}">
             			<TabItem x:Name="tabItem1" Header="应急预案" Style="{DynamicResource TabItemFirst}" HorizontalAlignment="Left" VerticalAlignment="Top" Height="33" Width="90" Margin="-2,-2,0,0">
             				<Grid Margin="0">
-            					<Label Content="自然灾害应急预案" Height="34" HorizontalAlignment="Left" Margin="5,5,0,0" x:Name="label_ZiRanZaiHai_YingJiYuAn_Title" VerticalAlignment="Top" Width="124" d:LayoutOverrides="HorizontalAlignment" FontSize="14" FontFamily="Helvetica" FontWeight="Bold" />
+            					<Label Content="自然灾害应急预案" Height="34" HorizontalAlignment="Left" Margin="5,5,0,0" x:Name="label_ZiRanZaiHai_YingJiYuAn_Title" VerticalAlignment="Top" Width="124" d:LayoutOverrides="HorizontalAlignment" FontSize="14" FontFamily="Helvetica" FontWeight="Bold" Foreground="#FFEDEDED" />
             					<TabControl Style="{DynamicResource TabControlSubContent}" Background="{x:Null}">
-            						<TabItem Header="组织实施" Style="{DynamicResource TabItem2ndmenuMIddle}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="86" Height="25" Margin="340,0,-340,0">
+            						<TabItem Header="组织实施" Style="{DynamicResource TabItem2ndmenuMIddle}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200,0,-200,0">
             							<Grid x:Name="Gridzzss" Loaded="Gridzzss_Loaded">
-            								<TextBlock x:Name="textBlockzzss" Text="TextBlock" />
+            								<TextBlock x:Name="textBlockzzss" Text="TextBlock" >
+            									<TextBlock.Foreground>
+            										<SolidColorBrush Color="{DynamicResource black}"/>
+            									</TextBlock.Foreground>
+            								</TextBlock>
             							</Grid>
             						</TabItem>
-            						<TabItem Header="扑救方法" Style="{DynamicResource TabItem2ndmenuMIddle}" HorizontalAlignment="Left" Margin="330,0,-330,0" Width="89" VerticalAlignment="Top">
-            							<Grid x:Name="Gridpjff" Background="#FFE5E5E5" Loaded="Gridpjff_Loaded">
-            								<TextBlock x:Name="textBlockbjff" Text="TextBlock" />
+            						<TabItem Header="扑救方法" Style="{DynamicResource TabItem2ndmenuMIddle}" HorizontalAlignment="Left" Margin="210,0,-210,0" Width="96" VerticalAlignment="Top">
+            							<Grid x:Name="Gridpjff" Loaded="Gridpjff_Loaded">
+            								<TextBlock x:Name="textBlockbjff" Text="TextBlock" Foreground="Black" />
             							</Grid>
             						</TabItem>
-            						<TabItem Header="注意事项" Style="{DynamicResource TabItem2ndmenulast}" Margin="320,0,-320,0" HorizontalAlignment="Left" Width="89" VerticalAlignment="Top">
-            							<Grid x:Name="Gridzysx" Background="#FFE5E5E5" Loaded="Gridzysx_Loaded">
-            								<TextBlock x:Name="textBlockzysx" Text="TextBlock" />
+            						<TabItem Header="注意事项" Style="{DynamicResource TabItem2ndmenuMIddle}" Margin="220,0,-220,0" HorizontalAlignment="Left" Width="96" VerticalAlignment="Top">
+            							<Grid x:Name="Gridzysx" Loaded="Gridzysx_Loaded">
+            								<TextBlock x:Name="textBlockzysx" Text="TextBlock" Foreground="Black" />
             							</Grid>
             						</TabItem>
             					</TabControl>
@@ -184,7 +180,7 @@
             				<SolidColorBrush Color="{DynamicResource Mainbg}"/>
             			</Rectangle.Fill>
             		</Rectangle>
-            		<Label Content="预案启动" Style="{DynamicResource Labeltopheader}" VerticalAlignment="Top" FontFamily="Helvetica" FontSize="14" FontWeight="Bold"/>
+            		<Label Content="预案启动" Style="{DynamicResource Labeltopheader}" VerticalAlignment="Top" FontFamily="Helvetica" FontSize="14" FontWeight="Bold" Foreground="#FFEDEDED"/>
             		<Grid Margin="0,80,0,0" VerticalAlignment="Top" d:LayoutOverrides="Width" >
             			<Grid.RowDefinitions>
             				<RowDefinition Height="321.13"/>
@@ -200,44 +196,40 @@
             				<ColumnDefinition Width="0.336*"/>
             			</Grid.ColumnDefinitions>
             			<ListBox Background="{x:Null}" BorderBrush="{x:Null}" Margin="0,41.31,0,8.945" Grid.Column="1">
-            				<ListBoxItem x:Name="dengji1" Content="Ⅰ级（特大）" Style="{DynamicResource ListBoxItemGreen}" Width="100" Height="33" FontFamily="Helvetica" FontWeight="Bold" Selected="dengji1_Selected">
-            					<ListBoxItem.Foreground>
-            						<SolidColorBrush Color="{DynamicResource #235235235}"/>
-            					</ListBoxItem.Foreground>
-            				</ListBoxItem>
-            				<ListBoxItem x:Name="dengji2" Content="Ⅱ级（重大）" Style="{DynamicResource ListBoxItemGreen}" BorderThickness="0" Width="100" Height="33" Margin="0,37,0,0" FontFamily="Helvetica" FontWeight="Bold" Selected="dengji2_Selected">
-            					<ListBoxItem.Foreground>
-            						<SolidColorBrush Color="{DynamicResource #235235235}"/>
-            					</ListBoxItem.Foreground>
-            				</ListBoxItem>
-            				<ListBoxItem x:Name="dengji3" Content="Ⅲ级（较大）" Style="{DynamicResource ListBoxItemGreen}" Margin="0,37,0,0" Width="100" Height="33" FontFamily="Helvetica" FontWeight="Bold" Selected="dengji3_Selected">
-            					<ListBoxItem.Foreground>
-            						<SolidColorBrush Color="{DynamicResource #235235235}"/>
-            					</ListBoxItem.Foreground>
-            				</ListBoxItem>
-            				<ListBoxItem x:Name="dengji4" Content="Ⅳ级（一般）" Style="{DynamicResource ListBoxItemGreen}" Width="100" Height="33" Margin="0,37,0,0" FontFamily="Helvetica" FontWeight="Bold" Selected="dengji4_Selected">
-            					<ListBoxItem.Foreground>
-            						<SolidColorBrush Color="{DynamicResource #235235235}"/>
-            					</ListBoxItem.Foreground>
-            				</ListBoxItem>
+            				<ListBoxItem x:Name="dengji1" Content="Ⅰ级（特大）" Style="{DynamicResource ListBoxItemGreen}" Width="100" Height="33" FontFamily="Helvetica" FontWeight="Bold" Selected="dengji1_Selected"/>
+            				<ListBoxItem x:Name="dengji2" Content="Ⅱ级（重大）" Style="{DynamicResource ListBoxItemGreen}" BorderThickness="0" Width="100" Height="33" Margin="0,37,0,0" FontFamily="Helvetica" FontWeight="Bold" Selected="dengji2_Selected"/>
+            				<ListBoxItem x:Name="dengji3" Content="Ⅲ级（较大）" Style="{DynamicResource ListBoxItemGreen}" Margin="0,37,0,0" Width="100" Height="33" FontFamily="Helvetica" FontWeight="Bold" Selected="dengji3_Selected"/>
+            				<ListBoxItem x:Name="dengji4" Content="Ⅳ级（一般）" Style="{DynamicResource ListBoxItemGreen}" Width="100" Height="33" Margin="0,37,0,0" FontFamily="Helvetica" FontWeight="Bold" Selected="dengji4_Selected"/>
             			</ListBox>
             			<Grid Margin="0,41.31,0,29.82" Grid.Column="3" Height="250">
             				<Grid.RowDefinitions>
             					<RowDefinition/>
             				</Grid.RowDefinitions>
-            				<Path Data="M14.000003,0 L216,0 C223.73198,0 230,6.2680135 230,13.999999 L230,207.47971 188.93861,250 14.000003,250 C6.2680143,250 8.6281216E-07,243.73198 0,236 L0,13.999999 C8.6281216E-07,6.2680135 6.2680143,0 14.000003,0 z" Stretch="Fill" StrokeThickness="2" >
-            					<Path.Fill>
-            						<SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveBorderColorKey}}"/>
-            					</Path.Fill>
-            				</Path>
+            				<Grid>
+            					<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="1,1,0,0">
+            						<Rectangle.Stroke>
+            							<SolidColorBrush Color="{DynamicResource #235235235}"/>
+            						</Rectangle.Stroke>
+            					</Rectangle>
+            					<Rectangle HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" StrokeDashArray="3 3" StrokeThickness="1" RadiusX="8" RadiusY="8" Stroke="{x:Null}" Margin="0,0,1,1">
+            						<Rectangle.Fill>
+            							<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            								<GradientStop Color="#FF5D5D5D" Offset="0"/>
+            								<GradientStop Color="#FF64665C" Offset="1"/>
+            							</LinearGradientBrush>
+            						</Rectangle.Fill>
+            					</Rectangle>
+            					<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="0,0,1,1">
+            						<Rectangle.Stroke>
+            							<SolidColorBrush Color="{DynamicResource Foregroundgray}"/>
+            						</Rectangle.Stroke>
+            					</Rectangle>
+            				</Grid>
             				<Grid Margin="34,39.333,30,39.333">
             					<Grid.RowDefinitions>
             						<RowDefinition Height="171.334"/>
             					</Grid.RowDefinitions>
-            					<CheckBox x:Name="lingdaoceng" Content="通知领导层" Style="{DynamicResource CheckBoxTongzhi}" FontFamily="Helvetica" FontWeight="Bold" Height="31.938" VerticalAlignment="Top" Margin="0,6.003,0,0">
-            						<CheckBox.Foreground>
-            							<SolidColorBrush Color="{DynamicResource black}"/>
-            						</CheckBox.Foreground>
+            					<CheckBox x:Name="lingdaoceng" Content="通知领导层" Style="{DynamicResource CheckBoxTongzhi}" FontFamily="Helvetica" FontWeight="Bold" Height="31.938" VerticalAlignment="Top" Margin="0,6.003,0,0" IsChecked="True">
             						<VisualStateManager.VisualStateGroups>
             							<VisualStateGroup x:Name="SelectionStates">
             								<VisualStateGroup.Transitions>
@@ -250,9 +242,6 @@
             						</VisualStateManager.VisualStateGroups>
             					</CheckBox>
             					<CheckBox x:Name="yuanrenyuan" Content="通知预案人员" Style="{DynamicResource CheckBoxTongzhi}" FontFamily="Helvetica" FontWeight="Bold" Margin="0,68.646,0,70.662" Width="166" HorizontalAlignment="Center">
-            						<CheckBox.Foreground>
-            							<SolidColorBrush Color="{DynamicResource black}"/>
-            						</CheckBox.Foreground>
             						<VisualStateManager.VisualStateGroups>
             							<VisualStateGroup x:Name="SelectionStates1">
             								<VisualStateGroup.Transitions>
@@ -265,9 +254,6 @@
             						</VisualStateManager.VisualStateGroups>
             					</CheckBox>
             					<CheckBox x:Name="yuanjigou" Content="通知预案机构" Style="{DynamicResource CheckBoxTongzhi}" FontFamily="Helvetica" FontWeight="Bold" Margin="0,0,0,8" Height="32.026" VerticalAlignment="Bottom">
-            						<CheckBox.Foreground>
-            							<SolidColorBrush Color="{DynamicResource black}"/>
-            						</CheckBox.Foreground>
             						<VisualStateManager.VisualStateGroups>
             							<VisualStateGroup x:Name="SelectionStates2">
             								<VisualStateGroup.Transitions>
@@ -282,32 +268,52 @@
             				</Grid>
             			</Grid>
             			<StackPanel Margin="6.04,0,7.96,27.629" d:LayoutOverrides="Height" Grid.Column="5" >
-            				<Label Content="负责人联络" Height="26.666" HorizontalAlignment="Left" x:Name="label_ZiRanZaiHai_ShiJianQingKuang_Copy" VerticalAlignment="Top" Width="107" Padding="13,1,5,1" FontWeight="Bold" FontSize="16" >
+            				<Label Content="负责人联络" Height="26.666" HorizontalAlignment="Left" x:Name="label_ZiRanZaiHai_ShiJianQingKuang_Copy" VerticalAlignment="Top" Width="107" Padding="13,1,5,1" FontWeight="Bold" FontSize="16" Background="{x:Null}" >
+            					<Label.Effect>
+            						<DropShadowEffect Color="#FFBEBEBE" ShadowDepth="1"/>
+            					</Label.Effect>
             					<Label.Foreground>
-            						<SolidColorBrush Color="{DynamicResource #235235235}"/>
+            						<SolidColorBrush Color="{DynamicResource #535353}"/>
             					</Label.Foreground>
-            					<Label.Background>
-            						<ImageBrush ImageSource="CutImages/图像/title_bg-07.png"/>
-            					</Label.Background>
             				</Label>
-            				<TextBlock TextWrapping="Wrap" Text="应急行动组长：" TextAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="9.999,20,0,0" FontWeight="Bold" FontSize="14"/>
+            				<TextBlock TextWrapping="Wrap" Text="应急行动组长：" TextAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="9.999,20,0,0" FontWeight="Bold" FontSize="14">
+            					<TextBlock.Foreground>
+            						<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+            					</TextBlock.Foreground>
+            				</TextBlock>
             				<Grid Height="35" Margin="0,15,0,0">
             					<Grid.ColumnDefinitions>
             						<ColumnDefinition Width="28.25"/>
             						<ColumnDefinition/>
             					</Grid.ColumnDefinitions>
             					<Image Source="CutImages/图像/phone-07.png" Stretch="Fill" Width="18" Height="23" HorizontalAlignment="Right"/>
-            					<TextBlock TextWrapping="Wrap" Text="林涛" d:LayoutOverrides="Width, Height" Grid.Column="1" HorizontalAlignment="Left" LineHeight="24" FontWeight="Bold" Padding="0,7,0,0" Margin="12,0,0,0"/>
-            					<Button x:Name="btn_ZiRanZaiHai_Phone_A" Grid.ColumnSpan="2" Opacity="0" Cursor="Hand" />
+            					<TextBlock TextWrapping="Wrap" Text="林涛" d:LayoutOverrides="Width, Height" Grid.Column="1" HorizontalAlignment="Left" LineHeight="24" FontWeight="Bold" Padding="0,7,0,0" Margin="12,0,0,0">
+            						<TextBlock.Foreground>
+            							<SolidColorBrush Color="{DynamicResource #235235235}"/>
+            						</TextBlock.Foreground>
+            					</TextBlock>
+            					<Button x:Name="btn_ZiRanZaiHai_Phone_A" Grid.ColumnSpan="2" Opacity="0" Cursor="Hand" >
+            						<Button.Foreground>
+            							<SolidColorBrush Color="{DynamicResource #235235235}"/>
+            						</Button.Foreground>
+            					</Button>
             				</Grid>
-            				<TextBlock TextWrapping="Wrap" Text="副组长：" TextAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="9.999,20,0,0" FontWeight="Bold" FontSize="14"/>
+            				<TextBlock TextWrapping="Wrap" Text="副组长：" TextAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="9.999,20,0,0" FontWeight="Bold" FontSize="14">
+            					<TextBlock.Foreground>
+            						<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+            					</TextBlock.Foreground>
+            				</TextBlock>
             				<Grid Height="35" Margin="0,15,0,0">
             					<Grid.ColumnDefinitions>
             						<ColumnDefinition Width="28.25"/>
             						<ColumnDefinition/>
             					</Grid.ColumnDefinitions>
             					<Image Source="CutImages/图像/phone-07.png" Stretch="Fill" Width="18" Height="23" HorizontalAlignment="Right"/>
-            					<TextBlock TextWrapping="Wrap" Text="程晓军" d:LayoutOverrides="Width, Height" Grid.Column="1" HorizontalAlignment="Left" LineHeight="24" FontWeight="Bold" Padding="0,7,0,0" Margin="12,0,0,0"/>
+            					<TextBlock TextWrapping="Wrap" Text="程晓军" d:LayoutOverrides="Width, Height" Grid.Column="1" HorizontalAlignment="Left" LineHeight="24" FontWeight="Bold" Padding="0,7,0,0" Margin="12,0,0,0">
+            						<TextBlock.Foreground>
+            							<SolidColorBrush Color="{DynamicResource #235235235}"/>
+            						</TextBlock.Foreground>
+            					</TextBlock>
             					<Button x:Name="btn_ZiRanZaiHai_Phone_A1" Grid.ColumnSpan="2" Opacity="0" Cursor="Hand" />
             				</Grid>
             				<Grid Height="35" Margin="0,10,0,0">
@@ -316,7 +322,11 @@
             						<ColumnDefinition/>
             					</Grid.ColumnDefinitions>
             					<Image Source="CutImages/图像/phone-07.png" Stretch="Fill" Width="18" Height="23" HorizontalAlignment="Right"/>
-            					<TextBlock TextWrapping="Wrap" Text="朱闻一" d:LayoutOverrides="Width, Height" Grid.Column="1" HorizontalAlignment="Left" LineHeight="24" FontWeight="Bold" Padding="0,7,0,0" Margin="12,0,0,0"/>
+            					<TextBlock TextWrapping="Wrap" Text="朱闻一" d:LayoutOverrides="Width, Height" Grid.Column="1" HorizontalAlignment="Left" LineHeight="24" FontWeight="Bold" Padding="0,7,0,0" Margin="12,0,0,0">
+            						<TextBlock.Foreground>
+            							<SolidColorBrush Color="{DynamicResource #235235235}"/>
+            						</TextBlock.Foreground>
+            					</TextBlock>
             					<Button x:Name="btn_ZiRanZaiHai_Phone_A2" Grid.ColumnSpan="2" Opacity="0" Cursor="Hand" />
             				</Grid>
             				<Grid Height="35" Margin="0,10,0,0">
@@ -325,7 +335,11 @@
             						<ColumnDefinition/>
             					</Grid.ColumnDefinitions>
             					<Image Source="CutImages/图像/phone-07.png" Stretch="Fill" Width="18" Height="23" HorizontalAlignment="Right"/>
-            					<TextBlock TextWrapping="Wrap" Text="金肖" d:LayoutOverrides="Width, Height" Grid.Column="1" HorizontalAlignment="Left" LineHeight="24" FontWeight="Bold" Padding="0,7,0,0" Margin="12,0,0,0"/>
+            					<TextBlock TextWrapping="Wrap" Text="金肖" d:LayoutOverrides="Width, Height" Grid.Column="1" HorizontalAlignment="Left" LineHeight="24" FontWeight="Bold" Padding="0,7,0,0" Margin="12,0,0,0">
+            						<TextBlock.Foreground>
+            							<SolidColorBrush Color="{DynamicResource #235235235}"/>
+            						</TextBlock.Foreground>
+            					</TextBlock>
             					<Button x:Name="btn_ZiRanZaiHai_Phone_A3" Grid.ColumnSpan="2" Opacity="0" Cursor="Hand" />
             				</Grid>
             			</StackPanel>
