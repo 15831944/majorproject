@@ -90,7 +90,7 @@
                 </Grid> 
                 <Grid Grid.Row="0" x:Name="shiyu" Visibility="Visible">
                     <Image Source="/WpfApplication3;component/Images/shiyu.jpg" />
-                    <TextBox TextWrapping="Wrap" x:Name="llable" Margin="703,342,71,125" Text="GDP:4785  \r\n 财政收入：1324" Background="Cyan" Foreground="#FFFF3210" FontWeight="Bold" FontSize="16" />
+                    <TextBox TextWrapping="Wrap" x:Name="llable" Margin="0,0,774,467" Text="GDP:4785  \r\n 财政收入：1324" Background="Cyan" Foreground="#FFFF3210" FontWeight="Bold" FontSize="16" />
 
                 </Grid>
             </Grid>
