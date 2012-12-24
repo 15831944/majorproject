@@ -534,7 +534,6 @@
     <Resource Include="CutImages\图像\Fushe.png" />
     <Resource Include="CutImages\图像\HuoJing.png" />
     <Resource Include="CutImages\图像\YiLiao.png" />
-    <Resource Include="Image1.png" />
     <Resource Include="Images\login_head.png" />
     <Resource Include="loginbuttonbg.png" />
     <Resource Include="logout.png" />
@@ -701,16 +700,13 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< .mine
     <Resource Include="Images\sanwei.png" />
     <Resource Include="Images\shiyu.jpg" />
     <Resource Include="Images\xiaqu.png" />
-=======
     <Resource Include="Images\工业布局规划.jpg" />
     <Resource Include="Images\总体规划.jpg" />
     <Resource Include="Images\yusuan.png" />
     <Resource Include="Images\zhichu.png" />
->>>>>>> .r14
     <Resource Include="Images\图书馆.jpg" />
     <Resource Include="Images\文远楼.jpg" />
     <Resource Include="Images\游泳馆.jpg" />
