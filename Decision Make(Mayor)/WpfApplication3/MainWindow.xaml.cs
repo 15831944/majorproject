@@ -398,31 +398,25 @@ namespace WpfApplication3
         private void TalentC(object sender, System.Windows.RoutedEventArgs e)
         {
             // TODO: Add event handler implementation here.
-            Development_performance.TalentCultivation  TalentC = new  Development_performance.TalentCultivation();
+            Development_performance.Economic  TalentC = new  Development_performance.Economic();
             FrameMiddleContent.Navigate(TalentC);
 
         }
            private void ScientificR(object sender, System.Windows.RoutedEventArgs e)
         {
             // TODO: Add event handler implementation here.
-            Development_performance.ScientificResearch  ScientificR = new  Development_performance.ScientificResearch();
+            Development_performance.Society  ScientificR = new  Development_performance.Society();
             FrameMiddleContent.Navigate(ScientificR);
 
         }
            private void ComprehensiveR(object sender, System.Windows.RoutedEventArgs e)
         {
             // TODO: Add event handler implementation here.
-            Development_performance.ComprehensiveReputation  ComprehensiveR = new  Development_performance.ComprehensiveReputation();
+            Development_performance.Environment  ComprehensiveR = new  Development_performance.Environment();
             FrameMiddleContent.Navigate(ComprehensiveR);
 
         }
-           private void GreenC(object sender, System.Windows.RoutedEventArgs e)
-        {
-            // TODO: Add event handler implementation here.
-            Development_performance.GreenCampus  GreenC = new  Development_performance.GreenCampus();
-            FrameMiddleContent.Navigate(GreenC);
-
-        }
+      
 
         private void menu6_1_Selected(object sender, System.Windows.RoutedEventArgs e)
 		{

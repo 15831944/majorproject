@@ -1,0 +1,194 @@
+﻿<Page x:Class="WpfApplication3.Development_performance.Society"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="972" d:DesignWidth="1265"
+	Title="Society" Loaded="Page_Loaded">
+    <Page.Resources>
+        <DataTemplate x:Key="listviewTemplate">
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="84*"/>
+                    <ColumnDefinition Width="16*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <TextBlock  Text="{Binding Path=title}" FontSize="12"/>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <TextBlock  Text="{Binding Path=number}" FontSize="12"/>
+                </Grid>
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="75*"/>
+            <ColumnDefinition Width="25*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30*"/>
+                <RowDefinition Height="70*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="90*"/>
+                    <RowDefinition Height="10*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40*"/>
+                        <ColumnDefinition Width="60*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="1">
+                        <UniformGrid Columns="5" Rows="1"  VerticalAlignment="Top">
+                            <TextBlock Text="1980" TextAlignment="Left">
+        							<TextBlock.Foreground>
+        								<SolidColorBrush Color="{DynamicResource black}"/>
+        							</TextBlock.Foreground>
+                            </TextBlock>
+                            <TextBlock Text="1990" TextAlignment="Left">
+        							<TextBlock.Foreground>
+        								<SolidColorBrush Color="{DynamicResource black}"/>
+        							</TextBlock.Foreground>
+                            </TextBlock>
+                            <TextBlock Text="2000" TextAlignment="Center">
+        							<TextBlock.Foreground>
+        								<SolidColorBrush Color="{DynamicResource black}"/>
+        							</TextBlock.Foreground>
+                            </TextBlock>
+                            <TextBlock Text="2010" TextAlignment="Right">
+        							<TextBlock.Foreground>
+        								<SolidColorBrush Color="{DynamicResource black}"/>
+        							</TextBlock.Foreground>
+                            </TextBlock>
+                            <TextBlock Text="2012" TextAlignment="Right">
+        							<TextBlock.Foreground>
+        								<SolidColorBrush Color="{DynamicResource black}"/>
+        							</TextBlock.Foreground>
+                            </TextBlock>
+
+                        </UniformGrid>
+
+                        <Slider x:Name="slider"  IsSnapToTickEnabled="True"  TickPlacement="TopLeft" Value="2" SmallChange="1" Maximum="4" ValueChanged="slider_ValueChanged" Margin="0,22,0,-22" />
+                        
+                    </Grid>
+                    <StackPanel Grid.Column="0" Orientation="Horizontal" >
+                        <Button Content="市域视图" Click="Button_Click"/>
+                        <Button Content="辖区视图" Click="Button_Click_1"/>
+                        <Button Content="三维视图" Click="Button_Click_2"/>
+                    </StackPanel>
+                </Grid>
+
+                <Grid Grid.Row="0" x:Name="xiaqu" Visibility="Collapsed">
+                    <Image Source="/WpfApplication3;component/Images/xiaqu.png" />
+                </Grid>
+                <Grid Grid.Row="0" x:Name="sanwei" Visibility="Collapsed">
+                    <Image Source="/WpfApplication3;component/Images/sanwei.png" />
+                </Grid>
+                <Grid Grid.Row="0" x:Name="shiyu" Visibility="Visible">
+                    <Image Source="/WpfApplication3;component/Images/shiyu.jpg" />
+                    <TextBox TextWrapping="Wrap" x:Name="Lable" Margin="703,342,71,125" Text="GDP:4785  \r\n 财政收入：1324" />
+
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="0" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="60*"/>
+                    <ColumnDefinition Width="40*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40*"/>
+                        <RowDefinition Height="30*"/>
+                        <RowDefinition Height="30*"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" Content="经济发展指数" Background="#FFB87411" Foreground="White" FontSize="20" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                    </Label>
+                    <Grid Grid.Row="1" VerticalAlignment="Center">
+                        <Rectangle  RadiusX="8"  RadiusY="8"  />
+                        <Rectangle  RadiusX="8" RadiusY="8" x:Name="MyRectangle" Width="0" Fill="#FFB87411" HorizontalAlignment="Left" >
+                            <Rectangle.Triggers>
+                                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                                    <BeginStoryboard>
+                                        <Storyboard  >
+                                            <DoubleAnimation  Storyboard.TargetName="MyRectangle"  Storyboard.TargetProperty="Width"  From="0" To="400" Duration="0:0:1" />
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </EventTrigger>
+                            </Rectangle.Triggers>
+                        </Rectangle>
+                        <Label  Content="281" FontSize="20" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left"  />
+                    </Grid>
+                    <Grid Grid.Row="2" VerticalAlignment="Center">
+                        <Rectangle  RadiusX="8"  RadiusY="8"  />
+                        <Rectangle  RadiusX="8" RadiusY="8" x:Name="MyRectangle1" Width="0" Fill="#FFB87411" HorizontalAlignment="Left" >
+                            <Rectangle.Triggers>
+                                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                                    <BeginStoryboard>
+                                        <Storyboard  >
+                                            <DoubleAnimation  Storyboard.TargetName="MyRectangle1"  Storyboard.TargetProperty="Width"  From="0" To="220" Duration="0:0:2" />
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </EventTrigger>
+                            </Rectangle.Triggers>
+                        </Rectangle>
+                        <Label  Content="358" FontSize="20" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left"  />
+                    </Grid>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <ScrollViewer>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="20*"/>
+                                <ColumnDefinition Width="80*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="0" Background="#FFE5FBFF">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="19*"/>
+                                    <RowDefinition Height="14*"/>
+                                    <RowDefinition Height="14*"/>
+                                    <RowDefinition Height="14*"/>
+                                    <RowDefinition Height="14*"/>
+                                    <RowDefinition Height="25*"/>
+                                </Grid.RowDefinitions>
+                                <TextBlock TextWrapping="Wrap" Grid.Row="0" Text="新区生产总值" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                <TextBlock TextWrapping="Wrap" Grid.Row="1" Text="财政" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                <TextBlock TextWrapping="Wrap" Grid.Row="2" Text="固定资产投资" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                <TextBlock TextWrapping="Wrap" Grid.Row="3" Text="招商引资" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                <TextBlock TextWrapping="Wrap" Grid.Row="4" Text="科技创新" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                <TextBlock TextWrapping="Wrap" Grid.Row="5" Text="国内外贸易" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Grid>
+                            <Grid Grid.Column="1">
+
+                                <ListView x:Name="Economic"  ItemsSource="{Binding}" ItemTemplate="{StaticResource listviewTemplate}"  Background="{x:Null}"  />
+                            </Grid>
+                        </Grid>
+                    </ScrollViewer>
+                </Grid>
+            </Grid>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30*"/>
+                <RowDefinition Height="30*"/>
+                <RowDefinition Height="40*"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" Orientation="Vertical">
+                <Label Content="曲线图" FontSize="18" FontWeight="Bold"/>
+                <Image Stretch="Fill" Source="/WpfApplication3;component/Images/tubiao2.jpg"/>
+            </StackPanel>
+            <StackPanel Grid.Row="1" Orientation="Vertical">
+                <Label Content="柱状图" FontSize="18" FontWeight="Bold"/>
+                <Image Stretch="Fill" Source="/WpfApplication3;component/Images/tubiao1.jpg"/>
+            </StackPanel>
+            <StackPanel Grid.Row="2" Orientation="Vertical">
+                <Label Content="指标解释" FontSize="18" FontWeight="Bold"/>
+                <TextBox Text="人均GDP - 计算方法 \r\n 人均国内生产总值 = 总产出（即 GDP 总额，社会产品和服务的产出总额） / 总人口 \r\n 地均GDP \r\n 地均GDP，是每平方公里土地创造的GDP，反应土地的使用效率(可以部分反应此地的工业与商业密集程度)" TextWrapping="Wrap" FontSize="14" FontWeight="Bold"/>
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+</Page>
