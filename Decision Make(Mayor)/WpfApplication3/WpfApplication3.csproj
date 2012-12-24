@@ -178,17 +178,14 @@
       <DependentUpon>DataSet_HumanResource.xsd</DependentUpon>
     </Compile>
     <Compile Include="DateHelper.cs" />
-    <Compile Include="Development performance\ComprehensiveReputation.xaml.cs">
-      <DependentUpon>ComprehensiveReputation.xaml</DependentUpon>
+    <Compile Include="Development performance\Economic.xaml.cs">
+      <DependentUpon>Economic.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Development performance\GreenCampus.xaml.cs">
-      <DependentUpon>GreenCampus.xaml</DependentUpon>
+    <Compile Include="Development performance\Environment.xaml.cs">
+      <DependentUpon>Environment.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Development performance\ScientificResearch.xaml.cs">
-      <DependentUpon>ScientificResearch.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Development performance\TalentCultivation.xaml.cs">
-      <DependentUpon>TalentCultivation.xaml</DependentUpon>
+    <Compile Include="Development performance\Society.xaml.cs">
+      <DependentUpon>Society.xaml</DependentUpon>
     </Compile>
     <Compile Include="EggModel\CxEggModel.xaml.cs">
       <DependentUpon>CxEggModel.xaml</DependentUpon>
@@ -319,21 +316,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Development performance\ComprehensiveReputation.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="Development performance\Economic.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Development performance\GreenCampus.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="Development performance\Environment.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Development performance\ScientificResearch.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="Development performance\Society.xaml">
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Development performance\TalentCultivation.xaml">
       <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="EggModel\CxEggModel.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -708,10 +701,16 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< .mine
+    <Resource Include="Images\sanwei.png" />
+    <Resource Include="Images\shiyu.jpg" />
+    <Resource Include="Images\xiaqu.png" />
+=======
     <Resource Include="Images\工业布局规划.jpg" />
     <Resource Include="Images\总体规划.jpg" />
     <Resource Include="Images\yusuan.png" />
     <Resource Include="Images\zhichu.png" />
+>>>>>>> .r14
     <Resource Include="Images\图书馆.jpg" />
     <Resource Include="Images\文远楼.jpg" />
     <Resource Include="Images\游泳馆.jpg" />
