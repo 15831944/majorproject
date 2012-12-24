@@ -106,7 +106,7 @@
                         <RowDefinition Height="30*"/>
                         <RowDefinition Height="30*"/>
                     </Grid.RowDefinitions>
-                    <Label Grid.Row="0" Content="经济发展指数" Background="#FFB87411" Foreground="White" FontSize="20" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                    <Label Grid.Row="0" Content="生态发展指数" Background="#FFB87411" Foreground="White" FontSize="20" HorizontalAlignment="Stretch" VerticalAlignment="Center">
                     </Label>
                     <Grid Grid.Row="1" VerticalAlignment="Center">
                         <Rectangle  RadiusX="8"  RadiusY="8"  />
@@ -148,19 +148,13 @@
                             </Grid.ColumnDefinitions>
                             <Grid Grid.Column="0" Background="#FFE5FBFF">
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="19*"/>
-                                    <RowDefinition Height="14*"/>
-                                    <RowDefinition Height="14*"/>
-                                    <RowDefinition Height="14*"/>
-                                    <RowDefinition Height="14*"/>
-                                    <RowDefinition Height="25*"/>
+                                    <RowDefinition Height="30*"/>
+                                    <RowDefinition Height="50*"/>
+                                    <RowDefinition Height="20*"/>
                                 </Grid.RowDefinitions>
-                                <TextBlock TextWrapping="Wrap" Grid.Row="0" Text="新区生产总值" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                                <TextBlock TextWrapping="Wrap" Grid.Row="1" Text="财政" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                                <TextBlock TextWrapping="Wrap" Grid.Row="2" Text="固定资产投资" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                                <TextBlock TextWrapping="Wrap" Grid.Row="3" Text="招商引资" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                                <TextBlock TextWrapping="Wrap" Grid.Row="4" Text="科技创新" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                                <TextBlock TextWrapping="Wrap" Grid.Row="5" Text="国内外贸易" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                <TextBlock TextWrapping="Wrap" Grid.Row="0" Text="园林绿化" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                <TextBlock TextWrapping="Wrap" Grid.Row="1" Text="环境保护" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                <TextBlock TextWrapping="Wrap" Grid.Row="2" Text="垃圾处理" HorizontalAlignment="Center" VerticalAlignment="Center" />
                             </Grid>
                             <Grid Grid.Column="1">
 
@@ -179,11 +173,11 @@
             </Grid.RowDefinitions>
             <StackPanel Grid.Row="0" Orientation="Vertical">
                 <Label Content="曲线图" FontSize="18" FontWeight="Bold"/>
-                <Image Stretch="Fill" Source="/WpfApplication3;component/Images/tubiao2.jpg"/>
+                <Image Stretch="Fill" Source="/WpfApplication3;component/Images/zhexian.jpg"/>
             </StackPanel>
             <StackPanel Grid.Row="1" Orientation="Vertical">
                 <Label Content="柱状图" FontSize="18" FontWeight="Bold"/>
-                <Image Stretch="Fill" Source="/WpfApplication3;component/Images/tubiao1.jpg"/>
+                <Image Stretch="Fill" Source="/WpfApplication3;component/Images/zhuzhuang.jpg"/>
             </StackPanel>
             <StackPanel Grid.Row="2" Orientation="Vertical">
                 <Label Content="指标解释" FontSize="18" FontWeight="Bold"/>

@@ -147,19 +147,17 @@
                             </Grid.ColumnDefinitions>
                             <Grid Grid.Column="0" Background="#FFE5FBFF">
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="19*"/>
-                                    <RowDefinition Height="14*"/>
-                                    <RowDefinition Height="14*"/>
-                                    <RowDefinition Height="14*"/>
-                                    <RowDefinition Height="14*"/>
+                                    <RowDefinition Height="20*"/>
+                                    <RowDefinition Height="20*"/>
                                     <RowDefinition Height="25*"/>
+                                    <RowDefinition Height="20*"/>
+                                    <RowDefinition Height="15*"/>
                                 </Grid.RowDefinitions>
-                                <TextBlock TextWrapping="Wrap" Grid.Row="0" Text="新区生产总值" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                                <TextBlock TextWrapping="Wrap" Grid.Row="1" Text="财政" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                                <TextBlock TextWrapping="Wrap" Grid.Row="2" Text="固定资产投资" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                                <TextBlock TextWrapping="Wrap" Grid.Row="3" Text="招商引资" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                                <TextBlock TextWrapping="Wrap" Grid.Row="4" Text="科技创新" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                                <TextBlock TextWrapping="Wrap" Grid.Row="5" Text="国内外贸易" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                <TextBlock TextWrapping="Wrap" Grid.Row="0" Text="人口" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                <TextBlock TextWrapping="Wrap" Grid.Row="1" Text="劳动就业" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                <TextBlock TextWrapping="Wrap" Grid.Row="2" Text="人民生活" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                <TextBlock TextWrapping="Wrap" Grid.Row="3" Text="教育" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                <TextBlock TextWrapping="Wrap" Grid.Row="4" Text="卫生" HorizontalAlignment="Center" VerticalAlignment="Center" />
                             </Grid>
                             <Grid Grid.Column="1">
 

@@ -700,6 +700,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Images\zhexian.jpg" />
+    <Resource Include="Images\zhuzhuang.jpg" />
     <Resource Include="Images\sanwei.png" />
     <Resource Include="Images\shiyu.jpg" />
     <Resource Include="Images\xiaqu.png" />

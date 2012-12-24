@@ -36,106 +36,55 @@ namespace WpfApplication3.Development_performance
             {
                 new TeaInformation
                 {
-                  title = "GDP（亿元）",
+                  title = "建成区绿化覆盖率（%）",
                   number = "54.73"
                 },
                 new TeaInformation
                 {
-                  title = "第一产业",
+                  title = "园林绿地面积（万平方米）",
                   number = "924"
                 },
                 new TeaInformation
                 {
-                  title = "第二产业",
+                  title = "人均公共绿地（㎡）",
                   number = "17.57"
                 },
                 new TeaInformation
                 {
-                  title = "第三产业",
+                  title = "工业固体废物产生量（万吨/年）",
                   number = ""
                 },
                 new TeaInformation
                 {
-                  title = "财政收入（亿元）",
+                  title = "工业废水排放量（万吨/年）",
                   number = ""
                 },
                 new TeaInformation
                 {
-                  title = "地方财政收入",
+                  title = "工业废气排放总量（亿立方米/年）",
                   number = ""
                 },
                 new TeaInformation
                 {
-                  title = "地方财政支出（亿元）",
+                  title = "城镇污水纳管率（%）",
                   number = ""
                 },
                 new TeaInformation
                 {
-                  title = "固定资产投资总额（亿元）",
+                  title = "空气质量优良率（%）",
                   number = ""
-                },   new TeaInformation
+                },  
+                new TeaInformation
                 {
-                  title = "房地产开发投资",
+                  title = "清运垃圾（万吨）",
                   number = ""
                 },
                 new TeaInformation
                 {
-                  title = "城市基础设施投资",
+                  title = "垃圾焚烧（万吨）",
                   number = ""
                 },
-                new TeaInformation
-                {
-                  title = "外商直接投资合同项目（项）",
-                  number = ""
-                },
-                new TeaInformation
-                {
-                  title = "外商直接投资合同金额（亿美元）",
-                  number = ""
-                },   new TeaInformation
-                {
-                  title = "期末内资企业注册数（个）",
-                  number = ""
-                },
-                new TeaInformation
-                {
-                  title = "研发机构数（个）",
-                  number = ""
-                },
-                new TeaInformation
-                {
-                  title = "申请专利数（项）",
-                  number = ""
-                },
-                new TeaInformation
-                {
-                  title = "授权专利数（项）",
-                  number = ""
-                },   new TeaInformation
-                {
-                  title = "商品销售总额（亿)",
-                  number = ""
-                },
-                new TeaInformation
-                {
-                  title = "社会消费品零售总额（亿）",
-                  number = ""
-                },
-                new TeaInformation
-                {
-                  title = "外贸进出口总额（亿美元）",
-                  number = ""
-                },
-                new TeaInformation
-                {
-                  title = "出口总额（亿美元）",
-                  number = ""
-                },                      
-                  new TeaInformation
-                {
-                  title = "进口总额（亿美元）",
-                  number = ""
-                }, 
+          
             };
 
             Economic.DataContext = TeaInfo;
@@ -174,111 +123,59 @@ namespace WpfApplication3.Development_performance
             if (slider.Value == 0)
             {
                 Lable.Text = "GDP:5645 \r\n 财政收入:1243";
-
                 List<TeaInformation> TeaInfo = new List<TeaInformation>
             {
-                 new TeaInformation
+                new TeaInformation
                 {
-                  title = "GDP（亿元）",
+                  title = "建成区绿化覆盖率（%）",
                   number = "54.73"
                 },
                 new TeaInformation
                 {
-                  title = "第一产业",
+                  title = "园林绿地面积（万平方米）",
                   number = "924"
                 },
                 new TeaInformation
                 {
-                  title = "第二产业",
+                  title = "人均公共绿地（㎡）",
                   number = "17.57"
                 },
                 new TeaInformation
                 {
-                  title = "第三产业",
-                  number = ""
+                  title = "工业固体废物产生量（万吨/年）",
+                  number = "4565"
                 },
                 new TeaInformation
                 {
-                  title = "财政收入（亿元）",
-                  number = ""
+                  title = "工业废水排放量（万吨/年）",
+                  number = "4145"
                 },
                 new TeaInformation
                 {
-                  title = "地方财政收入",
-                  number = ""
+                  title = "工业废气排放总量（亿立方米/年）",
+                  number = "2541"
                 },
                 new TeaInformation
                 {
-                  title = "地方财政支出（亿元）",
-                  number = ""
+                  title = "城镇污水纳管率（%）",
+                  number = "265"
                 },
                 new TeaInformation
                 {
-                  title = "固定资产投资总额（亿元）",
-                  number = ""
-                },   new TeaInformation
+                  title = "空气质量优良率（%）",
+                  number = "482"
+                },  
+                new TeaInformation
                 {
-                  title = "房地产开发投资",
-                  number = ""
+                  title = "清运垃圾（万吨）",
+                  number = "3546"
                 },
                 new TeaInformation
                 {
-                  title = "城市基础设施投资",
-                  number = ""
+                  title = "垃圾焚烧（万吨）",
+                  number = "5465"
                 },
-                new TeaInformation
-                {
-                  title = "外商直接投资合同项目（项）",
-                  number = ""
-                },
-                new TeaInformation
-                {
-                  title = "外商直接投资合同金额（亿美元）",
-                  number = ""
-                },   new TeaInformation
-                {
-                  title = "期末内资企业注册数（个）",
-                  number = ""
-                },
-                new TeaInformation
-                {
-                  title = "研发机构数（个）",
-                  number = ""
-                },
-                new TeaInformation
-                {
-                  title = "申请专利数（项）",
-                  number = ""
-                },
-                new TeaInformation
-                {
-                  title = "授权专利数（项）",
-                  number = ""
-                },   new TeaInformation
-                {
-                  title = "商品销售总额（亿)",
-                  number = ""
-                },
-                new TeaInformation
-                {
-                  title = "社会消费品零售总额（亿）",
-                  number = ""
-                },
-                new TeaInformation
-                {
-                  title = "外贸进出口总额（亿美元）",
-                  number = ""
-                },
-                new TeaInformation
-                {
-                  title = "出口总额（亿美元）",
-                  number = ""
-                },                      
-                  new TeaInformation
-                {
-                  title = "进口总额（亿美元）",
-                  number = ""
-                }, 
+          
             };
 
                 Economic.DataContext = TeaInfo;
@@ -291,106 +188,55 @@ namespace WpfApplication3.Development_performance
             {
                 new TeaInformation
                 {
-                  title = "GDP（亿元）",
-                  number = "54.51"
+                  title = "建成区绿化覆盖率（%）",
+                  number = "77.87"
                 },
                 new TeaInformation
                 {
-                  title = "第一产业",
-                  number = "693"
+                  title = "园林绿地面积（万平方米）",
+                  number = "714"
                 },
                 new TeaInformation
                 {
-                  title = "第二产业",
-                  number = "232"
+                  title = "人均公共绿地（㎡）",
+                  number = "23.11"
                 },
                 new TeaInformation
                 {
-                  title = "第三产业",
-                  number = ""
+                  title = "工业固体废物产生量（万吨/年）",
+                  number = "4521"
                 },
                 new TeaInformation
                 {
-                  title = "财政收入（亿元）",
-                  number = ""
+                  title = "工业废水排放量（万吨/年）",
+                  number = "332"
                 },
                 new TeaInformation
                 {
-                  title = "地方财政收入",
-                  number = ""
+                  title = "工业废气排放总量（亿立方米/年）",
+                  number = "454"
                 },
                 new TeaInformation
                 {
-                  title = "地方财政支出（亿元）",
-                  number = ""
+                  title = "城镇污水纳管率（%）",
+                  number = "455"
                 },
                 new TeaInformation
                 {
-                  title = "固定资产投资总额（亿元）",
-                  number = ""
-                },   new TeaInformation
+                  title = "空气质量优良率（%）",
+                  number = "442"
+                },  
+                new TeaInformation
                 {
-                  title = "房地产开发投资",
-                  number = ""
+                  title = "清运垃圾（万吨）",
+                  number = "544"
                 },
                 new TeaInformation
                 {
-                  title = "城市基础设施投资",
-                  number = ""
+                  title = "垃圾焚烧（万吨）",
+                  number = "4523"
                 },
-                new TeaInformation
-                {
-                  title = "外商直接投资合同项目（项）",
-                  number = ""
-                },
-                new TeaInformation
-                {
-                  title = "外商直接投资合同金额（亿美元）",
-                  number = ""
-                },   new TeaInformation
-                {
-                  title = "期末内资企业注册数（个）",
-                  number = ""
-                },
-                new TeaInformation
-                {
-                  title = "研发机构数（个）",
-                  number = ""
-                },
-                new TeaInformation
-                {
-                  title = "申请专利数（项）",
-                  number = ""
-                },
-                new TeaInformation
-                {
-                  title = "授权专利数（项）",
-                  number = ""
-                },   new TeaInformation
-                {
-                  title = "商品销售总额（亿)",
-                  number = ""
-                },
-                new TeaInformation
-                {
-                  title = "社会消费品零售总额（亿）",
-                  number = ""
-                },
-                new TeaInformation
-                {
-                  title = "外贸进出口总额（亿美元）",
-                  number = ""
-                },
-                new TeaInformation
-                {
-                  title = "出口总额（亿美元）",
-                  number = ""
-                },                      
-                  new TeaInformation
-                {
-                  title = "进口总额（亿美元）",
-                  number = ""
-                }, 
+          
             };
 
                 Economic.DataContext = TeaInfo;
@@ -402,108 +248,56 @@ namespace WpfApplication3.Development_performance
             {
                 new TeaInformation
                 {
-                  title = "GDP（亿元）",
-                  number = "64.3"
+                  title = "建成区绿化覆盖率（%）",
+                  number = "33.57"
                 },
                 new TeaInformation
                 {
-                  title = "第一产业",
-                  number = "56.2"
+                  title = "园林绿地面积（万平方米）",
+                  number = "4521"
                 },
                 new TeaInformation
                 {
-                  title = "第二产业",
-                  number = "78.5"
+                  title = "人均公共绿地（㎡）",
+                  number = "765"
                 },
                 new TeaInformation
                 {
-                  title = "第三产业",
-                  number = ""
+                  title = "工业固体废物产生量（万吨/年）",
+                  number = "4324"
                 },
                 new TeaInformation
                 {
-                  title = "财政收入（亿元）",
-                  number = ""
+                  title = "工业废水排放量（万吨/年）",
+                  number = "3554"
                 },
                 new TeaInformation
                 {
-                  title = "地方财政收入",
-                  number = ""
+                  title = "工业废气排放总量（亿立方米/年）",
+                  number = "112"
                 },
                 new TeaInformation
                 {
-                  title = "地方财政支出（亿元）",
-                  number = ""
+                  title = "城镇污水纳管率（%）",
+                  number = "665"
                 },
                 new TeaInformation
                 {
-                  title = "固定资产投资总额（亿元）",
-                  number = ""
-                },   new TeaInformation
+                  title = "空气质量优良率（%）",
+                  number = "876"
+                },  
+                new TeaInformation
                 {
-                  title = "房地产开发投资",
-                  number = ""
+                  title = "清运垃圾（万吨）",
+                  number = "342"
                 },
                 new TeaInformation
                 {
-                  title = "城市基础设施投资",
-                  number = ""
+                  title = "垃圾焚烧（万吨）",
+                  number = "324"
                 },
-                new TeaInformation
-                {
-                  title = "外商直接投资合同项目（项）",
-                  number = ""
-                },
-                new TeaInformation
-                {
-                  title = "外商直接投资合同金额（亿美元）",
-                  number = ""
-                },   new TeaInformation
-                {
-                  title = "期末内资企业注册数（个）",
-                  number = ""
-                },
-                new TeaInformation
-                {
-                  title = "研发机构数（个）",
-                  number = ""
-                },
-                new TeaInformation
-                {
-                  title = "申请专利数（项）",
-                  number = ""
-                },
-                new TeaInformation
-                {
-                  title = "授权专利数（项）",
-                  number = ""
-                },   new TeaInformation
-                {
-                  title = "商品销售总额（亿)",
-                  number = ""
-                },
-                new TeaInformation
-                {
-                  title = "社会消费品零售总额（亿）",
-                  number = ""
-                },
-                new TeaInformation
-                {
-                  title = "外贸进出口总额（亿美元）",
-                  number = ""
-                },
-                new TeaInformation
-                {
-                  title = "出口总额（亿美元）",
-                  number = ""
-                },                      
-                  new TeaInformation
-                {
-                  title = "进口总额（亿美元）",
-                  number = ""
-                }, 
+          
             };
-
             }
             if (slider.Value == 3)
             {
@@ -512,106 +306,55 @@ namespace WpfApplication3.Development_performance
             {
                 new TeaInformation
                 {
-                  title = "GDP（亿元）",
-                  number = "56.2"
+                  title = "建成区绿化覆盖率（%）",
+                  number = "79.25"
                 },
                 new TeaInformation
                 {
-                  title = "第一产业",
-                  number = "78.23"
+                  title = "园林绿地面积（万平方米）",
+                  number = "432"
                 },
                 new TeaInformation
                 {
-                  title = "第二产业",
-                  number = "33.26"
+                  title = "人均公共绿地（㎡）",
+                  number = "12.35"
                 },
                 new TeaInformation
                 {
-                  title = "第三产业",
-                  number = ""
+                  title = "工业固体废物产生量（万吨/年）",
+                  number = "6533"
                 },
                 new TeaInformation
                 {
-                  title = "财政收入（亿元）",
-                  number = ""
+                  title = "工业废水排放量（万吨/年）",
+                  number = "234"
                 },
                 new TeaInformation
                 {
-                  title = "地方财政收入",
-                  number = ""
+                  title = "工业废气排放总量（亿立方米/年）",
+                  number = "653"
                 },
                 new TeaInformation
                 {
-                  title = "地方财政支出（亿元）",
-                  number = ""
+                  title = "城镇污水纳管率（%）",
+                  number = "645"
                 },
                 new TeaInformation
                 {
-                  title = "固定资产投资总额（亿元）",
-                  number = ""
-                },   new TeaInformation
+                  title = "空气质量优良率（%）",
+                  number = "1344"
+                },  
+                new TeaInformation
                 {
-                  title = "房地产开发投资",
-                  number = ""
+                  title = "清运垃圾（万吨）",
+                  number = "6545"
                 },
                 new TeaInformation
                 {
-                  title = "城市基础设施投资",
-                  number = ""
+                  title = "垃圾焚烧（万吨）",
+                  number = "4543"
                 },
-                new TeaInformation
-                {
-                  title = "外商直接投资合同项目（项）",
-                  number = ""
-                },
-                new TeaInformation
-                {
-                  title = "外商直接投资合同金额（亿美元）",
-                  number = ""
-                },   new TeaInformation
-                {
-                  title = "期末内资企业注册数（个）",
-                  number = ""
-                },
-                new TeaInformation
-                {
-                  title = "研发机构数（个）",
-                  number = ""
-                },
-                new TeaInformation
-                {
-                  title = "申请专利数（项）",
-                  number = ""
-                },
-                new TeaInformation
-                {
-                  title = "授权专利数（项）",
-                  number = ""
-                },   new TeaInformation
-                {
-                  title = "商品销售总额（亿)",
-                  number = ""
-                },
-                new TeaInformation
-                {
-                  title = "社会消费品零售总额（亿）",
-                  number = ""
-                },
-                new TeaInformation
-                {
-                  title = "外贸进出口总额（亿美元）",
-                  number = ""
-                },
-                new TeaInformation
-                {
-                  title = "出口总额（亿美元）",
-                  number = ""
-                },                      
-                  new TeaInformation
-                {
-                  title = "进口总额（亿美元）",
-                  number = ""
-                }, 
+          
             };
 
                 Economic.DataContext = TeaInfo;
@@ -624,106 +367,55 @@ namespace WpfApplication3.Development_performance
             {
                 new TeaInformation
                 {
-                  title = "GDP（亿元）",
-                  number = "456"
+                  title = "建成区绿化覆盖率（%）",
+                  number = "543.23"
                 },
                 new TeaInformation
                 {
-                  title = "第一产业",
-                  number = "32.2"
+                  title = "园林绿地面积（万平方米）",
+                  number = "543"
                 },
                 new TeaInformation
                 {
-                  title = "第二产业",
-                  number = "45.25"
+                  title = "人均公共绿地（㎡）",
+                  number = "16.57"
                 },
                 new TeaInformation
                 {
-                  title = "第三产业",
-                  number = "56.2"
+                  title = "工业固体废物产生量（万吨/年）",
+                  number = "6546"
                 },
                 new TeaInformation
                 {
-                  title = "财政收入（亿元）",
-                  number = ""
+                  title = "工业废水排放量（万吨/年）",
+                  number = "665"
                 },
                 new TeaInformation
                 {
-                  title = "地方财政收入",
-                  number = ""
+                  title = "工业废气排放总量（亿立方米/年）",
+                  number = "766"
                 },
                 new TeaInformation
                 {
-                  title = "地方财政支出（亿元）",
-                  number = ""
+                  title = "城镇污水纳管率（%）",
+                  number = "765"
                 },
                 new TeaInformation
                 {
-                  title = "固定资产投资总额（亿元）",
-                  number = ""
-                },   new TeaInformation
+                  title = "空气质量优良率（%）",
+                  number = "322"
+                },  
+                new TeaInformation
                 {
-                  title = "房地产开发投资",
-                  number = ""
+                  title = "清运垃圾（万吨）",
+                  number = "3232"
                 },
                 new TeaInformation
                 {
-                  title = "城市基础设施投资",
-                  number = ""
+                  title = "垃圾焚烧（万吨）",
+                  number = "5643"
                 },
-                new TeaInformation
-                {
-                  title = "外商直接投资合同项目（项）",
-                  number = ""
-                },
-                new TeaInformation
-                {
-                  title = "外商直接投资合同金额（亿美元）",
-                  number = ""
-                },   new TeaInformation
-                {
-                  title = "期末内资企业注册数（个）",
-                  number = ""
-                },
-                new TeaInformation
-                {
-                  title = "研发机构数（个）",
-                  number = ""
-                },
-                new TeaInformation
-                {
-                  title = "申请专利数（项）",
-                  number = ""
-                },
-                new TeaInformation
-                {
-                  title = "授权专利数（项）",
-                  number = ""
-                },   new TeaInformation
-                {
-                  title = "商品销售总额（亿)",
-                  number = ""
-                },
-                new TeaInformation
-                {
-                  title = "社会消费品零售总额（亿）",
-                  number = ""
-                },
-                new TeaInformation
-                {
-                  title = "外贸进出口总额（亿美元）",
-                  number = ""
-                },
-                new TeaInformation
-                {
-                  title = "出口总额（亿美元）",
-                  number = ""
-                },                      
-                  new TeaInformation
-                {
-                  title = "进口总额（亿美元）",
-                  number = ""
-                }, 
+          
             };
 
                 Economic.DataContext = TeaInfo;

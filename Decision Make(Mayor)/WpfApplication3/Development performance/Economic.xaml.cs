@@ -53,89 +53,89 @@ namespace WpfApplication3.Development_performance
                 new TeaInformation
                 {
                   title = "第三产业",
-                  number = ""
+                  number = "453"
                 },
                 new TeaInformation
                 {
                   title = "财政收入（亿元）",
-                  number = ""
+                  number = "5435"
                 },
                 new TeaInformation
                 {
                   title = "地方财政收入",
-                  number = ""
+                  number = "654"
                 },
                 new TeaInformation
                 {
                   title = "地方财政支出（亿元）",
-                  number = ""
+                  number = "9823"
                 },
                 new TeaInformation
                 {
                   title = "固定资产投资总额（亿元）",
-                  number = ""
+                  number = "324"
                 },   new TeaInformation
                 {
                   title = "房地产开发投资",
-                  number = ""
+                  number = "6464"
                 },
                 new TeaInformation
                 {
                   title = "城市基础设施投资",
-                  number = ""
+                  number = "423"
                 },
                 new TeaInformation
                 {
                   title = "外商直接投资合同项目（项）",
-                  number = ""
+                  number = "43634"
                 },
                 new TeaInformation
                 {
                   title = "外商直接投资合同金额（亿美元）",
-                  number = ""
+                  number = "8677"
                 },   new TeaInformation
                 {
                   title = "期末内资企业注册数（个）",
-                  number = ""
+                  number = "2234"
                 },
                 new TeaInformation
                 {
                   title = "研发机构数（个）",
-                  number = ""
+                  number = "876"
                 },
                 new TeaInformation
                 {
                   title = "申请专利数（项）",
-                  number = ""
+                  number = "4556"
                 },
                 new TeaInformation
                 {
                   title = "授权专利数（项）",
-                  number = ""
+                  number = "1333"
                 },   new TeaInformation
                 {
                   title = "商品销售总额（亿)",
-                  number = ""
+                  number = "45445"
                 },
                 new TeaInformation
                 {
                   title = "社会消费品零售总额（亿）",
-                  number = ""
+                  number = "656"
                 },
                 new TeaInformation
                 {
                   title = "外贸进出口总额（亿美元）",
-                  number = ""
+                  number = "56"
                 },
                 new TeaInformation
                 {
                   title = "出口总额（亿美元）",
-                  number = ""
+                  number = "655"
                 },                      
                   new TeaInformation
                 {
                   title = "进口总额（亿美元）",
-                  number = ""
+                  number = "3434"
                 }, 
             };
 
@@ -196,89 +196,89 @@ namespace WpfApplication3.Development_performance
                 new TeaInformation
                 {
                   title = "第三产业",
-                  number = ""
+                  number = "5465"
                 },
                 new TeaInformation
                 {
                   title = "财政收入（亿元）",
-                  number = ""
+                  number = "767"
                 },
                 new TeaInformation
                 {
                   title = "地方财政收入",
-                  number = ""
+                  number = "3432"
                 },
                 new TeaInformation
                 {
                   title = "地方财政支出（亿元）",
-                  number = ""
+                  number = "2332"
                 },
                 new TeaInformation
                 {
                   title = "固定资产投资总额（亿元）",
-                  number = ""
+                  number = "5465"
                 },   new TeaInformation
                 {
                   title = "房地产开发投资",
-                  number = ""
+                  number = "6757"
                 },
                 new TeaInformation
                 {
                   title = "城市基础设施投资",
-                  number = ""
+                  number = "6576"
                 },
                 new TeaInformation
                 {
                   title = "外商直接投资合同项目（项）",
-                  number = ""
+                  number = "245666"
                 },
                 new TeaInformation
                 {
                   title = "外商直接投资合同金额（亿美元）",
-                  number = ""
+                  number = "6456"
                 },   new TeaInformation
                 {
                   title = "期末内资企业注册数（个）",
-                  number = ""
+                  number = "675"
                 },
                 new TeaInformation
                 {
                   title = "研发机构数（个）",
-                  number = ""
+                  number = "675"
                 },
                 new TeaInformation
                 {
                   title = "申请专利数（项）",
-                  number = ""
+                  number = "7653"
                 },
                 new TeaInformation
                 {
                   title = "授权专利数（项）",
-                  number = ""
+                  number = "6757"
                 },   new TeaInformation
                 {
                   title = "商品销售总额（亿)",
-                  number = ""
+                  number = "242"
                 },
                 new TeaInformation
                 {
                   title = "社会消费品零售总额（亿）",
-                  number = ""
+                  number = "22"
                 },
                 new TeaInformation
                 {
                   title = "外贸进出口总额（亿美元）",
-                  number = ""
+                  number = "24"
                 },
                 new TeaInformation
                 {
                   title = "出口总额（亿美元）",
-                  number = ""
+                  number = "24"
                 },                      
                   new TeaInformation
                 {
                   title = "进口总额（亿美元）",
-                  number = ""
+                  number = "56"
                 }, 
             };
 
@@ -308,89 +308,89 @@ namespace WpfApplication3.Development_performance
                 new TeaInformation
                 {
                   title = "第三产业",
-                  number = ""
+                  number = "656"
                 },
                 new TeaInformation
                 {
                   title = "财政收入（亿元）",
-                  number = ""
+                  number = "865"
                 },
                 new TeaInformation
                 {
                   title = "地方财政收入",
-                  number = ""
+                  number = "765"
                 },
                 new TeaInformation
                 {
                   title = "地方财政支出（亿元）",
-                  number = ""
+                  number = "765"
                 },
                 new TeaInformation
                 {
                   title = "固定资产投资总额（亿元）",
-                  number = ""
+                  number = "4724"
                 },   new TeaInformation
                 {
                   title = "房地产开发投资",
-                  number = ""
+                  number = "2467"
                 },
                 new TeaInformation
                 {
                   title = "城市基础设施投资",
-                  number = ""
+                  number = "247"
                 },
                 new TeaInformation
                 {
                   title = "外商直接投资合同项目（项）",
-                  number = ""
+                  number = "72"
                 },
                 new TeaInformation
                 {
                   title = "外商直接投资合同金额（亿美元）",
-                  number = ""
+                  number = "742"
                 },   new TeaInformation
                 {
                   title = "期末内资企业注册数（个）",
-                  number = ""
+                  number = "87"
                 },
                 new TeaInformation
                 {
                   title = "研发机构数（个）",
-                  number = ""
+                  number = "675"
                 },
                 new TeaInformation
                 {
                   title = "申请专利数（项）",
-                  number = ""
+                  number = "765"
                 },
                 new TeaInformation
                 {
                   title = "授权专利数（项）",
-                  number = ""
+                  number = "763"
                 },   new TeaInformation
                 {
                   title = "商品销售总额（亿)",
-                  number = ""
+                  number = "7373"
                 },
                 new TeaInformation
                 {
                   title = "社会消费品零售总额（亿）",
-                  number = ""
+                  number = "7563"
                 },
                 new TeaInformation
                 {
                   title = "外贸进出口总额（亿美元）",
-                  number = ""
+                  number = "735"
                 },
                 new TeaInformation
                 {
                   title = "出口总额（亿美元）",
-                  number = ""
+                  number = "8768"
                 },                      
                   new TeaInformation
                 {
                   title = "进口总额（亿美元）",
-                  number = ""
+                  number = "58"
                 }, 
             };
 
@@ -420,89 +420,89 @@ namespace WpfApplication3.Development_performance
                 new TeaInformation
                 {
                   title = "第三产业",
-                  number = ""
+                  number = "375"
                 },
                 new TeaInformation
                 {
                   title = "财政收入（亿元）",
-                  number = ""
+                  number = "875"
                 },
                 new TeaInformation
                 {
                   title = "地方财政收入",
-                  number = ""
+                  number = "2657"
                 },
                 new TeaInformation
                 {
                   title = "地方财政支出（亿元）",
-                  number = ""
+                  number = "72"
                 },
                 new TeaInformation
                 {
                   title = "固定资产投资总额（亿元）",
-                  number = ""
+                  number = "24"
                 },   new TeaInformation
                 {
                   title = "房地产开发投资",
-                  number = ""
+                  number = "87"
                 },
                 new TeaInformation
                 {
                   title = "城市基础设施投资",
-                  number = ""
+                  number = "68"
                 },
                 new TeaInformation
                 {
                   title = "外商直接投资合同项目（项）",
-                  number = ""
+                  number = "635"
                 },
                 new TeaInformation
                 {
                   title = "外商直接投资合同金额（亿美元）",
-                  number = ""
+                  number = "865"
                 },   new TeaInformation
                 {
                   title = "期末内资企业注册数（个）",
-                  number = ""
+                  number = "976"
                 },
                 new TeaInformation
                 {
                   title = "研发机构数（个）",
-                  number = ""
+                  number = "34"
                 },
                 new TeaInformation
                 {
                   title = "申请专利数（项）",
-                  number = ""
+                  number = "765"
                 },
                 new TeaInformation
                 {
                   title = "授权专利数（项）",
-                  number = ""
+                  number = "657"
                 },   new TeaInformation
                 {
                   title = "商品销售总额（亿)",
-                  number = ""
+                  number = "765"
                 },
                 new TeaInformation
                 {
                   title = "社会消费品零售总额（亿）",
-                  number = ""
+                  number = "657"
                 },
                 new TeaInformation
                 {
                   title = "外贸进出口总额（亿美元）",
-                  number = ""
+                  number = "67"
                 },
                 new TeaInformation
                 {
                   title = "出口总额（亿美元）",
-                  number = ""
+                  number = "876"
                 },                      
                   new TeaInformation
                 {
                   title = "进口总额（亿美元）",
-                  number = ""
+                  number = "876"
                 }, 
             };
 
@@ -531,89 +531,89 @@ namespace WpfApplication3.Development_performance
                 new TeaInformation
                 {
                   title = "第三产业",
-                  number = ""
+                  number = "654"
                 },
                 new TeaInformation
                 {
                   title = "财政收入（亿元）",
-                  number = ""
+                  number = "767"
                 },
                 new TeaInformation
                 {
                   title = "地方财政收入",
-                  number = ""
+                  number = "767"
                 },
                 new TeaInformation
                 {
                   title = "地方财政支出（亿元）",
-                  number = ""
+                  number = "456"
                 },
                 new TeaInformation
                 {
                   title = "固定资产投资总额（亿元）",
-                  number = ""
+                  number = "5426"
                 },   new TeaInformation
                 {
                   title = "房地产开发投资",
-                  number = ""
+                  number = "624"
                 },
                 new TeaInformation
                 {
                   title = "城市基础设施投资",
-                  number = ""
+                  number = "624"
                 },
                 new TeaInformation
                 {
                   title = "外商直接投资合同项目（项）",
-                  number = ""
+                  number = "76"
                 },
                 new TeaInformation
                 {
                   title = "外商直接投资合同金额（亿美元）",
-                  number = ""
+                  number = "767"
                 },   new TeaInformation
                 {
                   title = "期末内资企业注册数（个）",
-                  number = ""
+                  number = "31"
                 },
                 new TeaInformation
                 {
                   title = "研发机构数（个）",
-                  number = ""
+                  number = "3431"
                 },
                 new TeaInformation
                 {
                   title = "申请专利数（项）",
-                  number = ""
+                  number = "3434"
                 },
                 new TeaInformation
                 {
                   title = "授权专利数（项）",
-                  number = ""
+                  number = "7654"
                 },   new TeaInformation
                 {
                   title = "商品销售总额（亿)",
-                  number = ""
+                  number = "546"
                 },
                 new TeaInformation
                 {
                   title = "社会消费品零售总额（亿）",
-                  number = ""
+                  number = "654"
                 },
                 new TeaInformation
                 {
                   title = "外贸进出口总额（亿美元）",
-                  number = ""
+                  number = "6546"
                 },
                 new TeaInformation
                 {
                   title = "出口总额（亿美元）",
-                  number = ""
+                  number = "6546"
                 },                      
                   new TeaInformation
                 {
                   title = "进口总额（亿美元）",
-                  number = ""
+                  number = "6546"
                 }, 
             };
 
@@ -648,84 +648,84 @@ namespace WpfApplication3.Development_performance
                 new TeaInformation
                 {
                   title = "财政收入（亿元）",
-                  number = ""
+                  number = "642"
                 },
                 new TeaInformation
                 {
                   title = "地方财政收入",
-                  number = ""
+                  number = "64"
                 },
                 new TeaInformation
                 {
                   title = "地方财政支出（亿元）",
-                  number = ""
+                  number = "987"
                 },
                 new TeaInformation
                 {
                   title = "固定资产投资总额（亿元）",
-                  number = ""
+                  number = "9860"
                 },   new TeaInformation
                 {
                   title = "房地产开发投资",
-                  number = ""
+                  number = "559"
                 },
                 new TeaInformation
                 {
                   title = "城市基础设施投资",
-                  number = ""
+                  number = "78"
                 },
                 new TeaInformation
                 {
                   title = "外商直接投资合同项目（项）",
-                  number = ""
+                  number = "735"
                 },
                 new TeaInformation
                 {
                   title = "外商直接投资合同金额（亿美元）",
-                  number = ""
+                  number = "735"
                 },   new TeaInformation
                 {
                   title = "期末内资企业注册数（个）",
-                  number = ""
+                  number = "264"
                 },
                 new TeaInformation
                 {
                   title = "研发机构数（个）",
-                  number = ""
+                  number = "6524"
                 },
                 new TeaInformation
                 {
                   title = "申请专利数（项）",
-                  number = ""
+                  number = "62"
                 },
                 new TeaInformation
                 {
                   title = "授权专利数（项）",
-                  number = ""
+                  number = "62"
                 },   new TeaInformation
                 {
                   title = "商品销售总额（亿)",
-                  number = ""
+                  number = "26"
                 },
                 new TeaInformation
                 {
                   title = "社会消费品零售总额（亿）",
-                  number = ""
+                  number = "64"
                 },
                 new TeaInformation
                 {
                   title = "外贸进出口总额（亿美元）",
-                  number = ""
+                  number = "64"
                 },
                 new TeaInformation
                 {
                   title = "出口总额（亿美元）",
-                  number = ""
+                  number = "64"
                 },                      
                   new TeaInformation
                 {
                   title = "进口总额（亿美元）",
-                  number = ""
+                  number = "65446"
                 }, 
             };
 
