@@ -15,6 +15,7 @@ using System.Windows.Threading;
 using System.Diagnostics;
 using System.Xml;
 using WpfZhihui;
+using WpfApplication3.Language;
 
 namespace WpfApplication3
 {
@@ -29,6 +30,44 @@ namespace WpfApplication3
         public MainWindow()
         {
             InitializeComponent();
+
+            //
+            menutitle1.Content = WpfApplication3.Language.Language.MainWindow_menutitle1;
+            menutitle2.Content = WpfApplication3.Language.Language.MainWindow_menutitle2;
+            menutitle3.Content = WpfApplication3.Language.Language.MainWindow_menutitle3;
+            menutitle4.Content = WpfApplication3.Language.Language.MainWindow_menutitle4;
+            menutitle5.Content = WpfApplication3.Language.Language.MainWindow_menutitle5;
+            menutitle6.Content = WpfApplication3.Language.Language.MainWindow_menutitle6;
+            menutitle7.Content = WpfApplication3.Language.Language.MainWindow_menutitle7;
+            menutitle8.Content = WpfApplication3.Language.Language.MainWindow_menutitle8;
+            menu1_1.Content = WpfApplication3.Language.Language.MainWindow_menu1_1;
+            menu1_2.Content = WpfApplication3.Language.Language.MainWindow_menu1_2;
+            menu1_3.Content = WpfApplication3.Language.Language.MainWindow_menu1_3;
+            menu2_1.Content = WpfApplication3.Language.Language.MainWindow_menu2_1;
+            menu2_2.Content = WpfApplication3.Language.Language.MainWindow_menu2_2;
+            menu2_3.Content = WpfApplication3.Language.Language.MainWindow_menu2_3;
+            menu2_4.Content = WpfApplication3.Language.Language.MainWindow_menu2_4;
+            menu3_1.Content = WpfApplication3.Language.Language.MainWindow_menu3_1;
+            menu3_2.Content = WpfApplication3.Language.Language.MainWindow_menu3_2;
+            menu4_1.Content = WpfApplication3.Language.Language.MainWindow_menu4_1;
+            menu4_2.Content = WpfApplication3.Language.Language.MainWindow_menu4_2;
+            menu4_3.Content = WpfApplication3.Language.Language.MainWindow_menu4_3;
+            menu5_1.Content = WpfApplication3.Language.Language.MainWindow_menu5_1;
+            menu5_2.Content = WpfApplication3.Language.Language.MainWindow_menu5_2;
+            menu5_3.Content = WpfApplication3.Language.Language.MainWindow_menu5_3;
+            menu6_1.Content = WpfApplication3.Language.Language.MainWindow_menu6_1;
+            menu6_2.Content = WpfApplication3.Language.Language.MainWindow_menu6_2;
+            menu6_3.Content = WpfApplication3.Language.Language.MainWindow_menu6_3;
+            menu6_4.Content = WpfApplication3.Language.Language.MainWindow_menu6_4;
+            menu7_1.Content = WpfApplication3.Language.Language.MainWindow_menu7_1;
+            menu7_2.Content = WpfApplication3.Language.Language.MainWindow_menu7_2;
+            menu7_3.Content = WpfApplication3.Language.Language.MainWindow_menu7_3;
+            menu8_1.Content = WpfApplication3.Language.Language.MainWindow_menu8_1;
+            menu8_2.Content = WpfApplication3.Language.Language.MainWindow_menu8_2;
+            menu8_3.Content = WpfApplication3.Language.Language.MainWindow_menu8_3;
+            lblMedia.Content = WpfApplication3.Language.Language.MainWindow_lblMedia;
+            lblMicroblog.Content = WpfApplication3.Language.Language.MainWindow_lblMicroblog;
+            //
             DirectoryInfo di;
             di = new DirectoryInfo(System.Environment.CurrentDirectory);
             strPATH = di.Parent.Parent.FullName;

@@ -2199,7 +2199,7 @@
                 <Grid x:Name="RssNews" Width="286" HorizontalAlignment="Left" Margin="2,261.5,0,10">
                     <ListView x:Name="Rsslist" ItemTemplate="{DynamicResource DataTemplate1}" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Margin="0" />
                 </Grid>
-                <Label Content="媒  体" Style="{DynamicResource LabelRightContent}" VerticalAlignment="Top" FontFamily="Helvetica" FontSize="14" FontWeight="Bold"/>
+                <Label Name="lblMedia" Content="媒  体" Style="{DynamicResource LabelRightContent}" VerticalAlignment="Top" FontFamily="Helvetica" FontSize="14" FontWeight="Bold"/>
             </Grid>
             <Grid Grid.Row="1" Name="Weibo" >
             	<Grid.RowDefinitions>
@@ -2231,7 +2231,7 @@
                     <Button x:Name="weibo_search" Content="Button" Click="weibo_search_Click" Cursor="Hand" Style="{DynamicResource ButtonStyle10}" Margin="0.5,7,0,8" Grid.Column="1" HorizontalAlignment="Left" Width="33.809"/>
                 </Grid>
                 <WebBrowser Width="278" x:Name="wb_weibo" HorizontalAlignment="Left" Margin="6,0,0,20" Height="298" VerticalAlignment="Bottom" Grid.Row="2" />
-                <Label Content="微  博" Style="{DynamicResource LabelRightContent}" FontFamily="Helvetica" FontSize="14" FontWeight="Bold" Height="33" VerticalAlignment="Top"/>
+                <Label Name="lblMicroblog" Content="微  博" Style="{DynamicResource LabelRightContent}" FontFamily="Helvetica" FontSize="14" FontWeight="Bold" Height="33" VerticalAlignment="Top"/>
             </Grid>
         </Grid>
     </Grid>

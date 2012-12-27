@@ -1934,7 +1934,7 @@
                     </Grid>
                     <TextBlock HorizontalAlignment="Left" Height="18.333" Margin="28.167,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="37.333" FontSize="14" FontFamily="Helvetica"><TextBlock.Foreground>
         			<SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
-        		</TextBlock.Foreground><Run Language="zh-cn" Text="天  气"/></TextBlock>
+        		</TextBlock.Foreground><Run Name="runWeather" Language="zh-cn" Text="天  气"/></TextBlock>
                     <Label x:Name="w_label0" Content="11月2日" HorizontalAlignment="Left" Height="24.5" Margin="123,11.5,0,0" VerticalAlignment="Top" Width="73">
                         <Label.Foreground>
                             <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
@@ -1967,7 +1967,7 @@
                             <GridSplitter HorizontalAlignment="Stretch" Height="1" Margin="5,0"/>
                             <TextBox x:Name="textBox_Calendar" TextWrapping="Wrap" Background="{x:Null}" Style="{DynamicResource TextBoxStyle2}" Text="今天上午" Foreground="#FFD8E3B9" Margin="3,3,3,0" FontSize="11" />
                         </StackPanel>
-                        <TextBlock HorizontalAlignment="Left" Height="18.333" Margin="28.167,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="37.333" FontSize="14" FontFamily="Helvetica" Text="日  程"><TextBlock.Foreground>
+                        <TextBlock Name="tblCalendar" HorizontalAlignment="Left" Height="18.333" Margin="28.167,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="37.333" FontSize="14" FontFamily="Helvetica" Text="日  程"><TextBlock.Foreground>
         			<SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
         		</TextBlock.Foreground></TextBlock>
                     </Grid>
@@ -1986,7 +1986,7 @@
                                 <DropShadowEffect/>
                             </Path.Effect>
                         </Path>
-                        <TextBlock HorizontalAlignment="Left" Height="18.333" Margin="28.167,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="37.333" FontSize="14" FontFamily="Helvetica" Text="气  温"><TextBlock.Foreground>
+                        <TextBlock Name="tblTemperature" HorizontalAlignment="Left" Height="18.333" Margin="28.167,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="37.333" FontSize="14" FontFamily="Helvetica" Text="气  温"><TextBlock.Foreground>
         			<SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
         		</TextBlock.Foreground></TextBlock>
                         <Button Content="+" Height="22.625" HorizontalAlignment="Right" Margin="567.25,13.375,5,0" x:Name="btn_maxweather" VerticalAlignment="Top" Width="19.75" Click="btn_maxweather_Click" VerticalContentAlignment="Top" ContentTemplate="{DynamicResource DataTemplate2}" Style="{DynamicResource ButtonStyle6}" FontSize="14" FontWeight="Bold" Cursor="Hand" Background="{x:Null}" />
@@ -2020,7 +2020,7 @@
                         <DropShadowEffect/>
                     </Path.Effect>
                 </Path>
-                <TextBlock HorizontalAlignment="Left" Height="18.333" Margin="12.667,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="71.667" FontSize="14" FontFamily="Helvetica" Text="PM2.5监测"><TextBlock.Foreground>
+                <TextBlock Name="tblPM" HorizontalAlignment="Left" Height="18.333" Margin="12.667,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="71.667" FontSize="14" FontFamily="Helvetica" Text="PM2.5监测"><TextBlock.Foreground>
         			<SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
         		</TextBlock.Foreground></TextBlock>
                 <Image x:Name="w_imageWeather" HorizontalAlignment="Left" Margin="21,44,20,0" Width="444" RenderTransformOrigin="0.5,0.5" Height="336" VerticalAlignment="Top" Panel.ZIndex="1" Visibility="Collapsed">
@@ -2078,7 +2078,7 @@
                         <DropShadowEffect/>
                     </Path.Effect>
                 </Path>
-                <TextBlock HorizontalAlignment="Left" Height="18.333" Margin="16.5,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="57.5" FontSize="14" FontFamily="Helvetica" Text="突发事件"><TextBlock.Foreground>
+                <TextBlock Name="tblEmergency" HorizontalAlignment="Left" Height="18.333" Margin="16.5,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="57.5" FontSize="14" FontFamily="Helvetica" Text="突发事件"><TextBlock.Foreground>
             		<SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
             	</TextBlock.Foreground></TextBlock>
                 <Button Content="Max" Height="23" HorizontalAlignment="Right" Margin="0,13,5,0" x:Name="btn_maxemergency" Style="{DynamicResource ButtonStyle6}" Width="20.5" VerticalContentAlignment="Top" FontWeight="Bold" FontSize="14"  VerticalAlignment="Top" Click="btn_maxemergency_Click" Cursor="Hand" Background="{x:Null}" />
@@ -2150,7 +2150,7 @@
                         <DropShadowEffect/>
                     </Path.Effect>
                 </Path>
-                <TextBlock HorizontalAlignment="Left" Height="18.333" Margin="16.669,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="71.667" FontSize="14" FontFamily="Helvetica" Text="城市交通"><TextBlock.Foreground>
+                <TextBlock Name="tblTransportation" HorizontalAlignment="Left" Height="18.333" Margin="16.669,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="71.667" FontSize="14" FontFamily="Helvetica" Text="城市交通"><TextBlock.Foreground>
             		<SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
             	</TextBlock.Foreground></TextBlock>
                 <Button Content="Max" HorizontalAlignment="Right" Margin="0,13,5,0" x:Name="btn_maxtraffic" Style="{DynamicResource ButtonStyle6}" Width="20.5" Click="btn_maxtraffic_Click" VerticalContentAlignment="Top" FontWeight="Bold" FontSize="14" Height="23" VerticalAlignment="Top" Cursor="Hand" Background="{x:Null}" />

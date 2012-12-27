@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Windows;
+using WpfApplication3.Language;
 //using ESRI.ArcGIS.ADF.CATIDs;
 //using ESRI.ArcGIS.Controls;
 //using ESRI.ArcGIS.Geometry;
@@ -22,6 +23,8 @@ namespace WpfApplication3
         {
             //ESRI.ArcGIS.RuntimeManager.Bind(ESRI.ArcGIS.ProductCode.Engine);
             //InitializeEngineLicense();
+            LanguageHelper lh = new LanguageHelper();
+            lh.setLanguage("en-US");
         }
 
         //private void InitializeEngineLicense()

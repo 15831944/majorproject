@@ -30,6 +30,15 @@ namespace WpfApplication3
         public HomePage()
         {
             InitializeComponent();
+
+            //
+            runWeather.Text = WpfApplication3.Language.Language.HomePage_runWeather;
+            tblCalendar.Text = WpfApplication3.Language.Language.HomePage_tblCalendar;
+            tblPM.Text = WpfApplication3.Language.Language.HomePage_tblPM;
+            tblTemperature.Text = WpfApplication3.Language.Language.HomePage_tblTemperature;
+            tblEmergency.Text = WpfApplication3.Language.Language.HomePage_tblEmergency;
+            tblTransportation.Text = WpfApplication3.Language.Language.HomePage_tblTransportation;
+            //
             DirectoryInfo di;
             di = new DirectoryInfo(System.Environment.CurrentDirectory);
             strPATH = di.Parent.Parent.FullName;
