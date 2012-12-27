@@ -5,68 +5,113 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       mc:Ignorable="d" 
       d:DesignHeight="972" d:DesignWidth="1265"
-	Title="PageSpatialResource" Loaded="Page_Loaded">
+	Title="PageSpatialResource">
 
-    <Grid>
+    <Grid Margin="0,0,5,0">
+    	<Grid.RowDefinitions>
+    		<RowDefinition Height="41.796"/>
+    		<RowDefinition/>
+    	</Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="75*"/>
-            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Grid Grid.Column="0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="10*"/>
-                <RowDefinition Height="80*"/>
-                <RowDefinition Height="10*"/>
-            </Grid.RowDefinitions>
-            <Grid Grid.Row="0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="20*"/>
-                    <ColumnDefinition Width="20*"/>
-                    <ColumnDefinition Width="20*"/>
-                    <ColumnDefinition Width="40*"/>
-                </Grid.ColumnDefinitions>
-                <Grid Grid.Column="0">
-                    <Button Name="btnOverallPlan" Content="总体规划" Visibility="Visible" Click="btnOverallPlan_Click" />
-                </Grid>
-                <Grid Grid.Column="1">
-                    <Button Name="btnLandUsePlan" Content="土地使用规划" Visibility="Visible" Click="btnLandUsePlan_Click" />
-                </Grid>
-                <Grid Grid.Column="2">
-                    <Button Name="btnIndustrialLayout" Content="工业布局规划" Visibility="Visible" Click="btnIndustrialLayout_Click" />
-                </Grid>
-            </Grid>
-            <Grid Grid.Row="1">
-                <WebBrowser Name="webbrowserContent"/>
-            </Grid>
-            <Grid Grid.Row="2">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="20*"/>
-                    <ColumnDefinition Width="20*"/>
-                    <ColumnDefinition Width="20*"/>
-                    <ColumnDefinition Width="40*"/>
-                </Grid.ColumnDefinitions>
-                <Grid Grid.Column="0">
-                    <Button Name="btnSatellite" Content="卫星图" Click="btnSatellite_Click" />
-                </Grid>
-                <Grid Grid.Column="1">
-                    <Button Name="btnRoadMap" Content="地图" Click="btnRoadMap_Click" />
-                </Grid>
-                <Grid Grid.Column="2">
-                    <Button Name="btnPlan" Content="规划" Click="btnPlan_Click" />
-                </Grid>
-            </Grid>
-        </Grid>
-        <Grid Grid.Column="1">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="10*"/>
-                <RowDefinition Height="90*"/>
-            </Grid.RowDefinitions>
-            <Grid Grid.Row="0">
-                <Label FontSize="24" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="概况说明"/>
-            </Grid>
-            <Grid Grid.Row="1">
-                <TextBlock Name="tblAnnotation" TextWrapping="WrapWithOverflow" Background="White" Margin="10,10,10,10"/>
-            </Grid>
+        <Rectangle RadiusY="8" RadiusX="8" StrokeThickness="2" Grid.RowSpan="2">
+        	<Rectangle.Effect>
+        		<DropShadowEffect/>
+        	</Rectangle.Effect>
+        	<Rectangle.Fill>
+        		<SolidColorBrush Color="{DynamicResource Mainbg}"/>
+        	</Rectangle.Fill>
+        </Rectangle>
+        <Label Style="{DynamicResource Labeltopheader}" FontFamily="Helvetica" FontSize="14" FontWeight="Bold" Content="空间资源" Margin="0,0,0,9" d:LayoutOverrides="Height"/>
+        <Grid Grid.Row="1">
+        	<Grid.ColumnDefinitions>
+        		<ColumnDefinition/>
+        		<ColumnDefinition Width="263.34"/>
+        	</Grid.ColumnDefinitions>
+        	<Grid Grid.Column="0" Margin="0,8,8.5,0">
+        		<Grid.RowDefinitions>
+        			<RowDefinition/>
+        		</Grid.RowDefinitions>
+        		<TabControl Style="{DynamicResource TabControlSubContent}" Margin="10,0,0,10">
+        			<TabItem Header="卫星图" Style="{DynamicResource TabItem2ndmenuMIddle}" Margin="5,0,-5,0">
+        				<Grid x:Name="Grid_Satellite" Loaded="Grid_Satellite_Loaded">
+        					<WebBrowser x:Name="webbrowserContent"/>
+        				</Grid>
+        			</TabItem>
+        			<TabItem Header="地图" Style="{DynamicResource TabItem2ndmenuMIddle}">
+        				<Grid x:Name="Grid_Map" Loaded="Grid_Map_Loaded">
+        					<WebBrowser x:Name="webbrowserContent1"/>
+        				</Grid>
+        			</TabItem>
+        			<TabItem Header="规划" Style="{DynamicResource TabItem2ndmenuMIddle}">
+        				<Grid x:Name="Grid_Plan" Loaded="Grid_Plan_Loaded">
+        					<WebBrowser x:Name="webbrowserContent2" Margin="0"/>
+        					<Grid HorizontalAlignment="Right" Height="30" Margin="0,-48.333,3.5,0" VerticalAlignment="Top">
+        						<Grid>
+        							<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="1,1,0,0">
+        								<Rectangle.Stroke>
+        									<SolidColorBrush Color="{DynamicResource #235235235}"/>
+        								</Rectangle.Stroke>
+        							</Rectangle>
+        							<Rectangle HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" StrokeDashArray="3 3" StrokeThickness="1" RadiusX="8" RadiusY="8" Stroke="{x:Null}" Margin="0,0,1,1">
+        								<Rectangle.Fill>
+        									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+        										<GradientStop Color="#FF84857F"/>
+        										<GradientStop Color="#FF3B3B3B" Offset="1"/>
+        										<GradientStop Color="#FF5B5C58" Offset="0.509"/>
+        									</LinearGradientBrush>
+        								</Rectangle.Fill>
+        							</Rectangle>
+        							<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="0,0,1,1">
+        								<Rectangle.Stroke>
+        									<SolidColorBrush Color="{DynamicResource Foregroundgray}"/>
+        								</Rectangle.Stroke>
+        							</Rectangle>
+        						</Grid>
+        						<StackPanel Orientation="Horizontal" d:LayoutOverrides="Width">
+        							<RadioButton x:Name="OverallPlan" Content="总体规划" Checked="OverallPlan_Checked" d:LayoutOverrides="Height" Style="{DynamicResource RadioButtonSpatial}" Margin="1,1,1,2"/>
+        							<RadioButton x:Name="LandUsePlan" Content="土地使用规划" d:LayoutOverrides="Height" Checked="LandUsePlan_Checked" Style="{DynamicResource RadioButtonSpatialMiddle}" Margin="0,1,0,2"/>
+        							<RadioButton x:Name="IndustrialLayout" Content="工业布局规划" d:LayoutOverrides="Height" Checked="IndustrialLayout_Checked" Margin="1,1,1,2" Style="{DynamicResource RadioButtonSpatialLast}"/>
+        						</StackPanel>
+        					</Grid>
+        				</Grid>
+        			</TabItem>
+        		</TabControl>
+        	</Grid>
+        	<Grid Grid.Column="1">
+        		<Grid.RowDefinitions>
+        			<RowDefinition/>
+        		</Grid.RowDefinitions>
+        		<Grid Margin="10">
+        			<Grid>
+        				<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="1,1,0,0">
+        					<Rectangle.Stroke>
+        						<SolidColorBrush Color="{DynamicResource #235235235}"/>
+        					</Rectangle.Stroke>
+        				</Rectangle>
+        				<Rectangle HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" StrokeDashArray="3 3" StrokeThickness="1" RadiusX="8" RadiusY="8" Stroke="{x:Null}" Margin="0,0,1,1">
+        					<Rectangle.Fill>
+        						<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+        							<GradientStop Color="#FF5D5D5D" Offset="1"/>
+        							<GradientStop Color="#FF64665C"/>
+        						</LinearGradientBrush>
+        					</Rectangle.Fill>
+        				</Rectangle>
+        				<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="0,0,1,1">
+        					<Rectangle.Stroke>
+        						<SolidColorBrush Color="{DynamicResource Foregroundgray}"/>
+        					</Rectangle.Stroke>
+        				</Rectangle>
+        			</Grid>
+        			<Label Style="{DynamicResource LabelNormal}" FontSize="16" Content="概况说明" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,5,0,0"/>
+        			<TextBlock x:Name="tblAnnotation" TextWrapping="WrapWithOverflow" Margin="10,35,10,10" FontSize="14" Padding="5">
+        				<TextBlock.Foreground>
+        					<SolidColorBrush Color="{DynamicResource #235235235}"/>
+        				</TextBlock.Foreground>
+        			</TextBlock>
+        		</Grid>
+        	</Grid>
         </Grid>
     </Grid>
 </Page>

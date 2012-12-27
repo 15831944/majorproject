@@ -1917,7 +1917,7 @@
                 				<SolidColorBrush Color="{DynamicResource #646464}"/>
                 			</ListBoxItem.Foreground>
                 		</ListBoxItem>
-                		<ListBoxItem x:Name="menu2_4" Content="设备资源" Style="{DynamicResource ListBoxMainMenuSubmenu}" Height="70" FontSize="16" Selected="menu2_4_Selected">
+                		<ListBoxItem x:Name="menu2_4" Content="财政资源" Style="{DynamicResource ListBoxMainMenuSubmenu}" Height="70" FontSize="16" Selected="menu2_4_Selected">
                 			<ListBoxItem.Foreground>
                 				<SolidColorBrush Color="{DynamicResource #646464}"/>
                 			</ListBoxItem.Foreground>

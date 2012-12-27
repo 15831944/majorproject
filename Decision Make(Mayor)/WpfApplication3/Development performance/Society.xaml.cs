@@ -135,35 +135,8 @@ namespace WpfApplication3.Development_performance
 
             Economic.DataContext = TeaInfo;
             Economic.SelectedIndex = 0;
+			Lable.Text="GDP:4785  \r\n财政收入：1324";
         }
-
-
-
-
-
-
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            shiyu.Visibility = System.Windows.Visibility.Visible;
-            xiaqu.Visibility = System.Windows.Visibility.Collapsed;
-            sanwei.Visibility = System.Windows.Visibility.Collapsed;
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            shiyu.Visibility = System.Windows.Visibility.Collapsed;
-            xiaqu.Visibility = System.Windows.Visibility.Visible;
-            sanwei.Visibility = System.Windows.Visibility.Collapsed;
-        }
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            shiyu.Visibility = System.Windows.Visibility.Collapsed;
-            xiaqu.Visibility = System.Windows.Visibility.Collapsed;
-            sanwei.Visibility = System.Windows.Visibility.Visible;
-        }
-
         private void slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             if (slider.Value == 0)
@@ -595,7 +568,7 @@ namespace WpfApplication3.Development_performance
             }
             if (slider.Value == 4)
             {
-                Lable.Text = "GDP:9877 \r\n 财政收入:4023";
+                Lable.Text = "GDP:9877 \r\n财政收入:4023";
                 List<TeaInformation> TeaInfo = new List<TeaInformation>
             {
                 new TeaInformation

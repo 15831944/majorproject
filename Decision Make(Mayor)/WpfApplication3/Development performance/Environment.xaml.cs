@@ -89,33 +89,7 @@ namespace WpfApplication3.Development_performance
 
             Economic.DataContext = TeaInfo;
             Economic.SelectedIndex = 0;
-        }
-
-
-
-
-
-
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            shiyu.Visibility = System.Windows.Visibility.Visible;
-            xiaqu.Visibility = System.Windows.Visibility.Collapsed;
-            sanwei.Visibility = System.Windows.Visibility.Collapsed;
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            shiyu.Visibility = System.Windows.Visibility.Collapsed;
-            xiaqu.Visibility = System.Windows.Visibility.Visible;
-            sanwei.Visibility = System.Windows.Visibility.Collapsed;
-        }
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            shiyu.Visibility = System.Windows.Visibility.Collapsed;
-            xiaqu.Visibility = System.Windows.Visibility.Collapsed;
-            sanwei.Visibility = System.Windows.Visibility.Visible;
+			Lable.Text="GDP:4785  \r\n财政收入：1324";
         }
 
         private void slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)

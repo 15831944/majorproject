@@ -4,7 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
+      d:DesignHeight="972" d:DesignWidth="1265"
 	Title="PageHumanResource"
       Loaded="Page_Loaded">
     <Page.Resources>
@@ -15,7 +15,7 @@
             <Button Name="Depart" Content="{Binding}" Click="Depart_Click"></Button>
         </ControlTemplate>
     </Page.Resources>
-    <Grid>
+    <Grid Margin="0,0,5,0">
         <Grid.RowDefinitions>
             <RowDefinition Height="20*"></RowDefinition>
             <RowDefinition Height="80*"></RowDefinition>
@@ -25,20 +25,31 @@
             <ColumnDefinition Width="20*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         
+        <Rectangle RadiusX="8" RadiusY="8" Grid.RowSpan="2" Grid.ColumnSpan="2" Margin="0,0,-85,-672">
+        	<Rectangle.Effect>
+        		<DropShadowEffect/>
+        	</Rectangle.Effect>
+        	<Rectangle.Fill>
+        		<SolidColorBrush Color="{DynamicResource Mainbg}"/>
+        	</Rectangle.Fill>
+        </Rectangle>
+        <Label VerticalAlignment="Top" Style="{DynamicResource Labeltopheader}" Content="经费资源" Grid.ColumnSpan="2" Margin="0,0,-85,0"/>
+        
+        
         <StackPanel Grid.Column="0" Grid.Row="0">
-            <Label Content="区长：xx" Name="Leader"></Label>
-            <Label Content="彭崧" Name="ViceLeader"></Label>
-            <Label Content="规划和土地管理局" Name="Department"></Label>
+            <Label Content="区长：xx" x:Name="Leader"/>
+            <Label Content="彭崧" x:Name="ViceLeader"/>
+            <Label Content="规划和土地管理局" x:Name="Department"/>
         </StackPanel>
         
         <!--人员列表-->
         <Grid Grid.Column="1" Grid.Row="0">
             <Grid.RowDefinitions>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
+                <RowDefinition/>
+                <RowDefinition/>
             </Grid.RowDefinitions>
-            <Button Content="局长：许健" Name="JuZhang" Grid.Row="0" Click="JuZhang_Click"></Button>
-            <ListBox Name="listLeader" Grid.Row="1">
+            <Button Content="局长：许健" x:Name="JuZhang" Grid.Row="0" Click="JuZhang_Click"/>
+            <ListBox x:Name="listLeader" Grid.Row="1">
                 <ListBox.Template>
                     <ControlTemplate TargetType="{x:Type ListBox}">
                         <WrapPanel Orientation="Horizontal" IsItemsHost="True" Background="{x:Null}"/>
@@ -54,7 +65,7 @@
 
 
         <!--部门列表-->
-        <ListBox Name="listDepartment" Grid.Row="1" Grid.Column="0">
+        <ListBox x:Name="listDepartment" Grid.Row="1" Grid.Column="0">
             <ListBox.ItemContainerStyle>
                 <Style TargetType="{x:Type ListBoxItem}" >
                     <Setter Property="Template" Value="{StaticResource listBoxItemDepart}"/>
@@ -65,12 +76,12 @@
         
         <Grid Grid.Column="1" Grid.Row="1">
             <Grid.RowDefinitions>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
+                <RowDefinition/>
+                <RowDefinition/>
             </Grid.RowDefinitions>
             
-            <TextBlock Grid.Row="0" TextWrapping="Wrap" Name="BriefIntro"></TextBlock>
-            <TextBlock Grid.Row="1" TextWrapping="Wrap" Name="Address"></TextBlock>
+            <TextBlock Grid.Row="0" TextWrapping="Wrap" x:Name="BriefIntro"/>
+            <TextBlock Grid.Row="1" TextWrapping="Wrap" x:Name="Address"/>
         </Grid>
         
         

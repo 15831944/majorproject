@@ -20,17 +20,17 @@
             										<VisualState x:Name="Selected">
             											<Storyboard>
             												<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="ellipse">
-            													<EasingColorKeyFrame KeyTime="0" Value="{StaticResource GreenLeft}"/>
+            													<EasingColorKeyFrame KeyTime="0" Value="{StaticResource Orangeleft}"/>
             												</ColorAnimationUsingKeyFrames>
             												<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="ellipse">
-            													<EasingColorKeyFrame KeyTime="0" Value="{StaticResource GreenRight}"/>
-            												</ColorAnimationUsingKeyFrames>
-            												<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
-            													<EasingColorKeyFrame KeyTime="0" Value="{StaticResource Menu2ndSelected}"/>
+            													<EasingColorKeyFrame KeyTime="0" Value="{StaticResource OrangeColor}"/>
             												</ColorAnimationUsingKeyFrames>
             												<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
             													<EasingColorKeyFrame KeyTime="0" Value="{StaticResource #235235235}"/>
             												</ColorAnimationUsingKeyFrames>
+            												<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="rectangle">
+            													<DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+            												</ObjectAnimationUsingKeyFrames>
             											</Storyboard>
             										</VisualState>
             										<VisualState x:Name="SelectedUnfocused"/>
@@ -43,17 +43,17 @@
             										<VisualState x:Name="MouseOver">
             											<Storyboard>
             												<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="ellipse">
-            													<EasingColorKeyFrame KeyTime="0" Value="{StaticResource GreenLeft}"/>
+            													<EasingColorKeyFrame KeyTime="0" Value="{StaticResource Orangeleft}"/>
             												</ColorAnimationUsingKeyFrames>
             												<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="ellipse">
-            													<EasingColorKeyFrame KeyTime="0" Value="{StaticResource GreenRight}"/>
-            												</ColorAnimationUsingKeyFrames>
-            												<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
-            													<EasingColorKeyFrame KeyTime="0" Value="{StaticResource Menu2ndSelected}"/>
+            													<EasingColorKeyFrame KeyTime="0" Value="{StaticResource OrangeColor}"/>
             												</ColorAnimationUsingKeyFrames>
             												<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
             													<EasingColorKeyFrame KeyTime="0" Value="{StaticResource #235235235}"/>
             												</ColorAnimationUsingKeyFrames>
+            												<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="rectangle">
+            													<DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+            												</ObjectAnimationUsingKeyFrames>
             											</Storyboard>
             										</VisualState>
             										<VisualState x:Name="Disabled"/>
@@ -66,9 +66,9 @@
             										<VisualState x:Name="VisualStatetest"/>
             									</VisualStateGroup>
             								</VisualStateManager.VisualStateGroups>
-            								<Rectangle x:Name="rectangle" Stroke="Black" StrokeDashArray="3 3" Margin="0,2" Grid.ColumnSpan="3" Height="70" RadiusX="5" RadiusY="5">
+            								<Rectangle x:Name="rectangle" Stroke="Black" StrokeDashArray="3 3" Margin="0,2" Grid.ColumnSpan="3" Height="70" RadiusX="5" RadiusY="5" Visibility="Hidden">
             									<Rectangle.Fill>
-            										<SolidColorBrush Color="{DynamicResource white}"/>
+            										<SolidColorBrush Color="{DynamicResource MouseOverColor}"/>
             									</Rectangle.Fill>
             								</Rectangle>
             								<Grid HorizontalAlignment="Center" VerticalAlignment="Center" Width="15" Height="15">
@@ -146,28 +146,46 @@
             				<RowDefinition Height="0.399*"/>
             				<RowDefinition Height="0.601*"/>
             			</Grid.RowDefinitions>
-            			<Label Content="最新文件" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{DynamicResource LabelNormal}" Margin="10,7,0,0">
-            				<Label.Foreground>
-            					<SolidColorBrush Color="{DynamicResource white}"/>
-            				</Label.Foreground>
-            			</Label>
-            			<Grid Margin="10,40,10,5">
-            				<Rectangle StrokeThickness="0.5" Height="1" StrokeDashArray="3 3" Width="355" VerticalAlignment="Top">
-            					<Rectangle.Stroke>
-            						<SolidColorBrush Color="#FF7A7A7A"/>
-            					</Rectangle.Stroke>
-            				</Rectangle>
-            				<ListBox x:Name="listboxLatestDocsIsRead" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" BorderBrush="{x:Null}" BorderThickness="0" Background="{x:Null}" Margin="0,5,0,0" >
-            					<ListBox.ItemContainerStyle>
-            						<Style TargetType="{x:Type ListBoxItem}" >
-            							<Setter Property="Background" Value="Transparent"/>
-            							<Setter Property="HorizontalContentAlignment" Value="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
-            							<Setter Property="VerticalContentAlignment" Value="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
-            							<Setter Property="Padding" Value="2,0,0,0"/>
-            							<Setter Property="Template" Value="{StaticResource listBoxItemDocIssue}"/>
-            						</Style>
-            					</ListBox.ItemContainerStyle>
-            				</ListBox>
+            			<Grid>
+            				<Grid>
+            					<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="1,1,0,0">
+            						<Rectangle.Stroke>
+            							<SolidColorBrush Color="{DynamicResource #235235235}"/>
+            						</Rectangle.Stroke>
+            					</Rectangle>
+            					<Rectangle HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" StrokeDashArray="3 3" StrokeThickness="1" RadiusX="8" RadiusY="8" Stroke="{x:Null}" Margin="0,0,1,1">
+            						<Rectangle.Fill>
+            							<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            								<GradientStop Color="#FF5D5D5D" Offset="0"/>
+            								<GradientStop Color="#FF64665C" Offset="1"/>
+            							</LinearGradientBrush>
+            						</Rectangle.Fill>
+            					</Rectangle>
+            					<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="0,0,1,1">
+            						<Rectangle.Stroke>
+            							<SolidColorBrush Color="{DynamicResource Foregroundgray}"/>
+            						</Rectangle.Stroke>
+            					</Rectangle>
+            				</Grid>
+            				<Label Content="最新文件" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{DynamicResource LabelNormal}" Margin="0,5,0,0">
+            					<Label.Foreground>
+            						<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+            					</Label.Foreground>
+            				</Label>
+            				<Grid Margin="0,33,0,0">
+            					<Rectangle StrokeThickness="0.5" Height="1" StrokeDashArray="3 3" Width="355" VerticalAlignment="Top" Stroke="#FF494949"/>
+            					<ListBox x:Name="listboxLatestDocsIsRead" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" BorderBrush="{x:Null}" BorderThickness="0" Background="{x:Null}" Margin="5" >
+            						<ListBox.ItemContainerStyle>
+            							<Style TargetType="{x:Type ListBoxItem}" >
+            								<Setter Property="Background" Value="Transparent"/>
+            								<Setter Property="HorizontalContentAlignment" Value="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
+            								<Setter Property="VerticalContentAlignment" Value="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
+            								<Setter Property="Padding" Value="2,0,0,0"/>
+            								<Setter Property="Template" Value="{StaticResource listBoxItemDocIssue}"/>
+            							</Style>
+            						</ListBox.ItemContainerStyle>
+            					</ListBox>
+            				</Grid>
             			</Grid>
             			<Grid Margin="0,10,0,0" Grid.Row="1">
             				<Grid.RowDefinitions>
@@ -175,52 +193,46 @@
             					<RowDefinition/>
             				</Grid.RowDefinitions>
             				<TabControl Style="{DynamicResource TabControlSubContent}" Background="{x:Null}" BorderBrush="{x:Null}" Grid.RowSpan="2">
-            					<TabItem x:Name="DocType1" Header="行政文件" Style="{DynamicResource TabItemLargeProjects}" Margin="43.5,-2,-43.5,-1">
+            					<TabItem x:Name="DocType1" Header="行政文件" Style="{DynamicResource TabItem2ndmenuMIddle}">
             						<Grid x:Name="GridDocType1" Loaded="GridDocType1_Loaded">
-            							<ListBox x:Name="listboxDocsType1" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" Background="{x:Null}" BorderBrush="{x:Null}" >
+            							<ListBox x:Name="listboxDocsType1" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" Background="{x:Null}" BorderBrush="{x:Null}" >
             								<ListBox.ItemContainerStyle>
             									<Style TargetType="{x:Type ListBoxItem}" >
             										<Setter Property="Background" Value="Transparent"/>
             										<Setter Property="HorizontalContentAlignment" Value="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
             										<Setter Property="VerticalContentAlignment" Value="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
             										<Setter Property="Padding" Value="2,0,0,0"/>
-            										<Setter Property="Template" Value="{StaticResource listBoxItemDocIssue}">
-            
-            										</Setter>
+            										<Setter Property="Template" Value="{StaticResource listBoxItemDocIssue}"/>
             									</Style>
             								</ListBox.ItemContainerStyle>
             							</ListBox>
             						</Grid>
             					</TabItem>
-            					<TabItem x:Name="DocType2" Header="法规文件" Style="{DynamicResource TabItemLargeProjects}" Margin="67.5,-2,-67.5,-1">
+            					<TabItem x:Name="DocType2" Header="法规文件" Style="{DynamicResource TabItem2ndmenuMIddle}">
             						<Grid x:Name="GridDocType2" Loaded="GridDocType2_Loaded" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto">
-            							<ListBox x:Name="listboxDocsType2" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Visible" Background="{x:Null}" BorderBrush="{x:Null}" >
+            							<ListBox x:Name="listboxDocsType2" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" Background="{x:Null}" BorderBrush="{x:Null}" >
             								<ListBox.ItemContainerStyle>
             									<Style TargetType="{x:Type ListBoxItem}" >
             										<Setter Property="Background" Value="Transparent"/>
             										<Setter Property="HorizontalContentAlignment" Value="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
             										<Setter Property="VerticalContentAlignment" Value="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
             										<Setter Property="Padding" Value="2,0,0,0"/>
-            										<Setter Property="Template" Value="{StaticResource listBoxItemDocIssue}">
-            									
-            										</Setter>
+            										<Setter Property="Template" Value="{StaticResource listBoxItemDocIssue}"/>
             									</Style>
             								</ListBox.ItemContainerStyle>
             							</ListBox>
             						</Grid>
             					</TabItem>
-            					<TabItem x:Name="DocType3" Header="公开文件" Style="{DynamicResource TabItemLargeProjects}" Margin="92,-2,-92,-1">
+            					<TabItem x:Name="DocType3" Header="公开文件" Style="{DynamicResource TabItem2ndmenuMIddle}">
             						<Grid x:Name="GridDocType3" Loaded="GridDocType3_Loaded" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto">
-            							<ListBox x:Name="listboxDocsType3" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Visible" Background="{x:Null}" BorderBrush="{x:Null}" >
+            							<ListBox x:Name="listboxDocsType3" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" Background="{x:Null}" BorderBrush="{x:Null}" >
             								<ListBox.ItemContainerStyle>
 												<Style TargetType="{x:Type ListBoxItem}" >
 													<Setter Property="Background" Value="Transparent"/>
 													<Setter Property="HorizontalContentAlignment" Value="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
 													<Setter Property="VerticalContentAlignment" Value="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
 													<Setter Property="Padding" Value="2,0,0,0"/>
-													<Setter Property="Template" Value="{StaticResource listBoxItemDocIssue}">
-						
-													</Setter>
+													<Setter Property="Template" Value="{StaticResource listBoxItemDocIssue}"/>
 												</Style>
 											</ListBox.ItemContainerStyle>
             							</ListBox>
@@ -236,76 +248,93 @@
             				<RowDefinition Height="0.399*"/>
             				<RowDefinition Height="0.601*"/>
             			</Grid.RowDefinitions>
-            			<Label Content="最新文件" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{DynamicResource LabelNormal}" Margin="10,7,0,0">
-            				<Label.Foreground>
-            					<SolidColorBrush Color="{DynamicResource white}"/>
-            				</Label.Foreground>
-            			</Label>
-            			<ListBox x:Name="listboxLatestDocsNotRead" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" BorderBrush="{x:Null}" Margin="10,40,10,5" BorderThickness="0" Background="{x:Null}" >
-            				<ListBox.ItemContainerStyle>
-            					<Style TargetType="{x:Type ListBoxItem}" >
-            						<Setter Property="Background" Value="Transparent"/>
-            						<Setter Property="HorizontalContentAlignment" Value="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
-            						<Setter Property="VerticalContentAlignment" Value="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
-            						<Setter Property="Padding" Value="2,0,0,0"/>
-            						<Setter Property="Template" Value="{StaticResource listBoxItemDocIssue}">
-            				
-            						</Setter>
-            					</Style>
-            				</ListBox.ItemContainerStyle>
-            			</ListBox>
+            			<Grid>
+            				<Grid>
+            					<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="1,1,0,0">
+            						<Rectangle.Stroke>
+            							<SolidColorBrush Color="{DynamicResource #235235235}"/>
+            						</Rectangle.Stroke>
+            					</Rectangle>
+            					<Rectangle HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" StrokeDashArray="3 3" StrokeThickness="1" RadiusX="8" RadiusY="8" Stroke="{x:Null}" Margin="0,0,1,1">
+            						<Rectangle.Fill>
+            							<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            								<GradientStop Color="#FF5D5D5D" Offset="0"/>
+            								<GradientStop Color="#FF64665C" Offset="1"/>
+            							</LinearGradientBrush>
+            						</Rectangle.Fill>
+            					</Rectangle>
+            					<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="0,0,1,1">
+            						<Rectangle.Stroke>
+            							<SolidColorBrush Color="{DynamicResource Foregroundgray}"/>
+            						</Rectangle.Stroke>
+            					</Rectangle>
+            				</Grid>
+            				<Label Content="最新文件" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{DynamicResource LabelNormal}" Margin="0,5,0,0">
+            					<Label.Foreground>
+            						<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+            					</Label.Foreground>
+            				</Label>
+            				<Grid Margin="0,33,0,0">
+            					<Rectangle StrokeThickness="0.5" Height="1" StrokeDashArray="3 3" Width="355" VerticalAlignment="Top" Stroke="#FF494949" Margin="7.3,0"/>
+            					<ListBox x:Name="listboxLatestDocsNotRead" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" BorderBrush="{x:Null}" BorderThickness="0" Background="{x:Null}" Margin="5" >
+            						<ListBox.ItemContainerStyle>
+            							<Style TargetType="{x:Type ListBoxItem}" >
+            								<Setter Property="Background" Value="Transparent"/>
+            								<Setter Property="HorizontalContentAlignment" Value="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
+            								<Setter Property="VerticalContentAlignment" Value="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
+            								<Setter Property="Padding" Value="2,0,0,0"/>
+            								<Setter Property="Template" Value="{StaticResource listBoxItemDocIssue}"/>
+            							</Style>
+            						</ListBox.ItemContainerStyle>
+            					</ListBox>
+            				</Grid>
+            			</Grid>
             			<Grid Margin="0,10,0,0" Grid.Row="1">
             				<Grid.RowDefinitions>
             					<RowDefinition Height="45.261"/>
             					<RowDefinition/>
             				</Grid.RowDefinitions>
             				<TabControl Style="{DynamicResource TabControlSubContent}" Background="{x:Null}" BorderBrush="{x:Null}" Grid.RowSpan="2">
-            					<TabItem x:Name="DocType4" Header="行政文件" Style="{DynamicResource TabItemLargeProjects}" Margin="43.5,-2,-43.5,-1">
+            					<TabItem x:Name="DocType4" Header="行政文件" Style="{DynamicResource TabItem2ndmenuMIddle}">
             						<Grid x:Name="GridDocType4" Loaded="GridDocType4_Loaded">
-            							<ListBox x:Name="listboxDocsType4" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" Background="{x:Null}" BorderBrush="{x:Null}" >
+            							<ListBox x:Name="listboxDocsType4" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" Background="{x:Null}" BorderBrush="{x:Null}" >
             								<ListBox.ItemContainerStyle>
             									<Style TargetType="{x:Type ListBoxItem}" >
             										<Setter Property="Background" Value="Transparent"/>
             										<Setter Property="HorizontalContentAlignment" Value="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
             										<Setter Property="VerticalContentAlignment" Value="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
             										<Setter Property="Padding" Value="2,0,0,0"/>
-            										<Setter Property="Template" Value="{StaticResource listBoxItemDocIssue}">
-            						
-            										</Setter>
+            										<Setter Property="Template" Value="{StaticResource listBoxItemDocIssue}"/>
             									</Style>
             								</ListBox.ItemContainerStyle>
             							</ListBox>
             						</Grid>
             					</TabItem>
-            					<TabItem x:Name="DocType5" Header="法规文件" Style="{DynamicResource TabItemLargeProjects}" Margin="67.5,-2,-67.5,-1">
+            					<TabItem x:Name="DocType5" Header="法规文件" Style="{DynamicResource TabItem2ndmenuMIddle}">
             						<Grid x:Name="GridDocType5" Loaded="GridDocType5_Loaded">
-            							<ListBox x:Name="listboxDocsType5" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" Background="{x:Null}" BorderBrush="{x:Null}" >
+            							<ListBox x:Name="listboxDocsType5" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" Background="{x:Null}" BorderBrush="{x:Null}" >
             								<ListBox.ItemContainerStyle>
             									<Style TargetType="{x:Type ListBoxItem}" >
             										<Setter Property="Background" Value="Transparent"/>
             										<Setter Property="HorizontalContentAlignment" Value="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
             										<Setter Property="VerticalContentAlignment" Value="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
             										<Setter Property="Padding" Value="2,0,0,0"/>
-            										<Setter Property="Template" Value="{StaticResource listBoxItemDocIssue}">
-            		
-            										</Setter>
+            										<Setter Property="Template" Value="{StaticResource listBoxItemDocIssue}"/>
             									</Style>
             								</ListBox.ItemContainerStyle>
             							</ListBox>
             						</Grid>
             					</TabItem>
-            					<TabItem x:Name="DocType6" Header="公开文件" Style="{DynamicResource TabItemLargeProjects}" Margin="92,-2,-92,-1">
+            					<TabItem x:Name="DocType6" Header="公开文件" Style="{DynamicResource TabItem2ndmenuMIddle}">
             						<Grid x:Name="GridDocType6" Loaded="GridDocType6_Loaded">
-            							<ListBox x:Name="listboxDocsType6" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" Background="{x:Null}" BorderBrush="{x:Null}" >
+            							<ListBox x:Name="listboxDocsType6" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" Background="{x:Null}" BorderBrush="{x:Null}" >
             								<ListBox.ItemContainerStyle>
             									<Style TargetType="{x:Type ListBoxItem}" >
             										<Setter Property="Background" Value="Transparent"/>
             										<Setter Property="HorizontalContentAlignment" Value="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
             										<Setter Property="VerticalContentAlignment" Value="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
             										<Setter Property="Padding" Value="2,0,0,0"/>
-            										<Setter Property="Template" Value="{StaticResource listBoxItemDocIssue}">
- 
-            										</Setter>
+            										<Setter Property="Template" Value="{StaticResource listBoxItemDocIssue}"/>
             									</Style>
             								</ListBox.ItemContainerStyle>
             							</ListBox>
@@ -321,23 +350,34 @@
             		<RowDefinition/>
             		<RowDefinition Height="56.98"/>
             	</Grid.RowDefinitions>
-            	<Rectangle Margin="15,5,15,0" StrokeDashArray="1 0" RadiusX="8" RadiusY="8">
-            		<Rectangle.Stroke>
-            			<SolidColorBrush Color="{DynamicResource #122122122}"/>
-            		</Rectangle.Stroke>
-            		<Rectangle.Fill>
-            			<SolidColorBrush Color="{DynamicResource white}"/>
-            		</Rectangle.Fill>
-            	</Rectangle>
-            	<ListBox x:Name="listboxDocs" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" BorderBrush="{x:Null}" Margin="25,20,25,15" BorderThickness="0" Background="{x:Null}" >
+            	<Grid Margin="20,15,20,10">
+            		<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="1,1,0,0">
+            			<Rectangle.Stroke>
+            				<SolidColorBrush Color="{DynamicResource #235235235}"/>
+            			</Rectangle.Stroke>
+            		</Rectangle>
+            		<Rectangle HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" StrokeDashArray="3 3" StrokeThickness="1" RadiusX="8" RadiusY="8" Stroke="{x:Null}" Margin="0,0,1,1">
+            			<Rectangle.Fill>
+            				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            					<GradientStop Color="#FF5D5D5D" Offset="0"/>
+            					<GradientStop Color="#FF64665C" Offset="1"/>
+            				</LinearGradientBrush>
+            			</Rectangle.Fill>
+            		</Rectangle>
+            		<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="0,0,1,1">
+            			<Rectangle.Stroke>
+            				<SolidColorBrush Color="{DynamicResource Foregroundgray}"/>
+            			</Rectangle.Stroke>
+            		</Rectangle>
+            	</Grid>
+            	<ListBox x:Name="listboxDocs" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" BorderBrush="{x:Null}" Margin="25,20,25,15" BorderThickness="0" Background="{x:Null}" >
             		<ListBox.ItemContainerStyle>
             			<Style TargetType="{x:Type ListBoxItem}" >
             				<Setter Property="Background" Value="Transparent"/>
             				<Setter Property="HorizontalContentAlignment" Value="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
             				<Setter Property="VerticalContentAlignment" Value="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
             				<Setter Property="Padding" Value="2,0,0,0"/>
-            				<Setter Property="Template" Value="{StaticResource listBoxItemDocIssue}">
-               				</Setter>
+            				<Setter Property="Template" Value="{StaticResource listBoxItemDocIssue}"/>
             			</Style>
             		</ListBox.ItemContainerStyle>
             	</ListBox>
@@ -351,13 +391,10 @@
             			<Button x:Name="btnHistory" Margin="10,5,10,5" Content="历史记录" Style="{DynamicResource ButtonFeedbacknormal}" Width="80" Height="23"/>
             		</Grid>
             		<Grid Grid.Column="1" Height="25">
-            			<Rectangle RadiusY="8" RadiusX="8">
-            				<Rectangle.Fill>
-            					<SolidColorBrush Color="{DynamicResource white}"/>
-            				</Rectangle.Fill>
-            				<Rectangle.Stroke>
-            					<SolidColorBrush Color="{DynamicResource #122122122}"/>
-            				</Rectangle.Stroke>
+            			<Rectangle IsEnabled="False" Stroke="#FF414141" Fill="#FF9E9F91" RadiusY="6" RadiusX="6">
+            				<Rectangle.Effect>
+            					<BlurEffect Radius="1"/>
+            				</Rectangle.Effect>
             			</Rectangle>
             			<TextBox x:Name="tbxSearch" VerticalAlignment="Center" Margin="4,3" MaxLength="50" GotMouseCapture="tbxSearch_GotMouseCapture" KeyDown="tbxSearch_KeyDown" Background="{x:Null}" BorderBrush="{x:Null}" />
             		</Grid>
@@ -407,12 +444,12 @@
             	<Label Content="抄送部门" Style="{DynamicResource Labeltopheader}" VerticalAlignment="Top"/>
             	<Grid Grid.Row="1">
             		<Grid.ColumnDefinitions>
-            			<ColumnDefinition Width="16*"/>
-            			<ColumnDefinition Width="16*"/>
-            			<ColumnDefinition Width="16*"/>
-            			<ColumnDefinition Width="16*"/>
-                        <ColumnDefinition Width="16*"/>
-                        <ColumnDefinition Width="16*"/>
+            			<ColumnDefinition Width="0.167*"/>
+            			<ColumnDefinition Width="0.182*"/>
+            			<ColumnDefinition Width="0.196*"/>
+            			<ColumnDefinition Width="0.145*"/>
+                        <ColumnDefinition Width="0.143*"/>
+                        <ColumnDefinition Width="0.167*"/>
                     </Grid.ColumnDefinitions>
             		<Grid Grid.Column="0">
             			<ComboBox Height="23" x:Name="comboBox1" VerticalAlignment="Center" DropDownClosed="comboBox1_DropDownClosed" Style="{DynamicResource ComboBoxFeedback}" ItemContainerStyle="{DynamicResource ComboBoxItemfeedback}" HorizontalAlignment="Center">
@@ -505,14 +542,26 @@
                     </Grid>
                 </Grid>
             	<Grid Grid.Row="2" Margin="20,10">
-            		<Rectangle RadiusY="5" RadiusX="5">
-            			<Rectangle.Stroke>
-            				<SolidColorBrush Color="{DynamicResource #122122122}"/>
-            			</Rectangle.Stroke>
-            			<Rectangle.Fill>
-            				<SolidColorBrush Color="{DynamicResource white}"/>
-            			</Rectangle.Fill>
-            		</Rectangle>
+            		<Grid>
+            			<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="1,1,0,0">
+            				<Rectangle.Stroke>
+            					<SolidColorBrush Color="{DynamicResource #235235235}"/>
+            				</Rectangle.Stroke>
+            			</Rectangle>
+            			<Rectangle HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" StrokeDashArray="3 3" StrokeThickness="1" RadiusX="8" RadiusY="8" Stroke="{x:Null}" Margin="0,0,1,1">
+            				<Rectangle.Fill>
+            					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            						<GradientStop Color="#FF5D5D5D" Offset="0"/>
+            						<GradientStop Color="#FF64665C" Offset="1"/>
+            					</LinearGradientBrush>
+            				</Rectangle.Fill>
+            			</Rectangle>
+            			<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="0,0,1,1">
+            				<Rectangle.Stroke>
+            					<SolidColorBrush Color="{DynamicResource Foregroundgray}"/>
+            				</Rectangle.Stroke>
+            			</Rectangle>
+            		</Grid>
             		<ScrollViewer Margin="5" d:LayoutOverrides="Width, Height" ScrollViewer.VerticalScrollBarVisibility="Auto" Template="{DynamicResource ScrollViewerControlTemplatetest}">
             			<ListBox x:Name="listboxSend">
             				<ListBox.Background>
@@ -531,7 +580,14 @@
             								<ColumnDefinition Width="*"/>
             							</Grid.ColumnDefinitions>
             							<Grid Grid.Column="0" Grid.ColumnSpan="1">
-            								<Image Source="/WpfApplication3;component/CutImages/图像/dot_bg-green-07.png" Width="10" Height="10"/>
+            								<Ellipse Width="10" Height="10" HorizontalAlignment="Center" VerticalAlignment="Center">
+            									<Ellipse.Effect>
+            										<BlurEffect Radius="4"/>
+            									</Ellipse.Effect>
+            									<Ellipse.Fill>
+            										<SolidColorBrush Color="{DynamicResource #235235235}"/>
+            									</Ellipse.Fill>
+            								</Ellipse>
             							</Grid>
             							<Grid Grid.Column="2" Grid.ColumnSpan="1" d:LayoutOverrides="GridBox">
             								<TextBlock Text="{Binding}" VerticalAlignment="Stretch"/>

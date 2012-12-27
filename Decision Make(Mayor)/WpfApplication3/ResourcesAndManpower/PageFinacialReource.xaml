@@ -4,73 +4,475 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
+      d:DesignHeight="972" d:DesignWidth="1265"
 	Title="PageFinacialReource"
       Loaded="Page_Loaded">
 
-    <Grid>
+    <Grid Margin="0,0,5,0">
         <Grid.RowDefinitions>
-            <RowDefinition Height="30*"></RowDefinition>
-            <RowDefinition Height="70*"></RowDefinition>
+            <RowDefinition Height="176.480208"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
         
         <!--学术部门-->
-        <Grid Name="Xueshubumen" Grid.Row="0" Grid.ColumnSpan="2">
-            <Grid.RowDefinitions>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-            </Grid.RowDefinitions>
-            <Label Content="学术部门" Grid.Row="0"></Label>
-            <Label Content="财政预算" Grid.Row="1"></Label>
-            <Rectangle Name="rectangle0" Grid.Row="1" Margin="50 0 0 0" HorizontalAlignment="Left" Fill="BurlyWood"></Rectangle>
-            <Label Content="财政支出" Grid.Row="2"></Label>
-            <Rectangle Name="rectangle1" Grid.Row="2" Margin="50 0 0 0" HorizontalAlignment="Left" Fill="BurlyWood"></Rectangle>
-        </Grid>
+        	<Rectangle RadiusX="8" RadiusY="8" Grid.RowSpan="2">
+        		<Rectangle.Effect>
+        			<DropShadowEffect/>
+        		</Rectangle.Effect>
+        		<Rectangle.Fill>
+        			<SolidColorBrush Color="{DynamicResource Mainbg}"/>
+        		</Rectangle.Fill>
+        	</Rectangle>
+        	<Label Style="{DynamicResource LabelTitleLong}" Content="财政预算与支出" VerticalAlignment="Top"/>
+        	<Grid Margin="20,45,20,20">
+        		<Grid.ColumnDefinitions>
+        			<ColumnDefinition/>
+        			<ColumnDefinition Width="125.66"/>
+        		</Grid.ColumnDefinitions>
+        		<Grid Grid.ColumnSpan="2">
+        			<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="1,1,0,0">
+        				<Rectangle.Stroke>
+        					<SolidColorBrush Color="{DynamicResource #235235235}"/>
+        				</Rectangle.Stroke>
+        			</Rectangle>
+        			<Rectangle HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" StrokeDashArray="3 3" StrokeThickness="1" RadiusX="8" RadiusY="8" Stroke="{x:Null}" Margin="0,0,1,1">
+        				<Rectangle.Fill>
+        					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+        						<GradientStop Color="#FF5D5D5D" Offset="0"/>
+        						<GradientStop Color="#FF64665C" Offset="1"/>
+        					</LinearGradientBrush>
+        				</Rectangle.Fill>
+        			</Rectangle>
+        			<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="0,0,1,1">
+        				<Rectangle.Stroke>
+        					<SolidColorBrush Color="{DynamicResource Foregroundgray}"/>
+        				</Rectangle.Stroke>
+        			</Rectangle>
+        		</Grid>
+        		<Grid Grid.Column="1">
+        			<Grid.RowDefinitions>
+        				<RowDefinition Height="0.499*"/>
+        				<RowDefinition Height="0.501*"/>
+        			</Grid.RowDefinitions>
+        			<Grid Margin="0,13.258">
+        				<Label Content="财政预算" VerticalAlignment="Center">
+        					<Label.Foreground>
+        						<SolidColorBrush Color="{DynamicResource #235235235}"/>
+        					</Label.Foreground>
+        				</Label>
+        				<Rectangle Fill="#FF353535" Width="20" HorizontalAlignment="Right" Stroke="#FF1A1A1A" Height="10" VerticalAlignment="Center" Margin="0,0,28,0"/>
+        			</Grid>
+        			<Grid Margin="0,13.363" Grid.Row="1">
+        				<Label Content="财政支出" Grid.Row="1" VerticalAlignment="Center">
+        					<Label.Foreground>
+        						<SolidColorBrush Color="{DynamicResource #235235235}"/>
+        					</Label.Foreground>
+        				</Label>
+        				<Rectangle Width="20" Height="10" Margin="0,0,28,0" HorizontalAlignment="Right" Stroke="#FF505050" VerticalAlignment="Center">
+        					<Rectangle.Fill>
+        						<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+        					</Rectangle.Fill>
+        				</Rectangle>
+        			</Grid>
+        		</Grid>
+        		<Label Content="91.1%" VerticalAlignment="Top" Margin="0,15,19.847,0" HorizontalAlignment="Right" Width="58.66">
+        			<Label.Foreground>
+        				<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+        			</Label.Foreground>
+        		</Label>
+        		<Rectangle x:Name="rectangle0" Fill="#FF353535" Stroke="#FF252525" Height="10" Margin="20,0"/>
+        		<Rectangle x:Name="rectangle1" Margin="20,0" HorizontalAlignment="Left" VerticalAlignment="Center" Height="10" Stroke="#00000000">
+        			<Rectangle.Fill>
+        				<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+        			</Rectangle.Fill>
+        		</Rectangle>
+        		<UniformGrid Columns="12" Rows="1"  VerticalAlignment="Center" Margin="20,40,20,0">
+        			<TextBlock Text="1月" TextAlignment="Left" HorizontalAlignment="Right">
+        				<TextBlock.Foreground>
+        					<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+        				</TextBlock.Foreground>
+        			</TextBlock>
+        			<TextBlock Text="2月" TextAlignment="Left" HorizontalAlignment="Right">
+        				<TextBlock.Foreground>
+        					<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+        				</TextBlock.Foreground>
+        			</TextBlock>
+        			<TextBlock Text="3月" TextAlignment="Center" HorizontalAlignment="Right">
+        				<TextBlock.Foreground>
+        					<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+        				</TextBlock.Foreground>
+        			</TextBlock>
+        			<TextBlock Text="4月" TextAlignment="Right" HorizontalAlignment="Right">
+        				<TextBlock.Foreground>
+        					<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+        				</TextBlock.Foreground>
+        			</TextBlock>
+        			<TextBlock Text="5月" TextAlignment="Right" HorizontalAlignment="Right">
+        				<TextBlock.Foreground>
+        					<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+        				</TextBlock.Foreground>
+        			</TextBlock>
+        			<TextBlock Text="6月" TextAlignment="Left" HorizontalAlignment="Right">
+        				<TextBlock.Foreground>
+        					<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+        				</TextBlock.Foreground>
+        			</TextBlock>
+        			<TextBlock Text="7月" TextAlignment="Left" HorizontalAlignment="Right">
+        				<TextBlock.Foreground>
+        					<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+        				</TextBlock.Foreground>
+        			</TextBlock>
+        			<TextBlock Text="8月" TextAlignment="Center" HorizontalAlignment="Right">
+        				<TextBlock.Foreground>
+        					<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+        				</TextBlock.Foreground>
+        			</TextBlock>
+        			<TextBlock Text="9月" TextAlignment="Right" HorizontalAlignment="Right">
+        				<TextBlock.Foreground>
+        					<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+        				</TextBlock.Foreground>
+        			</TextBlock>
+        			<TextBlock Text="10月" TextAlignment="Right" HorizontalAlignment="Right">
+        				<TextBlock.Foreground>
+        					<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+        				</TextBlock.Foreground>
+        			</TextBlock>
+        			<TextBlock Text="11月" TextAlignment="Left" HorizontalAlignment="Right">
+        				<TextBlock.Foreground>
+        					<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+        				</TextBlock.Foreground>
+        			</TextBlock>
+        			<TextBlock Text="12月" TextAlignment="Left" HorizontalAlignment="Right">
+        				<TextBlock.Foreground>
+        					<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+        				</TextBlock.Foreground>
+        			</TextBlock>
+                        
+        		</UniformGrid>
+        	</Grid> 
+<Grid Grid.Row="1">
+	<Grid.ColumnDefinitions>
+		<ColumnDefinition Width="0.5*"/>
+		<ColumnDefinition Width="0.50*"/>
+	</Grid.ColumnDefinitions>
+<!--左下角图例-->
+	<Rectangle RadiusX="8" RadiusY="8" Grid.ColumnSpan="2">
+		<Rectangle.Effect>
+			<DropShadowEffect/>
+		</Rectangle.Effect>
+		<Rectangle.Fill>
+			<SolidColorBrush Color="{DynamicResource Mainbg}"/>
+		</Rectangle.Fill>
+	</Rectangle>
+	<Label Style="{DynamicResource Labeltopheader}" Content="其中" Grid.ColumnSpan="2" VerticalAlignment="Top"/>
+	<Grid Margin="20,55,20,40">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="0.481*"/>
+			<RowDefinition Height="0.519*"/>
+		</Grid.RowDefinitions>
+<!--左下角图例-->
+		<Grid Grid.RowSpan="2">
+			<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="1,1,0,0">
+				<Rectangle.Stroke>
+					<SolidColorBrush Color="{DynamicResource #235235235}"/>
+				</Rectangle.Stroke>
+			</Rectangle>
+			<Rectangle HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" StrokeDashArray="3 3" StrokeThickness="1" RadiusX="8" RadiusY="8" Stroke="{x:Null}" Margin="0,0,1,1">
+				<Rectangle.Fill>
+					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+						<GradientStop Color="#FF5D5D5D" Offset="0"/>
+						<GradientStop Color="#FF64665C" Offset="1"/>
+					</LinearGradientBrush>
+				</Rectangle.Fill>
+			</Rectangle>
+			<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="0,0,1,1">
+				<Rectangle.Stroke>
+					<SolidColorBrush Color="{DynamicResource Foregroundgray}"/>
+				</Rectangle.Stroke>
+			</Rectangle>
+		</Grid>
         
-        <!--左下角图例-->
-        <Grid Name="Qizhong" Grid.Column="0" Grid.Row="1">
-            <Grid.RowDefinitions>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="30*"></ColumnDefinition>
-                <ColumnDefinition Width="70*"></ColumnDefinition>
-            </Grid.ColumnDefinitions>
+        
+	<!--左下角图例-->
+		<Grid x:Name="Qizhong" Grid.Column="0" Margin="30,20,0,0">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="0.000*"/>
+				<RowDefinition Height="0.2*"/>
+				<RowDefinition Height="0.2*"/>
+				<RowDefinition Height="0.2*"/>
+				<RowDefinition Height="0.2*"/>
+				<RowDefinition Height="0.2*"/>
+				<RowDefinition Height="0.2*"/>
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="30*"/>
+				<ColumnDefinition Width="70*"/>
+			</Grid.ColumnDefinitions>
             
-            <Label Content="其中" Grid.Column="0" Grid.Row="0"></Label>
+			<Label Content="债务利息支出" Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Left">
+				<Label.Foreground>
+					<SolidColorBrush Color="{DynamicResource #235235235}"/>
+				</Label.Foreground>
+			</Label>
+			<Label Content="政策性补贴支出" Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Left">
+				<Label.Foreground>
+					<SolidColorBrush Color="{DynamicResource #235235235}"/>
+				</Label.Foreground>
+			</Label>
+			<Label Content="行政管理费" Grid.Column="0" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Left">
+				<Label.Foreground>
+					<SolidColorBrush Color="{DynamicResource #235235235}"/>
+				</Label.Foreground>
+			</Label>
+			<Label Content="国防支出" Grid.Column="0" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Left">
+				<Label.Foreground>
+					<SolidColorBrush Color="{DynamicResource #235235235}"/>
+				</Label.Foreground>
+			</Label>
+			<Label Content="行政事业单位离退休指出" Grid.Column="0" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Left">
+				<Label.Foreground>
+					<SolidColorBrush Color="{DynamicResource #235235235}"/>
+				</Label.Foreground>
+			</Label>
+			<Label Content="抚恤和社会福利救济费" Grid.Column="0" Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Left">
+				<Label.Foreground>
+					<SolidColorBrush Color="{DynamicResource #235235235}"/>
+				</Label.Foreground>
+			</Label>
+			<Rectangle x:Name="rectangle2_Copy" Grid.Column="1" Grid.Row="1" Margin="50,0,60,0" Fill="#FF353535" Height="10" Stroke="Black" VerticalAlignment="Center"/>
+			<Rectangle x:Name="rectangle3_Copy" Grid.Column="1" Grid.Row="2" Margin="50,0,60,0" Fill="#FF353535" Height="10" Stroke="Black" VerticalAlignment="Center"/>
+			<Rectangle x:Name="rectangle4_Copy" Grid.Column="1" Grid.Row="3" Margin="50,0,60,0" Fill="#FF353535" Height="10" Stroke="Black" VerticalAlignment="Center"/>
+			<Rectangle x:Name="rectangle5_Copy" Grid.Column="1" Grid.Row="4" Margin="50,0,60,0" Fill="#FF353535" Height="10" Stroke="Black" VerticalAlignment="Center"/>
+			<Rectangle x:Name="rectangle6_Copy" Grid.Column="1" Grid.Row="5" Margin="50,0,60,0" Fill="#FF353535" Height="10" Stroke="Black" VerticalAlignment="Center"/>
+			<Rectangle x:Name="rectangle7_Copy" Grid.Column="1" Grid.Row="6" Margin="50,0,60,0" Fill="#FF353535" Height="10" Stroke="Black" VerticalAlignment="Center"/>
+			<Rectangle x:Name="rectangle2" Grid.Column="1" Grid.Row="1" Margin="50,0,60,0" HorizontalAlignment="Left" Height="10" Stroke="#00000000">
+				<Rectangle.Fill>
+					<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+				</Rectangle.Fill>
+			</Rectangle>
+			<Rectangle x:Name="rectangle3" Grid.Column="1" Grid.Row="2" Margin="50,0,60,0" HorizontalAlignment="Left" Height="10" Stroke="#00000000">
+				<Rectangle.Fill>
+					<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+				</Rectangle.Fill>
+			</Rectangle>
+			<Rectangle x:Name="rectangle4" Grid.Column="1" Grid.Row="3" Margin="50,0,60,0" HorizontalAlignment="Left" Height="10" Stroke="#00000000">
+				<Rectangle.Fill>
+					<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+				</Rectangle.Fill>
+			</Rectangle>
+			<Rectangle x:Name="rectangle5" Grid.Column="1" Grid.Row="4" Margin="50,0,60,0" HorizontalAlignment="Left" Height="10" Stroke="#00000000">
+				<Rectangle.Fill>
+					<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+				</Rectangle.Fill>
+			</Rectangle>
+			<Rectangle x:Name="rectangle6" Grid.Column="1" Grid.Row="5" Margin="50,0,60,0" HorizontalAlignment="Left" Height="10" Stroke="#00000000">
+				<Rectangle.Fill>
+					<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+				</Rectangle.Fill>
+			</Rectangle>
+			<Rectangle x:Name="rectangle7" Grid.Column="1" Grid.Row="6" Margin="50,0,60,0" HorizontalAlignment="Left" Height="10" Stroke="#00000000">
+				<Rectangle.Fill>
+					<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+				</Rectangle.Fill>
+			</Rectangle>
+			<Label x:Name="label1" Content="50%" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,13.666,0">
+				<Label.Foreground>
+					<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+				</Label.Foreground>
+			</Label>
+			<Label x:Name="label2" Content="50%" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,13.666,0">
+				<Label.Foreground>
+					<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+				</Label.Foreground>
+			</Label>
+			<Label x:Name="label3" Content="50%" Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,13.666,0">
+				<Label.Foreground>
+					<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+				</Label.Foreground>
+			</Label>
+			<Label x:Name="label4" Content="50%" Grid.Column="1" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,13.666,0">
+				<Label.Foreground>
+					<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+				</Label.Foreground>
+			</Label>
+			<Label x:Name="label5" Content="50%" Grid.Column="1" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,13.666,0">
+				<Label.Foreground>
+					<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+				</Label.Foreground>
+			</Label>
+			<Label x:Name="label6" Content="50%" Grid.Column="1" Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,13.666,0">
+				<Label.Foreground>
+					<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+				</Label.Foreground>
+			</Label>
+		</Grid>
+		<Grid x:Name="Qizhong_Copy" Grid.Column="0" Grid.Row="1" Margin="30,0,0,20">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="0.000*"/>
+				<RowDefinition Height="0.2*"/>
+				<RowDefinition Height="0.2*"/>
+				<RowDefinition Height="0.2*"/>
+				<RowDefinition Height="0.2*"/>
+				<RowDefinition Height="0.2*"/>
+				<RowDefinition Height="0.2*"/>
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="30*"/>
+				<ColumnDefinition Width="70*"/>
+			</Grid.ColumnDefinitions>
             
-            <Label Content="公共累计支出" Grid.Column="0" Grid.Row="1" Grid.RowSpan="2"></Label>
-            <Label Content="公共消费支出" Grid.Column="0" Grid.Row="3" Grid.RowSpan="2"></Label>
-            <Label Content="转移支出" Grid.Column="0" Grid.Row="5" Grid.RowSpan="2"></Label>
-            <Rectangle Name="rectangle2" Grid.Column="1" Grid.Row="1" Margin="50 0 0 0" HorizontalAlignment="Left" Fill="BurlyWood"></Rectangle>
-            <Rectangle Name="rectangle3" Grid.Column="1" Grid.Row="2" Margin="50,0,0,0" HorizontalAlignment="Left" Fill="BurlyWood"></Rectangle>
-            <Rectangle Name="rectangle4" Grid.Column="1" Grid.Row="3" Margin="50 0 0 0" HorizontalAlignment="Left" Fill="BurlyWood"></Rectangle>
-            <Rectangle Name="rectangle5" Grid.Column="1" Grid.Row="4" Margin="50 0 0 0" HorizontalAlignment="Left" Fill="BurlyWood"></Rectangle>
-            <Rectangle Name="rectangle6" Grid.Column="1" Grid.Row="5" Margin="50 0 0 0" HorizontalAlignment="Left" Fill="BurlyWood"></Rectangle>
-            <Rectangle Name="rectangle7" Grid.Column="1" Grid.Row="6" Margin="50 0 0 0" HorizontalAlignment="Left" Fill="BurlyWood"></Rectangle>
-        </Grid>
+			<Label Content="文教科学卫生事业费" Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Left">
+				<Label.Foreground>
+					<SolidColorBrush Color="{DynamicResource #235235235}"/>
+				</Label.Foreground>
+			</Label>
+			<Label Content="工业交通商业等部门事业费" Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Left">
+				<Label.Foreground>
+					<SolidColorBrush Color="{DynamicResource #235235235}"/>
+				</Label.Foreground>
+			</Label>
+			<Label Content="支援农村生产支出" Grid.Column="0" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Left">
+				<Label.Foreground>
+					<SolidColorBrush Color="{DynamicResource #235235235}"/>
+				</Label.Foreground>
+			</Label>
+			<Label Content="科技三项费用" Grid.Column="0" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Left">
+				<Label.Foreground>
+					<SolidColorBrush Color="{DynamicResource #235235235}"/>
+				</Label.Foreground>
+			</Label>
+			<Label Content="企业家挖潜改造资金" Grid.Column="0" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Left">
+				<Label.Foreground>
+					<SolidColorBrush Color="{DynamicResource #235235235}"/>
+				</Label.Foreground>
+			</Label>
+			<Label Content="基本建设支出" Grid.Column="0" Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Left">
+				<Label.Foreground>
+					<SolidColorBrush Color="{DynamicResource #235235235}"/>
+				</Label.Foreground>
+			</Label>
+			<Rectangle x:Name="rectangle2_Copy1" Grid.Column="1" Grid.Row="1" Margin="50,0,60,0" Fill="#FF353535" Height="10" Stroke="Black" VerticalAlignment="Center"/>
+			<Rectangle x:Name="rectangle3_Copy1" Grid.Column="1" Grid.Row="2" Margin="50,0,60,0" Fill="#FF353535" Height="10" Stroke="Black" VerticalAlignment="Center"/>
+			<Rectangle x:Name="rectangle4_Copy1" Grid.Column="1" Grid.Row="3" Margin="50,0,60,0" Fill="#FF353535" Height="10" Stroke="Black" VerticalAlignment="Center"/>
+			<Rectangle x:Name="rectangle5_Copy1" Grid.Column="1" Grid.Row="4" Margin="50,0,60,0" Fill="#FF353535" Height="10" Stroke="Black" VerticalAlignment="Center"/>
+			<Rectangle x:Name="rectangle6_Copy1" Grid.Column="1" Grid.Row="5" Margin="50,0,60,0" Fill="#FF353535" Height="10" Stroke="Black" VerticalAlignment="Center"/>
+			<Rectangle x:Name="rectangle7_Copy1" Grid.Column="1" Grid.Row="6" Margin="50,0,60,0" Fill="#FF353535" Height="10" Stroke="Black" VerticalAlignment="Center"/>
+			<Rectangle x:Name="rectangle13" Grid.Column="1" Grid.Row="1" Margin="50,0,60,0" HorizontalAlignment="Left" Height="10" Stroke="#00000000">
+				<Rectangle.Fill>
+					<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+				</Rectangle.Fill>
+			</Rectangle>
+			<Rectangle x:Name="rectangle8" Grid.Column="1" Grid.Row="2" Margin="50,0,60,0" HorizontalAlignment="Left" Height="10" Stroke="#00000000">
+				<Rectangle.Fill>
+					<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+				</Rectangle.Fill>
+			</Rectangle>
+			<Rectangle x:Name="rectangle9" Grid.Column="1" Grid.Row="3" Margin="50,0,60,0" HorizontalAlignment="Left" Height="10" Stroke="#00000000">
+				<Rectangle.Fill>
+					<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+				</Rectangle.Fill>
+			</Rectangle>
+			<Rectangle x:Name="rectangle10" Grid.Column="1" Grid.Row="4" Margin="50,0,60,0" HorizontalAlignment="Left" Height="10" Stroke="#00000000">
+				<Rectangle.Fill>
+					<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+				</Rectangle.Fill>
+			</Rectangle>
+			<Rectangle x:Name="rectangle11" Grid.Column="1" Grid.Row="5" Margin="50,0,60,0" HorizontalAlignment="Left" Height="10" Stroke="#00000000">
+				<Rectangle.Fill>
+					<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+				</Rectangle.Fill>
+			</Rectangle>
+			<Rectangle x:Name="rectangle12" Grid.Column="1" Grid.Row="6" Margin="50,0,60,0" HorizontalAlignment="Left" Height="10" Stroke="#00000000">
+				<Rectangle.Fill>
+					<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+				</Rectangle.Fill>
+			</Rectangle>
+			<Label x:Name="label1_Copy" Content="50%" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,13.666,0">
+				<Label.Foreground>
+					<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+				</Label.Foreground>
+			</Label>
+			<Label x:Name="label2_Copy" Content="50%" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,13.666,0">
+				<Label.Foreground>
+					<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+				</Label.Foreground>
+			</Label>
+			<Label x:Name="label3_Copy" Content="50%" Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,13.666,0">
+				<Label.Foreground>
+					<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+				</Label.Foreground>
+			</Label>
+			<Label x:Name="label4_Copy" Content="50%" Grid.Column="1" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,13.666,0">
+				<Label.Foreground>
+					<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+				</Label.Foreground>
+			</Label>
+			<Label x:Name="label5_Copy" Content="50%" Grid.Column="1" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,13.666,0">
+				<Label.Foreground>
+					<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+				</Label.Foreground>
+			</Label>
+			<Label x:Name="label6_Copy" Content="50%" Grid.Column="1" Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,13.666,0">
+				<Label.Foreground>
+					<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+				</Label.Foreground>
+			</Label>
+		</Grid>
+        
+        
+	</Grid>
+        
+<!--左下角图例-->
         
         
         <!--右下角图片-->
-        <Grid Grid.Column="1" Grid.Row="1">
-            <Grid.RowDefinitions>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-            </Grid.RowDefinitions>
-            <Image Name="Yusuanbili" Grid.Row="0"></Image>
-            <Image Name="Zhichubili" Grid.Row="1"></Image>
-        </Grid>
+	<Grid Grid.Column="1" Margin="20,55,20,40">
+		<Grid.RowDefinitions>
+			<RowDefinition/>
+			<RowDefinition/>
+		</Grid.RowDefinitions>
+		<Grid Grid.RowSpan="2">
+			<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="1,1,0,0">
+				<Rectangle.Stroke>
+					<SolidColorBrush Color="{DynamicResource #235235235}"/>
+				</Rectangle.Stroke>
+			</Rectangle>
+			<Rectangle HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" StrokeDashArray="3 3" StrokeThickness="1" RadiusX="8" RadiusY="8" Stroke="{x:Null}" Margin="0,0,1,1">
+				<Rectangle.Fill>
+					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+						<GradientStop Color="#FF5D5D5D" Offset="0"/>
+						<GradientStop Color="#FF64665C" Offset="1"/>
+					</LinearGradientBrush>
+				</Rectangle.Fill>
+			</Rectangle>
+			<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="0,0,1,1">
+				<Rectangle.Stroke>
+					<SolidColorBrush Color="{DynamicResource Foregroundgray}"/>
+				</Rectangle.Stroke>
+			</Rectangle>
+		</Grid>
+		<Label Content="学术部门" Grid.Row="0" VerticalAlignment="Top" FontSize="20" Style="{DynamicResource LabelResourceYellow}" BorderThickness="0,10,0,0" Margin="1.5,10,2,0">
+			<Label.Foreground>
+				<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+			</Label.Foreground>
+			<Label.Background>
+				<SolidColorBrush Color="{DynamicResource Foregroundgray}"/>
+			</Label.Background>
+		</Label>
+		<Image x:Name="Yusuanbili" Grid.Row="0"/>
+		<Image x:Name="Zhichubili" Grid.Row="1"/>
+		<Image Source="/WpfApplication3;component/CutImages/图像/mayor resource-12.png" Stretch="Fill" Grid.RowSpan="2" Width="525" Height="515"/>
+	</Grid>
+        
+</Grid>
+        
+        <!--左下角图例-->
+        
+        
+        <!--右下角图片-->
         
     </Grid>
 </Page>

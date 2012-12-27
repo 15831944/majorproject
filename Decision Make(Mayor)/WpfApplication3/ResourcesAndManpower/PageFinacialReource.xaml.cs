@@ -36,18 +36,28 @@ namespace WpfApplication3.ResourcesAndManpower
         private double zhuanyiyusuan = 0.6;
         private double zhuanyizhichu = 0.3;
 
-        private double[] jindutiao = { 0.8, 0.7, 0.8, 0.7, 0.75, 0.5, 0.6, 0.3 };
+        private double[] jindutiao = { 0.911, 0.8, 0.7, 0.75, 0.5, 0.6, 0.3 , 0.8,  0.3 ,0.7, 0.75, 0.5, 0.6};
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
 
-            Yusuanbili.Source = new BitmapImage(new Uri("/Images/yusuan.png", UriKind.Relative));
-            Zhichubili.Source = new BitmapImage(new Uri("/Images/zhichu.png", UriKind.Relative));
+//            Yusuanbili.Source = new BitmapImage(new Uri("/Images/yusuan.png", UriKind.Relative));
+//            Zhichubili.Source = new BitmapImage(new Uri("/Images/zhichu.png", UriKind.Relative));
 
-            double upperWidth = Xueshubumen.ActualWidth;
-            double downWidth = Qizhong.ActualWidth * 0.7;
-
-
+            double[] upperWidth={rectangle0.ActualWidth,
+			 rectangle2_Copy.ActualWidth,
+		 rectangle3_Copy.ActualWidth,
+			rectangle4_Copy.ActualWidth,
+			rectangle5_Copy.ActualWidth,
+			rectangle6_Copy.ActualWidth,
+			rectangle7_Copy.ActualWidth,
+			rectangle2_Copy1.ActualWidth,
+		 rectangle3_Copy1.ActualWidth,
+			rectangle4_Copy1.ActualWidth,
+			rectangle5_Copy1.ActualWidth,
+			rectangle6_Copy1.ActualWidth,
+			rectangle7_Copy1.ActualWidth};
+			
             rectangle0.Name = "rectangle0";
             rectangle1.Name = "rectangle1";
             rectangle2.Name = "rectangle2";
@@ -57,19 +67,29 @@ namespace WpfApplication3.ResourcesAndManpower
             rectangle5.Name = "rectangle5";
             rectangle6.Name = "rectangle6";
             rectangle7.Name = "rectangle7";
- 
+ 			label1.Content=(jindutiao[1]*100)+"%";
+ 			label2.Content=(jindutiao[2]*100)+"%";
+ 			label3.Content=(jindutiao[3]*100)+"%";
+ 			label4.Content=(jindutiao[4]*100)+"%";
+ 			label5.Content=(jindutiao[5]*100)+"%";
+ 			label6.Content=(jindutiao[6]*100)+"%";
+ 			label1_Copy.Content=(jindutiao[7]*100)+"%";
+ 			label2_Copy.Content=(jindutiao[8]*100)+"%";
+ 			label3_Copy.Content=(jindutiao[9]*100)+"%";
+ 			label4_Copy.Content=(jindutiao[10]*100)+"%";
+ 			label5_Copy.Content=(jindutiao[11]*100)+"%";
+ 			label6_Copy.Content=(jindutiao[12]*100)+"%";
+			
 
-            for (int i = 0; i < 8; i++)
+			
+			for (int i = 0; i < 13; i++)
             {
                 DoubleAnimation myDoubleAnimation = new DoubleAnimation();
                 myDoubleAnimation.From = 0;
-                if(i<=1)
-                    myDoubleAnimation.To = jindutiao[i]*upperWidth;
-                else
-                    myDoubleAnimation.To = jindutiao[i] * downWidth;
+                myDoubleAnimation.To = jindutiao[i]*upperWidth[i];
                 myDoubleAnimation.Duration = new Duration(TimeSpan.FromSeconds(5));
 
-                Storyboard.SetTargetName(myDoubleAnimation, "rectangle" + i);
+                Storyboard.SetTargetName(myDoubleAnimation, "rectangle" + (i+1));
 
                 Storyboard.SetTargetProperty(myDoubleAnimation, new PropertyPath(Rectangle.WidthProperty));
                 Storyboard myStoryboard = new Storyboard();
@@ -77,7 +97,7 @@ namespace WpfApplication3.ResourcesAndManpower
                 myStoryboard.AutoReverse = false;
                 myStoryboard.Begin(this);
             }
-
+		
               
 
         }

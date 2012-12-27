@@ -158,10 +158,10 @@
             					<ListBox HorizontalAlignment="Left" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Height="25"/>
             				</Grid>
             			</TabItem>
-            			<TabItem x:Name="tabItem2" Header="历史记录" Style="{DynamicResource TabItemMiddle}" Width="100" Height="33" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="-25.833,-2,0,0">
+            			<TabItem x:Name="tabItem2" Header="历史记录" Style="{DynamicResource TabItemMiddle}" Height="33" VerticalAlignment="Top" Margin="-25.833,-2,25.833,0">
             				<Grid/>
             			</TabItem>
-            			<TabItem x:Name="tabItem3" Header="重大危险源" Style="{DynamicResource TabItemThird}" Height="33" VerticalAlignment="Top" Margin="-51.352,-2,0,0" HorizontalAlignment="Left" Width="100">
+            			<TabItem x:Name="tabItem3" Header="重大危险源" Style="{DynamicResource TabItemThird}" Height="33" VerticalAlignment="Top" Margin="-51.352,-2,51.352,0">
             				<Grid x:Name="Gridzdwxy">
             					<TextBlock x:Name="textBlockzdwxy" Text="TextBlock" Margin="0,0,20,60" />
             				</Grid>
@@ -286,8 +286,8 @@
             						<ColumnDefinition Width="28.25"/>
             						<ColumnDefinition/>
             					</Grid.ColumnDefinitions>
-            					<Image Source="CutImages/图像/phone-07.png" Stretch="Fill" Width="18" Height="23" HorizontalAlignment="Right"/>
-            					<TextBlock TextWrapping="Wrap" Text="林涛" d:LayoutOverrides="Width, Height" Grid.Column="1" HorizontalAlignment="Left" LineHeight="24" FontWeight="Bold" Padding="0,7,0,0" Margin="12,0,0,0">
+            					<Image Source="CutImages/图像/mayordesk05-2-09.png" Stretch="Fill" Margin="10.25,6,0,6" Width="18" Height="23" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment, GridBox"/>
+            					<TextBlock TextWrapping="Wrap" Text="林涛" d:LayoutOverrides="Width, Height" Grid.Column="1" HorizontalAlignment="Left" LineHeight="24" FontWeight="Bold" Padding="0,7,0,0" Margin="12,0,0,0" Style="{DynamicResource TextBlockPhone}">
             						<TextBlock.Foreground>
             							<SolidColorBrush Color="{DynamicResource #235235235}"/>
             						</TextBlock.Foreground>
@@ -308,7 +308,7 @@
             						<ColumnDefinition Width="28.25"/>
             						<ColumnDefinition/>
             					</Grid.ColumnDefinitions>
-            					<Image Source="CutImages/图像/phone-07.png" Stretch="Fill" Width="18" Height="23" HorizontalAlignment="Right"/>
+            					<Image Source="CutImages/图像/mayordesk05-2-09.png" Stretch="Fill" Margin="10.25,6,0,6" Width="18" Height="23" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment, GridBox"/>
             					<TextBlock TextWrapping="Wrap" Text="程晓军" d:LayoutOverrides="Width, Height" Grid.Column="1" HorizontalAlignment="Left" LineHeight="24" FontWeight="Bold" Padding="0,7,0,0" Margin="12,0,0,0">
             						<TextBlock.Foreground>
             							<SolidColorBrush Color="{DynamicResource #235235235}"/>
@@ -321,20 +321,20 @@
             						<ColumnDefinition Width="28.25"/>
             						<ColumnDefinition/>
             					</Grid.ColumnDefinitions>
-            					<Image Source="CutImages/图像/phone-07.png" Stretch="Fill" Width="18" Height="23" HorizontalAlignment="Right"/>
             					<TextBlock TextWrapping="Wrap" Text="朱闻一" d:LayoutOverrides="Width, Height" Grid.Column="1" HorizontalAlignment="Left" LineHeight="24" FontWeight="Bold" Padding="0,7,0,0" Margin="12,0,0,0">
             						<TextBlock.Foreground>
             							<SolidColorBrush Color="{DynamicResource #235235235}"/>
             						</TextBlock.Foreground>
             					</TextBlock>
             					<Button x:Name="btn_ZiRanZaiHai_Phone_A2" Grid.ColumnSpan="2" Opacity="0" Cursor="Hand" />
+            					<Image Source="CutImages/图像/mayordesk05-2-09.png" Stretch="Fill" Margin="10.25,6,0,6" Width="18" Height="23" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment, GridBox"/>
             				</Grid>
             				<Grid Height="35" Margin="0,10,0,0">
             					<Grid.ColumnDefinitions>
             						<ColumnDefinition Width="28.25"/>
             						<ColumnDefinition/>
             					</Grid.ColumnDefinitions>
-            					<Image Source="CutImages/图像/phone-07.png" Stretch="Fill" Width="18" Height="23" HorizontalAlignment="Right"/>
+            					<Image Source="CutImages/图像/mayordesk05-2-09.png" Stretch="Fill" Margin="10.25,6,0,6" Width="18" Height="23" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment, GridBox"/>
             					<TextBlock TextWrapping="Wrap" Text="金肖" d:LayoutOverrides="Width, Height" Grid.Column="1" HorizontalAlignment="Left" LineHeight="24" FontWeight="Bold" Padding="0,7,0,0" Margin="12,0,0,0">
             						<TextBlock.Foreground>
             							<SolidColorBrush Color="{DynamicResource #235235235}"/>

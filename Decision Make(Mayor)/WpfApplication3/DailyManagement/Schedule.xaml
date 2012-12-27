@@ -137,14 +137,26 @@
                 </ComboBox>
             </Grid>
             <Grid Grid.Row="7" Margin="15,5">
-                <Rectangle RadiusY="8" RadiusX="8">
-                	<Rectangle.Stroke>
-                		<SolidColorBrush Color="{DynamicResource #122122122}"/>
-                	</Rectangle.Stroke>
-                	<Rectangle.Fill>
-                		<SolidColorBrush Color="{DynamicResource white}"/>
-                	</Rectangle.Fill>
-                </Rectangle>
+                <Grid>
+                	<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="1,1,0,0">
+                		<Rectangle.Stroke>
+                			<SolidColorBrush Color="{DynamicResource #235235235}"/>
+                		</Rectangle.Stroke>
+                	</Rectangle>
+                	<Rectangle HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" StrokeDashArray="3 3" StrokeThickness="1" RadiusX="8" RadiusY="8" Stroke="{x:Null}" Margin="0,0,1,1">
+                		<Rectangle.Fill>
+                			<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                				<GradientStop Color="#FF5D5D5D" Offset="0"/>
+                				<GradientStop Color="#FF64665C" Offset="1"/>
+                			</LinearGradientBrush>
+                		</Rectangle.Fill>
+                	</Rectangle>
+                	<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="0,0,1,1">
+                		<Rectangle.Stroke>
+                			<SolidColorBrush Color="{DynamicResource Foregroundgray}"/>
+                		</Rectangle.Stroke>
+                	</Rectangle>
+                </Grid>
                 <ScrollViewer VerticalScrollBarVisibility="Auto"  HorizontalScrollBarVisibility="Disabled" Margin="5">
                     <ListBox x:Name="listboxSend">
                         <ListBox.Template>
@@ -161,11 +173,11 @@
                                     </Grid.ColumnDefinitions>
                                     <Grid Grid.Column="0" Grid.ColumnSpan="1">
                                 		<Ellipse Width="10" Height="10" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                			<Ellipse.Effect>
+                                				<BlurEffect Radius="4"/>
+                                			</Ellipse.Effect>
                                 			<Ellipse.Fill>
-                                				<LinearGradientBrush EndPoint="0.987,0.863" StartPoint="0.033,0.16">
-                                					<GradientStop Color="{DynamicResource GreenLeft}" Offset="0"/>
-                                					<GradientStop Color="{DynamicResource GreenRight}" Offset="1"/>
-                                				</LinearGradientBrush>
+                                				<SolidColorBrush Color="{DynamicResource #235235235}"/>
                                 			</Ellipse.Fill>
                                 		</Ellipse>
                                 	</Grid>
