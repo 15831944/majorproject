@@ -12,6 +12,7 @@ using System.Windows.Shapes;
 using System.Net.NetworkInformation;
 using System.Windows.Media.Animation;
 using System.Threading;
+using WpfApplication3.Language;
 
 namespace WpfApplication3
 {
@@ -36,7 +37,7 @@ namespace WpfApplication3
 
                 Ping p = new Ping();
                 PingReply pr = p.Send("www.baidu.com");
-                if (pr.Status == IPStatus.Success||true)
+                if (pr.Status == IPStatus.Success || true)
                 {
                     MainWindow mw = new MainWindow();
                     mw.Show();
@@ -64,8 +65,8 @@ namespace WpfApplication3
 
         private void btnLogin_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-        	// TODO: Add event handler implementation here.
-			if (userName.Text.Equals("tongji") && passwordBox.Password.Equals("tongji"))
+            // TODO: Add event handler implementation here.
+            if (userName.Text.Equals("tongji") && passwordBox.Password.Equals("tongji"))
             {
                 pingBaidu();
                 return;
@@ -80,28 +81,45 @@ namespace WpfApplication3
 
         private void userName_GotMouseCapture(object sender, System.Windows.Input.MouseEventArgs e)
         {
-        	// TODO: Add event handler implementation here.
-			userName.Text="";
+            // TODO: Add event handler implementation here.
+            userName.Text = "";
         }
 
         private void passwordBox_GotMouseCapture(object sender, System.Windows.Input.MouseEventArgs e)
         {
-        	// TODO: Add event handler implementation here.
-			passbg.Text="";
-			passwordBox.Clear();
+            // TODO: Add event handler implementation here.
+            passbg.Text = "";
+            passwordBox.Clear();
         }
 
         private void userName_GotFocus(object sender, System.Windows.RoutedEventArgs e)
         {
-        	userName.Text="";// TODO: Add event handler implementation here.
+            userName.Text = "";// TODO: Add event handler implementation here.
         }
 
         private void passwordBox_GotFocus(object sender, System.Windows.RoutedEventArgs e)
         {
-        	// TODO: Add event handler implementation here.
-			passbg.Text="";
-			passwordBox.Clear();
+            // TODO: Add event handler implementation here.
+            passbg.Text = "";
+            passwordBox.Clear();
 
+        }
+
+        private void comboBox1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            LanguageHelper lh = new LanguageHelper();
+            switch (comboBox1.SelectedIndex)
+            {
+                case 0:
+                    lh.setLanguage("zh-CN");
+                    break;
+                case 1:
+                    lh.setLanguage("en-US");
+                    break;
+                default:
+                    lh.setLanguage("zh-CN");
+                    break;
+            }
         }
 
     }

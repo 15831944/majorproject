@@ -23,8 +23,6 @@ namespace WpfApplication3
         {
             //ESRI.ArcGIS.RuntimeManager.Bind(ESRI.ArcGIS.ProductCode.Engine);
             //InitializeEngineLicense();
-            LanguageHelper lh = new LanguageHelper();
-            lh.setLanguage("en-US");
         }
 
         //private void InitializeEngineLicense()

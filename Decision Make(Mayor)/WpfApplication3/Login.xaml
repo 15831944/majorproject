@@ -247,5 +247,9 @@
         <Grid x:Name="logout" VerticalAlignment="Bottom" Grid.Column="2" HorizontalAlignment="Right" Margin="0,0,40,40">
             <Button x:Name="btnLogout" Margin="0" VerticalAlignment="Center" Width="40" Height="40" HorizontalAlignment="Center" BorderBrush="{x:Null}" Foreground="{x:Null}" Style="{DynamicResource ButtonStyle1}" Click="btnLogout_Click" Background="{x:Null}"/>
         </Grid>
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="12,12,0,0" Name="comboBox1" VerticalAlignment="Top" Width="120" SelectionChanged="comboBox1_SelectionChanged">
+            <ComboBoxItem Content="zh-CN" IsSelected="True" />
+            <ComboBoxItem Content="en-US" />
+        </ComboBox>
     </Grid>
 </Window>
