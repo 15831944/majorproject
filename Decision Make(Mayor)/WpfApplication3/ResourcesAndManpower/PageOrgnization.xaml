@@ -92,56 +92,119 @@
         			<RowDefinition Height="128.316"/>
         			<RowDefinition/>
         		</Grid.RowDefinitions>
-        		<StackPanel Orientation="Horizontal" Grid.Row="1" VerticalAlignment="Center" d:LayoutOverrides="GridBox">
-        			<ListBox x:Name="listVice">
-        				<ListBox.Template>
-        					<ControlTemplate TargetType="{x:Type ListBox}">
-        						<WrapPanel Orientation="Horizontal" IsItemsHost="True" Background="{x:Null}"/>
-        					</ControlTemplate>
-        				</ListBox.Template>
-        				<ListBox.ItemContainerStyle>
-        					<Style TargetType="{x:Type ListBoxItem}" >
-        						<Setter Property="Template" Value="{StaticResource listBoxItemVice}"/>
-        					</Style>
-        				</ListBox.ItemContainerStyle>
-                
-        			</ListBox>
-        			<Label Content="副区长"/>
-        		</StackPanel>
-        		<Grid Grid.RowSpan="2">
-        			<Grid.RowDefinitions>
-        				<RowDefinition Height="85*"/>
-        				<RowDefinition Height="15*"/>
-        			</Grid.RowDefinitions>
-        			<ListBox Grid.Row="0" x:Name="organList">
-
-        				<ListBox.Template>
-        					<ControlTemplate TargetType="{x:Type ListBox}">
-        						<WrapPanel Orientation="Horizontal" IsItemsHost="True" Background="{x:Null}"/>
-        					</ControlTemplate>
-        				</ListBox.Template>
-
-        				<ListBox.ItemContainerStyle>
-        					<Style TargetType="{x:Type ListBoxItem}" >
-        						<Setter Property="Template" Value="{StaticResource listBoxItemStreet}"/>
-        					</Style>
-        				</ListBox.ItemContainerStyle>
-
-        			</ListBox>
-        			<Label x:Name="Type" Grid.Row="1" Content="街道、镇"/>
+        		<Grid Margin="32,0,0,0" Grid.Row="1" VerticalAlignment="Top">
+        			<UniformGrid Columns="8" Margin="68,-34,0,0" Height="34" VerticalAlignment="Top" >
+        				<Grid>
+        					<Grid.ColumnDefinitions>
+        						<ColumnDefinition Width="0.5*"/>
+        						<ColumnDefinition Width="0.5*"/>
+        					</Grid.ColumnDefinitions>
+        					<Rectangle StrokeThickness="1" Width="1" HorizontalAlignment="Center" Fill="#FF89897D" Grid.ColumnSpan="2"/>
+        					<Rectangle StrokeThickness="1" Height="1" Fill="#FF89897D" Margin="0,0,0,8" VerticalAlignment="Top" d:LayoutOverrides="Height" Grid.Column="1"/>
+        				</Grid>
+        				<Grid>
+        					<Grid.ColumnDefinitions>
+        						<ColumnDefinition Width="0.5*"/>
+        						<ColumnDefinition Width="0.5*"/>
+        					</Grid.ColumnDefinitions>
+        					<Rectangle StrokeThickness="1" Width="1" HorizontalAlignment="Center" Grid.ColumnSpan="2" Fill="#FF89897D"/>
+        					<Rectangle StrokeThickness="1" Height="1" Margin="0,0,0,8" VerticalAlignment="Top" d:LayoutOverrides="Height" Fill="#FF89897D" Grid.ColumnSpan="2"/>
+        				</Grid>
+        				<Grid>
+        					<Grid.ColumnDefinitions>
+        						<ColumnDefinition Width="0.5*"/>
+        						<ColumnDefinition Width="0.5*"/>
+        					</Grid.ColumnDefinitions>
+        					<Rectangle StrokeThickness="1" Width="1" HorizontalAlignment="Center" Grid.ColumnSpan="2" Fill="#FF89897D"/>
+        					<Rectangle StrokeThickness="1" Height="1" Margin="0,0,0,8" VerticalAlignment="Top" d:LayoutOverrides="Height" Fill="#FF89897D" Grid.ColumnSpan="2"/>
+        				</Grid>
+        				<Grid>
+        					<Grid.ColumnDefinitions>
+        						<ColumnDefinition Width="0.5*"/>
+        						<ColumnDefinition Width="0.5*"/>
+        					</Grid.ColumnDefinitions>
+        					<Rectangle StrokeThickness="1" Width="1" HorizontalAlignment="Center" Grid.ColumnSpan="2" Fill="#FF89897D"/>
+        					<Rectangle StrokeThickness="1" Height="1" Margin="0,0,0,8" VerticalAlignment="Top" d:LayoutOverrides="Height" Fill="#FF89897D" Grid.ColumnSpan="2"/>
+        				</Grid>
+        				<Grid>
+        					<Grid.ColumnDefinitions>
+        						<ColumnDefinition Width="0.5*"/>
+        						<ColumnDefinition Width="0.5*"/>
+        					</Grid.ColumnDefinitions>
+        					<Rectangle StrokeThickness="1" Width="1" HorizontalAlignment="Center" Grid.ColumnSpan="2" Fill="#FF89897D"/>
+        					<Rectangle StrokeThickness="1" Height="1" Margin="0,0,0,8" VerticalAlignment="Top" d:LayoutOverrides="Height" Fill="#FF89897D" Grid.ColumnSpan="2"/>
+        				</Grid>
+        				<Grid>
+        					<Grid.ColumnDefinitions>
+        						<ColumnDefinition Width="0.5*"/>
+        						<ColumnDefinition Width="0.5*"/>
+        					</Grid.ColumnDefinitions>
+        					<Rectangle StrokeThickness="1" Width="1" HorizontalAlignment="Center" Grid.ColumnSpan="2" Fill="#FF89897D"/>
+        					<Rectangle StrokeThickness="1" Height="1" Margin="0,0,0,8" VerticalAlignment="Top" d:LayoutOverrides="Height" Fill="#FF89897D" Grid.ColumnSpan="2"/>
+        				</Grid>
+        				<Grid>
+        					<Grid.ColumnDefinitions>
+        						<ColumnDefinition Width="0.5*"/>
+        						<ColumnDefinition Width="0.5*"/>
+        					</Grid.ColumnDefinitions>
+        					<Rectangle StrokeThickness="1" Width="1" HorizontalAlignment="Center" Grid.ColumnSpan="2" Fill="#FF89897D"/>
+        					<Rectangle StrokeThickness="1" Height="1" Margin="0,0,0,8" VerticalAlignment="Top" d:LayoutOverrides="Height" Fill="#FF89897D" Grid.ColumnSpan="2"/>
+        				</Grid>
+        				<Grid>
+        					<Grid.ColumnDefinitions>
+        						<ColumnDefinition Width="0.5*"/>
+        						<ColumnDefinition Width="0.5*"/>
+        					</Grid.ColumnDefinitions>
+        					<Rectangle StrokeThickness="1" Width="1" HorizontalAlignment="Center" Grid.ColumnSpan="2" Fill="#FF89897D"/>
+        					<Rectangle StrokeThickness="1" Height="1" Margin="0,0,0,8" VerticalAlignment="Top" d:LayoutOverrides="Height" Fill="#FF89897D"/>
+        				</Grid>
+        			</UniformGrid>
+        			<UniformGrid Columns="8" Margin="68,0,0,0" d:LayoutOverrides="Height" >
+        				<ListBox x:Name="listVice1" ItemContainerStyle="{DynamicResource ListBoxItemOrganization}"  VerticalAlignment="Top" Margin="10,0" Style="{DynamicResource ListBoxTest}"/>
+        				<ListBox x:Name="listVice2" ItemContainerStyle="{DynamicResource ListBoxItemOrganization}"  VerticalAlignment="Top" Margin="10,0" Style="{DynamicResource ListBoxTest}"/>
+        				<ListBox x:Name="listVice3" ItemContainerStyle="{DynamicResource ListBoxItemOrganization}"  VerticalAlignment="Top" Margin="10,0" Style="{DynamicResource ListBoxTest}"/>
+        				<ListBox x:Name="listVice4" ItemContainerStyle="{DynamicResource ListBoxItemOrganization}"  VerticalAlignment="Top" Margin="10,0" Style="{DynamicResource ListBoxTest}"/>
+        				<ListBox x:Name="listVice5" ItemContainerStyle="{DynamicResource ListBoxItemOrganization}"  VerticalAlignment="Top" Margin="10,0" Style="{DynamicResource ListBoxTest}"/>
+        				<ListBox x:Name="listVice6" ItemContainerStyle="{DynamicResource ListBoxItemOrganization}"  VerticalAlignment="Top" Margin="10,0" Style="{DynamicResource ListBoxTest}"/>
+        				<ListBox x:Name="listVice7" ItemContainerStyle="{DynamicResource ListBoxItemOrganization}"  VerticalAlignment="Top" Margin="10,0" Style="{DynamicResource ListBoxTest}"/>
+        				<ListBox x:Name="listVice8" ItemContainerStyle="{DynamicResource ListBoxItemOrganization}"  VerticalAlignment="Top" Margin="10,0" Style="{DynamicResource ListBoxTest}"/>
+        			</UniformGrid>
+        			<Label Content="副区长" HorizontalAlignment="Left" Margin="0,5,0,3.163" d:LayoutOverrides="Height">
+        				<Label.Foreground>
+        					<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+        				</Label.Foreground>
+        			</Label>
         		</Grid>
-        		<UniformGrid Columns="8" Grid.Row="1" VerticalAlignment="Top" >
-        			<ListBox x:Name="listVice1" ItemContainerStyle="{DynamicResource ListBoxItemOrganization}" Template="{DynamicResource ListBoxControlOrganization}" VerticalAlignment="Top" Margin="10,0">
-        				<ListBoxItem Content="ListBoxItem"/>
-        			</ListBox>
-        			<ListBox x:Name="listVice2" ItemContainerStyle="{DynamicResource ListBoxItemOrganization}" Template="{DynamicResource ListBoxControlOrganization}" VerticalAlignment="Top" Margin="10,0"/>
-        			<ListBox x:Name="listVice3" ItemContainerStyle="{DynamicResource ListBoxItemOrganization}" Template="{DynamicResource ListBoxControlOrganization}" VerticalAlignment="Top" Margin="10,0"/>
-        			<ListBox x:Name="listVice4" ItemContainerStyle="{DynamicResource ListBoxItemOrganization}" Template="{DynamicResource ListBoxControlOrganization}" VerticalAlignment="Top" Margin="10,0"/>
-        			<ListBox x:Name="listVice5" ItemContainerStyle="{DynamicResource ListBoxItemOrganization}" Template="{DynamicResource ListBoxControlOrganization}" VerticalAlignment="Top" Margin="10,0"/>
-        			<ListBox x:Name="listVice6" ItemContainerStyle="{DynamicResource ListBoxItemOrganization}" Template="{DynamicResource ListBoxControlOrganization}" VerticalAlignment="Top" Margin="10,0"/>
-        			<ListBox x:Name="listVice7" ItemContainerStyle="{DynamicResource ListBoxItemOrganization}" Template="{DynamicResource ListBoxControlOrganization}" VerticalAlignment="Top" Margin="10,0"/>
-        			<ListBox x:Name="listVice8" ItemContainerStyle="{DynamicResource ListBoxItemOrganization}" Template="{DynamicResource ListBoxControlOrganization}" VerticalAlignment="Top" Margin="10,0"/>
-        		</UniformGrid>
+        		<Grid HorizontalAlignment="Center" Height="34" VerticalAlignment="Top" Width="140" Margin="100,-68,0,0" Grid.Row="1">
+        			<Grid.ColumnDefinitions>
+        				<ColumnDefinition Width="0.5*"/>
+        				<ColumnDefinition Width="0.5*"/>
+        			</Grid.ColumnDefinitions>
+        			<Grid Grid.RowSpan="1" Height="Auto" VerticalAlignment="Stretch" Grid.ColumnSpan="2" Margin="0,-34,0,34" Width="140">
+        				<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="1,1,0,0">
+        					<Rectangle.Stroke>
+        						<SolidColorBrush Color="{DynamicResource #235235235}"/>
+        					</Rectangle.Stroke>
+        				</Rectangle>
+        				<Rectangle HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" StrokeDashArray="3 3" StrokeThickness="1" RadiusX="8" RadiusY="8" Stroke="{x:Null}" Margin="0,0,1,1" Fill="#FF89897D"/>
+        				<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="0,0,1,1">
+        					<Rectangle.Stroke>
+        						<SolidColorBrush Color="{DynamicResource Foregroundgray}"/>
+        					</Rectangle.Stroke>
+        				</Rectangle>
+        				<TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="姜樑" VerticalAlignment="Center">
+        					<TextBlock.Foreground>
+        						<SolidColorBrush Color="{DynamicResource #235235235}"/>
+        					</TextBlock.Foreground>
+        				</TextBlock>
+        			</Grid>
+        			<Label Content="区长" HorizontalAlignment="Left" Margin="-54,-34,0,0" VerticalAlignment="Top">
+        				<Label.Foreground>
+        					<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+        				</Label.Foreground>
+        			</Label>
+        			<Rectangle StrokeThickness="1" Width="1" HorizontalAlignment="Center" Grid.ColumnSpan="2" Fill="#FF89897D"/>
+        		</Grid>
         	</Grid>
         </Grid>
         

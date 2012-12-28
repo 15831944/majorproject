@@ -28,6 +28,7 @@ namespace WpfApplication3.ResourcesAndManpower
         {
             List<string> viceList = new List<string>
             {
+				"局长：许健",
                 "副局长 朱学军",
                 "副局长 蔡赞石",
                 "副局长 陈会润",

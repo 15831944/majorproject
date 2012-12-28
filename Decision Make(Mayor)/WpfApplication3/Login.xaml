@@ -139,7 +139,7 @@
         			<RowDefinition Height="113.093"/>
         		</Grid.RowDefinitions>
         		<Image Source="Images/login_head.png" Stretch="Fill" Width="140" Height="140" HorizontalAlignment="Center"/>
-        		<TextBox x:Name="userName" TextWrapping="Wrap" Text="用户名" Width="470" HorizontalAlignment="Center" Style="{DynamicResource TextBoxlogin}" Height="80" Grid.Row="1" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="36" GotMouseCapture="userName_GotMouseCapture" Foreground="{DynamicResource BrushLoginWord}" GotFocus="userName_GotFocus" TabIndex="1">
+        		<TextBox x:Name="userName" TextWrapping="Wrap" Text="用户名/Username" Width="470" HorizontalAlignment="Center" Style="{DynamicResource TextBoxlogin}" Height="80" Grid.Row="1" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="30" GotMouseCapture="userName_GotMouseCapture" Foreground="{DynamicResource BrushLoginWord}" GotFocus="userName_GotFocus" TabIndex="1">
         			<TextBox.Effect>
         				<DropShadowEffect ShadowDepth="0" Color="{DynamicResource #122122122}" BlurRadius="20"/>
         			</TextBox.Effect>
@@ -151,7 +151,7 @@
         			<Grid.Background>
         				<SolidColorBrush Color="{DynamicResource white}"/>
         			</Grid.Background>
-        			<TextBlock x:Name="passbg" TextWrapping="Wrap" Text="登录密码" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="36">
+        			<TextBlock x:Name="passbg" TextWrapping="Wrap" Text="登录密码/Password" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="30">
         				<TextBlock.Foreground>
         					<SolidColorBrush Color="{DynamicResource LineColor#184184184}"/>
         				</TextBlock.Foreground>
@@ -247,9 +247,9 @@
         <Grid x:Name="logout" VerticalAlignment="Bottom" Grid.Column="2" HorizontalAlignment="Right" Margin="0,0,40,40">
             <Button x:Name="btnLogout" Margin="0" VerticalAlignment="Center" Width="40" Height="40" HorizontalAlignment="Center" BorderBrush="{x:Null}" Foreground="{x:Null}" Style="{DynamicResource ButtonStyle1}" Click="btnLogout_Click" Background="{x:Null}"/>
         </Grid>
-        <ComboBox Height="23" HorizontalAlignment="Left" Margin="12,12,0,0" Name="comboBox1" VerticalAlignment="Top" Width="120" SelectionChanged="comboBox1_SelectionChanged">
-            <ComboBoxItem Content="zh-CN" IsSelected="True" />
-            <ComboBoxItem Content="en-US" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="12,12,0,0" Name="comboBox1" VerticalAlignment="Top" Width="120" SelectionChanged="comboBox1_SelectionChanged" Style="{DynamicResource ComboBoxFeedback}">
+            <ComboBoxItem Content="zh-CN" IsSelected="True" Style="{DynamicResource ComboBoxItemCase}" />
+            <ComboBoxItem Content="en-US" Style="{DynamicResource ComboBoxItemCase}" />
         </ComboBox>
     </Grid>
 </Window>

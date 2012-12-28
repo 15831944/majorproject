@@ -1,48 +1,82 @@
-﻿<Window x:Class="WpfApplication3.ResourcesAndManpower.WindowHuman"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="WindowHuman" Height="400" Width="400"
-        Loaded="Window_Loaded">
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="WpfApplication3.ResourcesAndManpower.WindowHuman"
+        Title="WindowHuman" Height="600" Width="800" Background="{x:Null}">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="40*"></RowDefinition>
-            <RowDefinition Height="60*"></RowDefinition>
+            <RowDefinition Height="35.114"/>
+            <RowDefinition Height="0.4*"/>
+            <RowDefinition Height="0.6*"/>
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0">
+        <Rectangle RadiusY="8" RadiusX="8" StrokeThickness="2" Grid.RowSpan="3">
+        	<Rectangle.Effect>
+        		<DropShadowEffect/>
+        	</Rectangle.Effect>
+        	<Rectangle.Fill>
+        		<SolidColorBrush Color="{DynamicResource Mainbg}"/>
+        	</Rectangle.Fill>
+        </Rectangle>
+        
+        
+    	<Label Style="{DynamicResource Labeltopheader}" Content="简介" Margin="0,0,0,2" d:LayoutOverrides="Height"/>
+        
+        
+        <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="30*"></ColumnDefinition>
-                <ColumnDefinition Width="70*"></ColumnDefinition>
+            	<ColumnDefinition Width="30*"/>
+            	<ColumnDefinition Width="70*"/>
             </Grid.ColumnDefinitions>
-            <Image Name="Touxiang" Grid.Column="0"></Image>
-            <Grid Grid.Column="1">
+            <Image Source="/WpfApplication3;component/Images/Touxiang.jpg" Stretch="Fill" Margin="7"/>
+            
+            
+            <Grid Grid.Column="1" Margin="40,0,0,0">
                 <Grid.RowDefinitions>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
+                	<RowDefinition/>
+                	<RowDefinition/>
+                	<RowDefinition/>
+                	<RowDefinition/>
+                	<RowDefinition/>
                 </Grid.RowDefinitions>
                 
-                <Label Name="yuanxi" Content="城市规划系" Grid.Row="0"></Label>
-                <Label Name="zhicheng" Content="唐子华  教授" Grid.Row="1"></Label>
-                <Label Name="lianxifangshi" Content="tel: 1277777777     tex:021-3243434" Grid.Row="2"></Label>
-                <Label Name="youxiang" Content="e-mail: tangzihua@tongji.edu.cn" Grid.Row="3"></Label>
-          
-                
-                <StackPanel Grid.Row="4" Orientation="Horizontal">
-                    <Button Content="电话"></Button>
-                    <Button Content="邮件"></Button>
-                    <Button Content="全屏"></Button>
-                </StackPanel>
+                <Label x:Name="yuanxi" Content="城市规划系" Grid.Row="0">
+                	<Label.Foreground>
+                		<SolidColorBrush Color="{DynamicResource #229229229}"/>
+                	</Label.Foreground>
+                </Label>
+                <Label x:Name="zhicheng" Content="唐子华  教授" Grid.Row="1">
+                	<Label.Foreground>
+                		<SolidColorBrush Color="{DynamicResource #229229229}"/>
+                	</Label.Foreground>
+                </Label>
+                <Label x:Name="lianxifangshi" Content="tel: 1277777777     tex:021-3243434" Grid.Row="2">
+                	<Label.Foreground>
+                		<SolidColorBrush Color="{DynamicResource #229229229}"/>
+                	</Label.Foreground>
+                </Label>
+                <Label x:Name="youxiang" Content="e-mail: tangzihua@tongji.edu.cn" Grid.Row="3">
+                	<Label.Foreground>
+                		<SolidColorBrush Color="{DynamicResource #229229229}"/>
+                	</Label.Foreground>
+                </Label>
+                <Grid Grid.Row="4" >
+                	<Grid.ColumnDefinitions>
+                		<ColumnDefinition Width="62.074"/>
+                		<ColumnDefinition Width="63.499"/>
+                		<ColumnDefinition Width="63.232"/>
+                		<ColumnDefinition/>
+                	</Grid.ColumnDefinitions>
+                	<Button Content="电话" Style="{DynamicResource ButtonFeedbacknormal}" HorizontalAlignment="Center" VerticalAlignment="Center" Height="23" Width="35"/>
+                	<Button Content="邮件" Style="{DynamicResource ButtonFeedbacknormal}" Grid.Column="1" Width="35" Height="25"/>
+                	<Button Content="全屏" Style="{DynamicResource ButtonFeedbacknormal}" Grid.Column="2" Width="35" Height="25"/>
+                </Grid>
                 
                 
             </Grid>
             
             
         </Grid>
-        
-        
-        <Image Name="Loading" Grid.Row="1"></Image>
+        <WebBrowser Grid.Row="2" Margin="10" Source="http://www.tongji-caup.org/inter.php"/>
         
         
     </Grid>

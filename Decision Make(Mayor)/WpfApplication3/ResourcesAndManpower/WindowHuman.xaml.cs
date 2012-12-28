@@ -23,9 +23,5 @@ namespace WpfApplication3.ResourcesAndManpower
             InitializeComponent();
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            Touxiang.Source= new BitmapImage(new Uri("/Images/yusuan.png", UriKind.Relative));
-        }
     }
 }

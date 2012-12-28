@@ -161,7 +161,7 @@
             			<TabItem x:Name="tabItem2" Header="历史记录" Style="{DynamicResource TabItemMiddle}" Height="33" VerticalAlignment="Top" Margin="-25.833,-2,25.833,0">
             				<Grid/>
             			</TabItem>
-            			<TabItem x:Name="tabItem3" Header="重大危险源" Style="{DynamicResource TabItemThird}" Height="33" VerticalAlignment="Top" Margin="-51.352,-2,51.352,0">
+            			<TabItem x:Name="tabItem3" Header="重大危险源" Style="{DynamicResource TabItemThird}" Height="33" VerticalAlignment="Top" Margin="-51.352,-2,0,0" HorizontalAlignment="Left" Width="100">
             				<Grid x:Name="Gridzdwxy">
             					<TextBlock x:Name="textBlockzdwxy" Text="TextBlock" Margin="0,0,20,60" />
             				</Grid>

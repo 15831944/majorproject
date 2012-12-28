@@ -1912,7 +1912,7 @@
                 				<SolidColorBrush Color="{DynamicResource #646464}"/>
                 			</ListBoxItem.Foreground>
                 		</ListBoxItem>
-                		<ListBoxItem x:Name="menu2_3" Content="经费资源" Style="{DynamicResource ListBoxMainMenuSubmenu}" Height="70" FontSize="16" Selected="menu2_3_Selected">
+                		<ListBoxItem x:Name="menu2_3" Content="人力资源" Style="{DynamicResource ListBoxMainMenuSubmenu}" Height="70" FontSize="16" Selected="menu2_3_Selected">
                 			<ListBoxItem.Foreground>
                 				<SolidColorBrush Color="{DynamicResource #646464}"/>
                 			</ListBoxItem.Foreground>
@@ -2231,7 +2231,7 @@
                     <Button x:Name="weibo_search" Content="Button" Click="weibo_search_Click" Cursor="Hand" Style="{DynamicResource ButtonStyle10}" Margin="0.5,7,0,8" Grid.Column="1" HorizontalAlignment="Left" Width="33.809"/>
                 </Grid>
                 <WebBrowser Width="278" x:Name="wb_weibo" HorizontalAlignment="Left" Margin="6,0,0,20" Height="298" VerticalAlignment="Bottom" Grid.Row="2" />
-                <Label Name="lblMicroblog" Content="微  博" Style="{DynamicResource LabelRightContent}" FontFamily="Helvetica" FontSize="14" FontWeight="Bold" Height="33" VerticalAlignment="Top"/>
+                <Label Name="lblMicroblog" Content="微  博" Style="{DynamicResource LabelTitleLong}" FontFamily="Helvetica" FontSize="14" FontWeight="Bold" Height="33" VerticalAlignment="Top"/>
             </Grid>
         </Grid>
     </Grid>

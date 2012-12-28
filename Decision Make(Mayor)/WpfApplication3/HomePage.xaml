@@ -1822,12 +1822,7 @@
                             <SolidColorBrush Color="{DynamicResource partbackground}"/>
                         </Rectangle.Fill>
                     </Rectangle>
-                    <Rectangle Height="24" VerticalAlignment="Top" Margin="0,12,0,0" Fill="{DynamicResource gredientgray}"/>
-                    <Path Data="M7.9999995,6.8212103E-13 L8.0095253,6.8212103E-13 82.050003,6.8212103E-13 82.097755,6.8212103E-13 C82.581573,-1.9431297E-07 83.055374,0.043099869 83.515564,0.12568295 L83.644882,0.1607797 83.662277,0.16253293 83.738304,0.18613401 84.851685,0.48829973 85.126106,0.61692792 85.163963,0.62867761 85.244873,0.67259467 86.084549,1.0661709 86.489799,1.3483219 86.522881,1.3662779 86.562286,1.3987894 87.192551,1.8376046 C88.577065,2.9856124 89.571114,4.5919936 89.944542,6.4255145 L90.051376,7.4902956 90.024994,7.7519791 90.050003,7.9999998 90.050003,28.496026 90.162529,29.612272 C90.908501,33.257741 94.134003,35.999997 98.000008,35.999986 L124.99998,35.999986 839.99994,35.999997 839.99994,29.171588 840,161.95267 C840,166.39708 836.414,170 831.99048,170 L8.0095253,170 C3.5859876,170 -1.1368684E-13,166.39708 0,161.95267 L0,41.999997 0,21.124236 0,19.447387 0,8.0473263 0,7.9999998 C-5.6843419E-14,3.5817232 3.581722,1.1920936E-06 7.9999995,6.8212103E-13 z" Fill="#FF66685D" Stretch="Fill">
-                        <Path.Effect>
-                            <DropShadowEffect/>
-                        </Path.Effect>
-                    </Path>
+                    <Label x:Name="runWeather" Content="天 气" Style="{DynamicResource Labeltopheader}" VerticalAlignment="Top" FontFamily="Helvetica" FontSize="14" FontWeight="Bold" Foreground="#FFEDEDED"/>
                     <Grid x:Name="WeatherToday" HorizontalAlignment="Left" Width="123" Margin="0,36,0,0">
                         <Image x:Name="w_image1" Margin="34,0,35,25" Stretch="Fill" VerticalAlignment="Bottom" Height="55" Width="55"/>
                         <Label x:Name="w_label1" HorizontalAlignment="Center" Height="32" Margin="0,21,0,0" VerticalAlignment="Top" d:LayoutOverrides="VerticalAlignment" FontSize="14" Content="多云转阵雨">
@@ -1932,9 +1927,6 @@
                         </Grid>
 
                     </Grid>
-                    <TextBlock HorizontalAlignment="Left" Height="18.333" Margin="28.167,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="37.333" FontSize="14" FontFamily="Helvetica"><TextBlock.Foreground>
-        			<SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
-        		</TextBlock.Foreground><Run Name="runWeather" Language="zh-cn" Text="天  气"/></TextBlock>
                     <Label x:Name="w_label0" Content="11月2日" HorizontalAlignment="Left" Height="24.5" Margin="123,11.5,0,0" VerticalAlignment="Top" Width="73">
                         <Label.Foreground>
                             <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
@@ -1956,20 +1948,12 @@
                                 <SolidColorBrush Color="{DynamicResource partbackground}"/>
                             </Rectangle.Fill>
                         </Rectangle>
-                        <Rectangle Height="24" VerticalAlignment="Top" Fill="{DynamicResource gredientgray}" Margin="0,12,0,0"/>
-                        <Path Data="M8,0 L8.0095205,0 82.049995,0 82.097748,0 C82.581573,5.1105004E-06 83.055374,0.043105174 83.515556,0.12569034 L83.644882,0.160779 83.662277,0.16253972 83.738304,0.18614596 84.851685,0.4882983 85.126106,0.61693156 85.163956,0.62867808 85.244881,0.67260808 86.084549,1.0661796 86.489792,1.3483352 86.522881,1.3662819 86.562271,1.3987924 87.192551,1.8376145 C88.577065,2.9856176 89.571114,4.591999 89.944542,6.4255132 L90.051384,7.4902968 90.024994,7.7519774 90.049995,8.0000004 90.049995,28.496028 90.162537,29.612275 C90.908501,33.257745 94.134003,36.000001 98.000008,35.999993 L124.99998,35.999993 235,35.999993 235,170 235,200.5 235,287 C235,291.41828 231.41827,295 227,295 L8,295 C3.581722,295 -1.1368684E-13,291.41828 0,287 L0,161.95267 0,141.16701 0,42.000005 0,21.12424 0,19.447392 0,8.047326 0,8.0000004 C-1.7053026E-13,3.5817286 3.581722,6.496907E-06 8,0 z" Fill="#FF66685D" Stretch="Fill">
-                            <Path.Effect>
-                                <DropShadowEffect/>
-                            </Path.Effect>
-                        </Path>
+                        <Label x:Name="tblCalendar" Content="日 程" Style="{DynamicResource Labeltopheader}" VerticalAlignment="Top" FontFamily="Helvetica" FontSize="14" FontWeight="Bold" Foreground="#FFEDEDED"/>
                         <StackPanel Margin="15,36,15,8" Orientation="Vertical">
                             <Calendar HorizontalAlignment="Center" x:Name="calendar1" VerticalAlignment="Top" SelectedDatesChanged="calendar1_SelectedDatesChanged" Style="{DynamicResource CalendarStyle1}" Foreground="#FFF0F0F0" Background="{x:Null}" CalendarItemStyle="{DynamicResource CalendarItemStyle2}" CalendarDayButtonStyle="{DynamicResource CalendarDayButtonStyle1}" CalendarButtonStyle="{DynamicResource CalendarButtonStyle1}"/>
                             <GridSplitter HorizontalAlignment="Stretch" Height="1" Margin="5,0"/>
                             <TextBox x:Name="textBox_Calendar" TextWrapping="Wrap" Background="{x:Null}" Style="{DynamicResource TextBoxStyle2}" Text="今天上午" Foreground="#FFD8E3B9" Margin="3,3,3,0" FontSize="11" />
                         </StackPanel>
-                        <TextBlock Name="tblCalendar" HorizontalAlignment="Left" Height="18.333" Margin="28.167,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="37.333" FontSize="14" FontFamily="Helvetica" Text="日  程"><TextBlock.Foreground>
-        			<SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
-        		</TextBlock.Foreground></TextBlock>
                     </Grid>
                     <Grid Grid.Column="1" Name="gridWeather" Margin="0,0,10,0">
                         <Rectangle RadiusX="8" RadiusY="8">
@@ -1980,15 +1964,7 @@
                                 <SolidColorBrush Color="{DynamicResource partbackground}"/>
                             </Rectangle.Fill>
                         </Rectangle>
-                        <Rectangle Height="24" VerticalAlignment="Top" Fill="{DynamicResource gredientgray}" Margin="0,12,0,0"/>
-                        <Path Data="M8.0000057,0 L8.0095272,0 82.050003,0 82.097755,0 C82.581573,3.0204816E-06 83.055374,0.043103084 83.515556,0.12568353 L83.64489,0.16078908 83.662277,0.16253665 83.738312,0.18614167 84.851692,0.48830384 85.126106,0.61693 85.163963,0.62867468 85.244881,0.67260801 86.084549,1.0661706 86.489799,1.3483256 86.522881,1.3662767 86.562279,1.3987867 87.192558,1.8376061 C88.577065,2.9856155 89.571114,4.5919969 89.944542,6.4255111 L90.051369,7.4902942 90.024994,7.7519796 90.050011,8.0000055 90.050011,28.49602 90.162537,29.612279 C90.908501,33.257743 94.134003,35.999999 98,35.999987 L124.99998,35.999987 595,35.999995 595,170 595,183.5 595,287 C595,291.41828 591.41827,295 587,295 L8.0000057,295 C3.581722,295 0,291.41828 0,287 L0,161.95267 0,126.83301 0,42.000003 0,21.12424 0,19.447385 0,8.0473316 0,8.0000055 C-5.6843419E-14,3.5817265 3.581722,4.4068881E-06 8.0000057,0 z" Fill="#FF66685D" Stretch="Fill">
-                            <Path.Effect>
-                                <DropShadowEffect/>
-                            </Path.Effect>
-                        </Path>
-                        <TextBlock Name="tblTemperature" HorizontalAlignment="Left" Height="18.333" Margin="28.167,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="37.333" FontSize="14" FontFamily="Helvetica" Text="气  温"><TextBlock.Foreground>
-        			<SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
-        		</TextBlock.Foreground></TextBlock>
+                        <Label x:Name="tblTemperature" Content="气 温" Style="{DynamicResource Labeltopheader}" VerticalAlignment="Top" FontFamily="Helvetica" FontSize="14" FontWeight="Bold" Foreground="#FFEDEDED"/>
                         <Button Content="+" Height="22.625" HorizontalAlignment="Right" Margin="567.25,13.375,5,0" x:Name="btn_maxweather" VerticalAlignment="Top" Width="19.75" Click="btn_maxweather_Click" VerticalContentAlignment="Top" ContentTemplate="{DynamicResource DataTemplate2}" Style="{DynamicResource ButtonStyle6}" FontSize="14" FontWeight="Bold" Cursor="Hand" Background="{x:Null}" />
                         <WebBrowser x:Name="w_webBrowser1" Opacity="0.2" ScrollViewer.VerticalScrollBarVisibility="Disabled" Margin="16,52,16,16"/>
                         <Grid x:Name="tag_Copy3" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="81.25" Margin="0,-20,0,0" Visibility="Collapsed">
@@ -2014,15 +1990,7 @@
                         <SolidColorBrush Color="{DynamicResource partbackground}"/>
                     </Rectangle.Fill>
                 </Rectangle>
-                <Rectangle Height="24" VerticalAlignment="Top" Fill="{DynamicResource gredientgray}" Margin="0,12,0,0"/>
-                <Path Data="M8.0000027,0 L8.0095299,0 82.050004,0 82.097756,0 C82.581574,3.3827268E-07 83.055375,0.043100402 83.515557,0.12568496 L83.644891,0.16078502 83.662278,0.1625333 83.73832,0.18614568 84.851693,0.48830062 85.126107,0.61693007 85.163964,0.62866545 85.244881,0.67260599 86.08455,1.0661669 86.4898,1.3483263 86.522881,1.3662763 86.562287,1.3987858 87.192567,1.8376038 C88.577065,2.9856129 89.571114,4.5919938 89.94455,6.4255047 L90.051377,7.4902916 90.024995,7.7519813 90.050012,8.0000029 90.050012,28.496016 90.162537,29.612274 C90.908501,33.25774 94.134004,35.999996 98.000001,35.999981 L124.99998,35.999981 410,35.999981 410,237 410,295 410,467 C410,471.41827 406.41827,475 402,475 L8.0000027,475 C3.5817228,475 8.1956387E-07,471.41827 0,467 L0,287 0,237 0,161.95267 0,126.83301 0,42.000004 0,21.124233 0,19.447378 0,8.047327 0,8.0000029 C8.1956381E-07,3.5817239 3.5817228,1.7246789E-06 8.0000027,0 z" Fill="#FF66685D" Stretch="Fill">
-                    <Path.Effect>
-                        <DropShadowEffect/>
-                    </Path.Effect>
-                </Path>
-                <TextBlock Name="tblPM" HorizontalAlignment="Left" Height="18.333" Margin="12.667,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="71.667" FontSize="14" FontFamily="Helvetica" Text="PM2.5监测"><TextBlock.Foreground>
-        			<SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
-        		</TextBlock.Foreground></TextBlock>
+                <Label x:Name="tblPM" Content="PM2.5监测" Style="{DynamicResource LabelTitleLong}" VerticalAlignment="Top" FontFamily="Helvetica" FontSize="14" FontWeight="Bold" Foreground="#FFEDEDED"/>
                 <Image x:Name="w_imageWeather" HorizontalAlignment="Left" Margin="21,44,20,0" Width="444" RenderTransformOrigin="0.5,0.5" Height="336" VerticalAlignment="Top" Panel.ZIndex="1" Visibility="Collapsed">
                     <Image.RenderTransform>
                         <TransformGroup>
@@ -2064,7 +2032,7 @@
                 <ColumnDefinition Width="0.333*"/>
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="0" Name="gridEmergency">
-                <Rectangle RadiusX="8" RadiusY="8" Height="170" VerticalAlignment="Top">
+                <Rectangle RadiusX="8" RadiusY="8">
                     <Rectangle.Effect>
                         <DropShadowEffect/>
                     </Rectangle.Effect>
@@ -2072,15 +2040,7 @@
                         <SolidColorBrush Color="{DynamicResource partbackground}"/>
                     </Rectangle.Fill>
                 </Rectangle>
-                <Rectangle Height="24" VerticalAlignment="Top" Fill="{DynamicResource gredientgray}" Margin="0,12,0,0"/>
-                <Path Data="M7.9999995,0 L8.0095253,0 82.050003,0 82.097755,0 C82.581573,1.5938263E-06 83.055374,0.043101657 83.515564,0.12568295 L83.64489,0.16078055 83.662277,0.16253293 83.738304,0.18613994 84.851685,0.48829973 85.126106,0.61692417 85.163963,0.62867761 85.244873,0.67259967 86.084549,1.0661709 86.489799,1.3483286 86.522881,1.3662779 86.562279,1.398797 87.192551,1.8376046 C88.577065,2.9856142 89.571114,4.5919956 89.944542,6.4255141 L90.051376,7.4902958 90.024994,7.7519759 90.050003,7.9999994 90.050003,28.496021 90.162529,29.612272 C90.908501,33.257742 94.134003,35.999998 98.000008,35.999987 L124.99998,35.999987 839.99994,35.999998 839.99994,29.171587 840,122.66681 840,161.95267 840,457 C840,461.41828 836.41827,465 832,465 L7.9999995,465 C3.581722,465 -5.6843419E-14,461.41828 0,457 L0,161.95267 0,122.66699 0,41.999998 0,21.124237 0,19.447388 0,8.047326 0,7.9999994 C-1.1368684E-13,3.581725 3.581722,2.9802329E-06 7.9999995,0 z" Fill="#FF66685D" Stretch="Fill">
-                    <Path.Effect>
-                        <DropShadowEffect/>
-                    </Path.Effect>
-                </Path>
-                <TextBlock Name="tblEmergency" HorizontalAlignment="Left" Height="18.333" Margin="16.5,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="57.5" FontSize="14" FontFamily="Helvetica" Text="突发事件"><TextBlock.Foreground>
-            		<SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
-            	</TextBlock.Foreground></TextBlock>
+                <Label x:Name="tblEmergency" Content="突发事件" Style="{DynamicResource LabelTitleLong}" VerticalAlignment="Top" FontFamily="Helvetica" FontSize="14" FontWeight="Bold" Foreground="#FFEDEDED"/>
                 <Button Content="Max" Height="23" HorizontalAlignment="Right" Margin="0,13,5,0" x:Name="btn_maxemergency" Style="{DynamicResource ButtonStyle6}" Width="20.5" VerticalContentAlignment="Top" FontWeight="Bold" FontSize="14"  VerticalAlignment="Top" Click="btn_maxemergency_Click" Cursor="Hand" Background="{x:Null}" />
                 <WebBrowser x:Name="wbEmergency" Margin="22,60,22,30" Opacity="0.2"/>
                 <Grid x:Name="tag_Copy" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="114.75" Margin="0,-20,0,0" Visibility="Collapsed">
@@ -2099,41 +2059,6 @@
                     </Label.Foreground>
                 </Label>
                 <Button Content="" ContentTemplate="{DynamicResource DataTemplate2}" FontSize="14" FontWeight="Bold" Height="22.625" HorizontalAlignment="Left" Margin="790.75,13.375,0,0" x:Name="btnEmergencyRefresh" Style="{DynamicResource ButtonStyle9}" VerticalAlignment="Top" VerticalContentAlignment="Top" Width="19.75" Click="btnEmergencyRefresh_Click" Cursor="Hand" Background="#FF353535"/>
-                <Grid HorizontalAlignment="Right" Margin="0,0,30,42" VerticalAlignment="Bottom">
-                    <Rectangle RadiusX="6" RadiusY="6" Fill="#AD474747"/>
-                    <StackPanel HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="44">
-                        <Grid Height="23">
-                            <Rectangle RadiusX="6" RadiusY="6" Visibility="Hidden">
-                                <Rectangle.Fill>
-                                    <SolidColorBrush Color="{DynamicResource s_side}"/>
-                                </Rectangle.Fill>
-                            </Rectangle>
-                            <Label Content="突发事件" FontSize="8" Cursor="None" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                <Label.Foreground>
-                                    <SolidColorBrush Color="{DynamicResource TVCharacterColor}"/>
-                                </Label.Foreground>
-                            </Label>
-                            <Button Content="突发事件" x:Name="btn_emergency" Click="btn_emergency_Click" Style="{DynamicResource ButtonStyle2}" Background="{x:Null}" Panel.ZIndex="100" Cursor="Hand" Opacity="0" >
-                                <Button.Foreground>
-                                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
-                                </Button.Foreground>
-                            </Button>
-                        </Grid>
-                        <Grid Height="23">
-                            <Rectangle RadiusX="6" RadiusY="6" Fill="#B2474747" Visibility="Hidden"/>
-                            <Label Content="台风" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="8" Cursor="None">
-                                <Label.Foreground>
-                                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
-                                </Label.Foreground>
-                            </Label>
-                            <Button Content="台风信息" x:Name="btn_typhoon" Click="btn_typhoon_Click" Style="{DynamicResource ButtonStyle2}" Background="{x:Null}" Panel.ZIndex="100" Cursor="Hand" Opacity="0">
-                                <Button.Foreground>
-                                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
-                                </Button.Foreground>
-                            </Button>
-                        </Grid>
-                    </StackPanel>
-                </Grid>
             </Grid>
             <Grid Grid.Column="1" Name="gridTraffic" Margin="10,0,0,0">
                 <Rectangle RadiusX="8" RadiusY="8">
@@ -2144,15 +2069,7 @@
                         <SolidColorBrush Color="{DynamicResource partbackground}"/>
                     </Rectangle.Fill>
                 </Rectangle>
-                <Rectangle Height="24" VerticalAlignment="Top" Fill="{DynamicResource gredientgray}" Margin="0,12,0,0"/>
-                <Path Data="M8.0000027,0 L8.0095299,0 82.050004,0 82.097756,0 C82.581574,3.3827268E-07 83.055375,0.043100402 83.515557,0.12568496 L83.644891,0.16078502 83.662278,0.1625333 83.73832,0.18614568 84.851693,0.48830062 85.126107,0.61693007 85.163964,0.62866545 85.244881,0.67260599 86.08455,1.0661669 86.4898,1.3483263 86.522881,1.3662763 86.562287,1.3987858 87.192567,1.8376038 C88.577065,2.9856129 89.571114,4.5919938 89.94455,6.4255047 L90.051377,7.4902916 90.024995,7.7519813 90.050012,8.0000029 90.050012,28.496016 90.162537,29.612274 C90.908501,33.25774 94.134004,35.999996 98.000001,35.999981 L124.99998,35.999981 410,35.999981 410,237 410,295 410,467 C410,471.41827 406.41827,475 402,475 L8.0000027,475 C3.5817228,475 8.1956387E-07,471.41827 0,467 L0,287 0,237 0,161.95267 0,126.83301 0,42.000004 0,21.124233 0,19.447378 0,8.047327 0,8.0000029 C8.1956381E-07,3.5817239 3.5817228,1.7246789E-06 8.0000027,0 z" Fill="#FF66685D" Stretch="Fill">
-                    <Path.Effect>
-                        <DropShadowEffect/>
-                    </Path.Effect>
-                </Path>
-                <TextBlock Name="tblTransportation" HorizontalAlignment="Left" Height="18.333" Margin="16.669,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="71.667" FontSize="14" FontFamily="Helvetica" Text="城市交通"><TextBlock.Foreground>
-            		<SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
-            	</TextBlock.Foreground></TextBlock>
+                <Label x:Name="tblTransportation" Content="城市交通" Style="{DynamicResource LabelTitleLong}" VerticalAlignment="Top" FontFamily="Helvetica" FontSize="14" FontWeight="Bold" Foreground="#FFEDEDED"/>
                 <Button Content="Max" HorizontalAlignment="Right" Margin="0,13,5,0" x:Name="btn_maxtraffic" Style="{DynamicResource ButtonStyle6}" Width="20.5" Click="btn_maxtraffic_Click" VerticalContentAlignment="Top" FontWeight="Bold" FontSize="14" Height="23" VerticalAlignment="Top" Cursor="Hand" Background="{x:Null}" />
                 <WebBrowser Margin="10,51,10,20" x:Name="wbTraffic" DataContext="{Binding}" Opacity="0.2"/>
                 <Grid x:Name="tag_Copy1" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="81.25" Margin="0,-20,0,0" Visibility="Collapsed">

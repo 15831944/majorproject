@@ -8,24 +8,38 @@
 	Title="PageHumanResource"
       Loaded="Page_Loaded">
     <Page.Resources>
-        <ControlTemplate x:Key="listBoxItemLeader" TargetType="{x:Type ListBoxItem}">
-            <Button Name="Leader" Content="{Binding}" Click="Leader_Click"></Button>
-        </ControlTemplate>
-        <ControlTemplate x:Key="listBoxItemDepart" TargetType="{x:Type ListBoxItem}">
-            <Button Name="Depart" Content="{Binding}" Click="Depart_Click"></Button>
-        </ControlTemplate>
+        <DataTemplate x:Key="listBoxItemLeader" >
+            <Grid Height="Auto" Width="Auto">
+        		<Label Content="{Binding}"  d:LayoutOverrides="Width, Height">
+        			<Label.Foreground>
+        				<SolidColorBrush Color="{DynamicResource #229229229}"/>
+        			</Label.Foreground>
+        		</Label>
+            	<Button x:Name="Leader" Content="{Binding}" Click="Leader_Click" Opacity="0" d:LayoutOverrides="Width, Height"/>
+        	</Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="listBoxItemDepart" >
+            <Grid Height="Auto" Width="Auto">
+        		<Label  Content="{Binding}" d:LayoutOverrides="Width, Height">
+        			<Label.Foreground>
+        				<SolidColorBrush Color="{DynamicResource #229229229}"/>
+        			</Label.Foreground>
+        		</Label>
+            	<Button x:Name="Depart" Content="{Binding}" Click="Depart_Click" Opacity="0" d:LayoutOverrides="Width, Height"/>
+        	</Grid>
+        </DataTemplate>
     </Page.Resources>
     <Grid Margin="0,0,5,0">
         <Grid.RowDefinitions>
-            <RowDefinition Height="20*"></RowDefinition>
-            <RowDefinition Height="80*"></RowDefinition>
+            <RowDefinition Height="38.88"></RowDefinition>
+            <RowDefinition Height="0.271*"/>
+            <RowDefinition Height="0.729*"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="20*"></ColumnDefinition>
-            <ColumnDefinition Width="20*"></ColumnDefinition>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         
-        <Rectangle RadiusX="8" RadiusY="8" Grid.RowSpan="2" Grid.ColumnSpan="2" Margin="0,0,-85,-672">
+        <Rectangle RadiusX="8" RadiusY="8" Grid.RowSpan="3">
         	<Rectangle.Effect>
         		<DropShadowEffect/>
         	</Rectangle.Effect>
@@ -33,56 +47,122 @@
         		<SolidColorBrush Color="{DynamicResource Mainbg}"/>
         	</Rectangle.Fill>
         </Rectangle>
-        <Label VerticalAlignment="Top" Style="{DynamicResource Labeltopheader}" Content="经费资源" Grid.ColumnSpan="2" Margin="0,0,-85,0"/>
-        
-        
-        <StackPanel Grid.Column="0" Grid.Row="0">
-            <Label Content="区长：xx" x:Name="Leader"/>
-            <Label Content="彭崧" x:Name="ViceLeader"/>
-            <Label Content="规划和土地管理局" x:Name="Department"/>
-        </StackPanel>
+        <Label Style="{DynamicResource Labeltopheader}" Content="人力资源" Margin="0,0,0,6" d:LayoutOverrides="Height"/>
+        <Grid Grid.Row="1" Margin="20">
+        	<Grid.ColumnDefinitions>
+        		<ColumnDefinition Width="0.445*"/>
+        		<ColumnDefinition Width="0.555*"/>
+        	</Grid.ColumnDefinitions>
         
         <!--人员列表-->
-        <Grid Grid.Column="1" Grid.Row="0">
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <Button Content="局长：许健" x:Name="JuZhang" Grid.Row="0" Click="JuZhang_Click"/>
-            <ListBox x:Name="listLeader" Grid.Row="1">
-                <ListBox.Template>
-                    <ControlTemplate TargetType="{x:Type ListBox}">
-                        <WrapPanel Orientation="Horizontal" IsItemsHost="True" Background="{x:Null}"/>
-                    </ControlTemplate>
-                </ListBox.Template>
-                <ListBox.ItemContainerStyle>
-                    <Style TargetType="{x:Type ListBoxItem}" >
-                        <Setter Property="Template" Value="{StaticResource listBoxItemLeader}"/>
-                    </Style>
-                </ListBox.ItemContainerStyle>
-            </ListBox>
+        	<Grid Grid.Column="0" Grid.Row="0" Margin="0,0,10,0">
+        		<Grid>
+        			<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="1,1,0,0">
+        				<Rectangle.Stroke>
+        					<SolidColorBrush Color="{DynamicResource #235235235}"/>
+        				</Rectangle.Stroke>
+        			</Rectangle>
+        			<Rectangle HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" StrokeDashArray="3 3" StrokeThickness="1" RadiusX="8" RadiusY="8" Stroke="{x:Null}" Margin="0,0,1,1">
+        				<Rectangle.Fill>
+        					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+        						<GradientStop Color="#FF575852" Offset="1"/>
+        						<GradientStop Color="#FF64665C"/>
+        					</LinearGradientBrush>
+        				</Rectangle.Fill>
+        			</Rectangle>
+        			<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="0,0,1,1">
+        				<Rectangle.Stroke>
+        					<SolidColorBrush Color="{DynamicResource Foregroundgray}"/>
+        				</Rectangle.Stroke>
+        			</Rectangle>
+        			<Rectangle Height="1" RadiusY="8" RadiusX="8" VerticalAlignment="Center">
+        				<Rectangle.Fill>
+        					<SolidColorBrush Color="{DynamicResource #235235235}"/>
+        				</Rectangle.Fill>
+        			</Rectangle>
+        		</Grid>
+        		<Label Content="区长：" x:Name="Leader" VerticalAlignment="Top">
+        			<Label.Foreground>
+        				<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+        			</Label.Foreground>
+        		</Label>
+        		<Label Content="彭崧" x:Name="ViceLeader" Margin="0,25.836,0,0" VerticalAlignment="Top">
+        			<Label.Foreground>
+        				<SolidColorBrush Color="{DynamicResource #229229229}"/>
+        			</Label.Foreground>
+        		</Label>
+        		<Label Content="规划和土地管理局" x:Name="Department" Margin="0,51.673,0,0" VerticalAlignment="Top">
+        			<Label.Foreground>
+        				<SolidColorBrush Color="{DynamicResource #229229229}"/>
+        			</Label.Foreground>
+        		</Label>
+        	</Grid>
+<!--人员列表-->
+        	<Grid Grid.Row="0" Grid.Column="1" Margin="10,0,0,0">
+        		<Grid.RowDefinitions>
+        			<RowDefinition/>
+        		</Grid.RowDefinitions>
+        		<ListBox x:Name="listLeader" Style="{DynamicResource ListBoxHuman}" ItemTemplate="{StaticResource listBoxItemLeader}" ItemContainerStyle="{DynamicResource ListBoxItemOrganization}"/>
+        	</Grid>
+        </Grid>
+        
+        <!--人员列表-->
+        <Grid Grid.Row="2">
+        	<Grid.ColumnDefinitions>
+        		<ColumnDefinition Width="324"/>
+        		<ColumnDefinition/>
+        	</Grid.ColumnDefinitions>
+<!--部门列表-->
+        	<ListBox x:Name="listDepartment" Grid.Column="0" ItemTemplate="{StaticResource listBoxItemDepart}" Style="{DynamicResource ListBoxHuman}" ItemContainerStyle="{DynamicResource ListBoxItemOrganization}" VerticalAlignment="Top" Margin="20,10,10,0"/>
+        	<Grid Grid.Column="1" Margin="10,10,20,20">
+        		<Grid.RowDefinitions>
+        			<RowDefinition/>
+        			<RowDefinition/>
+        		</Grid.RowDefinitions>
+            
+        		<Grid Grid.RowSpan="2">
+        			<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="1,1,0,0">
+        				<Rectangle.Stroke>
+        					<SolidColorBrush Color="{DynamicResource #235235235}"/>
+        				</Rectangle.Stroke>
+        			</Rectangle>
+        			<Rectangle HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" StrokeDashArray="3 3" StrokeThickness="1" RadiusX="8" RadiusY="8" Stroke="{x:Null}" Margin="0,0,1,1">
+        				<Rectangle.Fill>
+        					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+        						<GradientStop Color="#FF575852" Offset="1"/>
+        						<GradientStop Color="#FF64665C"/>
+        					</LinearGradientBrush>
+        				</Rectangle.Fill>
+        			</Rectangle>
+        			<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="0,0,1,1">
+        				<Rectangle.Stroke>
+        					<SolidColorBrush Color="{DynamicResource Foregroundgray}"/>
+        				</Rectangle.Stroke>
+        			</Rectangle>
+        			<Rectangle Height="1" RadiusY="8" RadiusX="8" VerticalAlignment="Center">
+        				<Rectangle.Fill>
+        					<SolidColorBrush Color="{DynamicResource #235235235}"/>
+        				</Rectangle.Fill>
+        			</Rectangle>
+        		</Grid>
+            
+        		<TextBlock Grid.Row="0" TextWrapping="Wrap" x:Name="BriefIntro" Margin="10">
+        			<TextBlock.Foreground>
+        				<SolidColorBrush Color="{DynamicResource #229229229}"/>
+        			</TextBlock.Foreground>
+        		</TextBlock>
+        		<TextBlock Grid.Row="1" TextWrapping="Wrap" x:Name="Address" Margin="10">
+        			<TextBlock.Foreground>
+        				<SolidColorBrush Color="{DynamicResource #229229229}"/>
+        			</TextBlock.Foreground>
+        		</TextBlock>
+        	</Grid>
+
+        
         </Grid>
 
 
         <!--部门列表-->
-        <ListBox x:Name="listDepartment" Grid.Row="1" Grid.Column="0">
-            <ListBox.ItemContainerStyle>
-                <Style TargetType="{x:Type ListBoxItem}" >
-                    <Setter Property="Template" Value="{StaticResource listBoxItemDepart}"/>
-                </Style>
-            </ListBox.ItemContainerStyle>
-        </ListBox>
-
-        
-        <Grid Grid.Column="1" Grid.Row="1">
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            
-            <TextBlock Grid.Row="0" TextWrapping="Wrap" x:Name="BriefIntro"/>
-            <TextBlock Grid.Row="1" TextWrapping="Wrap" x:Name="Address"/>
-        </Grid>
         
         
     </Grid>

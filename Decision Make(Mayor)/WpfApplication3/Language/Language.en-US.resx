@@ -124,19 +124,19 @@
     <value>Calendar</value>
   </data>
   <data name="HomePage_tblEmergency" xml:space="preserve">
-    <value>Emergencies</value>
+    <value>Emergency</value>
   </data>
   <data name="HomePage_tblPM" xml:space="preserve">
-    <value>PM2.5</value>
+    <value>PM2.5 Index</value>
   </data>
   <data name="HomePage_tblTemperature" xml:space="preserve">
-    <value>Temperature</value>
+    <value>Temp.</value>
   </data>
   <data name="HomePage_tblTransportation" xml:space="preserve">
-    <value>Urban Transportation</value>
+    <value>Transportation</value>
   </data>
   <data name="MainWindow_lblMedia" xml:space="preserve">
-    <value>Media News</value>
+    <value>Media</value>
   </data>
   <data name="MainWindow_lblMicroblog" xml:space="preserve">
     <value>Microblog</value>
