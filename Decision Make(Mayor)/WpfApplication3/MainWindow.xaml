@@ -1961,12 +1961,12 @@
                 				<SolidColorBrush Color="{DynamicResource #646464}"/>
                 			</ListBoxItem.Foreground>
                 		</ListBoxItem>
-                		<ListBoxItem x:Name="menu5_2" Content="城市百科知识库" Style="{DynamicResource ListBoxMainMenuSubmenu}" Height="70" FontSize="16">
+                		<ListBoxItem x:Name="menu5_2" Content="城市百科知识库" Style="{DynamicResource ListBoxMainMenuSubmenu}" Height="70" FontSize="16" Selected="menu5_2_Selected">
                 			<ListBoxItem.Foreground>
                 				<SolidColorBrush Color="{DynamicResource #646464}"/>
                 			</ListBoxItem.Foreground>
                 		</ListBoxItem>
-                		<ListBoxItem x:Name="menu5_3" Content="城市数据知识库" Style="{DynamicResource ListBoxMainMenuSubmenu}" Height="70" FontSize="16">
+                		<ListBoxItem x:Name="menu5_3" Content="城市数据知识库" Style="{DynamicResource ListBoxMainMenuSubmenu}" Height="70" FontSize="16" Selected="menu5_3_Selected">
                 			<ListBoxItem.Foreground>
                 				<SolidColorBrush Color="{DynamicResource #646464}"/>
                 			</ListBoxItem.Foreground>

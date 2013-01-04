@@ -493,7 +493,7 @@ namespace WpfApplication3
 		{
 			// TODO: Add event handler implementation here.
 			
-            Case.PageCase m_PageCase = new Case.PageCase();
+            Case.PageCase m_PageCase = new Case.PageCase(1);
             FrameMiddleContent.Navigate(m_PageCase);
 		}
 
@@ -541,6 +541,18 @@ namespace WpfApplication3
         {
             ResourcesAndManpower.PageFinacialReource m_Page = new ResourcesAndManpower.PageFinacialReource();
             FrameMiddleContent.Navigate(m_Page);
+        }
+
+        private void menu5_2_Selected(object sender, RoutedEventArgs e)
+        {
+            Case.PageCase m_PageCase = new Case.PageCase(2);
+            FrameMiddleContent.Navigate(m_PageCase);
+        }
+
+        private void menu5_3_Selected(object sender, RoutedEventArgs e)
+        {
+            Case.PageCase m_PageCase = new Case.PageCase(3);
+            FrameMiddleContent.Navigate(m_PageCase);
         }
 		
     }

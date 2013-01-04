@@ -499,7 +499,7 @@ namespace WpfApplication3.Case {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public T_CaseRow AddT_CaseRow(string CaseTitle, string CaseCity, string CaseProvince, string CaseCountry, string CaseTopic, string CaseCompany, string CaseManager, System.DateTime CreateTime, System.DateTime UpdateTime, string CasePDF, string Menu1, string Menu2, string Menu3, int StarLevel) {
+            public T_CaseRow AddT_CaseRow(string CaseTitle, string CaseCity, string CaseProvince, string CaseCountry, string CaseTopic, string CaseCompany, string CaseManager, string CreateTime, string UpdateTime, string CasePDF, string Menu1, string Menu2, string Menu3, string StarLevel) {
                 T_CaseRow rowT_CaseRow = ((T_CaseRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -582,9 +582,9 @@ namespace WpfApplication3.Case {
                 base.Columns.Add(this.columnCaseCompany);
                 this.columnCaseManager = new global::System.Data.DataColumn("CaseManager", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCaseManager);
-                this.columnCreateTime = new global::System.Data.DataColumn("CreateTime", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                this.columnCreateTime = new global::System.Data.DataColumn("CreateTime", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCreateTime);
-                this.columnUpdateTime = new global::System.Data.DataColumn("UpdateTime", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                this.columnUpdateTime = new global::System.Data.DataColumn("UpdateTime", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnUpdateTime);
                 this.columnCasePDF = new global::System.Data.DataColumn("CasePDF", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCasePDF);
@@ -594,7 +594,7 @@ namespace WpfApplication3.Case {
                 base.Columns.Add(this.columnMenu2);
                 this.columnMenu3 = new global::System.Data.DataColumn("Menu3", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMenu3);
-                this.columnStarLevel = new global::System.Data.DataColumn("StarLevel", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnStarLevel = new global::System.Data.DataColumn("StarLevel", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnStarLevel);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
@@ -619,7 +619,9 @@ namespace WpfApplication3.Case {
                 this.columnCaseManager.AllowDBNull = false;
                 this.columnCaseManager.MaxLength = 50;
                 this.columnCreateTime.AllowDBNull = false;
+                this.columnCreateTime.MaxLength = 50;
                 this.columnUpdateTime.AllowDBNull = false;
+                this.columnUpdateTime.MaxLength = 50;
                 this.columnCasePDF.AllowDBNull = false;
                 this.columnCasePDF.MaxLength = 50;
                 this.columnMenu1.AllowDBNull = false;
@@ -628,6 +630,7 @@ namespace WpfApplication3.Case {
                 this.columnMenu2.MaxLength = 50;
                 this.columnMenu3.MaxLength = 50;
                 this.columnStarLevel.AllowDBNull = false;
+                this.columnStarLevel.MaxLength = 100;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -858,9 +861,9 @@ namespace WpfApplication3.Case {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime CreateTime {
+            public string CreateTime {
                 get {
-                    return ((global::System.DateTime)(this[this.tableT_Case.CreateTimeColumn]));
+                    return ((string)(this[this.tableT_Case.CreateTimeColumn]));
                 }
                 set {
                     this[this.tableT_Case.CreateTimeColumn] = value;
@@ -869,9 +872,9 @@ namespace WpfApplication3.Case {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime UpdateTime {
+            public string UpdateTime {
                 get {
-                    return ((global::System.DateTime)(this[this.tableT_Case.UpdateTimeColumn]));
+                    return ((string)(this[this.tableT_Case.UpdateTimeColumn]));
                 }
                 set {
                     this[this.tableT_Case.UpdateTimeColumn] = value;
@@ -929,9 +932,9 @@ namespace WpfApplication3.Case {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int StarLevel {
+            public string StarLevel {
                 get {
-                    return ((int)(this[this.tableT_Case.StarLevelColumn]));
+                    return ((string)(this[this.tableT_Case.StarLevelColumn]));
                 }
                 set {
                     this[this.tableT_Case.StarLevelColumn] = value;
@@ -1128,7 +1131,7 @@ namespace WpfApplication3.Case.DataSet_CaseTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[T_Case] WHERE (([Id] = @Original_Id) AND ([CaseTitle] = @Original_CaseTitle) AND ([CaseCity] = @Original_CaseCity) AND ([CaseProvince] = @Original_CaseProvince) AND ([CaseCountry] = @Original_CaseCountry) AND ([CaseTopic] = @Original_CaseTopic) AND ([CaseCompany] = @Original_CaseCompany) AND ([CaseManager] = @Original_CaseManager) AND ([CreateTime] = @Original_CreateTime) AND ([UpdateTime] = @Original_UpdateTime) AND ([CasePDF] = @Original_CasePDF) AND ([Menu1] = @Original_Menu1) AND ([Menu2] = @Original_Menu2) AND ((@IsNull_Menu3 = 1 AND [Menu3] IS NULL) OR ([Menu3] = @Original_Menu3)) AND ([StarLevel] = @Original_StarLevel))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [T_Case] WHERE (([Id] = @Original_Id) AND ([CaseTitle] = @Original_CaseTitle) AND ([CaseCity] = @Original_CaseCity) AND ([CaseProvince] = @Original_CaseProvince) AND ([CaseCountry] = @Original_CaseCountry) AND ([CaseTopic] = @Original_CaseTopic) AND ([CaseCompany] = @Original_CaseCompany) AND ([CaseManager] = @Original_CaseManager) AND ([CreateTime] = @Original_CreateTime) AND ([UpdateTime] = @Original_UpdateTime) AND ([CasePDF] = @Original_CasePDF) AND ([Menu1] = @Original_Menu1) AND ([Menu2] = @Original_Menu2) AND ((@IsNull_Menu3 = 1 AND [Menu3] IS NULL) OR ([Menu3] = @Original_Menu3)) AND ([StarLevel] = @Original_StarLevel))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CaseTitle", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CaseTitle", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -1138,17 +1141,17 @@ namespace WpfApplication3.Case.DataSet_CaseTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CaseTopic", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CaseTopic", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CaseCompany", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CaseCompany", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CaseManager", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CaseManager", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CreateTime", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CreateTime", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UpdateTime", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UpdateTime", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CreateTime", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CreateTime", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UpdateTime", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UpdateTime", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CasePDF", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CasePDF", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Menu1", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Menu1", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Menu2", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Menu2", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Menu3", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Menu3", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Menu3", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Menu3", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_StarLevel", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StarLevel", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_StarLevel", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StarLevel", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[T_Case] ([CaseTitle], [CaseCity], [CaseProvince], [CaseCountry], [CaseTopic], [CaseCompany], [CaseManager], [CreateTime], [UpdateTime], [CasePDF], [Menu1], [Menu2], [Menu3], [StarLevel]) VALUES (@CaseTitle, @CaseCity, @CaseProvince, @CaseCountry, @CaseTopic, @CaseCompany, @CaseManager, @CreateTime, @UpdateTime, @CasePDF, @Menu1, @Menu2, @Menu3, @StarLevel);
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [T_Case] ([CaseTitle], [CaseCity], [CaseProvince], [CaseCountry], [CaseTopic], [CaseCompany], [CaseManager], [CreateTime], [UpdateTime], [CasePDF], [Menu1], [Menu2], [Menu3], [StarLevel]) VALUES (@CaseTitle, @CaseCity, @CaseProvince, @CaseCountry, @CaseTopic, @CaseCompany, @CaseManager, @CreateTime, @UpdateTime, @CasePDF, @Menu1, @Menu2, @Menu3, @StarLevel);
 SELECT Id, CaseTitle, CaseCity, CaseProvince, CaseCountry, CaseTopic, CaseCompany, CaseManager, CreateTime, UpdateTime, CasePDF, Menu1, Menu2, Menu3, StarLevel FROM T_Case WHERE (Id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CaseTitle", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CaseTitle", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1158,16 +1161,16 @@ SELECT Id, CaseTitle, CaseCity, CaseProvince, CaseCountry, CaseTopic, CaseCompan
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CaseTopic", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CaseTopic", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CaseCompany", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CaseCompany", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CaseManager", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CaseManager", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CreateTime", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CreateTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UpdateTime", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UpdateTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CreateTime", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CreateTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UpdateTime", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UpdateTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CasePDF", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CasePDF", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Menu1", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Menu1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Menu2", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Menu2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Menu3", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Menu3", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StarLevel", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StarLevel", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StarLevel", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StarLevel", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[T_Case] SET [CaseTitle] = @CaseTitle, [CaseCity] = @CaseCity, [CaseProvince] = @CaseProvince, [CaseCountry] = @CaseCountry, [CaseTopic] = @CaseTopic, [CaseCompany] = @CaseCompany, [CaseManager] = @CaseManager, [CreateTime] = @CreateTime, [UpdateTime] = @UpdateTime, [CasePDF] = @CasePDF, [Menu1] = @Menu1, [Menu2] = @Menu2, [Menu3] = @Menu3, [StarLevel] = @StarLevel WHERE (([Id] = @Original_Id) AND ([CaseTitle] = @Original_CaseTitle) AND ([CaseCity] = @Original_CaseCity) AND ([CaseProvince] = @Original_CaseProvince) AND ([CaseCountry] = @Original_CaseCountry) AND ([CaseTopic] = @Original_CaseTopic) AND ([CaseCompany] = @Original_CaseCompany) AND ([CaseManager] = @Original_CaseManager) AND ([CreateTime] = @Original_CreateTime) AND ([UpdateTime] = @Original_UpdateTime) AND ([CasePDF] = @Original_CasePDF) AND ([Menu1] = @Original_Menu1) AND ([Menu2] = @Original_Menu2) AND ((@IsNull_Menu3 = 1 AND [Menu3] IS NULL) OR ([Menu3] = @Original_Menu3)) AND ([StarLevel] = @Original_StarLevel));
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [T_Case] SET [CaseTitle] = @CaseTitle, [CaseCity] = @CaseCity, [CaseProvince] = @CaseProvince, [CaseCountry] = @CaseCountry, [CaseTopic] = @CaseTopic, [CaseCompany] = @CaseCompany, [CaseManager] = @CaseManager, [CreateTime] = @CreateTime, [UpdateTime] = @UpdateTime, [CasePDF] = @CasePDF, [Menu1] = @Menu1, [Menu2] = @Menu2, [Menu3] = @Menu3, [StarLevel] = @StarLevel WHERE (([Id] = @Original_Id) AND ([CaseTitle] = @Original_CaseTitle) AND ([CaseCity] = @Original_CaseCity) AND ([CaseProvince] = @Original_CaseProvince) AND ([CaseCountry] = @Original_CaseCountry) AND ([CaseTopic] = @Original_CaseTopic) AND ([CaseCompany] = @Original_CaseCompany) AND ([CaseManager] = @Original_CaseManager) AND ([CreateTime] = @Original_CreateTime) AND ([UpdateTime] = @Original_UpdateTime) AND ([CasePDF] = @Original_CasePDF) AND ([Menu1] = @Original_Menu1) AND ([Menu2] = @Original_Menu2) AND ((@IsNull_Menu3 = 1 AND [Menu3] IS NULL) OR ([Menu3] = @Original_Menu3)) AND ([StarLevel] = @Original_StarLevel));
 SELECT Id, CaseTitle, CaseCity, CaseProvince, CaseCountry, CaseTopic, CaseCompany, CaseManager, CreateTime, UpdateTime, CasePDF, Menu1, Menu2, Menu3, StarLevel FROM T_Case WHERE (Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CaseTitle", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CaseTitle", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1177,13 +1180,13 @@ SELECT Id, CaseTitle, CaseCity, CaseProvince, CaseCountry, CaseTopic, CaseCompan
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CaseTopic", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CaseTopic", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CaseCompany", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CaseCompany", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CaseManager", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CaseManager", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CreateTime", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CreateTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UpdateTime", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UpdateTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CreateTime", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CreateTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UpdateTime", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UpdateTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CasePDF", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CasePDF", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Menu1", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Menu1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Menu2", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Menu2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Menu3", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Menu3", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StarLevel", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StarLevel", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StarLevel", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StarLevel", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CaseTitle", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CaseTitle", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CaseCity", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CaseCity", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -1192,14 +1195,14 @@ SELECT Id, CaseTitle, CaseCity, CaseProvince, CaseCountry, CaseTopic, CaseCompan
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CaseTopic", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CaseTopic", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CaseCompany", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CaseCompany", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CaseManager", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CaseManager", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CreateTime", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CreateTime", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UpdateTime", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UpdateTime", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CreateTime", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CreateTime", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UpdateTime", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UpdateTime", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CasePDF", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CasePDF", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Menu1", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Menu1", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Menu2", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Menu2", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Menu3", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Menu3", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Menu3", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Menu3", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_StarLevel", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StarLevel", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_StarLevel", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StarLevel", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -1213,61 +1216,30 @@ SELECT Id, CaseTitle, CaseCity, CaseProvince, CaseCountry, CaseTopic, CaseCompan
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[6];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, CaseTitle, CaseCity, CaseProvince, CaseCountry, CaseTopic, CaseCompany" +
-                ", CaseManager, CreateTime, UpdateTime, CasePDF, Menu1, Menu2, Menu3, StarLevel F" +
-                "ROM dbo.T_Case";
+            this._commandCollection[0].CommandText = "SELECT        Id, CaseTitle, CaseCity, CaseProvince, CaseCountry, CaseTopic, Case" +
+                "Company, CaseManager, CreateTime, UpdateTime, CasePDF, Menu1, Menu2, Menu3, \r\n  " +
+                "                       StarLevel\r\nFROM            T_Case";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"SELECT        Id, CaseTitle, CaseCity, CaseProvince, CaseCountry, CaseTopic, CaseCompany, CaseManager, CreateTime, UpdateTime, CasePDF, Menu1, Menu2, Menu3, 
-                         StarLevel
-FROM            T_Case
-WHERE        (CaseTitle LIKE '%' + @KeyInput + '%') OR
-                         (CaseCity LIKE '%' + @KeyInput + '%') OR
-                         (CaseProvince LIKE '%' + @KeyInput + '%') OR
-                         (CaseCountry LIKE '%' + @KeyInput + '%') OR
-                         (CaseTopic LIKE '%' + @KeyInput + '%') OR
-                         (CaseCompany LIKE '%' + @KeyInput + '%') OR
-                         (CaseManager LIKE '%' + @KeyInput + '%')";
+            this._commandCollection[1].CommandText = @"SELECT CaseCity, CaseCompany, CaseCountry, CaseManager, CasePDF, CaseProvince, CaseTitle, CaseTopic, CreateTime, Id, Menu1, Menu2, Menu3, StarLevel, UpdateTime FROM T_Case WHERE (Menu1 = @MenuInput) AND (Menu2 = @FunctionInput) AND (CaseTitle LIKE '%' + @KeyInput + '%') AND (UpdateTime LIKE '%' + @TimeInput + '%') AND (CaseProvince = @ProvinceInput) OR (CaseCity LIKE '%' + @KeyInput + '%') OR (CaseProvince LIKE '%' + @KeyInput + '%') OR (CaseCountry LIKE '%' + @KeyInput + '%') OR (CaseTopic LIKE '%' + @KeyInput + '%') OR (CaseCompany LIKE '%' + @KeyInput + '%') OR (CaseManager LIKE '%' + @KeyInput + '%')";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MenuInput", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Menu1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FunctionInput", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Menu2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@KeyInput", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "CaseTitle", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TimeInput", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "UpdateTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ProvinceInput", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "CaseProvince", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = @"SELECT        Id, CaseTitle, CaseCity, CaseProvince, CaseCountry, CaseTopic, CaseCompany, CaseManager, CreateTime, UpdateTime, CasePDF, Menu1, Menu2, Menu3, 
-                         StarLevel
-FROM            T_Case
-WHERE        (Menu1 = @MenuInput) OR
-                         (Menu2 = @MenuInput) OR
-                         (Menu3 = @MenuInput)";
+            this._commandCollection[2].CommandText = "SELECT CaseCity, CaseCompany, CaseCountry, CaseManager, CasePDF, CaseProvince, Ca" +
+                "seTitle, CaseTopic, CreateTime, Id, Menu1, Menu2, Menu3, StarLevel, UpdateTime F" +
+                "ROM T_Case WHERE (Menu1 = @MenuInput) OR (Menu2 = @MenuInput) OR (Menu3 = @MenuI" +
+                "nput)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MenuInput", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Menu1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = @"SELECT        Id, CaseTitle, CaseCity, CaseProvince, CaseCountry, CaseTopic, CaseCompany, CaseManager, CreateTime, UpdateTime, CasePDF, Menu1, Menu2, Menu3, 
-                         StarLevel
-FROM            T_Case
-WHERE        (Menu1 = N'城市历史与概况') OR
-                         (Menu1 = N'城市媒体库')";
-            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[4].Connection = this.Connection;
-            this._commandCollection[4].CommandText = @"SELECT        Id, CaseTitle, CaseCity, CaseProvince, CaseCountry, CaseTopic, CaseCompany, CaseManager, CreateTime, UpdateTime, CasePDF, Menu1, Menu2, Menu3, 
-                         StarLevel
-FROM            T_Case
-WHERE        (Menu1 = N'城乡规划案例') OR
-                         (Menu1 = N'城乡运营管理')";
-            this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[5].Connection = this.Connection;
-            this._commandCollection[5].CommandText = @"SELECT        Id, CaseTitle, CaseCity, CaseProvince, CaseCountry, CaseTopic, CaseCompany, CaseManager, CreateTime, UpdateTime, CasePDF, Menu1, Menu2, Menu3, 
-                         StarLevel
-FROM            T_Case
-WHERE        (Menu1 = N'数据统计') OR
-                         (Menu1 = N'学者智库')";
-            this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1298,13 +1270,37 @@ WHERE        (Menu1 = N'数据统计') OR
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual DataSet_Case.T_CaseDataTable GetDataByKey(string KeyInput) {
+        public virtual DataSet_Case.T_CaseDataTable GetDataByKey(string MenuInput, string FunctionInput, string KeyInput, string TimeInput, string ProvinceInput) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((MenuInput == null)) {
+                throw new global::System.ArgumentNullException("MenuInput");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(MenuInput));
+            }
+            if ((FunctionInput == null)) {
+                throw new global::System.ArgumentNullException("FunctionInput");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(FunctionInput));
+            }
             if ((KeyInput == null)) {
                 throw new global::System.ArgumentNullException("KeyInput");
             }
             else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(KeyInput));
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(KeyInput));
+            }
+            if ((TimeInput == null)) {
+                throw new global::System.ArgumentNullException("TimeInput");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(TimeInput));
+            }
+            if ((ProvinceInput == null)) {
+                throw new global::System.ArgumentNullException("ProvinceInput");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((string)(ProvinceInput));
             }
             DataSet_Case.T_CaseDataTable dataTable = new DataSet_Case.T_CaseDataTable();
             this.Adapter.Fill(dataTable);
@@ -1323,39 +1319,6 @@ WHERE        (Menu1 = N'数据统计') OR
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((string)(MenuInput));
             }
-            DataSet_Case.T_CaseDataTable dataTable = new DataSet_Case.T_CaseDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual DataSet_Case.T_CaseDataTable GetDataFromChengShiBaiKeZhiShiKu() {
-            this.Adapter.SelectCommand = this.CommandCollection[3];
-            DataSet_Case.T_CaseDataTable dataTable = new DataSet_Case.T_CaseDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual DataSet_Case.T_CaseDataTable GetDataFromChengShiFaZhanAnLiKu() {
-            this.Adapter.SelectCommand = this.CommandCollection[4];
-            DataSet_Case.T_CaseDataTable dataTable = new DataSet_Case.T_CaseDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual DataSet_Case.T_CaseDataTable GetDataFromChengShiShuJuZhiShiKu() {
-            this.Adapter.SelectCommand = this.CommandCollection[5];
             DataSet_Case.T_CaseDataTable dataTable = new DataSet_Case.T_CaseDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -1394,7 +1357,7 @@ WHERE        (Menu1 = N'数据统计') OR
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, string Original_CaseTitle, string Original_CaseCity, string Original_CaseProvince, string Original_CaseCountry, string Original_CaseTopic, string Original_CaseCompany, string Original_CaseManager, System.DateTime Original_CreateTime, System.DateTime Original_UpdateTime, string Original_CasePDF, string Original_Menu1, string Original_Menu2, string Original_Menu3, int Original_StarLevel) {
+        public virtual int Delete(int Original_Id, string Original_CaseTitle, string Original_CaseCity, string Original_CaseProvince, string Original_CaseCountry, string Original_CaseTopic, string Original_CaseCompany, string Original_CaseManager, string Original_CreateTime, string Original_UpdateTime, string Original_CasePDF, string Original_Menu1, string Original_Menu2, string Original_Menu3, string Original_StarLevel) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
             if ((Original_CaseTitle == null)) {
                 throw new global::System.ArgumentNullException("Original_CaseTitle");
@@ -1438,8 +1401,18 @@ WHERE        (Menu1 = N'数据统计') OR
             else {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((string)(Original_CaseManager));
             }
-            this.Adapter.DeleteCommand.Parameters[8].Value = ((System.DateTime)(Original_CreateTime));
-            this.Adapter.DeleteCommand.Parameters[9].Value = ((System.DateTime)(Original_UpdateTime));
+            if ((Original_CreateTime == null)) {
+                throw new global::System.ArgumentNullException("Original_CreateTime");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_CreateTime));
+            }
+            if ((Original_UpdateTime == null)) {
+                throw new global::System.ArgumentNullException("Original_UpdateTime");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((string)(Original_UpdateTime));
+            }
             if ((Original_CasePDF == null)) {
                 throw new global::System.ArgumentNullException("Original_CasePDF");
             }
@@ -1466,7 +1439,12 @@ WHERE        (Menu1 = N'数据统计') OR
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_Menu3));
             }
-            this.Adapter.DeleteCommand.Parameters[15].Value = ((int)(Original_StarLevel));
+            if ((Original_StarLevel == null)) {
+                throw new global::System.ArgumentNullException("Original_StarLevel");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((string)(Original_StarLevel));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1487,7 +1465,7 @@ WHERE        (Menu1 = N'数据统计') OR
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string CaseTitle, string CaseCity, string CaseProvince, string CaseCountry, string CaseTopic, string CaseCompany, string CaseManager, System.DateTime CreateTime, System.DateTime UpdateTime, string CasePDF, string Menu1, string Menu2, string Menu3, int StarLevel) {
+        public virtual int Insert(string CaseTitle, string CaseCity, string CaseProvince, string CaseCountry, string CaseTopic, string CaseCompany, string CaseManager, string CreateTime, string UpdateTime, string CasePDF, string Menu1, string Menu2, string Menu3, string StarLevel) {
             if ((CaseTitle == null)) {
                 throw new global::System.ArgumentNullException("CaseTitle");
             }
@@ -1530,8 +1508,18 @@ WHERE        (Menu1 = N'数据统计') OR
             else {
                 this.Adapter.InsertCommand.Parameters[6].Value = ((string)(CaseManager));
             }
-            this.Adapter.InsertCommand.Parameters[7].Value = ((System.DateTime)(CreateTime));
-            this.Adapter.InsertCommand.Parameters[8].Value = ((System.DateTime)(UpdateTime));
+            if ((CreateTime == null)) {
+                throw new global::System.ArgumentNullException("CreateTime");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(CreateTime));
+            }
+            if ((UpdateTime == null)) {
+                throw new global::System.ArgumentNullException("UpdateTime");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(UpdateTime));
+            }
             if ((CasePDF == null)) {
                 throw new global::System.ArgumentNullException("CasePDF");
             }
@@ -1556,7 +1544,12 @@ WHERE        (Menu1 = N'数据统计') OR
             else {
                 this.Adapter.InsertCommand.Parameters[12].Value = ((string)(Menu3));
             }
-            this.Adapter.InsertCommand.Parameters[13].Value = ((int)(StarLevel));
+            if ((StarLevel == null)) {
+                throw new global::System.ArgumentNullException("StarLevel");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[13].Value = ((string)(StarLevel));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1585,13 +1578,13 @@ WHERE        (Menu1 = N'数据统计') OR
                     string CaseTopic, 
                     string CaseCompany, 
                     string CaseManager, 
-                    System.DateTime CreateTime, 
-                    System.DateTime UpdateTime, 
+                    string CreateTime, 
+                    string UpdateTime, 
                     string CasePDF, 
                     string Menu1, 
                     string Menu2, 
                     string Menu3, 
-                    int StarLevel, 
+                    string StarLevel, 
                     int Original_Id, 
                     string Original_CaseTitle, 
                     string Original_CaseCity, 
@@ -1600,13 +1593,13 @@ WHERE        (Menu1 = N'数据统计') OR
                     string Original_CaseTopic, 
                     string Original_CaseCompany, 
                     string Original_CaseManager, 
-                    System.DateTime Original_CreateTime, 
-                    System.DateTime Original_UpdateTime, 
+                    string Original_CreateTime, 
+                    string Original_UpdateTime, 
                     string Original_CasePDF, 
                     string Original_Menu1, 
                     string Original_Menu2, 
                     string Original_Menu3, 
-                    int Original_StarLevel, 
+                    string Original_StarLevel, 
                     int Id) {
             if ((CaseTitle == null)) {
                 throw new global::System.ArgumentNullException("CaseTitle");
@@ -1650,8 +1643,18 @@ WHERE        (Menu1 = N'数据统计') OR
             else {
                 this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(CaseManager));
             }
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((System.DateTime)(CreateTime));
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((System.DateTime)(UpdateTime));
+            if ((CreateTime == null)) {
+                throw new global::System.ArgumentNullException("CreateTime");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(CreateTime));
+            }
+            if ((UpdateTime == null)) {
+                throw new global::System.ArgumentNullException("UpdateTime");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(UpdateTime));
+            }
             if ((CasePDF == null)) {
                 throw new global::System.ArgumentNullException("CasePDF");
             }
@@ -1676,7 +1679,12 @@ WHERE        (Menu1 = N'数据统计') OR
             else {
                 this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Menu3));
             }
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(StarLevel));
+            if ((StarLevel == null)) {
+                throw new global::System.ArgumentNullException("StarLevel");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(StarLevel));
+            }
             this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Original_Id));
             if ((Original_CaseTitle == null)) {
                 throw new global::System.ArgumentNullException("Original_CaseTitle");
@@ -1720,8 +1728,18 @@ WHERE        (Menu1 = N'数据统计') OR
             else {
                 this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_CaseManager));
             }
-            this.Adapter.UpdateCommand.Parameters[22].Value = ((System.DateTime)(Original_CreateTime));
-            this.Adapter.UpdateCommand.Parameters[23].Value = ((System.DateTime)(Original_UpdateTime));
+            if ((Original_CreateTime == null)) {
+                throw new global::System.ArgumentNullException("Original_CreateTime");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_CreateTime));
+            }
+            if ((Original_UpdateTime == null)) {
+                throw new global::System.ArgumentNullException("Original_UpdateTime");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_UpdateTime));
+            }
             if ((Original_CasePDF == null)) {
                 throw new global::System.ArgumentNullException("Original_CasePDF");
             }
@@ -1748,7 +1766,12 @@ WHERE        (Menu1 = N'数据统计') OR
                 this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
                 this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(Original_Menu3));
             }
-            this.Adapter.UpdateCommand.Parameters[29].Value = ((int)(Original_StarLevel));
+            if ((Original_StarLevel == null)) {
+                throw new global::System.ArgumentNullException("Original_StarLevel");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((string)(Original_StarLevel));
+            }
             this.Adapter.UpdateCommand.Parameters[30].Value = ((int)(Id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1778,13 +1801,13 @@ WHERE        (Menu1 = N'数据统计') OR
                     string CaseTopic, 
                     string CaseCompany, 
                     string CaseManager, 
-                    System.DateTime CreateTime, 
-                    System.DateTime UpdateTime, 
+                    string CreateTime, 
+                    string UpdateTime, 
                     string CasePDF, 
                     string Menu1, 
                     string Menu2, 
                     string Menu3, 
-                    int StarLevel, 
+                    string StarLevel, 
                     int Original_Id, 
                     string Original_CaseTitle, 
                     string Original_CaseCity, 
@@ -1793,13 +1816,13 @@ WHERE        (Menu1 = N'数据统计') OR
                     string Original_CaseTopic, 
                     string Original_CaseCompany, 
                     string Original_CaseManager, 
-                    System.DateTime Original_CreateTime, 
-                    System.DateTime Original_UpdateTime, 
+                    string Original_CreateTime, 
+                    string Original_UpdateTime, 
                     string Original_CasePDF, 
                     string Original_Menu1, 
                     string Original_Menu2, 
                     string Original_Menu3, 
-                    int Original_StarLevel) {
+                    string Original_StarLevel) {
             return this.Update(CaseTitle, CaseCity, CaseProvince, CaseCountry, CaseTopic, CaseCompany, CaseManager, CreateTime, UpdateTime, CasePDF, Menu1, Menu2, Menu3, StarLevel, Original_Id, Original_CaseTitle, Original_CaseCity, Original_CaseProvince, Original_CaseCountry, Original_CaseTopic, Original_CaseCompany, Original_CaseManager, Original_CreateTime, Original_UpdateTime, Original_CasePDF, Original_Menu1, Original_Menu2, Original_Menu3, Original_StarLevel, Original_Id);
         }
     }
