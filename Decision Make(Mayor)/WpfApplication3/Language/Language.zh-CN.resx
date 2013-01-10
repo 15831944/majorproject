@@ -154,10 +154,7 @@
     <value>空间资源</value>
   </data>
   <data name="MainWindow_menu2_2" xml:space="preserve">
-    <value>组织构架</value>
-  </data>
-  <data name="MainWindow_menu2_3" xml:space="preserve">
-    <value>经费资源</value>
+    <value>人力资源</value>
   </data>
   <data name="MainWindow_menu2_4" xml:space="preserve">
     <value>财政资源</value>

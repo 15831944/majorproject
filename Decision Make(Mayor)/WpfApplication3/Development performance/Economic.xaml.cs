@@ -30,6 +30,9 @@ namespace WpfApplication3.Development_performance
             InitializeComponent();
         }
 
+        bool isBrokenLineGraphExpand;
+        bool isPieGraphExpand;
+
         protected void Page_Loaded(object sender, RoutedEventArgs e)
         {
             llable.Text = "GDP:6145 \r\n财政收入:3247";
@@ -141,10 +144,13 @@ namespace WpfApplication3.Development_performance
 
             economic.DataContext = TeaInfo;
             economic.SelectedIndex = 0;
+
+            isBrokenLineGraphExpand = false;
+            isPieGraphExpand = false;
         }
         private void slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            if (slider.Value == 0) 
+            if (slider.Value == 0)
             {
                 llable.Text = "GDP:5645 \r\n财政收入:1243";
 
@@ -257,7 +263,7 @@ namespace WpfApplication3.Development_performance
                 economic.DataContext = TeaInfo;
                 economic.SelectedIndex = 0;
             }
-            if (slider.Value == 1) 
+            if (slider.Value == 1)
             {
                 llable.Text = "GDP:7856 \r\n财政收入:2243";
                 List<TeaInformation> TeaInfo = new List<TeaInformation>
@@ -369,9 +375,9 @@ namespace WpfApplication3.Development_performance
                 economic.DataContext = TeaInfo;
                 economic.SelectedIndex = 0;
             }
-            if (slider.Value == 2) 
+            if (slider.Value == 2)
             {
-            
+
                 List<TeaInformation> TeaInfo = new List<TeaInformation>
             {
                 new TeaInformation
@@ -478,7 +484,7 @@ namespace WpfApplication3.Development_performance
                 }, 
             };
 
-           
+
             }
             if (slider.Value == 3)
             {
@@ -592,7 +598,7 @@ namespace WpfApplication3.Development_performance
                 economic.DataContext = TeaInfo;
                 economic.SelectedIndex = 0;
             }
-            if (slider.Value == 4) 
+            if (slider.Value == 4)
             {
                 llable.Text = "GDP:9877 \r\n财政收入:4023";
                 List<TeaInformation> TeaInfo = new List<TeaInformation>
@@ -710,6 +716,74 @@ namespace WpfApplication3.Development_performance
             public string title { get; set; }
             public string number { get; set; }
 
+        }
+
+        private void gridBrokenLineGraph_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ClickCount == 2)
+            {
+                if (isBrokenLineGraphExpand)
+                {
+                    gridMiddle.Children.Clear();
+                    gridRightTop.Children.Clear();
+                    gridMiddle.Children.Add(gridMap);
+                    gridRightTop.Children.Add(gridBrokenLineGraph);
+                    isBrokenLineGraphExpand = false;
+                }
+                else if (isPieGraphExpand)
+                {
+                    gridRightTop.Children.Clear();
+                    gridMiddle.Children.Clear();
+                    gridRightMiddle.Children.Clear();
+                    gridRightTop.Children.Add(gridMap);
+                    gridRightMiddle.Children.Add(gridPieGraph);
+                    gridMiddle.Children.Add(gridBrokenLineGraph);
+                    isPieGraphExpand = false;
+                    isBrokenLineGraphExpand = true;
+                }
+                else
+                {
+                    gridMiddle.Children.Clear();
+                    gridRightTop.Children.Clear();
+                    gridMiddle.Children.Add(gridBrokenLineGraph);
+                    gridRightTop.Children.Add(gridMap);
+                    isBrokenLineGraphExpand = true;
+                }
+            }
+        }
+
+        private void gridPieGraph_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ClickCount == 2)
+            {
+                if (isPieGraphExpand)
+                {
+                    gridMiddle.Children.Clear();
+                    gridRightMiddle.Children.Clear();
+                    gridMiddle.Children.Add(gridMap);
+                    gridRightMiddle.Children.Add(gridPieGraph);
+                    isPieGraphExpand = false;
+                }
+                else if (isBrokenLineGraphExpand)
+                {
+                    gridRightTop.Children.Clear();
+                    gridMiddle.Children.Clear();
+                    gridRightMiddle.Children.Clear();
+                    gridRightTop.Children.Add(gridBrokenLineGraph);
+                    gridRightMiddle.Children.Add(gridMap);
+                    gridMiddle.Children.Add(gridPieGraph);
+                    isBrokenLineGraphExpand = false;
+                    isPieGraphExpand = true;
+                }
+                else
+                {
+                    gridMiddle.Children.Clear();
+                    gridRightMiddle.Children.Clear();
+                    gridMiddle.Children.Add(gridPieGraph);
+                    gridRightMiddle.Children.Add(gridMap);
+                    isPieGraphExpand = true;
+                }
+            }
         }
 
     }

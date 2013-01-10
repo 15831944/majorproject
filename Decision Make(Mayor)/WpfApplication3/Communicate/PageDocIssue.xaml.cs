@@ -301,9 +301,11 @@ namespace WpfApplication3.Communicate
         private void btnDocSearchShow_Click(object sender, System.Windows.RoutedEventArgs e)
         {
 			Button btn = sender as Button;
-            string content = btn.Content as string;
-			string filePDF = content + ".pdf";
-			string FileISF = content+".isf";
+            int id = Convert.ToInt32(btn.Tag.ToString());
+            DataSetDocTableAdapters.T_DocTableAdapter adapter = new DataSetDocTableAdapters.T_DocTableAdapter();
+            DataSetDoc.T_DocDataTable dt = adapter.GetDocById(id);
+			string filePDF = dt[0].DocAddress;
+            string FileISF = dt[0].DocTitle + ".isf";
             DirectoryInfo di = new DirectoryInfo(System.Environment.CurrentDirectory);
             string strPath = di.Parent.Parent.FullName;
             if (System.IO.File.Exists(strPath + @"/PDF/" + filePDF))
@@ -323,7 +325,7 @@ namespace WpfApplication3.Communicate
             else
                 this.InkCanvasAnnotation1.Strokes = new System.Windows.Ink.StrokeCollection();
             this.InkCanvasAnnotation1.IsEnabled = true;
-			fileCurrentPDF=content;
+            adapter.UpdateState(true, id);
 //            PDFReader pdfReader = new PDFReader();
 //            pdfReader.showPdf(content + ".pdf");
         }

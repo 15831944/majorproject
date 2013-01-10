@@ -169,7 +169,13 @@ namespace WpfApplication3.DailyManagement
 
             listBox4.DataContext = infos.Where(s => s.Type == "媒体报道");
             listBox4.SelectedIndex = 0;
+
+            DirectoryInfo di = new DirectoryInfo(System.Environment.CurrentDirectory);
+            string pathPDF = di.Parent.Parent.FullName;
+            webBrower1.Navigate(new Uri(pathPDF + @"/PDF/" + "2012年5月媒体报道情况报告.pdf", UriKind.RelativeOrAbsolute));//获取根目录的日历文件
+            webBrower2.Navigate(new Uri(pathPDF + @"/PDF/" + "2012年5月媒体报道情况报告.pdf", UriKind.RelativeOrAbsolute));//获取根目录的日历文件
         }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             System.Windows.Controls.Button btn = sender as System.Windows.Controls.Button;
@@ -202,8 +208,8 @@ namespace WpfApplication3.DailyManagement
 
     }
 }
-    
 
-     
+
+
 
 

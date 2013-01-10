@@ -160,14 +160,14 @@
         				</Grid>
         			</UniformGrid>
         			<UniformGrid Columns="8" Margin="68,0,0,0" d:LayoutOverrides="Height" >
-        				<ListBox x:Name="listVice1" ItemContainerStyle="{DynamicResource ListBoxItemOrganization}"  VerticalAlignment="Top" Margin="10,0" Style="{DynamicResource ListBoxTest}"/>
-        				<ListBox x:Name="listVice2" ItemContainerStyle="{DynamicResource ListBoxItemOrganization}"  VerticalAlignment="Top" Margin="10,0" Style="{DynamicResource ListBoxTest}"/>
-        				<ListBox x:Name="listVice3" ItemContainerStyle="{DynamicResource ListBoxItemOrganization}"  VerticalAlignment="Top" Margin="10,0" Style="{DynamicResource ListBoxTest}"/>
-        				<ListBox x:Name="listVice4" ItemContainerStyle="{DynamicResource ListBoxItemOrganization}"  VerticalAlignment="Top" Margin="10,0" Style="{DynamicResource ListBoxTest}"/>
-        				<ListBox x:Name="listVice5" ItemContainerStyle="{DynamicResource ListBoxItemOrganization}"  VerticalAlignment="Top" Margin="10,0" Style="{DynamicResource ListBoxTest}"/>
-        				<ListBox x:Name="listVice6" ItemContainerStyle="{DynamicResource ListBoxItemOrganization}"  VerticalAlignment="Top" Margin="10,0" Style="{DynamicResource ListBoxTest}"/>
-        				<ListBox x:Name="listVice7" ItemContainerStyle="{DynamicResource ListBoxItemOrganization}"  VerticalAlignment="Top" Margin="10,0" Style="{DynamicResource ListBoxTest}"/>
-        				<ListBox x:Name="listVice8" ItemContainerStyle="{DynamicResource ListBoxItemOrganization}"  VerticalAlignment="Top" Margin="10,0" Style="{DynamicResource ListBoxTest}"/>
+        				<ListBox x:Name="listVice1" ItemContainerStyle="{DynamicResource ListBoxItemOrganization}"  VerticalAlignment="Top" Margin="10,0" Style="{DynamicResource ListBoxTest}" SelectionChanged="listVice_SelectionChanged" />
+                        <ListBox x:Name="listVice2" ItemContainerStyle="{DynamicResource ListBoxItemOrganization}"  VerticalAlignment="Top" Margin="10,0" Style="{DynamicResource ListBoxTest}" SelectionChanged="listVice_SelectionChanged"/>
+                        <ListBox x:Name="listVice3" ItemContainerStyle="{DynamicResource ListBoxItemOrganization}"  VerticalAlignment="Top" Margin="10,0" Style="{DynamicResource ListBoxTest}" SelectionChanged="listVice_SelectionChanged"/>
+                        <ListBox x:Name="listVice4" ItemContainerStyle="{DynamicResource ListBoxItemOrganization}"  VerticalAlignment="Top" Margin="10,0" Style="{DynamicResource ListBoxTest}" SelectionChanged="listVice_SelectionChanged"/>
+                        <ListBox x:Name="listVice5" ItemContainerStyle="{DynamicResource ListBoxItemOrganization}"  VerticalAlignment="Top" Margin="10,0" Style="{DynamicResource ListBoxTest}" SelectionChanged="listVice_SelectionChanged"/>
+                        <ListBox x:Name="listVice6" ItemContainerStyle="{DynamicResource ListBoxItemOrganization}"  VerticalAlignment="Top" Margin="10,0" Style="{DynamicResource ListBoxTest}" SelectionChanged="listVice_SelectionChanged"/>
+                        <ListBox x:Name="listVice7" ItemContainerStyle="{DynamicResource ListBoxItemOrganization}"  VerticalAlignment="Top" Margin="10,0" Style="{DynamicResource ListBoxTest}" SelectionChanged="listVice_SelectionChanged"/>
+                        <ListBox x:Name="listVice8" ItemContainerStyle="{DynamicResource ListBoxItemOrganization}"  VerticalAlignment="Top" Margin="10,0" Style="{DynamicResource ListBoxTest}" SelectionChanged="listVice_SelectionChanged"/>
         			</UniformGrid>
         			<Label Content="副区长" HorizontalAlignment="Left" Margin="0,5,0,3.163" d:LayoutOverrides="Height">
         				<Label.Foreground>

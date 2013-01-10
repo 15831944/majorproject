@@ -156,11 +156,8 @@
   <data name="MainWindow_menu2_2" xml:space="preserve">
     <value>Framework</value>
   </data>
-  <data name="MainWindow_menu2_3" xml:space="preserve">
-    <value>Financial Resource</value>
-  </data>
   <data name="MainWindow_menu2_4" xml:space="preserve">
-    <value>In-Kind Resource</value>
+    <value>Financial Resource</value>
   </data>
   <data name="MainWindow_menu3_1" xml:space="preserve">
     <value>Documents Release</value>

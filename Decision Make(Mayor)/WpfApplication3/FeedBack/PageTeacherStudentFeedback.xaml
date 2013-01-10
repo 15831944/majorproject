@@ -6,110 +6,110 @@
       mc:Ignorable="d" 
       d:DesignHeight="972" d:DesignWidth="1265"
 	Title="PageTeacherStudentFeedback">
-	<Page.Resources>
-			<ControlTemplate x:Key="listBoxItemFeedback" TargetType="{x:Type ListBoxItem}">
-										<Grid x:Name="Bd" SnapsToDevicePixels="true">
-											<Grid.ColumnDefinitions>
-												<ColumnDefinition Width="28.044"/>
-												<ColumnDefinition Width="0.561*"/>
-												<ColumnDefinition Width="0.439*"/>
-											</Grid.ColumnDefinitions>
-											<VisualStateManager.VisualStateGroups>
-												<VisualStateGroup x:Name="SelectionStates">
-													<VisualState x:Name="Unselected"/>
-													<VisualState x:Name="Selected">
-														<Storyboard>
-															<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
-																<EasingColorKeyFrame KeyTime="0" Value="{StaticResource Menu2ndSelected}"/>
-															</ColorAnimationUsingKeyFrames>
-															<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="ellipse">
-																<EasingColorKeyFrame KeyTime="0" Value="{StaticResource GreenLeft}"/>
-															</ColorAnimationUsingKeyFrames>
-															<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="ellipse">
-																<EasingColorKeyFrame KeyTime="0" Value="{StaticResource GreenRight}"/>
-															</ColorAnimationUsingKeyFrames>
-															<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
-																<EasingColorKeyFrame KeyTime="0" Value="{StaticResource #235235235}"/>
-															</ColorAnimationUsingKeyFrames>
-														</Storyboard>
-													</VisualState>
-													<VisualState x:Name="SelectedUnfocused"/>
-												</VisualStateGroup>
-												<VisualStateGroup x:Name="CommonStates">
-													<VisualStateGroup.Transitions>
-														<VisualTransition GeneratedDuration="0:0:0.02"/>
-													</VisualStateGroup.Transitions>
-													<VisualState x:Name="Normal"/>
-													<VisualState x:Name="MouseOver">
-														<Storyboard>
-															<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
-																<EasingColorKeyFrame KeyTime="0" Value="{StaticResource #235235235}"/>
-															</ColorAnimationUsingKeyFrames>
-															<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="ellipse">
-																<EasingColorKeyFrame KeyTime="0" Value="{StaticResource OrangeColor}"/>
-															</ColorAnimationUsingKeyFrames>
-															<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="ellipse">
-																<EasingColorKeyFrame KeyTime="0" Value="{StaticResource OrangeColor}"/>
-															</ColorAnimationUsingKeyFrames>
-													
-															<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="rectangle">
-																<DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
-															</ObjectAnimationUsingKeyFrames>
-														</Storyboard>
-													</VisualState>
-													<VisualState x:Name="Disabled"/>
-												</VisualStateGroup>
-												<VisualStateGroup x:Name="FocusStates">
-													<VisualState x:Name="Unfocused"/>
-													<VisualState x:Name="Focused">
-														
-													</VisualState>
-												</VisualStateGroup>
-												<VisualStateGroup x:Name="VisualStateGroup">
-													<VisualState x:Name="VisualStatetest"/>
-												</VisualStateGroup>
-											</VisualStateManager.VisualStateGroups>
-											<Rectangle x:Name="rectangle" Stroke="Black" StrokeDashArray="3 3" Margin="0,2" Grid.ColumnSpan="3" Height="70" RadiusX="5" RadiusY="5" Cursor="None" Visibility="Hidden">
-												<Rectangle.Fill>
-													<SolidColorBrush Color="#FF66664B"/>
-												</Rectangle.Fill>
-											</Rectangle>
-											<Grid HorizontalAlignment="Center" VerticalAlignment="Center" Width="15" Height="15" Cursor="None">
-												<Ellipse x:Name="ellipse" Stroke="{x:Null}" Width="15" Height="15" d:LayoutOverrides="Margin">
-													<Ellipse.Fill>
-														<LinearGradientBrush EndPoint="0.955,0.899" StartPoint="0.006,0.215">
-															<GradientStop Color="{DynamicResource #122122122}" Offset="0"/>
-															<GradientStop Color="{DynamicResource #122122122}" Offset="1"/>
-														</LinearGradientBrush>
-													</Ellipse.Fill>
-												</Ellipse>
-												<Path Data="M7.6011834,0 L10.977817,1.9494996 10.97651,1.9517625 11,1.9517625 11,2.9517623 10.968314,2.9517623 10.974816,2.9630251 7.5981836,4.9125252 7.0981836,4.0464997 8.9943237,2.9517623 0,2.9517623 0,1.9517625 8.9817362,1.9517625 7.1011834,0.86602509 z" HorizontalAlignment="Stretch" Height="4.913" Margin="2,0" Stretch="Fill" Stroke="{x:Null}" StrokeThickness="0" VerticalAlignment="Center" Width="Auto" >
-													<Path.Fill>
-														<SolidColorBrush Color="{DynamicResource #235235235}"/>
-													</Path.Fill>
-												</Path>
-											</Grid>
-											<Label x:Name="label" Content="{Binding SubmissionDate}" HorizontalAlignment="Center" Width="Auto" Grid.Column="2" VerticalAlignment="Center" Cursor="None"/>
-											<ContentPresenter Content="{Binding FeedbackTitle}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" Height="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.ColumnSpan="1" Grid.Column="1" Cursor="Hand"/>
-											<Button x:Name="btnFeedbackTitle" Content="{Binding FeedbackTitle}" Click="btnFeedbackShow_Click" Focusable="False" HorizontalAlignment="Stretch" Width="Auto" Grid.Column="1" VerticalAlignment="Stretch" FontSize="14" FontWeight="Bold" Style="{DynamicResource ButtonFeedbacknormal}" Grid.ColumnSpan="2" Opacity="0" Cursor="Hand"/>
-										</Grid>
-										<ControlTemplate.Triggers>
-											<Trigger Property="IsSelected" Value="true"/>
-											<Trigger Property="IsMouseOver" Value="true">
-												<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}"/>
-											</Trigger>
-											<MultiTrigger>
-												<MultiTrigger.Conditions>
-													<Condition Property="IsSelected" Value="true"/>
-													<Condition Property="Selector.IsSelectionActive" Value="false"/>
-												</MultiTrigger.Conditions>
-											</MultiTrigger>
-											<Trigger Property="IsEnabled" Value="false">
-												<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
-											</Trigger>
-										</ControlTemplate.Triggers>
-									</ControlTemplate>
-	</Page.Resources>
+    <Page.Resources>
+        <ControlTemplate x:Key="listBoxItemFeedback" TargetType="{x:Type ListBoxItem}">
+            <Grid x:Name="Bd" SnapsToDevicePixels="true">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="28.044"/>
+                    <ColumnDefinition Width="0.561*"/>
+                    <ColumnDefinition Width="0.439*"/>
+                </Grid.ColumnDefinitions>
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="SelectionStates">
+                        <VisualState x:Name="Unselected"/>
+                        <VisualState x:Name="Selected">
+                            <Storyboard>
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
+                                    <EasingColorKeyFrame KeyTime="0" Value="{StaticResource Menu2ndSelected}"/>
+                                </ColorAnimationUsingKeyFrames>
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="ellipse">
+                                    <EasingColorKeyFrame KeyTime="0" Value="{StaticResource GreenLeft}"/>
+                                </ColorAnimationUsingKeyFrames>
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="ellipse">
+                                    <EasingColorKeyFrame KeyTime="0" Value="{StaticResource GreenRight}"/>
+                                </ColorAnimationUsingKeyFrames>
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+                                    <EasingColorKeyFrame KeyTime="0" Value="{StaticResource #235235235}"/>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </VisualState>
+                        <VisualState x:Name="SelectedUnfocused"/>
+                    </VisualStateGroup>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualStateGroup.Transitions>
+                            <VisualTransition GeneratedDuration="0:0:0.02"/>
+                        </VisualStateGroup.Transitions>
+                        <VisualState x:Name="Normal"/>
+                        <VisualState x:Name="MouseOver">
+                            <Storyboard>
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+                                    <EasingColorKeyFrame KeyTime="0" Value="{StaticResource #235235235}"/>
+                                </ColorAnimationUsingKeyFrames>
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="ellipse">
+                                    <EasingColorKeyFrame KeyTime="0" Value="{StaticResource OrangeColor}"/>
+                                </ColorAnimationUsingKeyFrames>
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="ellipse">
+                                    <EasingColorKeyFrame KeyTime="0" Value="{StaticResource OrangeColor}"/>
+                                </ColorAnimationUsingKeyFrames>
+
+                                <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="rectangle">
+                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                                </ObjectAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </VisualState>
+                        <VisualState x:Name="Disabled"/>
+                    </VisualStateGroup>
+                    <VisualStateGroup x:Name="FocusStates">
+                        <VisualState x:Name="Unfocused"/>
+                        <VisualState x:Name="Focused">
+
+                        </VisualState>
+                    </VisualStateGroup>
+                    <VisualStateGroup x:Name="VisualStateGroup">
+                        <VisualState x:Name="VisualStatetest"/>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+                <Rectangle x:Name="rectangle" Stroke="Black" StrokeDashArray="3 3" Margin="0,2" Grid.ColumnSpan="3" Height="70" RadiusX="5" RadiusY="5" Cursor="None" Visibility="Hidden">
+                    <Rectangle.Fill>
+                        <SolidColorBrush Color="#FF66664B"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Width="15" Height="15" Cursor="None">
+                    <Ellipse x:Name="ellipse" Stroke="{x:Null}" Width="15" Height="15" d:LayoutOverrides="Margin">
+                        <Ellipse.Fill>
+                            <LinearGradientBrush EndPoint="0.955,0.899" StartPoint="0.006,0.215">
+                                <GradientStop Color="{DynamicResource #122122122}" Offset="0"/>
+                                <GradientStop Color="{DynamicResource #122122122}" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Ellipse.Fill>
+                    </Ellipse>
+                    <Path Data="M7.6011834,0 L10.977817,1.9494996 10.97651,1.9517625 11,1.9517625 11,2.9517623 10.968314,2.9517623 10.974816,2.9630251 7.5981836,4.9125252 7.0981836,4.0464997 8.9943237,2.9517623 0,2.9517623 0,1.9517625 8.9817362,1.9517625 7.1011834,0.86602509 z" HorizontalAlignment="Stretch" Height="4.913" Margin="2,0" Stretch="Fill" Stroke="{x:Null}" StrokeThickness="0" VerticalAlignment="Center" Width="Auto" >
+                        <Path.Fill>
+                            <SolidColorBrush Color="{DynamicResource #235235235}"/>
+                        </Path.Fill>
+                    </Path>
+                </Grid>
+                <Label x:Name="label" Content="{Binding SubmissionDate}" HorizontalAlignment="Center" Width="Auto" Grid.Column="2" VerticalAlignment="Center" Cursor="None"/>
+                <ContentPresenter Content="{Binding FeedbackTitle}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" Height="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.ColumnSpan="1" Grid.Column="1" Cursor="Hand"/>
+                <Button x:Name="btnFeedbackTitle" Content="{Binding FeedbackTitle}" Click="btnFeedbackShow_Click" Focusable="False" HorizontalAlignment="Stretch" Width="Auto" Grid.Column="1" VerticalAlignment="Stretch" FontSize="14" FontWeight="Bold" Style="{DynamicResource ButtonFeedbacknormal}" Grid.ColumnSpan="2" Opacity="0" Cursor="Hand"/>
+            </Grid>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsSelected" Value="true"/>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}"/>
+                </Trigger>
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="IsSelected" Value="true"/>
+                        <Condition Property="Selector.IsSelectionActive" Value="false"/>
+                    </MultiTrigger.Conditions>
+                </MultiTrigger>
+                <Trigger Property="IsEnabled" Value="false">
+                    <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </Page.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.335*"/>
@@ -121,51 +121,62 @@
                 <RowDefinition Height="50"/>
             </Grid.RowDefinitions>
             <Rectangle RadiusX="8" RadiusY="8" Grid.RowSpan="2">
-            	<Rectangle.Effect>
-            		<DropShadowEffect/>
-            	</Rectangle.Effect>
-            	<Rectangle.Fill>
-            		<SolidColorBrush Color="{DynamicResource Mainbg}"/>
-            	</Rectangle.Fill>
+                <Rectangle.Effect>
+                    <DropShadowEffect/>
+                </Rectangle.Effect>
+                <Rectangle.Fill>
+                    <SolidColorBrush Color="{DynamicResource Mainbg}"/>
+                </Rectangle.Fill>
             </Rectangle>
             <Grid Grid.Row="0">
                 <Grid.RowDefinitions>
-                	<RowDefinition Height="50"/>
-                	<RowDefinition Height="*"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <Label VerticalAlignment="Top" Style="{DynamicResource LabelTitleLong}" Content="市民信息反馈"/>
-                <Grid Margin="10" Grid.Row="1">
-                	<Grid>
-                		<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="1,1,0,0">
-                			<Rectangle.Stroke>
-                				<SolidColorBrush Color="{DynamicResource #235235235}"/>
-                			</Rectangle.Stroke>
-                		</Rectangle>
-                		<Rectangle HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" StrokeDashArray="3 3" StrokeThickness="1" RadiusX="8" RadiusY="8" Stroke="{x:Null}" Margin="0,0,1,1">
-                			<Rectangle.Fill>
-                				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                					<GradientStop Color="#FF5D5D5D" Offset="0"/>
-                					<GradientStop Color="#FF64665C" Offset="1"/>
-                				</LinearGradientBrush>
-                			</Rectangle.Fill>
-                		</Rectangle>
-                		<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="0,0,1,1">
-                			<Rectangle.Stroke>
-                				<SolidColorBrush Color="{DynamicResource Foregroundgray}"/>
-                			</Rectangle.Stroke>
-                		</Rectangle>
-                	</Grid>
-                	<ListBox x:Name="listboxFeedback" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" SelectionChanged="listboxFeedback_SelectionChanged" BorderBrush="{x:Null}" Background="{x:Null}">
-                		<ListBox.ItemContainerStyle>
-                			<Style TargetType="{x:Type ListBoxItem}" >
-                				<Setter Property="Background" Value="Transparent"/>
-                				<Setter Property="HorizontalContentAlignment" Value="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
-                				<Setter Property="VerticalContentAlignment" Value="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
-                				<Setter Property="Padding" Value="2,0,0,0"/>
-                				<Setter Property="Template" Value="{StaticResource listBoxItemFeedback}"/>
-                			</Style>
-                		</ListBox.ItemContainerStyle>
-                	</ListBox>
+                <Label VerticalAlignment="Top" Style="{DynamicResource LabelTitleLong}" Content="市民信息反馈" Grid.Row="0"/>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="33*"/>
+                        <ColumnDefinition Width="33*"/>
+                        <ColumnDefinition Width="33*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Name="btnUnRead" Content="未阅读" Grid.Column="0" Click="btnUnRead_Click"/>
+                    <Button Name="btnAlreadyRead" Content="已阅读"  Grid.Column="1" Click="btnAlreadyRead_Click"/>
+                    <Button Name="btnAlreadyComment" Content="已批示" Grid.Column="2" Click="btnAlreadyComment_Click"/>
+                </Grid>
+                <Grid Margin="10" Grid.Row="2">
+                    <Grid>
+                        <Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="1,1,0,0">
+                            <Rectangle.Stroke>
+                                <SolidColorBrush Color="{DynamicResource #235235235}"/>
+                            </Rectangle.Stroke>
+                        </Rectangle>
+                        <Rectangle HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" StrokeDashArray="3 3" StrokeThickness="1" RadiusX="8" RadiusY="8" Stroke="{x:Null}" Margin="0,0,1,1">
+                            <Rectangle.Fill>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="#FF5D5D5D" Offset="0"/>
+                                    <GradientStop Color="#FF64665C" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                        <Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="0,0,1,1">
+                            <Rectangle.Stroke>
+                                <SolidColorBrush Color="{DynamicResource Foregroundgray}"/>
+                            </Rectangle.Stroke>
+                        </Rectangle>
+                    </Grid>
+                    <ListBox x:Name="listboxFeedback" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" SelectionChanged="listboxFeedback_SelectionChanged" BorderBrush="{x:Null}" Background="{x:Null}">
+                        <ListBox.ItemContainerStyle>
+                            <Style TargetType="{x:Type ListBoxItem}" >
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Setter Property="HorizontalContentAlignment" Value="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
+                                <Setter Property="VerticalContentAlignment" Value="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
+                                <Setter Property="Padding" Value="2,0,0,0"/>
+                                <Setter Property="Template" Value="{StaticResource listBoxItemFeedback}"/>
+                            </Style>
+                        </ListBox.ItemContainerStyle>
+                    </ListBox>
                 </Grid>
             </Grid>
             <Grid Grid.Row="1">
@@ -177,12 +188,12 @@
                 <Button x:Name="btnHistory" Content="历史记录" VerticalAlignment="Center" Margin="5,0" Style="{DynamicResource ButtonFeedbacknormal}" Height="23" Width="80" HorizontalAlignment="Center"/>
                 <Button x:Name="btnSearch" VerticalAlignment="Center" Content="搜索" Click="btnSearch_Click" Grid.Column="2" Style="{DynamicResource ButtonFeedbacknormal}" Width="60" Height="23"/>
                 <Grid Grid.Column="1" Height="25">
-                	<Rectangle IsEnabled="False" Stroke="#FF414141" Fill="#FF9E9F91" RadiusY="6" RadiusX="6">
-                		<Rectangle.Effect>
-                			<BlurEffect Radius="1"/>
-                		</Rectangle.Effect>
-                	</Rectangle>
-                	<TextBox x:Name="tbxSearch" VerticalAlignment="Center" Margin="4,3" MaxLength="50" GotMouseCapture="tbxSearch_GotMouseCapture" KeyDown="tbxSearch_KeyDown" Background="{x:Null}" BorderBrush="{x:Null}" />
+                    <Rectangle IsEnabled="False" Stroke="#FF414141" Fill="#FF9E9F91" RadiusY="6" RadiusX="6">
+                        <Rectangle.Effect>
+                            <BlurEffect Radius="1"/>
+                        </Rectangle.Effect>
+                    </Rectangle>
+                    <TextBox x:Name="tbxSearch" VerticalAlignment="Center" Margin="4,3" MaxLength="50" GotMouseCapture="tbxSearch_GotMouseCapture" KeyDown="tbxSearch_KeyDown" Background="{x:Null}" BorderBrush="{x:Null}" />
                 </Grid>
             </Grid>
         </Grid>
@@ -196,101 +207,101 @@
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-            	<Grid Margin="0,0,0,10">
-            		<Grid.RowDefinitions>
-            			<RowDefinition Height="48.948"/>
-            			<RowDefinition/>
-            		</Grid.RowDefinitions>
-            		<Rectangle RadiusX="8" RadiusY="8" Grid.RowSpan="2">
-            			<Rectangle.Effect>
-            				<DropShadowEffect/>
-            			</Rectangle.Effect>
-            			<Rectangle.Fill>
-            				<SolidColorBrush Color="{DynamicResource Mainbg}"/>
-            			</Rectangle.Fill>
-            		</Rectangle>
-            		<Label VerticalAlignment="Top" Content="文件内容" Style="{DynamicResource Labeltopheader}"/>
-            		<Grid Margin="20,12,20,30" Grid.Row="1">
-            			<Grid.RowDefinitions>
-            				<RowDefinition/>
-            				<RowDefinition Height="48.112"/>
-            			</Grid.RowDefinitions>
-            			<Grid Grid.RowSpan="2">
-            				<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="1,1,0,0">
-            					<Rectangle.Stroke>
-            						<SolidColorBrush Color="{DynamicResource #235235235}"/>
-            					</Rectangle.Stroke>
-            				</Rectangle>
-            				<Rectangle HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" StrokeDashArray="3 3" StrokeThickness="1" RadiusX="8" RadiusY="8" Stroke="{x:Null}" Margin="0,0,1,1">
-            					<Rectangle.Fill>
-            						<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-            							<GradientStop Color="#FF5D5D5D" Offset="0"/>
-            							<GradientStop Color="#FF64665C" Offset="1"/>
-            						</LinearGradientBrush>
-            					</Rectangle.Fill>
-            				</Rectangle>
-            				<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="0,0,1,1">
-            					<Rectangle.Stroke>
-            						<SolidColorBrush Color="{DynamicResource Foregroundgray}"/>
-            					</Rectangle.Stroke>
-            				</Rectangle>
-            			</Grid>
-            			<TextBox x:Name="tbxFeedbackContent" TextWrapping="Wrap" BorderBrush="{x:Null}" Background="{x:Null}" Margin="0,0,0,0.42" FontSize="14">
-            				<TextBox.Foreground>
-            					<SolidColorBrush Color="{DynamicResource #235235235}"/>
-            				</TextBox.Foreground>
-            			</TextBox>
-            			<Grid Grid.Row="1" d:LayoutOverrides="Height">
-            				<Grid.ColumnDefinitions>
-            					<ColumnDefinition Width="120"/>
-            					<ColumnDefinition Width="208.5"/>
-            					<ColumnDefinition Width="128"/>
-            					<ColumnDefinition/>
-            					<ColumnDefinition Width="79.872"/>
-            				</Grid.ColumnDefinitions>
-            				<Grid Grid.Column="0">
-            					<Label Content="姓名" Height="28" HorizontalAlignment="Left" Margin="10,0,0,0" x:Name="label1" VerticalAlignment="Center" >
-            						<Label.Foreground>
-            							<SolidColorBrush Color="{DynamicResource #235235235}"/>
-            						</Label.Foreground>
-            					</Label>
-            					<Label Content="李某" Height="28" Margin="45,0,0,0" x:Name="labelName" VerticalAlignment="Center" >
-            						<Label.Foreground>
-            							<SolidColorBrush Color="{DynamicResource #235235235}"/>
-            						</Label.Foreground>
-            					</Label>
-            				</Grid>
-            				<Grid Grid.Column="1">
-            					<Label Content="联系方式" Height="28" HorizontalAlignment="Left" Margin="10,0,0,0" x:Name="label2" VerticalAlignment="Center" >
-            						<Label.Foreground>
-            							<SolidColorBrush Color="{DynamicResource #235235235}"/>
-            						</Label.Foreground>
-            					</Label>
-            					<Label Content="139*****" Height="28" Margin="80,0,0,0" x:Name="labelContact" VerticalAlignment="Center" >
-            						<Label.Foreground>
-            							<SolidColorBrush Color="{DynamicResource #235235235}"/>
-            						</Label.Foreground>
-            					</Label>
-            				</Grid>
-            				<Grid Grid.Column="2" HorizontalAlignment="Left">
-            					<Label Content="日期" Height="28" Margin="10,0,0,0" x:Name="label3" VerticalAlignment="Center" HorizontalAlignment="Left" >
-            						<Label.Foreground>
-            							<SolidColorBrush Color="{DynamicResource #235235235}"/>
-            						</Label.Foreground>
-            					</Label>
-            					<Label Content="2012.12.31" Height="28" Margin="45,0,0,0" x:Name="labelDate" VerticalAlignment="Center" >
-            						<Label.Foreground>
-            							<SolidColorBrush Color="{DynamicResource #235235235}"/>
-            						</Label.Foreground>
-            					</Label>
-            				</Grid>
-            				<Grid HorizontalAlignment="Right" Width="80" Height="50.002" VerticalAlignment="Bottom" Grid.Column="4" d:LayoutOverrides="HorizontalAlignment, GridBox">
-            					<Button Content="&lt;" Height="20" HorizontalAlignment="Left" Margin="13.671,0,0,0" x:Name="btnPrevious" VerticalAlignment="Center" Width="20" Click="btnPrevious_Click" Style="{DynamicResource ButtonFeedbacknormal}" FontFamily="Helvetica" />
-            					<Button Content="&gt;" Height="20" Margin="0,0,14.338,0" x:Name="btnNext" VerticalAlignment="Center" Click="btnNext_Click" Style="{DynamicResource ButtonFeedbacknormal}" HorizontalAlignment="Right" Width="20" FontFamily="Helvetica" />
-            				</Grid>
-            			</Grid>
-            		</Grid>
-            	</Grid>
+                <Grid Margin="0,0,0,10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="48.948"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Rectangle RadiusX="8" RadiusY="8" Grid.RowSpan="2">
+                        <Rectangle.Effect>
+                            <DropShadowEffect/>
+                        </Rectangle.Effect>
+                        <Rectangle.Fill>
+                            <SolidColorBrush Color="{DynamicResource Mainbg}"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Label VerticalAlignment="Top" Content="文件内容" Style="{DynamicResource Labeltopheader}"/>
+                    <Grid Margin="20,12,20,30" Grid.Row="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition Height="48.112"/>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.RowSpan="2">
+                            <Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="1,1,0,0">
+                                <Rectangle.Stroke>
+                                    <SolidColorBrush Color="{DynamicResource #235235235}"/>
+                                </Rectangle.Stroke>
+                            </Rectangle>
+                            <Rectangle HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" StrokeDashArray="3 3" StrokeThickness="1" RadiusX="8" RadiusY="8" Stroke="{x:Null}" Margin="0,0,1,1">
+                                <Rectangle.Fill>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FF5D5D5D" Offset="0"/>
+                                        <GradientStop Color="#FF64665C" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Rectangle.Fill>
+                            </Rectangle>
+                            <Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="0,0,1,1">
+                                <Rectangle.Stroke>
+                                    <SolidColorBrush Color="{DynamicResource Foregroundgray}"/>
+                                </Rectangle.Stroke>
+                            </Rectangle>
+                        </Grid>
+                        <TextBox x:Name="tbxFeedbackContent" TextWrapping="Wrap" BorderBrush="{x:Null}" Background="{x:Null}" Margin="0,0,0,0.42" FontSize="14">
+                            <TextBox.Foreground>
+                                <SolidColorBrush Color="{DynamicResource #235235235}"/>
+                            </TextBox.Foreground>
+                        </TextBox>
+                        <Grid Grid.Row="1" d:LayoutOverrides="Height">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="120"/>
+                                <ColumnDefinition Width="208.5"/>
+                                <ColumnDefinition Width="128"/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="79.872"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="0">
+                                <Label Content="姓名" Height="28" HorizontalAlignment="Left" Margin="10,0,0,0" x:Name="label1" VerticalAlignment="Center" >
+                                    <Label.Foreground>
+                                        <SolidColorBrush Color="{DynamicResource #235235235}"/>
+                                    </Label.Foreground>
+                                </Label>
+                                <Label Content="李某" Height="28" Margin="45,0,0,0" x:Name="labelName" VerticalAlignment="Center" >
+                                    <Label.Foreground>
+                                        <SolidColorBrush Color="{DynamicResource #235235235}"/>
+                                    </Label.Foreground>
+                                </Label>
+                            </Grid>
+                            <Grid Grid.Column="1">
+                                <Label Content="联系方式" Height="28" HorizontalAlignment="Left" Margin="10,0,0,0" x:Name="label2" VerticalAlignment="Center" >
+                                    <Label.Foreground>
+                                        <SolidColorBrush Color="{DynamicResource #235235235}"/>
+                                    </Label.Foreground>
+                                </Label>
+                                <Label Content="139*****" Height="28" Margin="80,0,0,0" x:Name="labelContact" VerticalAlignment="Center" >
+                                    <Label.Foreground>
+                                        <SolidColorBrush Color="{DynamicResource #235235235}"/>
+                                    </Label.Foreground>
+                                </Label>
+                            </Grid>
+                            <Grid Grid.Column="2" HorizontalAlignment="Left">
+                                <Label Content="日期" Height="28" Margin="10,0,0,0" x:Name="label3" VerticalAlignment="Center" HorizontalAlignment="Left" >
+                                    <Label.Foreground>
+                                        <SolidColorBrush Color="{DynamicResource #235235235}"/>
+                                    </Label.Foreground>
+                                </Label>
+                                <Label Content="2012.12.31" Height="28" Margin="45,0,0,0" x:Name="labelDate" VerticalAlignment="Center" >
+                                    <Label.Foreground>
+                                        <SolidColorBrush Color="{DynamicResource #235235235}"/>
+                                    </Label.Foreground>
+                                </Label>
+                            </Grid>
+                            <Grid HorizontalAlignment="Right" Width="80" Height="50.002" VerticalAlignment="Bottom" Grid.Column="4" d:LayoutOverrides="HorizontalAlignment, GridBox">
+                                <Button Content="&lt;" Height="20" HorizontalAlignment="Left" Margin="13.671,0,0,0" x:Name="btnPrevious" VerticalAlignment="Center" Width="20" Click="btnPrevious_Click" Style="{DynamicResource ButtonFeedbacknormal}" FontFamily="Helvetica" />
+                                <Button Content="&gt;" Height="20" Margin="0,0,14.338,0" x:Name="btnNext" VerticalAlignment="Center" Click="btnNext_Click" Style="{DynamicResource ButtonFeedbacknormal}" HorizontalAlignment="Right" Width="20" FontFamily="Helvetica" />
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </Grid>
             </Grid>
             <Grid Grid.Row="1" Margin="0,0,0,10">
                 <Grid.RowDefinitions>
@@ -300,12 +311,12 @@
                     <RowDefinition Height="50"/>
                 </Grid.RowDefinitions>
                 <Rectangle RadiusX="8" RadiusY="8" Grid.RowSpan="4">
-                	<Rectangle.Effect>
-                		<DropShadowEffect/>
-                	</Rectangle.Effect>
-                	<Rectangle.Fill>
-                		<SolidColorBrush Color="{DynamicResource Mainbg}"/>
-                	</Rectangle.Fill>
+                    <Rectangle.Effect>
+                        <DropShadowEffect/>
+                    </Rectangle.Effect>
+                    <Rectangle.Fill>
+                        <SolidColorBrush Color="{DynamicResource Mainbg}"/>
+                    </Rectangle.Fill>
                 </Rectangle>
                 <Label Content="抄送部门" Style="{DynamicResource Labeltopheader}" VerticalAlignment="Top"/>
                 <Grid Grid.Row="1" Height="50" VerticalAlignment="Top">
@@ -408,64 +419,64 @@
                     </Grid>
                 </Grid>
                 <Grid Grid.Row="2" Margin="20,10">
-                	<Grid>
-                		<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="1,1,0,0">
-                			<Rectangle.Stroke>
-                				<SolidColorBrush Color="{DynamicResource #235235235}"/>
-                			</Rectangle.Stroke>
-                		</Rectangle>
-                		<Rectangle HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" StrokeDashArray="3 3" StrokeThickness="1" RadiusX="8" RadiusY="8" Stroke="{x:Null}" Margin="0,0,1,1">
-                			<Rectangle.Fill>
-                				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                					<GradientStop Color="#FF5D5D5D" Offset="0"/>
-                					<GradientStop Color="#FF64665C" Offset="1"/>
-                				</LinearGradientBrush>
-                			</Rectangle.Fill>
-                		</Rectangle>
-                		<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="0,0,1,1">
-                			<Rectangle.Stroke>
-                				<SolidColorBrush Color="{DynamicResource Foregroundgray}"/>
-                			</Rectangle.Stroke>
-                		</Rectangle>
-                	</Grid>
-                	<ScrollViewer Margin="5" ScrollViewer.VerticalScrollBarVisibility="Auto">
-                    
-                		<ListBox x:Name="listboxSend" Background="{x:Null}" BorderBrush="{x:Null}">
-                			<ListBox.Template>
-                				<ControlTemplate TargetType="{x:Type ListBox}">
-                					<WrapPanel Orientation="Horizontal" IsItemsHost="True" Background="{x:Null}"/>
-                				</ControlTemplate>
-                			</ListBox.Template>
-                			<ListBox.ItemTemplate>
-                				<DataTemplate>
-                					<Grid Margin="5" Height="Auto" Width="Auto">
-                						<Grid.ColumnDefinitions>
-                							<ColumnDefinition Width="14.88"/>
-                							<ColumnDefinition Width="*"/>
-                						</Grid.ColumnDefinitions>
-                						<Grid Grid.Column="0" Grid.ColumnSpan="1">
-                							<Ellipse Width="10" Height="10" HorizontalAlignment="Center" VerticalAlignment="Center">
-                								<Ellipse.Effect>
-                									<BlurEffect Radius="4"/>
-                								</Ellipse.Effect>
-                								<Ellipse.Fill>
-                									<SolidColorBrush Color="{DynamicResource #229229229}"/>
-                								</Ellipse.Fill>
-                							</Ellipse>
-                						</Grid>
-                						<Grid Grid.Column="2" Grid.ColumnSpan="1" d:LayoutOverrides="GridBox">
-                							<TextBlock Text="{Binding}" VerticalAlignment="Stretch">
+                    <Grid>
+                        <Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="1,1,0,0">
+                            <Rectangle.Stroke>
+                                <SolidColorBrush Color="{DynamicResource #235235235}"/>
+                            </Rectangle.Stroke>
+                        </Rectangle>
+                        <Rectangle HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" StrokeDashArray="3 3" StrokeThickness="1" RadiusX="8" RadiusY="8" Stroke="{x:Null}" Margin="0,0,1,1">
+                            <Rectangle.Fill>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="#FF5D5D5D" Offset="0"/>
+                                    <GradientStop Color="#FF64665C" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                        <Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="0,0,1,1">
+                            <Rectangle.Stroke>
+                                <SolidColorBrush Color="{DynamicResource Foregroundgray}"/>
+                            </Rectangle.Stroke>
+                        </Rectangle>
+                    </Grid>
+                    <ScrollViewer Margin="5" ScrollViewer.VerticalScrollBarVisibility="Auto">
+
+                        <ListBox x:Name="listboxSend" Background="{x:Null}" BorderBrush="{x:Null}">
+                            <ListBox.Template>
+                                <ControlTemplate TargetType="{x:Type ListBox}">
+                                    <WrapPanel Orientation="Horizontal" IsItemsHost="True" Background="{x:Null}"/>
+                                </ControlTemplate>
+                            </ListBox.Template>
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid Margin="5" Height="Auto" Width="Auto">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="14.88"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid Grid.Column="0" Grid.ColumnSpan="1">
+                                            <Ellipse Width="10" Height="10" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                                <Ellipse.Effect>
+                                                    <BlurEffect Radius="4"/>
+                                                </Ellipse.Effect>
+                                                <Ellipse.Fill>
+                                                    <SolidColorBrush Color="{DynamicResource #229229229}"/>
+                                                </Ellipse.Fill>
+                                            </Ellipse>
+                                        </Grid>
+                                        <Grid Grid.Column="2" Grid.ColumnSpan="1" d:LayoutOverrides="GridBox">
+                                            <TextBlock Text="{Binding}" VerticalAlignment="Stretch">
                 								<TextBlock.Foreground>
                 									<SolidColorBrush Color="Black"/>
                 								</TextBlock.Foreground>
-                							</TextBlock>
-                						</Grid>
-                					</Grid>
-                				</DataTemplate>
-                			</ListBox.ItemTemplate>
-                		</ListBox>
-                    
-                	</ScrollViewer>
+                                            </TextBlock>
+                                        </Grid>
+                                    </Grid>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+
+                    </ScrollViewer>
                 </Grid>
                 <Grid Grid.Row="3">
                     <Button x:Name="btnSend" Content="发送" Width="69" HorizontalAlignment="Right" Margin="0,5,33,22" Style="{DynamicResource ButtonFeedbacknormal}"/>
@@ -478,30 +489,30 @@
                     <RowDefinition Height="50"/>
                 </Grid.RowDefinitions>
                 <Rectangle RadiusX="8" RadiusY="8" Grid.RowSpan="3">
-                	<Rectangle.Effect>
-                		<DropShadowEffect/>
-                	</Rectangle.Effect>
-                	<Rectangle.Fill>
-                		<SolidColorBrush Color="{DynamicResource Mainbg}"/>
-                	</Rectangle.Fill>
+                    <Rectangle.Effect>
+                        <DropShadowEffect/>
+                    </Rectangle.Effect>
+                    <Rectangle.Fill>
+                        <SolidColorBrush Color="{DynamicResource Mainbg}"/>
+                    </Rectangle.Fill>
                 </Rectangle>
                 <Label VerticalAlignment="Top" Content="批示区" Style="{DynamicResource Labeltopheader}"/>
                 <Grid Grid.Row="1">
                     <Grid.ColumnDefinitions>
-                    	<ColumnDefinition Width="162.893"/>
-                    	<ColumnDefinition/>
+                        <ColumnDefinition Width="162.893"/>
+                        <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <Grid Grid.Column="0" Margin="20,5,20,5">
                         <Grid.ColumnDefinitions>
-                        	<ColumnDefinition Width="61.446"/>
-                        	<ColumnDefinition Width="61.447"/>
+                            <ColumnDefinition Width="61.446"/>
+                            <ColumnDefinition Width="61.447"/>
                         </Grid.ColumnDefinitions>
                         <Grid Grid.Column="0">
                             <Grid.RowDefinitions>
-                            	<RowDefinition Height="25*"/>
-                            	<RowDefinition Height="25*"/>
-                            	<RowDefinition Height="25*"/>
-                            	<RowDefinition Height="25*"/>
+                                <RowDefinition Height="25*"/>
+                                <RowDefinition Height="25*"/>
+                                <RowDefinition Height="25*"/>
+                                <RowDefinition Height="25*"/>
                             </Grid.RowDefinitions>
                             <Grid Grid.Row="0">
                                 <Button x:Name="rbtBlackInk" Content="黑" Click="rbtBlackInk_Click" Style="{DynamicResource Buttonblack}" HorizontalAlignment="Center" VerticalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Cursor="Hand"/>
@@ -518,10 +529,10 @@
                         </Grid>
                         <Grid Grid.Column="1">
                             <Grid.RowDefinitions>
-                            	<RowDefinition Height="25*"/>
-                            	<RowDefinition Height="25*"/>
-                            	<RowDefinition Height="25*"/>
-                            	<RowDefinition Height="25*"/>
+                                <RowDefinition Height="25*"/>
+                                <RowDefinition Height="25*"/>
+                                <RowDefinition Height="25*"/>
+                                <RowDefinition Height="25*"/>
                             </Grid.RowDefinitions>
                             <Grid Grid.Row="0">
                                 <Button x:Name="rbtThickInk" Content="粗" Click="rbtThickInk_Click" Style="{DynamicResource Buttonthick}" HorizontalAlignment="Center" VerticalAlignment="Center" Cursor="Hand"/>
@@ -539,12 +550,12 @@
                     </Grid>
                     <Grid Grid.Column="1" Margin="0,0,20,0">
                         <Rectangle RadiusY="8" RadiusX="8" StrokeThickness="1">
-                        	<Rectangle.Fill>
-                        		<SolidColorBrush Color="{DynamicResource white}"/>
-                        	</Rectangle.Fill>
-                        	<Rectangle.Stroke>
-                        		<SolidColorBrush Color="{DynamicResource #122122122}"/>
-                        	</Rectangle.Stroke>
+                            <Rectangle.Fill>
+                                <SolidColorBrush Color="{DynamicResource white}"/>
+                            </Rectangle.Fill>
+                            <Rectangle.Stroke>
+                                <SolidColorBrush Color="{DynamicResource #122122122}"/>
+                            </Rectangle.Stroke>
                         </Rectangle>
                         <InkCanvas x:Name="InkCanvasAnnotation1" MinHeight="0" MinWidth="0" Strokes="{Binding Strokes}" EditingMode="Ink" Background="{x:Null}"/>
                     </Grid>

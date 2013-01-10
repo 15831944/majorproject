@@ -285,7 +285,7 @@
         		</Grid>
                    
         	</Grid>
-            <Grid Grid.Row="1">
+            <Grid Grid.Row="1" >
             	<Grid.RowDefinitions>
             		<RowDefinition Height="44.906"/>
             		<RowDefinition/>

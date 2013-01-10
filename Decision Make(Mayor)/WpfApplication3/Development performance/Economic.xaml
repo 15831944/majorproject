@@ -34,213 +34,215 @@
             </Grid.RowDefinitions>
             <Grid Grid.Row="0" Margin="0,0,0,7" >
                 <Grid.ColumnDefinitions>
-                	<ColumnDefinition/>
+                    <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-            	<Rectangle RadiusY="8" RadiusX="8" StrokeThickness="2">
-            		<Rectangle.Effect>
-            			<DropShadowEffect/>
-            		</Rectangle.Effect>
-            		<Rectangle.Fill>
-            			<SolidColorBrush Color="{DynamicResource Mainbg}"/>
-            		</Rectangle.Fill>
-            	</Rectangle>
-            	<Label Style="{DynamicResource LabelTitleLong}" VerticalAlignment="Top" FontFamily="Helvetica" FontSize="14" FontWeight="Bold" Content="经济发展指数"/>
-            	<Grid Grid.Column="0" Margin="20,50,20,20">
-            		<Grid.ColumnDefinitions>
-            			<ColumnDefinition Width="67.64"/>
-            			<ColumnDefinition/>
-            		</Grid.ColumnDefinitions>
-            		<Grid.RowDefinitions>
-            			<RowDefinition/>
-            		</Grid.RowDefinitions>
-            		<Grid Grid.ColumnSpan="2">
-            			<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="1,1,0,0">
-            				<Rectangle.Stroke>
-            					<SolidColorBrush Color="{DynamicResource #235235235}"/>
-            				</Rectangle.Stroke>
-            			</Rectangle>
-            			<Rectangle HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" StrokeDashArray="3 3" StrokeThickness="1" RadiusX="8" RadiusY="8" Stroke="{x:Null}" Margin="0,0,1,1">
-            				<Rectangle.Fill>
-            					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-            						<GradientStop Color="#FF5D5D5D" Offset="0"/>
-            						<GradientStop Color="#FF64665C" Offset="1"/>
-            					</LinearGradientBrush>
-            				</Rectangle.Fill>
-            			</Rectangle>
-            			<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="0,0,1,1">
-            				<Rectangle.Stroke>
-            					<SolidColorBrush Color="{DynamicResource Foregroundgray}"/>
-            				</Rectangle.Stroke>
-            			</Rectangle>
-            		</Grid>
-            		<Grid Grid.Column="1" Margin="10">
-            			<Grid.RowDefinitions>
-            				<RowDefinition Height="0.5*"/>
-            				<RowDefinition Height="0.5*"/>
-            			</Grid.RowDefinitions>
-            			<Grid Height="36" Grid.Row="1" VerticalAlignment="Center">
-            				<Grid.ColumnDefinitions>
-            					<ColumnDefinition Width="0.7*"/>
-            					<ColumnDefinition Width="0.3*"/>
-            				</Grid.ColumnDefinitions>
-            				<Grid Margin="0,0,1,0" Height="20">
-            					<Rectangle Fill="#FF212121" Opacity="0.69"  />
-            					<Rectangle x:Name="MyRectangle" Width="0" Fill="#FF69BDDF" HorizontalAlignment="Left" >
-            						<Rectangle.Triggers>
-            							<EventTrigger RoutedEvent="FrameworkElement.Loaded">
-            								<BeginStoryboard>
-            									<Storyboard  >
-            										<DoubleAnimation  Storyboard.TargetName="MyRectangle"  Storyboard.TargetProperty="Width"  From="0" To="350" Duration="0:0:1" />
-            									</Storyboard>
-            								</BeginStoryboard>
-            							</EventTrigger>
-            						</Rectangle.Triggers>
-            					</Rectangle>
-            				</Grid>
-            				<Grid Grid.Column="1">
-            					<Label  Content="494" FontSize="16" Foreground="#FF69BDDF" HorizontalAlignment="Left"  />
-            					<Label  Content="奉贤区" FontSize="16" Foreground="White" VerticalAlignment="Center" Height="36" d:LayoutOverrides="Width" HorizontalAlignment="Right" Margin="0,0,70,0"  />
-            					<Rectangle Fill="#FF69BDDF" Width="25" Height="15" HorizontalAlignment="Right" Margin="0,0,40,0"/>
-            				</Grid>
-            			</Grid>
-            			<Grid d:LayoutOverrides="Height, GridBox" VerticalAlignment="Center">
-            				<Grid.ColumnDefinitions>
-            					<ColumnDefinition Width="0.7*"/>
-            					<ColumnDefinition Width="0.3*"/>
-            				</Grid.ColumnDefinitions>
-            				<Grid Height="20">
-            					<Rectangle Fill="#FF212121" Opacity="0.69"  />
-            					<Rectangle x:Name="MyRectangle1" Width="0" Fill="#FFF09F33" HorizontalAlignment="Left" >
-            						<Rectangle.Triggers>
-            							<EventTrigger RoutedEvent="FrameworkElement.Loaded">
-            								<BeginStoryboard>
-            									<Storyboard  >
-            										<DoubleAnimation  Storyboard.TargetName="MyRectangle1"  Storyboard.TargetProperty="Width"  From="0" To="400" Duration="0:0:2" />
-            									</Storyboard>
-            								</BeginStoryboard>
-            							</EventTrigger>
-            						</Rectangle.Triggers>
-            					</Rectangle>
-            				</Grid>
-            				<Grid Grid.Column="1">
-            					<Label  Content="542" FontSize="16" Foreground="#FFF09F33" VerticalAlignment="Center" HorizontalAlignment="Left" Height="36"  />
-            					<Label  Content="嘉定区" FontSize="16" Foreground="White" VerticalAlignment="Center" Height="36" d:LayoutOverrides="Width" HorizontalAlignment="Right" Margin="0,0,70,0"  />
-            					<Rectangle Fill="#FFF09F33" Width="25" Height="15" HorizontalAlignment="Right" Margin="0,0,40,0"/>
-            				</Grid>
-            			</Grid>
-            		</Grid>
-            		<Label Content="经济" d:LayoutOverrides="Width, Height" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16">
-            			<Label.Foreground>
-            				<SolidColorBrush Color="White"/>
-            			</Label.Foreground>
-            		</Label>
-            	</Grid>
-            	<Grid HorizontalAlignment="Right" Margin="0,-268,0,0" Width="372" Height="182.54" VerticalAlignment="Top" Visibility="Hidden">
-            		<ScrollViewer>
-            			<Grid>
-            				<Grid.ColumnDefinitions>
-            					<ColumnDefinition Width="20*"/>
-            					<ColumnDefinition Width="80*"/>
-            				</Grid.ColumnDefinitions>
-            				<Grid Grid.Column="0" Background="#FFE5FBFF">
-            					<Grid.RowDefinitions>
-            						<RowDefinition Height="19*"/>
-            						<RowDefinition Height="14*"/>
-            						<RowDefinition Height="14*"/>
-            						<RowDefinition Height="14*"/>
-            						<RowDefinition Height="14*"/>
-            						<RowDefinition Height="25*"/>
-            					</Grid.RowDefinitions>
-            					<TextBlock TextWrapping="Wrap" Grid.Row="0" Text="新区生产总值" HorizontalAlignment="Center" VerticalAlignment="Center" />
-            					<TextBlock TextWrapping="Wrap" Grid.Row="1" Text="财政" HorizontalAlignment="Center" VerticalAlignment="Center" />
-            					<TextBlock TextWrapping="Wrap" Grid.Row="2" Text="固定资产投资" HorizontalAlignment="Center" VerticalAlignment="Center" />
-            					<TextBlock TextWrapping="Wrap" Grid.Row="3" Text="招商引资" HorizontalAlignment="Center" VerticalAlignment="Center" />
-            					<TextBlock TextWrapping="Wrap" Grid.Row="4" Text="科技创新" HorizontalAlignment="Center" VerticalAlignment="Center" />
-            					<TextBlock TextWrapping="Wrap" Grid.Row="5" Text="国内外贸易" HorizontalAlignment="Center" VerticalAlignment="Center" />
-            				</Grid>
-            				<Grid Grid.Column="1">
-                              
-            					<ListView x:Name="economic"  ItemsSource="{Binding}" ItemTemplate="{StaticResource listviewTemplate}"  Background="{x:Null}"  />
-            				</Grid>
-            			</Grid>
-            		</ScrollViewer>
-            	</Grid>
-            </Grid>
-            <Grid Grid.Row="1">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="90*"/>
-                    <RowDefinition Height="10*"/>
-                </Grid.RowDefinitions>
-                <Rectangle RadiusY="8" RadiusX="8" StrokeThickness="2" Grid.RowSpan="2">
-                	<Rectangle.Effect>
-                		<DropShadowEffect/>
-                	</Rectangle.Effect>
-                	<Rectangle.Fill>
-                		<SolidColorBrush Color="{DynamicResource Mainbg}"/>
-                	</Rectangle.Fill>
+                <Rectangle RadiusY="8" RadiusX="8" StrokeThickness="2">
+                    <Rectangle.Effect>
+                        <DropShadowEffect/>
+                    </Rectangle.Effect>
+                    <Rectangle.Fill>
+                        <SolidColorBrush Color="{DynamicResource Mainbg}"/>
+                    </Rectangle.Fill>
                 </Rectangle>
-                <Label Style="{DynamicResource Labeltopheader}" VerticalAlignment="Top" FontFamily="Helvetica" FontSize="14" FontWeight="Bold" Content="业绩比较"/>
-                <TabControl Margin="20,40,20,20" Style="{DynamicResource TabControlSubContent}">
-                	<TabItem Header="市域视图" Style="{DynamicResource TabItem2ndmenuMIddle}" Margin="10,0,-10,0">
-                		<Grid>
-                			<Grid Grid.Row="0" x:Name="shiyu" Visibility="Visible">
-                				<Image Source="/WpfApplication3;component/Images/shiyu.jpg" />
-                				<TextBox TextWrapping="Wrap" x:Name="llable" Background="{x:Null}" FontWeight="Bold" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="{x:Null}" Margin="654.75,333.5,0,0" >
-                					<TextBox.Foreground>
-                						<SolidColorBrush Color="{DynamicResource black}"/>
-                					</TextBox.Foreground>
-                				</TextBox>
+                <Label Style="{DynamicResource LabelTitleLong}" VerticalAlignment="Top" FontFamily="Helvetica" FontSize="14" FontWeight="Bold" Content="经济发展指数"/>
+                <Grid Grid.Column="0" Margin="20,50,20,20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="67.64"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.ColumnSpan="2">
+                        <Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="1,1,0,0">
+                            <Rectangle.Stroke>
+                                <SolidColorBrush Color="{DynamicResource #235235235}"/>
+                            </Rectangle.Stroke>
+                        </Rectangle>
+                        <Rectangle HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" StrokeDashArray="3 3" StrokeThickness="1" RadiusX="8" RadiusY="8" Stroke="{x:Null}" Margin="0,0,1,1">
+                            <Rectangle.Fill>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="#FF5D5D5D" Offset="0"/>
+                                    <GradientStop Color="#FF64665C" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                        <Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="0,0,1,1">
+                            <Rectangle.Stroke>
+                                <SolidColorBrush Color="{DynamicResource Foregroundgray}"/>
+                            </Rectangle.Stroke>
+                        </Rectangle>
+                    </Grid>
+                    <Grid Grid.Column="1" Margin="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0.5*"/>
+                            <RowDefinition Height="0.5*"/>
+                        </Grid.RowDefinitions>
+                        <Grid Height="36" Grid.Row="1" VerticalAlignment="Center">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.7*"/>
+                                <ColumnDefinition Width="0.3*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid Margin="0,0,1,0" Height="20">
+                                <Rectangle Fill="#FF212121" Opacity="0.69"  />
+                                <Rectangle x:Name="MyRectangle" Width="0" Fill="#FF69BDDF" HorizontalAlignment="Left" >
+                                    <Rectangle.Triggers>
+                                        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                                            <BeginStoryboard>
+                                                <Storyboard  >
+                                                    <DoubleAnimation  Storyboard.TargetName="MyRectangle"  Storyboard.TargetProperty="Width"  From="0" To="350" Duration="0:0:1" />
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </EventTrigger>
+                                    </Rectangle.Triggers>
+                                </Rectangle>
+                            </Grid>
+                            <Grid Grid.Column="1">
+                                <Label  Content="494" FontSize="16" Foreground="#FF69BDDF" HorizontalAlignment="Left"  />
+                                <Label  Content="奉贤区" FontSize="16" Foreground="White" VerticalAlignment="Center" Height="36" d:LayoutOverrides="Width" HorizontalAlignment="Right" Margin="0,0,70,0"  />
+                                <Rectangle Fill="#FF69BDDF" Width="25" Height="15" HorizontalAlignment="Right" Margin="0,0,40,0"/>
+                            </Grid>
+                        </Grid>
+                        <Grid d:LayoutOverrides="Height, GridBox" VerticalAlignment="Center">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.7*"/>
+                                <ColumnDefinition Width="0.3*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid Height="20">
+                                <Rectangle Fill="#FF212121" Opacity="0.69"  />
+                                <Rectangle x:Name="MyRectangle1" Width="0" Fill="#FFF09F33" HorizontalAlignment="Left" >
+                                    <Rectangle.Triggers>
+                                        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                                            <BeginStoryboard>
+                                                <Storyboard  >
+                                                    <DoubleAnimation  Storyboard.TargetName="MyRectangle1"  Storyboard.TargetProperty="Width"  From="0" To="400" Duration="0:0:2" />
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </EventTrigger>
+                                    </Rectangle.Triggers>
+                                </Rectangle>
+                            </Grid>
+                            <Grid Grid.Column="1">
+                                <Label  Content="542" FontSize="16" Foreground="#FFF09F33" VerticalAlignment="Center" HorizontalAlignment="Left" Height="36"  />
+                                <Label  Content="嘉定区" FontSize="16" Foreground="White" VerticalAlignment="Center" Height="36" d:LayoutOverrides="Width" HorizontalAlignment="Right" Margin="0,0,70,0"  />
+                                <Rectangle Fill="#FFF09F33" Width="25" Height="15" HorizontalAlignment="Right" Margin="0,0,40,0"/>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                    <Label Content="经济" d:LayoutOverrides="Width, Height" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16">
+                        <Label.Foreground>
+                            <SolidColorBrush Color="White"/>
+                        </Label.Foreground>
+                    </Label>
+                </Grid>
+                <Grid HorizontalAlignment="Right" Margin="0,-268,0,0" Width="372" Height="182.54" VerticalAlignment="Top" Visibility="Hidden">
+                    <ScrollViewer>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="20*"/>
+                                <ColumnDefinition Width="80*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="0" Background="#FFE5FBFF">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="19*"/>
+                                    <RowDefinition Height="14*"/>
+                                    <RowDefinition Height="14*"/>
+                                    <RowDefinition Height="14*"/>
+                                    <RowDefinition Height="14*"/>
+                                    <RowDefinition Height="25*"/>
+                                </Grid.RowDefinitions>
+                                <TextBlock TextWrapping="Wrap" Grid.Row="0" Text="新区生产总值" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                <TextBlock TextWrapping="Wrap" Grid.Row="1" Text="财政" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                <TextBlock TextWrapping="Wrap" Grid.Row="2" Text="固定资产投资" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                <TextBlock TextWrapping="Wrap" Grid.Row="3" Text="招商引资" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                <TextBlock TextWrapping="Wrap" Grid.Row="4" Text="科技创新" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                <TextBlock TextWrapping="Wrap" Grid.Row="5" Text="国内外贸易" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Grid>
+                            <Grid Grid.Column="1">
 
-                			</Grid>
-                		</Grid>
-                	</TabItem>
-                	<TabItem Header="辖区视图" Style="{DynamicResource TabItem2ndmenuMIddle}">
-                		<Grid>
-                			<Grid Grid.Row="0" x:Name="xiaqu" HorizontalAlignment="Center" VerticalAlignment="Center">
-                				<Image Source="/WpfApplication3;component/Images/xiaqu.png" />
-                			</Grid>
-                		</Grid>
-                	</TabItem>
-                	<TabItem Header="三维视图" Style="{DynamicResource TabItem2ndmenuMIddle}">
-                		<Grid>
-                			<Grid Grid.Row="0" x:Name="sanwei">
-                				<Image Source="/WpfApplication3;component/Images/sanwei.png" />
-                			</Grid>
-                		</Grid>
-                	</TabItem>
-                </TabControl>
-                <Grid VerticalAlignment="Top" Grid.Row="1" HorizontalAlignment="Center" Width="250">
-                	<UniformGrid Columns="5" Rows="1"  VerticalAlignment="Top">
-                		<TextBlock Text="1980" TextAlignment="Left">
-                			<TextBlock.Foreground>
-                				<SolidColorBrush Color="{DynamicResource black}"/>
-                			</TextBlock.Foreground>
-                		</TextBlock>
-                		<TextBlock Text="1990" TextAlignment="Left">
-                			<TextBlock.Foreground>
-                				<SolidColorBrush Color="{DynamicResource black}"/>
-                			</TextBlock.Foreground>
-                		</TextBlock>
-                		<TextBlock Text="2000" TextAlignment="Center">
-                			<TextBlock.Foreground>
-                				<SolidColorBrush Color="{DynamicResource black}"/>
-                			</TextBlock.Foreground>
-                		</TextBlock>
-                		<TextBlock Text="2010" TextAlignment="Right">
-                			<TextBlock.Foreground>
-                				<SolidColorBrush Color="{DynamicResource black}"/>
-                			</TextBlock.Foreground>
-                		</TextBlock>
-                		<TextBlock Text="2012" TextAlignment="Right">
-                			<TextBlock.Foreground>
-                				<SolidColorBrush Color="{DynamicResource black}"/>
-                			</TextBlock.Foreground>
-                		</TextBlock>
-                        
-                	</UniformGrid>
+                                <ListView x:Name="economic"  ItemsSource="{Binding}" ItemTemplate="{StaticResource listviewTemplate}"  Background="{x:Null}"  />
+                            </Grid>
+                        </Grid>
+                    </ScrollViewer>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="1" Name="gridMiddle">
+                <Grid Name="gridMap">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="90*"/>
+                        <RowDefinition Height="10*"/>
+                    </Grid.RowDefinitions>
+                    <Rectangle RadiusY="8" RadiusX="8" StrokeThickness="2" Grid.RowSpan="2">
+                        <Rectangle.Effect>
+                            <DropShadowEffect/>
+                        </Rectangle.Effect>
+                        <Rectangle.Fill>
+                            <SolidColorBrush Color="{DynamicResource Mainbg}"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Label Style="{DynamicResource Labeltopheader}" VerticalAlignment="Top" FontFamily="Helvetica" FontSize="14" FontWeight="Bold" Content="业绩比较"/>
+                    <TabControl Margin="20,40,20,20" Style="{DynamicResource TabControlSubContent}">
+                        <TabItem Header="市域视图" Style="{DynamicResource TabItem2ndmenuMIddle}" Margin="10,0,-10,0">
+                            <Grid>
+                                <Grid Grid.Row="0" x:Name="shiyu" Visibility="Visible">
+                                    <Image Source="/WpfApplication3;component/Images/shiyu.jpg" />
+                                    <TextBox TextWrapping="Wrap" x:Name="llable" Background="{x:Null}" FontWeight="Bold" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="{x:Null}" Margin="654.75,333.5,0,0">
+                                        <TextBox.Foreground>
+                                            <SolidColorBrush Color="{DynamicResource black}"/>
+                                        </TextBox.Foreground>
+                                    </TextBox>
 
-                	<Slider x:Name="slider"  IsSnapToTickEnabled="True"  TickPlacement="TopLeft" Value="2" SmallChange="1" Maximum="4" ValueChanged="slider_ValueChanged" Margin="0,22,0,-22" />
-                       
+                                </Grid>
+                            </Grid>
+                        </TabItem>
+                        <TabItem Header="辖区视图" Style="{DynamicResource TabItem2ndmenuMIddle}">
+                            <Grid>
+                                <Grid Grid.Row="0" x:Name="xiaqu" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <Image Source="/WpfApplication3;component/Images/xiaqu.png" />
+                                </Grid>
+                            </Grid>
+                        </TabItem>
+                        <TabItem Header="三维视图" Style="{DynamicResource TabItem2ndmenuMIddle}">
+                            <Grid>
+                                <Grid Grid.Row="0" x:Name="sanwei">
+                                    <Image Source="/WpfApplication3;component/Images/sanwei.png" />
+                                </Grid>
+                            </Grid>
+                        </TabItem>
+                    </TabControl>
+                    <Grid VerticalAlignment="Top" Grid.Row="1" HorizontalAlignment="Center" Width="250">
+                        <UniformGrid Columns="5" Rows="1"  VerticalAlignment="Top">
+                            <TextBlock Text="1980" TextAlignment="Left">
+                			<TextBlock.Foreground>
+                				<SolidColorBrush Color="{DynamicResource black}"/>
+                			</TextBlock.Foreground>
+                            </TextBlock>
+                            <TextBlock Text="1990" TextAlignment="Left">
+                			<TextBlock.Foreground>
+                				<SolidColorBrush Color="{DynamicResource black}"/>
+                			</TextBlock.Foreground>
+                            </TextBlock>
+                            <TextBlock Text="2000" TextAlignment="Center">
+                			<TextBlock.Foreground>
+                				<SolidColorBrush Color="{DynamicResource black}"/>
+                			</TextBlock.Foreground>
+                            </TextBlock>
+                            <TextBlock Text="2010" TextAlignment="Right">
+                			<TextBlock.Foreground>
+                				<SolidColorBrush Color="{DynamicResource black}"/>
+                			</TextBlock.Foreground>
+                            </TextBlock>
+                            <TextBlock Text="2012" TextAlignment="Right">
+                			<TextBlock.Foreground>
+                				<SolidColorBrush Color="{DynamicResource black}"/>
+                			</TextBlock.Foreground>
+                            </TextBlock>
+
+                        </UniformGrid>
+
+                        <Slider x:Name="slider"  IsSnapToTickEnabled="True"  TickPlacement="TopLeft" Value="2" SmallChange="1" Maximum="4" ValueChanged="slider_ValueChanged" Margin="0,22,0,-22" />
+
+                    </Grid>
                 </Grid>
             </Grid>
         </Grid>
@@ -250,84 +252,88 @@
                 <RowDefinition Height="0.356*"/>
                 <RowDefinition Height="0.344*"/>
             </Grid.RowDefinitions>
-            <Grid Grid.Row="0" Margin="0,0,0,7">
-        		<Rectangle RadiusY="8" RadiusX="8" StrokeThickness="2">
-        			<Rectangle.Effect>
-        				<DropShadowEffect/>
-        			</Rectangle.Effect>
-        			<Rectangle.Fill>
-        				<SolidColorBrush Color="{DynamicResource Mainbg}"/>
-        			</Rectangle.Fill>
-        		</Rectangle>
-        		<Label Style="{DynamicResource Labeltopheader}" VerticalAlignment="Top" FontFamily="Helvetica" FontSize="16" FontWeight="Bold" Content="折线图"/>
-        		<Image Stretch="Fill" Source="/WpfApplication3;component/Images/table.png" d:LayoutOverrides="Height" Margin="20,50,20,20"/>
-        	</Grid>
-            <Grid Grid.Row="1" Margin="0,0,0,7" >
-            	<Rectangle RadiusY="8" RadiusX="8" StrokeThickness="2">
-            		<Rectangle.Effect>
-            			<DropShadowEffect/>
-            		</Rectangle.Effect>
-            		<Rectangle.Fill>
-            			<SolidColorBrush Color="{DynamicResource Mainbg}"/>
-            		</Rectangle.Fill>
-            	</Rectangle>
-            	<Label Style="{DynamicResource Labeltopheader}" VerticalAlignment="Top" FontFamily="Helvetica" FontSize="16" FontWeight="Bold" Content="饼状图"/>
-            	<Image Stretch="Fill" Source="/WpfApplication3;component/Images/pan.png" d:LayoutOverrides="Height" Margin="20,50,20,20"/>
+            <Grid Name="gridRightTop" Grid.Row="0" Margin="0,0,0,7">
+                <Grid Name="gridBrokenLineGraph" MouseDown="gridBrokenLineGraph_MouseDown">
+                    <Rectangle RadiusY="8" RadiusX="8" StrokeThickness="2">
+                        <Rectangle.Effect>
+                            <DropShadowEffect/>
+                        </Rectangle.Effect>
+                        <Rectangle.Fill>
+                            <SolidColorBrush Color="{DynamicResource Mainbg}"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Label Style="{DynamicResource Labeltopheader}" VerticalAlignment="Top" FontFamily="Helvetica" FontSize="16" FontWeight="Bold" Content="折线图"/>
+                    <Image Stretch="Fill" Source="/WpfApplication3;component/Images/table.png" d:LayoutOverrides="Height" Margin="20,50,20,20"/>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="1" Margin="0,0,0,7" Name="gridRightMiddle" >
+                <Grid Name="gridPieGraph" MouseDown="gridPieGraph_MouseDown">
+                    <Rectangle RadiusY="8" RadiusX="8" StrokeThickness="2">
+                        <Rectangle.Effect>
+                            <DropShadowEffect/>
+                        </Rectangle.Effect>
+                        <Rectangle.Fill>
+                            <SolidColorBrush Color="{DynamicResource Mainbg}"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Label Style="{DynamicResource Labeltopheader}" VerticalAlignment="Top" FontFamily="Helvetica" FontSize="16" FontWeight="Bold" Content="饼状图"/>
+                    <Image Stretch="Fill" Source="/WpfApplication3;component/Images/pan.png" d:LayoutOverrides="Height" Margin="20,50,20,20"/>
+                </Grid>
             </Grid>
             <Grid Grid.Row="2">
-            	<Rectangle RadiusY="8" RadiusX="8" StrokeThickness="2">
-            		<Rectangle.Effect>
-            			<DropShadowEffect/>
-            		</Rectangle.Effect>
-            		<Rectangle.Fill>
-            			<SolidColorBrush Color="{DynamicResource Mainbg}"/>
-            		</Rectangle.Fill>
-            	</Rectangle>
-            	<Label Style="{DynamicResource Labeltopheader}" VerticalAlignment="Top" FontFamily="Helvetica" FontSize="14" FontWeight="Bold" Content="指标解释"/>
-            	<Grid Margin="10,40,10,0" VerticalAlignment="Top">
-            		<Grid>
-            			<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="1,1,0,0">
-            				<Rectangle.Stroke>
-            					<SolidColorBrush Color="{DynamicResource #235235235}"/>
-            				</Rectangle.Stroke>
-            			</Rectangle>
-            			<Rectangle HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" StrokeDashArray="3 3" StrokeThickness="1" RadiusX="8" RadiusY="8" Stroke="{x:Null}" Margin="0,0,1,1">
-            				<Rectangle.Fill>
-            					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-            						<GradientStop Color="#FF5D5D5D" Offset="0"/>
-            						<GradientStop Color="#FF64665C" Offset="1"/>
-            					</LinearGradientBrush>
-            				</Rectangle.Fill>
-            			</Rectangle>
-            			<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="0,0,1,1">
-            				<Rectangle.Stroke>
-            					<SolidColorBrush Color="{DynamicResource Foregroundgray}"/>
-            				</Rectangle.Stroke>
-            			</Rectangle>
-            		</Grid>
-            		<StackPanel HorizontalAlignment="Left">
-            			<Label Content="人均GDP-计算方法" d:LayoutOverrides="Height" FontSize="16">
-            				<Label.Foreground>
-            					<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
-            				</Label.Foreground>
-            			</Label>
-            			<TextBlock TextWrapping="Wrap" Text="人均国内生产总值 = 总产出（即 GDP 总额，社会产品和服务的产出总额） / 总人口 " Padding="5">
+                <Rectangle RadiusY="8" RadiusX="8" StrokeThickness="2">
+                    <Rectangle.Effect>
+                        <DropShadowEffect/>
+                    </Rectangle.Effect>
+                    <Rectangle.Fill>
+                        <SolidColorBrush Color="{DynamicResource Mainbg}"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <Label Style="{DynamicResource Labeltopheader}" VerticalAlignment="Top" FontFamily="Helvetica" FontSize="14" FontWeight="Bold" Content="指标解释"/>
+                <Grid Margin="10,40,10,0" VerticalAlignment="Top">
+                    <Grid>
+                        <Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="1,1,0,0">
+                            <Rectangle.Stroke>
+                                <SolidColorBrush Color="{DynamicResource #235235235}"/>
+                            </Rectangle.Stroke>
+                        </Rectangle>
+                        <Rectangle HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" StrokeDashArray="3 3" StrokeThickness="1" RadiusX="8" RadiusY="8" Stroke="{x:Null}" Margin="0,0,1,1">
+                            <Rectangle.Fill>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="#FF5D5D5D" Offset="0"/>
+                                    <GradientStop Color="#FF64665C" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                        <Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="0,0,1,1">
+                            <Rectangle.Stroke>
+                                <SolidColorBrush Color="{DynamicResource Foregroundgray}"/>
+                            </Rectangle.Stroke>
+                        </Rectangle>
+                    </Grid>
+                    <StackPanel HorizontalAlignment="Left">
+                        <Label Content="人均GDP-计算方法" d:LayoutOverrides="Height" FontSize="16">
+                            <Label.Foreground>
+                                <SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+                            </Label.Foreground>
+                        </Label>
+                        <TextBlock TextWrapping="Wrap" Text="人均国内生产总值 = 总产出（即 GDP 总额，社会产品和服务的产出总额） / 总人口 " Padding="5">
             				<TextBlock.Foreground>
             					<SolidColorBrush Color="{DynamicResource #235235235}"/>
             				</TextBlock.Foreground>
-            			</TextBlock>
-            			<Label Content="地均GDP" FontSize="16">
-            				<Label.Foreground>
-            					<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
-            				</Label.Foreground>
-            			</Label>
-            			<TextBlock TextWrapping="Wrap" Text="地均GDP，是每平方公里土地创造的GDP，反应土地的使用效率(可以部分反应此地的工业与商业密集程度)" Padding="5">
+                        </TextBlock>
+                        <Label Content="地均GDP" FontSize="16">
+                            <Label.Foreground>
+                                <SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+                            </Label.Foreground>
+                        </Label>
+                        <TextBlock TextWrapping="Wrap" Text="地均GDP，是每平方公里土地创造的GDP，反应土地的使用效率(可以部分反应此地的工业与商业密集程度)" Padding="5">
             				<TextBlock.Foreground>
             					<SolidColorBrush Color="{DynamicResource #235235235}"/>
             				</TextBlock.Foreground>
-            			</TextBlock>
-            		</StackPanel>
-            	</Grid>
+                        </TextBlock>
+                    </StackPanel>
+                </Grid>
             </Grid>
         </Grid>
 

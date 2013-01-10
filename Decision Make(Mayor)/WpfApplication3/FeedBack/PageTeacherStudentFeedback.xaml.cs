@@ -26,11 +26,13 @@ namespace WpfApplication3.FeedBack
         DataSetFeedback.T_FeedBackDataTable dtCurrent;
         int iCurrentItem;
         List<string> lstrSend;
-        public PageTeacherStudentFeedback()
+        int iFeedBackType;
+        public PageTeacherStudentFeedback(int i)
         {
             InitializeComponent();
+            iFeedBackType = i;
             DataSetFeedbackTableAdapters.T_FeedBackTableAdapter adapter = new DataSetFeedbackTableAdapters.T_FeedBackTableAdapter();
-            dtCurrent = adapter.GetData(1);
+            dtCurrent = adapter.GetData(iFeedBackType,false,false);
             listboxFeedback.ItemsSource = dtCurrent;
             btnPrevious.IsEnabled = false;
             btnNext.IsEnabled = false;
@@ -103,6 +105,9 @@ namespace WpfApplication3.FeedBack
             else
                 this.InkCanvasAnnotation1.Strokes = new System.Windows.Ink.StrokeCollection();
             this.InkCanvasAnnotation1.IsEnabled = true;
+            int id = row.Id;
+            DataSetFeedbackTableAdapters.T_FeedBackTableAdapter adapter = new DataSetFeedbackTableAdapters.T_FeedBackTableAdapter();
+            adapter.UpdateState(true, false, id);
         }
 
         private void comboBox1_DropDownClosed(object sender, EventArgs e)
@@ -150,6 +155,9 @@ namespace WpfApplication3.FeedBack
             this.InkCanvasAnnotation1.Strokes.Save(fs);
             fs.Close();
             MessageBox.Show("批示保存成功！");
+            int id = dtCurrent[iCurrentItem].Id;
+            DataSetFeedbackTableAdapters.T_FeedBackTableAdapter adapter = new DataSetFeedbackTableAdapters.T_FeedBackTableAdapter();
+            adapter.UpdateState(true, true, id);
         }
 
         private void btnCommentClear_Click(object sender, RoutedEventArgs e)
@@ -241,6 +249,36 @@ namespace WpfApplication3.FeedBack
         private void tbxSearch_GotMouseCapture(object sender, System.Windows.Input.MouseEventArgs e)
         {
         	tbxSearch.Clear();// TODO: Add event handler implementation here.
+        }
+
+        private void btnUnRead_Click(object sender, RoutedEventArgs e)
+        {
+            DataSetFeedbackTableAdapters.T_FeedBackTableAdapter adapter = new DataSetFeedbackTableAdapters.T_FeedBackTableAdapter();
+            dtCurrent = adapter.GetData(iFeedBackType, false, false);
+            listboxFeedback.ItemsSource = dtCurrent;
+            btnPrevious.IsEnabled = false;
+            btnNext.IsEnabled = false;
+            iCurrentItem = -1;
+        }
+
+        private void btnAlreadyRead_Click(object sender, RoutedEventArgs e)
+        {
+            DataSetFeedbackTableAdapters.T_FeedBackTableAdapter adapter = new DataSetFeedbackTableAdapters.T_FeedBackTableAdapter();
+            dtCurrent = adapter.GetData(iFeedBackType, true, false);
+            listboxFeedback.ItemsSource = dtCurrent;
+            btnPrevious.IsEnabled = false;
+            btnNext.IsEnabled = false;
+            iCurrentItem = -1;
+        }
+
+        private void btnAlreadyComment_Click(object sender, RoutedEventArgs e)
+        {
+            DataSetFeedbackTableAdapters.T_FeedBackTableAdapter adapter = new DataSetFeedbackTableAdapters.T_FeedBackTableAdapter();
+            dtCurrent = adapter.GetData(iFeedBackType, true, true);
+            listboxFeedback.ItemsSource = dtCurrent;
+            btnPrevious.IsEnabled = false;
+            btnNext.IsEnabled = false;
+            iCurrentItem = -1;
         }
     }
 }

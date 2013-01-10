@@ -165,5 +165,11 @@ namespace WpfApplication3.ResourcesAndManpower
             listVice7.ItemsSource = viceList7;
             listVice8.ItemsSource = viceList8;        }
 
+        private void listVice_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ResourcesAndManpower.PageHumanResource m_Page = new ResourcesAndManpower.PageHumanResource();
+            this.NavigationService.Navigate(m_Page);
+        }
+
     }
 }

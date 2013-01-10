@@ -180,15 +180,6 @@ namespace WpfApplication3.Language {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
-        internal static string MainWindow_menu2_3 {
-            get {
-                return ResourceManager.GetString("MainWindow_menu2_3", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to .
-        /// </summary>
         internal static string MainWindow_menu2_4 {
             get {
                 return ResourceManager.GetString("MainWindow_menu2_4", resourceCulture);

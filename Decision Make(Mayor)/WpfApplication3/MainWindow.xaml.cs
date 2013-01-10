@@ -45,7 +45,6 @@ namespace WpfApplication3
             menu1_3.Content = WpfApplication3.Language.Language.MainWindow_menu1_3;
             menu2_1.Content = WpfApplication3.Language.Language.MainWindow_menu2_1;
             menu2_2.Content = WpfApplication3.Language.Language.MainWindow_menu2_2;
-            menu2_3.Content = WpfApplication3.Language.Language.MainWindow_menu2_3;
             menu2_4.Content = WpfApplication3.Language.Language.MainWindow_menu2_4;
             menu3_1.Content = WpfApplication3.Language.Language.MainWindow_menu3_1;
             menu3_2.Content = WpfApplication3.Language.Language.MainWindow_menu3_2;
@@ -468,7 +467,7 @@ namespace WpfApplication3
 		private void menu7_1_Selected(object sender, System.Windows.RoutedEventArgs e)
 		{
 			// TODO: Add event handler implementation here.
-			FeedBack.PageTeacherStudentFeedback m_PageTeacherStudentFeedback = new FeedBack.PageTeacherStudentFeedback();
+			FeedBack.PageTeacherStudentFeedback m_PageTeacherStudentFeedback = new FeedBack.PageTeacherStudentFeedback(1);
             FrameMiddleContent.Navigate(m_PageTeacherStudentFeedback);
 			
 			
@@ -533,8 +532,7 @@ namespace WpfApplication3
 
         private void menu2_3_Selected(object sender, RoutedEventArgs e)
         {
-            ResourcesAndManpower.PageHumanResource m_Page = new ResourcesAndManpower.PageHumanResource();
-            FrameMiddleContent.Navigate(m_Page);
+            
         }
 
         private void menu2_4_Selected(object sender, RoutedEventArgs e)
@@ -553,6 +551,18 @@ namespace WpfApplication3
         {
             Case.PageCase m_PageCase = new Case.PageCase(3);
             FrameMiddleContent.Navigate(m_PageCase);
+        }
+
+        private void menu7_2_Selected(object sender, RoutedEventArgs e)
+        {
+            FeedBack.PageTeacherStudentFeedback m_PageTeacherStudentFeedback = new FeedBack.PageTeacherStudentFeedback(2);
+            FrameMiddleContent.Navigate(m_PageTeacherStudentFeedback);
+        }
+
+        private void menu7_3_Selected(object sender, RoutedEventArgs e)
+        {
+            FeedBack.PageTeacherStudentFeedback m_PageTeacherStudentFeedback = new FeedBack.PageTeacherStudentFeedback(3);
+            FrameMiddleContent.Navigate(m_PageTeacherStudentFeedback);
         }
 		
     }
