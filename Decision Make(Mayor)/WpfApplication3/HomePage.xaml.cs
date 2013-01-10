@@ -49,7 +49,7 @@ namespace WpfApplication3
             wbTraffic.Navigate(new Uri(pathTraffic + @"/html/Traffic.htm", UriKind.RelativeOrAbsolute));
             //wbTraffic.Document.documentElement.style.overflow = "hidden"; //隐藏浏览器的滚动条
             string pathEmergency = di.Parent.Parent.FullName;
-            ds = new EmergencyBasic();
+            ds = new EmergencyBasic(this);
             wbEmergency.Navigate(new Uri(pathEmergency + @"/html/Emergency.htm", UriKind.RelativeOrAbsolute));//获取根目录的日历文件
             wbEmergency.ObjectForScripting = ds;//该对象可由显示在WebBrowser控件中的网页所包含的脚本代码访问
             //wb_weibo.Navigate(new Uri(pathEmergency + @"/html/weibo.htm"));
@@ -184,27 +184,53 @@ namespace WpfApplication3
             public string Description { get; set; }
             [DataMember(Order = 5)]
             public string Tel { get; set; }
+            [DataMember(Order = 6)]
+            public int icategory { get; set; }
 
         }
         public EmergencyBasic ds;
         [System.Runtime.InteropServices.ComVisibleAttribute(true)]//将该类设置为com可访问
         public class EmergencyBasic
         {
+           public EmergencyBasic(HomePage hp)//调用navigateservice
+           {
+               php = hp;
+           }
+           private HomePage php; 
             public static string name;
             public string Name
             {
                 get { return name; }
                 set { name = value; }
             }
+            public void LinkTo(int icategory)
+            {
+                PageShiGuZaiHai m_PageShiGuZaiHai =null;
+                switch (icategory)
+                {
+                    case 1:
+                        m_PageShiGuZaiHai = new PageShiGuZaiHai(2);//社会安全   
+                        break;
+                    case 2:
+                         m_PageShiGuZaiHai = new PageShiGuZaiHai(3);//社会安全   
+                        break;
+                    case 3:  
+                        m_PageShiGuZaiHai = new PageShiGuZaiHai(1);//自然灾害
+                        break;
+                    case 4:
+                        m_PageShiGuZaiHai = new PageShiGuZaiHai(4);//公共卫生
+                        break;
+                }
+                if (m_PageShiGuZaiHai!=null)
+                {
+                    php.NavigationService.Navigate(m_PageShiGuZaiHai);
+                }
+            }
             public void ClickEvent(string strlocation)
             {
-                int ijudge = 0;
-                if (strlocation == "突发事件")
-                {
-                    ijudge = 1;
-                }
                 DataTable dt = new DataTable();
-                SQLHelper.getPointsByCategory(ijudge, out dt);
+                //SQLHelper.getPointsByCategory(ijudge, out dt);
+                SQLHelper.getAllPoints(out dt);
                 List<Location> m_list = new List<Location>();
 
                 for (int ix = 0; ix < dt.Rows.Count; ix++)
@@ -215,7 +241,7 @@ namespace WpfApplication3
                     new_Location.Tel = dt.Rows[ix]["Tel"].ToString();
                     new_Location.Longitude = (double)dt.Rows[ix]["ilng"];
                     new_Location.Latitude = (double)dt.Rows[ix]["ilat"];
-
+                    new_Location.icategory = (int)dt.Rows[ix]["icategory"];
                     m_list.Add(new_Location);
                 }
                 strlocation = ToJsJson(m_list);
@@ -300,7 +326,7 @@ namespace WpfApplication3
         {
             DirectoryInfo di = new DirectoryInfo(System.Environment.CurrentDirectory);
             string pathEmergency = di.Parent.Parent.FullName;
-            ds = new EmergencyBasic();
+            ds = new EmergencyBasic(this);
             wbEmergency.Navigate(new Uri(pathEmergency + @"/html/Emergency.htm", UriKind.RelativeOrAbsolute));//获取根目录的日历文件
             wbEmergency.ObjectForScripting = ds;//该对象可由显示在WebBrowser控件中的网页所包含的脚本代码访问
         }

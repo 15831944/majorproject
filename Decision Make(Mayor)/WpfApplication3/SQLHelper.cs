@@ -76,7 +76,11 @@ namespace WpfZhihui
         }
         public static void getPointsByCategory(int Category, out DataTable dt)
         {
-            dt = SQLHelper.ExecuteDataTable("select ilng,ilat,Name,Description,Tel from T_Mappoint where T_Mappoint.icategory=@Category", new SqlParameter("Category", Category));
+            dt = SQLHelper.ExecuteDataTable("select ilng,ilat,Name,Description,Tel,icategory from T_Mappoint where T_Mappoint.icategory=@Category", new SqlParameter("Category", Category));
+        }
+        public static void getAllPoints( out DataTable dt)
+        {
+            dt = SQLHelper.ExecuteDataTable("select ilng,ilat,Name,Description,Tel,icategory from T_Mappoint ");
         }
     }
 }

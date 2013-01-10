@@ -60,7 +60,7 @@
         		<RowDefinition Height="0.531*"/>
         		<RowDefinition Height="0.469*"/>
         	</Grid.RowDefinitions>
-            <Grid x:Name="grid_ZiRanZaiHai_ShiJianGaiKuang" Margin="0,0,5,15" Loaded="Grid_Loaded" >
+            <Grid x:Name="grid_ShiJianGaiKuang" Margin="0,0,5,15" Loaded="Grid_Loaded" >
                 <Rectangle RadiusY="8" RadiusX="8" StrokeThickness="2">
                 	<Rectangle.Effect>
                 		<DropShadowEffect/>
@@ -83,18 +83,18 @@
                 			<RowDefinition Height="0.616*"/>
                 		</Grid.RowDefinitions>
                 		<StackPanel x:Name="Shijianshishigengxin" Margin="0,0,0,23.5">
-                			<Label Content="事件实时更新:" x:Name="label_ZiRanZaiHai_ShiJianShiShiGengXin" VerticalAlignment="Center" Padding="5,1" Style="{DynamicResource LabelNormal}" Background="{x:Null}" Height="23" HorizontalAlignment="Left" />
-                			<TextBox Height="88.167" x:Name="tbx_ZiRanZaiHai_ShiJianShiShiGengXin" VerticalAlignment="Top" TextWrapping="Wrap" Style="{DynamicResource TextBoxStyle4}" Margin="0,10,0,0" BorderBrush="{x:Null}" Background="{x:Null}" />
+                			<Label Content="事件实时更新:" x:Name="labeli_ShiJianShiShiGengXin" VerticalAlignment="Center" Padding="5,1" Style="{DynamicResource LabelNormal}" Background="{x:Null}" Height="23" HorizontalAlignment="Left" />
+                			<TextBox Height="88.167" x:Name="tbx_ShiJianShiShiGengXin" VerticalAlignment="Top" TextWrapping="Wrap" Style="{DynamicResource TextBoxStyle4}" Margin="0,10,0,0" BorderBrush="{x:Null}" Background="{x:Null}" />
                 		</StackPanel>
                 		<StackPanel x:Name="Shijianqingkuang" Margin="0,-0.166,0,0" Orientation="Vertical" Grid.Row="1">
-                			<Label HorizontalAlignment="Left" x:Name="label_ZiRanZaiHai_ShiJianQingKuang" VerticalAlignment="Top" Padding="5,1" Background="{x:Null}" Content="事件情况：" Style="{DynamicResource LabelNormal}" d:LayoutOverrides="HorizontalAlignment" />
-                			<TextBox x:Name="tbx_ZiRanZaiHai_ShiJianQingKuang" TextWrapping="Wrap" Height="199.337"  Margin="0,10,0,0" Background="{x:Null}" BorderBrush="{x:Null}" />
+                			<Label HorizontalAlignment="Left" x:Name="label_ShiJianQingKuang" VerticalAlignment="Top" Padding="5,1" Background="{x:Null}" Content="事件情况：" Style="{DynamicResource LabelNormal}" d:LayoutOverrides="HorizontalAlignment" />
+                			<TextBox x:Name="tbx_ShiJianQingKuang" TextWrapping="Wrap" Height="199.337"  Margin="0,10,0,0" Background="{x:Null}" BorderBrush="{x:Null}" />
                 		</StackPanel>
                 	</Grid>
                 	<Grid Margin="21,0,38.768,2.764" Grid.Column="1" Height="220" Width="40" HorizontalAlignment="Left" VerticalAlignment="Bottom">
                 		<ListBox Background="{x:Null}" BorderBrush="{x:Null}" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
-                			<ListBoxItem Content="" Height="54" Style="{DynamicResource ListBoxItemEmergency}" IsSelected="True"/>
-                			<ListBoxItem Content="" Height="54" Style="{DynamicResource ListBoxItemHuoJIng}" Cursor="Hand"/>
+                            <ListBoxItem Content="" Height="54"  IsSelected="True"/> <!--Style="{DynamicResource ListBoxItemEmergency}"-->
+                            <ListBoxItem Content="" Height="54" Style="{DynamicResource ListBoxItemHuoJIng}" Cursor="Hand"/>
                 			<ListBoxItem Content="" Height="54" Style="{DynamicResource ListBoxItemYiLiao}" Cursor="Hand"/>
                 			<ListBoxItem Content="" Height="54" Style="{DynamicResource ListBoxItemWeixianyuan}" Cursor="Hand"/>
                 		</ListBox>
@@ -132,7 +132,7 @@
             		<TabControl x:Name="tabControl_ZiRanZaiHai" Style="{DynamicResource TabControlStyle2}">
             			<TabItem x:Name="tabItem1" Header="应急预案" Style="{DynamicResource TabItemFirst}" HorizontalAlignment="Left" VerticalAlignment="Top" Height="33" Width="90" Margin="-2,-2,0,0">
             				<Grid Margin="0">
-            					<Label Content="自然灾害应急预案" Height="34" HorizontalAlignment="Left" Margin="5,5,0,0" x:Name="label_ZiRanZaiHai_YingJiYuAn_Title" VerticalAlignment="Top" Width="124" d:LayoutOverrides="HorizontalAlignment" FontSize="14" FontFamily="Helvetica" FontWeight="Bold" Foreground="#FFEDEDED" />
+            					<Label Content="自然灾害应急预案" Height="34" HorizontalAlignment="Left" Margin="5,5,0,0" x:Name="label_YingJiYuAn_Title" VerticalAlignment="Top" Width="124" d:LayoutOverrides="HorizontalAlignment" FontSize="14" FontFamily="Helvetica" FontWeight="Bold" Foreground="#FFEDEDED" />
             					<TabControl Style="{DynamicResource TabControlSubContent}" Background="{x:Null}">
             						<TabItem Header="组织实施" Style="{DynamicResource TabItem2ndmenuMIddle}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200,0,-200,0">
             							<Grid x:Name="Gridzzss" Loaded="Gridzzss_Loaded">
@@ -229,7 +229,7 @@
             					<Grid.RowDefinitions>
             						<RowDefinition Height="171.334"/>
             					</Grid.RowDefinitions>
-            					<CheckBox x:Name="lingdaoceng" Content="通知领导层" Style="{DynamicResource CheckBoxTongzhi}" FontFamily="Helvetica" FontWeight="Bold" Height="31.938" VerticalAlignment="Top" Margin="0,6.003,0,0" IsChecked="True">
+                                <CheckBox x:Name="lingdaoceng" Content="通知领导层" FontFamily="Helvetica" FontWeight="Bold" Height="31.938" VerticalAlignment="Top" Margin="0,6.003,0,0" IsChecked="True" ><!--Style="{DynamicResource CheckBoxTongzhi}"-->
             						<VisualStateManager.VisualStateGroups>
             							<VisualStateGroup x:Name="SelectionStates">
             								<VisualStateGroup.Transitions>
@@ -268,7 +268,7 @@
             				</Grid>
             			</Grid>
             			<StackPanel Margin="6.04,0,7.96,27.629" d:LayoutOverrides="Height" Grid.Column="5" >
-            				<Label Content="负责人联络" Height="26.666" HorizontalAlignment="Left" x:Name="label_ZiRanZaiHai_ShiJianQingKuang_Copy" VerticalAlignment="Top" Width="107" Padding="13,1,5,1" FontWeight="Bold" FontSize="16" Background="{x:Null}" >
+            				<Label Content="负责人联络" Height="26.666" HorizontalAlignment="Left" x:Name="label_ShiJianQingKuang_Copy" VerticalAlignment="Top" Width="107" Padding="13,1,5,1" FontWeight="Bold" FontSize="16" Background="{x:Null}" >
             					<Label.Effect>
             						<DropShadowEffect Color="#FFBEBEBE" ShadowDepth="1"/>
             					</Label.Effect>

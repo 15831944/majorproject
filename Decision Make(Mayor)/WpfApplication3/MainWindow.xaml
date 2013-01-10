@@ -1974,17 +1974,17 @@
                 				<SolidColorBrush Color="{DynamicResource #646464}"/>
                 			</ListBoxItem.Foreground>
                 		</ListBoxItem>
-                		<ListBoxItem x:Name="menu6_2" Content="社会安全" Style="{DynamicResource ListBoxMainMenuSubmenu}" Height="70" FontSize="16">
+                		<ListBoxItem x:Name="menu6_2" Content="社会安全" Style="{DynamicResource ListBoxMainMenuSubmenu}" Height="70" FontSize="16" Selected="menu6_2_Selected">
                 			<ListBoxItem.Foreground>
                 				<SolidColorBrush Color="{DynamicResource #646464}"/>
                 			</ListBoxItem.Foreground>
                 		</ListBoxItem>
-                		<ListBoxItem x:Name="menu6_3" Content="事故灾害" Style="{DynamicResource ListBoxMainMenuSubmenu}" Height="70" FontSize="16" >
+                        <ListBoxItem x:Name="menu6_3" Content="事故灾害" Style="{DynamicResource ListBoxMainMenuSubmenu}" Height="70" FontSize="16" Selected="menu6_3_Selected">
                 			<ListBoxItem.Foreground>
                 				<SolidColorBrush Color="{DynamicResource #646464}"/>
                 			</ListBoxItem.Foreground>
                 		</ListBoxItem>
-                		<ListBoxItem x:Name="menu6_4" Content="公共卫生" Style="{DynamicResource ListBoxMainMenuSubmenu}" Height="70" FontSize="16">
+                        <ListBoxItem x:Name="menu6_4" Content="公共卫生" Style="{DynamicResource ListBoxMainMenuSubmenu}" Height="70" FontSize="16" Selected="menu6_4_Selected">
                 			<ListBoxItem.Foreground>
                 				<SolidColorBrush Color="{DynamicResource #646464}"/>
                 			</ListBoxItem.Foreground>

@@ -52,19 +52,20 @@
         var points = [];
         map.clearOverlays();
         for (var i = 0; i < jsonconf.length; i++) {
-            addMarker1(new BMap.Point(jsonconf[i].Longitude, jsonconf[i].Latitude), jsonconf[i].Name, jsonconf[i].Description, jsonconf[i].Tel);
+            addMarker1(new BMap.Point(jsonconf[i].Longitude, jsonconf[i].Latitude), jsonconf[i].Name, jsonconf[i].Description, jsonconf[i].Tel, jsonconf[i].icategory);
             points.push(new BMap.Point(jsonconf[i].Longitude, jsonconf[i].Latitude));
         }
         map.setViewport(points);
     }
-    function addMarker1(point1, text, description, tel) {
+    function addMarker1(point1, text, description, tel, icategory) {
+        
         var marker = new BMap.Marker(point1);
         map.addOverlay(marker);
         var label = new BMap.Label(text, { offset: new BMap.Size(20, -10) });
         marker.setLabel(label);
 
         var sContent =
-            "<div><h4 style='margin:0 0 5px 0;padding:0.2em 0'>" + text + "</h4>" +
+            "<div><h4 style='margin:0 0 5px 0;padding:0.2em 0'>" + text + "</h4>" + "<input value=\"查看\" onclick=\"linkto('" + icategory + "')\" type=button> " +
             "<p style='margin:0;line-height:1.5;font-size:13px;text-indent:2em;width:180px;'>" + description + "</p>" + "电话：" + tel +
             "</div>";
 
@@ -74,4 +75,7 @@
             //图片加载完毕重绘infowindow
         });
     }
+    function linkto(icategory) {
+        window.external.LinkTo(icategory);
+    } 
 </script>

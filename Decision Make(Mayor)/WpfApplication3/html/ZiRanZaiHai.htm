@@ -12,7 +12,7 @@
 <div style="width:796px;height:514px;border:1px solid gray;margin-left:-10px;margin-top:-16px;" id="container"></div>
 <div style="display:inline;">
 <span>
-	<input name="emergency" style="width: 68px; height: 25px; font-size: 12px; font-family: 微软雅黑; display:none;" type="button"  id="emergency" onclick="Select2();" class="auto-style1" value="自然灾害"></span>
+	<input name="emergency" style="width: 68px; height: 25px; font-size: 12px; font-family: 微软雅黑; display:none;" type="button"  id="emergency" onclick="Select2();" class="auto-style1" value="公共卫生"></span>
 </div>
 
 
@@ -52,6 +52,7 @@
             points.push(new BMap.Point(jsonconf[i].Longitude, jsonconf[i].Latitude));
         }
         map.setViewport(points);
+        map.centerAndZoom(new BMap.Point(jsonconf[0].Longitude, jsonconf[0].Latitude), 15);  
     }
     function addMarker1(point1, text, description, tel) {
         var marker = new BMap.Marker(point1);

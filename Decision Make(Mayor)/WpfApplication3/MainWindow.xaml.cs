@@ -456,13 +456,34 @@ namespace WpfApplication3
         }
       
 
-        private void menu6_1_Selected(object sender, System.Windows.RoutedEventArgs e)
+        public void menu6_1_Selected(object sender, System.Windows.RoutedEventArgs e)
 		{
 			// TODO: Add event handler implementation here.
-			PageShiGuZaiHai m_PageShiGuZaiHai = new PageShiGuZaiHai();
+			PageShiGuZaiHai m_PageShiGuZaiHai = new PageShiGuZaiHai(1);//自然灾害
             FrameMiddleContent.Navigate(m_PageShiGuZaiHai);
 
 		}
+        private void menu6_2_Selected(object sender, System.Windows.RoutedEventArgs e)
+        {
+            // TODO: Add event handler implementation here.
+            PageShiGuZaiHai m_PageShiGuZaiHai = new PageShiGuZaiHai(2);//社会安全
+            FrameMiddleContent.Navigate(m_PageShiGuZaiHai);
+
+        }
+        private void menu6_3_Selected(object sender, System.Windows.RoutedEventArgs e)
+        {
+            // TODO: Add event handler implementation here.
+            PageShiGuZaiHai m_PageShiGuZaiHai = new PageShiGuZaiHai(3);//事故灾害
+            FrameMiddleContent.Navigate(m_PageShiGuZaiHai);
+
+        }
+        private void menu6_4_Selected(object sender, System.Windows.RoutedEventArgs e)
+        {
+            // TODO: Add event handler implementation here.
+            PageShiGuZaiHai m_PageShiGuZaiHai = new PageShiGuZaiHai(4);//
+            FrameMiddleContent.Navigate(m_PageShiGuZaiHai);
+
+        }
 
 		private void menu7_1_Selected(object sender, System.Windows.RoutedEventArgs e)
 		{
