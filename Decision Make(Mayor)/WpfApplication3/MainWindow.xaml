@@ -2118,17 +2118,17 @@
             </Grid>
         </Grid>
         <Grid Grid.Column="1" Name="MiddleContent" Margin="29,30,0,40">
-            <Frame Name="FrameMiddleContent" NavigationUIVisibility="Hidden"/>
+            <Frame Name="FrameMiddleContent" NavigationUIVisibility="Hidden" Navigated="FrameMiddleContent_Navigated" />
         </Grid>
         <Grid Grid.Column="2" Name="RightContent" Margin="24,30,4,40">
             <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="432"/>
+                <RowDefinition Height="58*"/>
+                <RowDefinition Height="42*"/>
             </Grid.RowDefinitions>
-            <Grid Grid.Row="0" Name="News" Margin="0,0,0,-10">
+            <Grid Grid.Row="0" Name="News" Margin="0,0,0,0">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="230"/>
-                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="45*"/>
+                    <RowDefinition Height="55*"/>
                 </Grid.RowDefinitions>
             	<Grid.Effect>
             		<DropShadowEffect/>
@@ -2195,7 +2195,7 @@
                     </ComboBox>
                     <Image Height="186" HorizontalAlignment="Left" x:Name="imageTVCover" Stretch="Fill" VerticalAlignment="Top" Width="280" Source="Images/TVCover.jpg" MouseLeftButtonDown="imageTVCover_MouseLeftButtonDown" Margin="6.5,8,0,0" />
                 </Grid>
-                <Grid x:Name="RssNews" Grid.Row="1" Width="286" HorizontalAlignment="Left" Margin="10,20,10,20">
+                <Grid x:Name="RssNews" Grid.Row="1" Margin="0">
                     <ListView x:Name="Rsslist" ItemTemplate="{DynamicResource DataTemplate1}" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Margin="0" />
                 </Grid>
                 <Label Name="lblMedia" Content="媒  体" Style="{DynamicResource LabelRightContent}" VerticalAlignment="Top" FontFamily="Helvetica" FontSize="14" FontWeight="Bold"/>
@@ -2229,7 +2229,7 @@
                     </Grid>
                     <Button x:Name="weibo_search" Content="Button" Click="weibo_search_Click" Cursor="Hand" Style="{DynamicResource ButtonStyle10}" Margin="0.5,7,0,8" Grid.Column="1" HorizontalAlignment="Left" Width="33.809"/>
                 </Grid>
-                <WebBrowser Width="278" x:Name="wb_weibo" HorizontalAlignment="Left" Margin="6,0,0,20" Height="298" VerticalAlignment="Bottom" Grid.Row="2" />
+                <WebBrowser x:Name="wb_weibo" Margin="5,0,5,20" Grid.Row="2" />
                 <Label Name="lblMicroblog" Content="微  博" Style="{DynamicResource LabelTitleLong}" FontFamily="Helvetica" FontSize="14" FontWeight="Bold" Height="33" VerticalAlignment="Top"/>
             </Grid>
         </Grid>

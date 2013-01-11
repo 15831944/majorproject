@@ -585,6 +585,11 @@ namespace WpfApplication3
             FeedBack.PageTeacherStudentFeedback m_PageTeacherStudentFeedback = new FeedBack.PageTeacherStudentFeedback(3);
             FrameMiddleContent.Navigate(m_PageTeacherStudentFeedback);
         }
+
+        private void FrameMiddleContent_Navigated(object sender, System.Windows.Navigation.NavigationEventArgs e)
+        {
+
+        }
 		
     }
 }
