@@ -30,7 +30,6 @@ namespace WpfApplication3
         public HomePage()
         {
             InitializeComponent();
-
             //
             runWeather.Content = WpfApplication3.Language.Language.HomePage_runWeather;
             tblCalendar.Content = WpfApplication3.Language.Language.HomePage_tblCalendar;
@@ -249,7 +248,7 @@ namespace WpfApplication3
             }
 
         }
-
+        
         private void Hyperlink_RequestNavigate(object sender, System.Windows.Navigation.RequestNavigateEventArgs e)
         {
             Process.Start(new ProcessStartInfo(e.Uri.AbsoluteUri));

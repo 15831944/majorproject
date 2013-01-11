@@ -30,9 +30,9 @@ namespace WpfApplication3.ResourcesAndManpower
         {
             DirectoryInfo di = new DirectoryInfo(System.Environment.CurrentDirectory);
             string strPATH = di.Parent.Parent.FullName;
-            GoogleMapHelper m_GoogleMapHelper = new GoogleMapHelper();
-            m_GoogleMapHelper.setMap(0, "31.22924594193164", "121.48104309082031");
-            webbrowserContent.Navigate(new Uri(strPATH + @"/html/GoogleMap.htm"));
+            //GoogleMapHelper m_GoogleMapHelper = new GoogleMapHelper();
+            //m_GoogleMapHelper.setMap(0, "31.22924594193164", "121.48104309082031");
+            webbrowserContent.Navigate(new Uri(strPATH + @"/html/GoogleMapSatellite.htm"));
             tblAnnotation.Text = "浦东新区总体规划体现了高起点、高标准，面向二十一世纪并使之建设成为现代化国际一流城市的战略目标。并以多视角地研究和探索浦东新区的功能定位、规划布局以及浦东浦协调发展等诸多问题。其目的是为了从城市发展的物质形态上保证浦东新区社会经济高速发展，从而带动上海以至整个长江三角洲地区的社会经济发展的总目标。(1)浦东新区是上海城市的一个有机整体，同时又是有相对独立性的新区。浦东的开发，要依托浦西的综合优势，浦东的开放又促进浦西产业结构和城市功能的调整，以加快开发浦东，振兴上海，服务全国，面向世界。(2)浦东新区是扩大对外开放的主要“窗口”，要大力发展外向型经济，加快把上海建设成为开放型、多功能的现代化国际大城市。(3)浦东新区是城乡发展的一个整体，要按城乡协调发展，综合规划，统筹安排，合理调整城镇体系，使城郊发展成为现代化农业和相应的现代化城镇。(4)开发浦东新区是一个跨世纪工程，要有高起点，新主意，以适应90年代以至21世纪国际大城市发展的需要。(5)浦东新区是长江流域经济地区，特别是长江三角洲地区的一个“龙头”，要从区域经济发展角度出发，服务全国。";
         }
 
@@ -40,9 +40,9 @@ namespace WpfApplication3.ResourcesAndManpower
         {
             DirectoryInfo di = new DirectoryInfo(System.Environment.CurrentDirectory);
             string strPATH = di.Parent.Parent.FullName;
-            GoogleMapHelper m_GoogleMapHelper = new GoogleMapHelper();
-            m_GoogleMapHelper.setMap(1, "31.22924594193164", "121.48104309082031");
-            webbrowserContent1.Navigate(new Uri(strPATH + @"/html/GoogleMap.htm"));
+            //GoogleMapHelper m_GoogleMapHelper = new GoogleMapHelper();
+            //m_GoogleMapHelper.setMap(1, "31.22924594193164", "121.48104309082031");
+            webbrowserContent1.Navigate(new Uri(strPATH + @"/html/GoogleMapRoadMap.htm"));
         }
 
         private void Grid_Plan_Loaded(object sender, System.Windows.RoutedEventArgs e)

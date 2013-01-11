@@ -32,13 +32,15 @@ namespace WpfApplication3.FeedBack
             InitializeComponent();
             iFeedBackType = i;
             DataSetFeedbackTableAdapters.T_FeedBackTableAdapter adapter = new DataSetFeedbackTableAdapters.T_FeedBackTableAdapter();
-            dtCurrent = adapter.GetData(iFeedBackType,false,false);
+            dtCurrent = adapter.GetData(iFeedBackType,true,false);
             listboxFeedback.ItemsSource = dtCurrent;
             btnPrevious.IsEnabled = false;
             btnNext.IsEnabled = false;
             lstrSend = new List<string>();
             iCurrentItem = -1;
             this.InkCanvasAnnotation1.IsEnabled = false;
+            if (dtCurrent.Count > 0)
+                ShowFeedBack(0);
         }
 
         private void btnFeedbackShow_Click(object sender, RoutedEventArgs e)

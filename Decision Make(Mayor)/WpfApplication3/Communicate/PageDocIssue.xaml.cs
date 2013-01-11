@@ -25,13 +25,13 @@ namespace WpfApplication3.Communicate
     {
         bool IsRead;
         int DocType;
+        int iFirstDocId;
         DataSetDoc.T_DocDataTable dtDocs;
         DataSetDoc.T_DocDataTable dtLatestDocs;
 //        DataSetDoc.T_DocDataTable dtCurrent;
 //		DataSetDoc.T_DocDataTable dtLatestCurrent;
-		string fileCurrentPDF;
 		
-        int iCurrent;
+        int iCurrentId;
         public PageDocIssue()
         {
             InitializeComponent();
@@ -39,6 +39,7 @@ namespace WpfApplication3.Communicate
             dtLatestDocs = new DataSetDoc.T_DocDataTable();
 //            dtCurrent = new DataSetDoc.T_DocDataTable();
             this.InkCanvasAnnotation1.IsEnabled = false;
+            iFirstDocId = -1;
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
@@ -55,7 +56,8 @@ namespace WpfApplication3.Communicate
 				listboxLatestDocsRefresh(IsRead);
             	listboxDocsRefresh(IsRead,DocType);
 			}
-
+            if (iFirstDocId != -1)
+                ShowDoc(iFirstDocId);
         }
 
 		private void comboBox1_DropDownClosed(object sender, EventArgs e)
@@ -170,7 +172,9 @@ namespace WpfApplication3.Communicate
         {
             DirectoryInfo di = new DirectoryInfo(System.Environment.CurrentDirectory);
             string strPath = di.Parent.Parent.FullName;
-            string filename = fileCurrentPDF;
+            DataSetDocTableAdapters.T_DocTableAdapter adapter = new DataSetDocTableAdapters.T_DocTableAdapter();
+            DataSetDoc.T_DocDataTable dt = adapter.GetDocById(iCurrentId);
+            string filename = dt[0].DocTitle;
             if (Directory.Exists(strPath + @"/Comment") == false)
             {
                 Directory.CreateDirectory(strPath + @"/Comment");
@@ -231,7 +235,8 @@ namespace WpfApplication3.Communicate
 					listboxDocsType6.ItemsSource = dtDocs;
 				}
 			}
-
+            if (iFirstDocId == -1 && dtDocs.Count > 0 && Isread == true)
+                iFirstDocId = dtDocs[0].Id;
         }
        private void btnSend_Click(object sender, RoutedEventArgs e)
         {
@@ -302,6 +307,7 @@ namespace WpfApplication3.Communicate
         {
 			Button btn = sender as Button;
             int id = Convert.ToInt32(btn.Tag.ToString());
+            iCurrentId = id;
             DataSetDocTableAdapters.T_DocTableAdapter adapter = new DataSetDocTableAdapters.T_DocTableAdapter();
             DataSetDoc.T_DocDataTable dt = adapter.GetDocById(id);
 			string filePDF = dt[0].DocAddress;
@@ -328,6 +334,34 @@ namespace WpfApplication3.Communicate
             adapter.UpdateState(true, id);
 //            PDFReader pdfReader = new PDFReader();
 //            pdfReader.showPdf(content + ".pdf");
+        }
+
+        private void ShowDoc(int id)
+        {
+            DataSetDocTableAdapters.T_DocTableAdapter adapter = new DataSetDocTableAdapters.T_DocTableAdapter();
+            DataSetDoc.T_DocDataTable dt = adapter.GetDocById(id);
+            string filePDF = dt[0].DocAddress;
+            string FileISF = dt[0].DocTitle + ".isf";
+            DirectoryInfo di = new DirectoryInfo(System.Environment.CurrentDirectory);
+            string strPath = di.Parent.Parent.FullName;
+            if (System.IO.File.Exists(strPath + @"/PDF/" + filePDF))
+            {
+                webbrowserDocContent.Navigate(new Uri(strPath + @"/PDF/" + filePDF, UriKind.RelativeOrAbsolute));
+            }
+            else
+            {
+                MessageBox.Show("未找到PDF文件");
+            }
+            if (System.IO.File.Exists(strPath + @"/Comment/" + FileISF))
+            {
+                System.IO.FileStream fs = new System.IO.FileStream(strPath + @"/Comment/" + FileISF, FileMode.OpenOrCreate, FileAccess.ReadWrite);
+                this.InkCanvasAnnotation1.Strokes = new System.Windows.Ink.StrokeCollection(fs);
+                fs.Close();
+            }
+            else
+                this.InkCanvasAnnotation1.Strokes = new System.Windows.Ink.StrokeCollection();
+            this.InkCanvasAnnotation1.IsEnabled = true;
+            adapter.UpdateState(true, id);
         }
 		
     }
