@@ -65,7 +65,12 @@ namespace WpfApplication3.ResourcesAndManpower
             webbrowserContent2.Source = new BitmapImage(new Uri(strPATH + @"/Images/土地使用规划.jpg"));
             webbrowserContent2.Stretch = Stretch.Fill;
             tblAnnotation.Text = "在《浦东新区综合发展规划》中，提出了《浦东新区土地使用规划》。该规划的指导思想是：按照“控制增量，提高质量，集约利用”的土地使用方针，利用级差效益，盘活存量土地；搞好“三个集中”，实行集约利用；开发滩涂资源，增加土地后备资源。 该规划的主要内容包括规划超时限和范围、不同区位土地使用原则及土地等级的划分和有关土地的技术经济指标等。 该规划的特点是将土地使用规划作为浦东新区综合发展规划的一部分，从全局长远利益出发，对全区土地的开发、整治、利用和保护进行统筹安排，以实现土地资源的可持续利用；对浦东新区规划年（2020年）用地总量及主要用地的结构比例等重要指标进行了说明，对建设用地总量、生态林用地总量及城市发展备用地总量进行了分解。";
-        }
+        } 
+
+
+
+
+
 
         private void IndustrialLayout_Checked(object sender, System.Windows.RoutedEventArgs e)
         {

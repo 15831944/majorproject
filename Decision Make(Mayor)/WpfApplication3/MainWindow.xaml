@@ -2122,10 +2122,14 @@
         </Grid>
         <Grid Grid.Column="2" Name="RightContent" Margin="24,30,4,40">
             <Grid.RowDefinitions>
-                <RowDefinition/>
+                <RowDefinition Height="*"/>
                 <RowDefinition Height="432"/>
             </Grid.RowDefinitions>
             <Grid Grid.Row="0" Name="News" Margin="0,0,0,-10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="230"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
             	<Grid.Effect>
             		<DropShadowEffect/>
             	</Grid.Effect>
@@ -2137,7 +2141,7 @@
                         <DropShadowEffect/>
                     </Rectangle.Effect>
                 </Rectangle>
-                <Grid x:Name="newsvideo" Margin="0,37,0,0" Height="224" VerticalAlignment="Top">
+                <Grid x:Name="newsvideo" Grid.Row="0" Margin="0,37,0,0" Height="224" VerticalAlignment="Top">
                     <WebBrowser x:Name="WebBrowserTV" Height="186" VerticalAlignment="Top" Margin="8,7.5,8,0" Visibility="Hidden"/>
                     <ComboBox x:Name="comboBox" Margin="6.5,196,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120" Background="{x:Null}" BorderThickness="0" BorderBrush="{x:Null}" SelectionChanged="comboBox_SelectionChanged" Height="25" Foreground="{DynamicResource ButtonNormalBackground}" Style="{DynamicResource ComboBoxStyle2}" Cursor="Hand">
                         <ComboBoxItem Content="东方卫视" x:Name="Dongfangweishi" Opacity="0.8" >
@@ -2191,7 +2195,7 @@
                     </ComboBox>
                     <Image Height="186" HorizontalAlignment="Left" x:Name="imageTVCover" Stretch="Fill" VerticalAlignment="Top" Width="280" Source="Images/TVCover.jpg" MouseLeftButtonDown="imageTVCover_MouseLeftButtonDown" Margin="6.5,8,0,0" />
                 </Grid>
-                <Grid x:Name="RssNews" Width="286" HorizontalAlignment="Left" Margin="2,261.5,0,10">
+                <Grid x:Name="RssNews" Grid.Row="1" Width="286" HorizontalAlignment="Left" Margin="10,20,10,20">
                     <ListView x:Name="Rsslist" ItemTemplate="{DynamicResource DataTemplate1}" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Margin="0" />
                 </Grid>
                 <Label Name="lblMedia" Content="媒  体" Style="{DynamicResource LabelRightContent}" VerticalAlignment="Top" FontFamily="Helvetica" FontSize="14" FontWeight="Bold"/>
