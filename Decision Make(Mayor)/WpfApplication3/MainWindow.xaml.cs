@@ -501,14 +501,25 @@ namespace WpfApplication3
             FrameMiddleContent.Navigate(m_PageDocIssue);
 		}
 
-		private void menu8_1_Selected(object sender, System.Windows.RoutedEventArgs e)
+		private void menu8_1_Selected(object sender, System.Windows.RoutedEventArgs e)//重大项目
 		{
 			// TODO: Add event handler implementation here.
-			LargeProject.PageProject m_PageProject = new LargeProject.PageProject();
+			LargeProject.PageProject m_PageProject = new LargeProject.PageProject(1);
             FrameMiddleContent.Navigate(m_PageProject);
 
 		}
+        private void menu8_2_Selected(object sender, RoutedEventArgs e)
+        {
+            LargeProject.PageProject m_PageProject = new LargeProject.PageProject(2);
+            FrameMiddleContent.Navigate(m_PageProject);
+        }
 
+        private void menu8_3_Selected(object sender, RoutedEventArgs e)
+        {
+            LargeProject.PageProject m_PageProject = new LargeProject.PageProject(3);
+            FrameMiddleContent.Navigate(m_PageProject);
+        }
+		
 		private void menu5_1_Selected(object sender, System.Windows.RoutedEventArgs e)
 		{
 			// TODO: Add event handler implementation here.
@@ -590,6 +601,7 @@ namespace WpfApplication3
         {
 
         }
-		
+
+
     }
 }

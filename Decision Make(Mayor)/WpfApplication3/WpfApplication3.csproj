@@ -690,6 +690,15 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Images\construct1.jpg" />
+    <Resource Include="Images\construct2.jpg" />
+    <Resource Include="Images\construct3.jpg" />
+    <Resource Include="Images\sence1.png" />
+    <Resource Include="Images\sence2.png" />
+    <Resource Include="Images\sence3.png" />
+    <Resource Include="Images\solute1.png" />
+    <Resource Include="Images\solute2.png" />
+    <Resource Include="Images\solute3.png" />
     <Resource Include="Images\StarLevel5.jpg" />
     <Resource Include="Images\zhexian.jpg" />
     <Resource Include="Images\zhuzhuang.jpg" />
@@ -716,14 +725,10 @@
     <Resource Include="Images\tubiao1.jpg" />
     <Resource Include="Images\tubiao2.jpg" />
     <Resource Include="Images\学院船.png" />
-    <Resource Include="Images\construct.jpg" />
     <Resource Include="Images\ImageVideo1.jpg" />
     <Resource Include="Images\ImageVideo3.jpg" />
     <Resource Include="Images\logo_tongji.jpg" />
     <Resource Include="Images\projectorg.jpg" />
-    <Resource Include="Images\solute.png" />
-    <Resource Include="Images\sence.png" />
-    <Resource Include="Images\construct.png" />
     <Resource Include="Images\JingFei.JPG" />
     <Resource Include="CutImages\图像\branch_bg-07.png" />
     <Resource Include="CutImages\图像\branch_bg-full-07.png" />

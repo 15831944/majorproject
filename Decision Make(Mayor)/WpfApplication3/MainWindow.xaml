@@ -2015,12 +2015,12 @@
                 				<SolidColorBrush Color="{DynamicResource #646464}"/>
                 			</ListBoxItem.Foreground>
                 		</ListBoxItem>
-                		<ListBoxItem x:Name="menu8_2" Content="经济适用房项目" Style="{DynamicResource ListBoxMainMenuSubmenu}" Height="70" FontSize="16">
+                		<ListBoxItem x:Name="menu8_2" Content="经济适用房项目" Style="{DynamicResource ListBoxMainMenuSubmenu}" Height="70" FontSize="16" Selected="menu8_2_Selected">
                 			<ListBoxItem.Foreground>
                 				<SolidColorBrush Color="{DynamicResource #646464}"/>
                 			</ListBoxItem.Foreground>
                 		</ListBoxItem>
-                		<ListBoxItem x:Name="menu8_3" Content="迪斯尼项目" Style="{DynamicResource ListBoxMainMenuSubmenu}" Height="70" FontSize="16">
+                		<ListBoxItem x:Name="menu8_3" Content="迪斯尼项目" Style="{DynamicResource ListBoxMainMenuSubmenu}" Height="70" FontSize="16" Selected="menu8_3_Selected">
                 			<ListBoxItem.Foreground>
                 				<SolidColorBrush Color="{DynamicResource #646464}"/>
                 			</ListBoxItem.Foreground>

@@ -24,6 +24,11 @@ namespace WpfApplication3.LargeProject
         {
             InitializeComponent();
         }
+        public PageProject(int i)///i REFERE THE PROJECT
+        {
+            projectID = i;
+            InitializeComponent();
+        }
         /// <summary>
         /// 保存各项所占的比例
         /// </summary>
@@ -36,20 +41,29 @@ namespace WpfApplication3.LargeProject
         /// 建设比例
         /// </summary>
         private double constructPercent = 0.45d;
-
+        private int projectID = 1;
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             percentList = new List<double> { 0.3, 0.4, 0.2, 0.1 };
             actualPercentList = new List<double> { 0.2, 0.2, 0.1, 0.05 };
 
-            ConstructImg.Source = new BitmapImage(new Uri("/Images/construct.jpg", UriKind.Relative));
-            CurrentSence.Source = new BitmapImage(new Uri("/Images/sence.png", UriKind.Relative));
-            ImageSolution.Source = new BitmapImage(new Uri("/Images/solute.png", UriKind.Relative));
+            ConstructImg.Source = new BitmapImage(new Uri("/Images/construct"+projectID.ToString()+".jpg", UriKind.Relative));
+            CurrentSence.Source = new BitmapImage(new Uri("/Images/sence" + projectID.ToString() + ".png", UriKind.Relative));
+            ImageSolution.Source = new BitmapImage(new Uri("/Images/solute" + projectID.ToString() + ".png", UriKind.Relative));
             //image_ProjectOrg.Source=new BitmapImage(new Uri("/Images/projectorg.jpg",UriKind.Relative));
-
-            TextProject.Text = "上海国际设计一场”的前身是巴士一汽停车场，占地面积约120亩。在上海市高校布局新一轮调整中，该停车场划归同济大学。杨浦区政府与同济大学决定联手，在此建设集设计教育、设计研发、国际交流、活动展览等多种功能于一体的“上海国际设计一场”，将其建设成为国际化的高端设计创意平台、同济大学设计创意教育与实践基地、环同济设计创意产业的航空母舰、知识杨浦国际化的高端平台，以及上海创意之都的核心引擎项目。";
-
+            switch (projectID)
+            {
+                case 1:
+                    TextProject.Text = "上海国际设计一场”的前身是巴士一汽停车场，占地面积约120亩。在上海市高校布局新一轮调整中，该停车场划归同济大学。杨浦区政府与同济大学决定联手，在此建设集设计教育、设计研发、国际交流、活动展览等多种功能于一体的“上海国际设计一场”，将其建设成为国际化的高端设计创意平台、同济大学设计创意教育与实践基地、环同济设计创意产业的航空母舰、知识杨浦国际化的高端平台，以及上海创意之都的核心引擎项目。";
+                    break;
+                case 2:
+                    TextProject.Text = "上海保障房制度今后应从 “重建”向“重租”、“重补”转变。 “对符合公租房条件的人员除提供实物租赁外，还应提供房屋券补贴。 “限价商品房”应扩大到符合条件的中等（或偏下）收入家庭。记者今天获悉，即将召开的市政协十二届一次会议上，民革市委将提交“关于缓解上海住房保障发展中深层次问题”的党派提案，其中就包括上述观点。";
+                    break;
+                case 3:
+                    TextProject.Text = "上海迪斯尼乐园总投资预计250亿元人民币，首期规划开发面积为4平方公里，其中1平方公里为主题乐园区，首期开发5-6年。上海迪斯尼主题乐园是规划中的上海国际旅游度假区的核心。而上海国际旅游度假区总面积为20平方公里，以迪斯尼乐园为核心区，以宾馆和会议中心为拓展区，以大型购物、娱乐、餐饮设施为配套区，聚集了旅游会展、文化创意、商业零售、体育休闲等众多产业，意在打造现代服务业产业高地。它将与虹桥商务区、世博后续开发区等一起共同成为上海市“十二五规划”优化城市空间布局的重要部署。";
+                    break;
+            }
 
             List<Information> infos = new List<Information>
             {
