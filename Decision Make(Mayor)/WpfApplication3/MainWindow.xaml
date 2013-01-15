@@ -2122,13 +2122,13 @@
         </Grid>
         <Grid Grid.Column="2" Name="RightContent" Margin="24,30,4,40">
             <Grid.RowDefinitions>
-                <RowDefinition Height="58*"/>
-                <RowDefinition Height="42*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="410"/>
             </Grid.RowDefinitions>
             <Grid Grid.Row="0" Name="News" Margin="0,0,0,0">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="45*"/>
-                    <RowDefinition Height="55*"/>
+                    <RowDefinition Height="260"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
             	<Grid.Effect>
             		<DropShadowEffect/>
@@ -2141,7 +2141,7 @@
                         <DropShadowEffect/>
                     </Rectangle.Effect>
                 </Rectangle>
-                <Grid x:Name="newsvideo" Grid.Row="0" Margin="0,37,0,0" Height="224" VerticalAlignment="Top">
+                <Grid x:Name="newsvideo" Grid.Row="0" Margin="0,37,0,0" VerticalAlignment="Top">
                     <WebBrowser x:Name="WebBrowserTV" Height="186" VerticalAlignment="Top" Margin="8,7.5,8,0" Visibility="Hidden"/>
                     <ComboBox x:Name="comboBox" Margin="6.5,196,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120" Background="{x:Null}" BorderThickness="0" BorderBrush="{x:Null}" SelectionChanged="comboBox_SelectionChanged" Height="25" Foreground="{DynamicResource ButtonNormalBackground}" Style="{DynamicResource ComboBoxStyle2}" Cursor="Hand">
                         <ComboBoxItem Content="东方卫视" x:Name="Dongfangweishi" Opacity="0.8" >
