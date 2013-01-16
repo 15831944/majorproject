@@ -263,7 +263,38 @@
                         </Rectangle.Fill>
                     </Rectangle>
                     <Label Style="{DynamicResource Labeltopheader}" VerticalAlignment="Top" FontFamily="Helvetica" FontSize="16" FontWeight="Bold" Content="折线图"/>
-                    <Image Stretch="Fill" Source="/WpfApplication3;component/Images/table.png" d:LayoutOverrides="Height" Margin="20,50,20,20"/>
+                    <Grid Margin="10,35,10,10">
+                        <vc:Chart Name="chartRightTop" xmlns:vc="clr-namespace:Visifire.Charts;assembly=WPFVisifire.Charts" BorderThickness="0" Theme="Theme1" View3D="True" ToolBarEnabled="False" Watermark="False" >
+                            <vc:Chart.AxesX>
+                                <vc:Axis Title="时间" />
+                            </vc:Chart.AxesX>
+                            <vc:Chart.AxesY>
+                                <vc:Axis Title="净迁移率" Enabled="True" StartFromZero="True" AxisType="Primary" AxisMaximum="100" Interval="20"/>
+                            </vc:Chart.AxesY>
+                            <vc:Chart.Series>
+                                <vc:DataSeries LegendText="浦东新区" RenderAs="Line" AxisYType="Primary" >
+                                    <vc:DataSeries.DataPoints>
+                                        <vc:DataPoint AxisXLabel="Jul 07" YValue="90" />
+                                        <vc:DataPoint AxisXLabel="Aug 07" YValue="80" />
+                                        <vc:DataPoint AxisXLabel="Sep 07" YValue="70" />
+                                        <vc:DataPoint AxisXLabel="Nov 07" YValue="80" />
+                                        <vc:DataPoint AxisXLabel="Jan 08" YValue="60" />
+                                        <vc:DataPoint AxisXLabel="Feb 08" YValue="100" />
+                                    </vc:DataSeries.DataPoints>
+                                </vc:DataSeries>
+                                <vc:DataSeries LegendText="嘉定区" RenderAs="Line" AxisYType="Primary" >
+                                    <vc:DataSeries.DataPoints>
+                                        <vc:DataPoint AxisXLabel="Jul 07" YValue="70" />
+                                        <vc:DataPoint AxisXLabel="Aug 07" YValue="90" />
+                                        <vc:DataPoint AxisXLabel="Sep 07" YValue="60" />
+                                        <vc:DataPoint AxisXLabel="Nov 07" YValue="50" />
+                                        <vc:DataPoint AxisXLabel="Jan 08" YValue="80" />
+                                        <vc:DataPoint AxisXLabel="Feb 08" YValue="70" />
+                                    </vc:DataSeries.DataPoints>
+                                </vc:DataSeries>
+                            </vc:Chart.Series>
+                        </vc:Chart>
+                    </Grid>
                 </Grid>
             </Grid>
             <Grid Grid.Row="1" Margin="0,0,0,7" Name="gridRightMiddle" >
@@ -277,7 +308,33 @@
                         </Rectangle.Fill>
                     </Rectangle>
                     <Label Style="{DynamicResource Labeltopheader}" VerticalAlignment="Top" FontFamily="Helvetica" FontSize="16" FontWeight="Bold" Content="饼状图"/>
-                    <Image Stretch="Fill" Source="/WpfApplication3;component/Images/pan.png" d:LayoutOverrides="Height" Margin="20,50,20,20"/>
+                    <Grid Margin="10,35,10,10">
+                        <vc:Chart Name="chartRightMiddle" xmlns:vc="clr-namespace:Visifire.Charts;assembly=WPFVisifire.Charts" BorderThickness="0" Theme="Theme1" View3D="True" ToolBarEnabled="False" Watermark="False" >
+                            <vc:Chart.AxesY>
+                                <vc:Axis AxisMaximum="100" Interval="20" StartFromZero="True" AxisType="Primary" />
+                            </vc:Chart.AxesY>
+                            <vc:Chart.Series>
+                                <vc:DataSeries LegendText="十一五期末（预计）" RenderAs="Column" AxisYType="Primary" >
+                                    <vc:DataSeries.DataPoints>
+                                        <vc:DataPoint AxisXLabel="Wall-Mart" YValue="10" />
+                                        <vc:DataPoint AxisXLabel="Exxon Mobil" YValue="25" />
+                                        <vc:DataPoint AxisXLabel="Shell" YValue="45" />
+                                        <vc:DataPoint AxisXLabel="BP" YValue="70" />
+                                        <vc:DataPoint AxisXLabel="General Motors" YValue="90" />
+                                    </vc:DataSeries.DataPoints>
+                                </vc:DataSeries>
+                                <vc:DataSeries LegendText="十五期末" RenderAs="Column" AxisYType="Primary" >
+                                    <vc:DataSeries.DataPoints>
+                                        <vc:DataPoint AxisXLabel="Wall-Mart" YValue="8" />
+                                        <vc:DataPoint AxisXLabel="Exxon Mobil" YValue="23" />
+                                        <vc:DataPoint AxisXLabel="Shell" YValue="40" />
+                                        <vc:DataPoint AxisXLabel="BP" YValue="56" />
+                                        <vc:DataPoint AxisXLabel="General Motors" YValue="80" />
+                                    </vc:DataSeries.DataPoints>
+                                </vc:DataSeries>
+                            </vc:Chart.Series>
+                        </vc:Chart>
+                    </Grid>
                 </Grid>
             </Grid>
             <Grid Grid.Row="2">
