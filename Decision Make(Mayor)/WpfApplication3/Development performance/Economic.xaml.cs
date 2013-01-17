@@ -34,6 +34,10 @@ namespace WpfApplication3.Development_performance
         
         protected void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            DirectoryInfo di;
+            di = new DirectoryInfo(System.Environment.CurrentDirectory);
+            string strPATH = di.Parent.Parent.FullName;
+            webbrowser3D.Navigate(new Uri(strPATH + @"/html/3Dmap.htm", UriKind.RelativeOrAbsolute));
             llable.Text = "GDP:6145 \r\n财政收入:3247";
             List<TeaInformation> TeaInfo = new List<TeaInformation>
             {

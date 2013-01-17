@@ -761,6 +761,7 @@
     <Resource Include="CutImages\图像\yingjiyuan1-07.png" />
     <Resource Include="CutImages\图像\yuan_bg-07.png" />
     <Resource Include="Application.ico" />
+    <Content Include="html\3Dmap.htm" />
     <Content Include="html\GoogleMapRoadMap.htm" />
     <Content Include="html\GoogleMapSatellite.htm" />
     <Content Include="html\GoogleMapTerrain.htm" />
