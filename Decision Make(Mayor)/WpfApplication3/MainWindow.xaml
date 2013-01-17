@@ -1845,7 +1845,11 @@
             		<RowDefinition Height="70"/>
             		<RowDefinition/>
             	</Grid.RowDefinitions>
-                <Rectangle x:Name="MenuBg0" Style="{DynamicResource RectangleStyle1}" Fill="{DynamicResource leftcontent}" Grid.RowSpan="2"/>
+                <Rectangle x:Name="MenuBg0" Style="{DynamicResource RectangleStyle1}" Grid.RowSpan="2">
+                	<Rectangle.Fill>
+                		<SolidColorBrush Color="{DynamicResource Menuleft}"/>
+                	</Rectangle.Fill>
+                </Rectangle>
                 <Grid Margin="0" Grid.Row="1" ScrollViewer.VerticalScrollBarVisibility="Auto" >
                 	<Grid x:Name="Home" Height="70" VerticalAlignment="Top">
                 		<Grid>
@@ -2035,16 +2039,7 @@
             		<RowDefinition Height="0.339*"/>
             		<RowDefinition Height="0.346*"/>
             	</Grid.RowDefinitions>
-            	<Rectangle Height="260" VerticalAlignment="Top" RadiusY="8" RadiusX="8" Grid.RowSpan="3">
-            		<Rectangle.Fill>
-            			<LinearGradientBrush EndPoint="1.086,0.462" MappingMode="RelativeToBoundingBox" StartPoint="-0.105,0.458">
-            				<GradientStop Color="{DynamicResource middle}" Offset="0.522"/>
-            				<GradientStop Color="#FFD8D9C8" Offset="0.888"/>
-            				<GradientStop Offset="0.112" Color="#FFD8D9C8"/>
-            				<GradientStop Color="#FFD2D2AF" Offset="0.297"/>
-            				<GradientStop Color="#FFD2D2AF" Offset="0.75"/>
-            			</LinearGradientBrush>
-            		</Rectangle.Fill>
+            	<Rectangle Height="260" VerticalAlignment="Top" RadiusY="8" RadiusX="8" Grid.RowSpan="3" Fill="#FFE9E6C5">
             		<Rectangle.Effect>
             			<DropShadowEffect Color="#FF383838"/>
             		</Rectangle.Effect>

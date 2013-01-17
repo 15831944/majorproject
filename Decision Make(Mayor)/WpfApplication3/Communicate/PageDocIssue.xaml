@@ -442,105 +442,6 @@
             		</Rectangle.Fill>
             	</Rectangle>
             	<Label Content="抄送部门" Style="{DynamicResource Labeltopheader}" VerticalAlignment="Top"/>
-            	<Grid Grid.Row="1">
-            		<Grid.ColumnDefinitions>
-            			<ColumnDefinition Width="0.167*"/>
-            			<ColumnDefinition Width="0.182*"/>
-            			<ColumnDefinition Width="0.196*"/>
-            			<ColumnDefinition Width="0.145*"/>
-                        <ColumnDefinition Width="0.143*"/>
-                        <ColumnDefinition Width="0.167*"/>
-                    </Grid.ColumnDefinitions>
-            		<Grid Grid.Column="0">
-            			<ComboBox Height="23" x:Name="comboBox1" VerticalAlignment="Center" DropDownClosed="comboBox1_DropDownClosed" Style="{DynamicResource ComboBoxFeedback}" ItemContainerStyle="{DynamicResource ComboBoxItemfeedback}" HorizontalAlignment="Center">
-            				<ComboBox.Foreground>
-            					<SolidColorBrush Color="{DynamicResource #235235235}"/>
-            				</ComboBox.Foreground>
-            				<ComboBoxItem Content="主要领导同志" IsEnabled="False" IsSelected="True" />
-            				<CheckBox Content="小明" Style="{DynamicResource CheckBoxfeedback}" />
-            				<CheckBox Content="武福" Style="{DynamicResource CheckBoxfeedback}" />
-                            <CheckBox Content="成贞" Style="{DynamicResource CheckBoxfeedback}" />
-                            <CheckBox Content="超文" Style="{DynamicResource CheckBoxfeedback}" />
-                            <CheckBox Content="晓平" Style="{DynamicResource CheckBoxfeedback}" />
-                            <CheckBox Content="习淼" Style="{DynamicResource CheckBoxfeedback}" />
-                            <CheckBox Content="向荣" Style="{DynamicResource CheckBoxfeedback}" />
-                            <CheckBox Content="代慧" Style="{DynamicResource CheckBoxfeedback}" />
-                            <CheckBox Content="全选" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" Style="{DynamicResource CheckBoxfeedback}" />
-            			</ComboBox>
-            		</Grid>
-            		<Grid Grid.Column="1">
-            			<ComboBox Height="23" x:Name="comboBox2" VerticalAlignment="Center" DropDownClosed="comboBox1_DropDownClosed" Style="{DynamicResource ComboBoxFeedback}" ItemContainerStyle="{DynamicResource ComboBoxItemfeedback}" HorizontalAlignment="Center">
-            				<ComboBox.Foreground>
-            					<SolidColorBrush Color="{DynamicResource #235235235}"/>
-            				</ComboBox.Foreground>
-            				<ComboBoxItem Content="市政府组织机构" IsEnabled="False" IsSelected="True" />
-            				<CheckBox Content="政府办" Style="{DynamicResource CheckBoxfeedback}"/>
-            				<CheckBox Content="发改委" Style="{DynamicResource CheckBoxfeedback}"/>
-            				<CheckBox Content="经信委" Style="{DynamicResource CheckBoxfeedback}"/>
-            				<CheckBox Content="教育局" Style="{DynamicResource CheckBoxfeedback}"/>
-            				<CheckBox Content="科技局" Style="{DynamicResource CheckBoxfeedback}"/>
-            				<CheckBox Content="国资委" Style="{DynamicResource CheckBoxfeedback}"/>
-            				<CheckBox Content="民宗局" Style="{DynamicResource CheckBoxfeedback}"/>
-            				<CheckBox Content="广电局" Style="{DynamicResource CheckBoxfeedback}"/>
-            				<CheckBox Content="体育局" Style="{DynamicResource CheckBoxfeedback}"/>
-            				<CheckBox Content="公路局" Style="{DynamicResource CheckBoxfeedback}"/>
-            				<CheckBox Content="全选" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" Style="{DynamicResource CheckBoxfeedback}"/>
-            			</ComboBox>
-            		</Grid>
-            		<Grid Grid.Column="2">
-            			<ComboBox Height="23" x:Name="comboBox3" VerticalAlignment="Center" DropDownClosed="comboBox1_DropDownClosed" Style="{DynamicResource ComboBoxFeedback}" ItemContainerStyle="{DynamicResource ComboBoxItemfeedback}" HorizontalAlignment="Center">
-            				<ComboBox.Foreground>
-            					<SolidColorBrush Color="{DynamicResource #235235235}"/>
-            				</ComboBox.Foreground>
-                            <ComboBoxItem Content="市委、群团、党派" IsEnabled="False" IsSelected="True" />
-                            <CheckBox Content="市纪委(监察局)" Style="{DynamicResource CheckBoxfeedback}"/>
-                            <CheckBox Content="市委办" Style="{DynamicResource CheckBoxfeedback}"/>
-                            <CheckBox Content="农村办" Style="{DynamicResource CheckBoxfeedback}"/>
-                            <CheckBox Content="组织部" Style="{DynamicResource CheckBoxfeedback}"/>
-                            <CheckBox Content="宣传部" Style="{DynamicResource CheckBoxfeedback}"/>
-                            <CheckBox Content="总工会" Style="{DynamicResource CheckBoxfeedback}"/>
-                            <CheckBox Content="工商联" Style="{DynamicResource CheckBoxfeedback}"/>
-            				<CheckBox Content="全选" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" Style="{DynamicResource CheckBoxfeedback}"/>
-            			</ComboBox>
-            		</Grid>
-            		<Grid Grid.Column="3">
-            			<ComboBox Height="23" x:Name="comboBox4" VerticalAlignment="Center" DropDownClosed="comboBox1_DropDownClosed" Style="{DynamicResource ComboBoxFeedback}" Background="{x:Null}" BorderBrush="{x:Null}" ItemContainerStyle="{DynamicResource ComboBoxItemfeedback}" HorizontalAlignment="Center">
-            				<ComboBox.Foreground>
-            					<SolidColorBrush Color="{DynamicResource #235235235}"/>
-            				</ComboBox.Foreground>
-            				<ComboBoxItem Content="政法机构" IsEnabled="False" IsSelected="True" />
-                            <CheckBox Content="检察院" Style="{DynamicResource CheckBoxfeedback}"/>
-                            <CheckBox Content="法院" Style="{DynamicResource CheckBoxfeedback}"/>
-                            <CheckBox Content="交警支队" Style="{DynamicResource CheckBoxfeedback}"/>
-            				<CheckBox Content="全选" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" Style="{DynamicResource CheckBoxfeedback}"/>
-
-            			</ComboBox>
-            		</Grid>
-                    <Grid Grid.Column="4">
-                        <ComboBox Height="23" x:Name="comboBox5" VerticalAlignment="Center" DropDownClosed="comboBox1_DropDownClosed" Style="{DynamicResource ComboBoxFeedback}" ItemContainerStyle="{DynamicResource ComboBoxItemfeedback}" HorizontalAlignment="Center">
-                            <ComboBox.Foreground>
-                                <SolidColorBrush Color="{DynamicResource #235235235}"/>
-                            </ComboBox.Foreground>
-                            <ComboBoxItem Content="省管单位" IsEnabled="False" IsSelected="True" />
-                            <CheckBox Content="消防支队" Style="{DynamicResource CheckBoxfeedback}"/>
-                            <CheckBox Content="水文局" Style="{DynamicResource CheckBoxfeedback}"/>
-                            <CheckBox Content="气象局" Style="{DynamicResource CheckBoxfeedback}"/>
-                            <CheckBox Content="电业局" Style="{DynamicResource CheckBoxfeedback}"/>
-                            <CheckBox Content="电信公司" Style="{DynamicResource CheckBoxfeedback}"/>
-                            <CheckBox Content="全选" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" Style="{DynamicResource CheckBoxfeedback}"/>
-                        </ComboBox>
-                    </Grid>
-                    <Grid Grid.Column="5">
-                        <ComboBox Height="23" x:Name="comboBox6" VerticalAlignment="Center" DropDownClosed="comboBox1_DropDownClosed" Style="{DynamicResource ComboBoxFeedback}" Background="{x:Null}" BorderBrush="{x:Null}" ItemContainerStyle="{DynamicResource ComboBoxItemfeedback}" HorizontalAlignment="Center">
-                            <ComboBox.Foreground>
-                                <SolidColorBrush Color="{DynamicResource #235235235}"/>
-                            </ComboBox.Foreground>
-                            <ComboBoxItem Content="区县、管理处" IsEnabled="False" IsSelected="True" />
-                            <CheckBox Content="全选" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" Style="{DynamicResource CheckBoxfeedback}"/>
-
-                        </ComboBox>
-                    </Grid>
-                </Grid>
             	<Grid Grid.Row="2" Margin="20,10">
             		<Grid>
             			<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="1,1,0,0">
@@ -590,7 +491,11 @@
             								</Ellipse>
             							</Grid>
             							<Grid Grid.Column="2" Grid.ColumnSpan="1" d:LayoutOverrides="GridBox">
-            								<TextBlock Text="{Binding}" VerticalAlignment="Stretch"/>
+            								<TextBlock Text="{Binding}" VerticalAlignment="Stretch">
+            									<TextBlock.Foreground>
+            										<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+            									</TextBlock.Foreground>
+            								</TextBlock>
             							</Grid>
             						</Grid>
             					</DataTemplate>
@@ -602,11 +507,182 @@
             	<Grid Grid.Row="3">
             		<Button x:Name="btnSend" Content="发送" Width="69" HorizontalAlignment="Right" Style="{DynamicResource ButtonFeedbacknormal}" Height="23" VerticalAlignment="Top" Margin="0,0,30,0" Click="btnSend_Click"/>
             	</Grid>
+            	<Grid Grid.Row="1" Height="30" VerticalAlignment="Top" Margin="20,0">
+            		<Grid.ColumnDefinitions>
+            			<ColumnDefinition Width="0.167*"/>
+            			<ColumnDefinition Width="0.181*"/>
+            			<ColumnDefinition Width="0.193*"/>
+            			<ColumnDefinition Width="0.143*"/>
+            			<ColumnDefinition Width="0.149*"/>
+            			<ColumnDefinition Width="0.167*"/>
+            		</Grid.ColumnDefinitions>
+            		<Grid Grid.ColumnSpan="6">
+            			<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="1,1,0,0">
+            				<Rectangle.Stroke>
+            					<SolidColorBrush Color="{DynamicResource #235235235}"/>
+            				</Rectangle.Stroke>
+            			</Rectangle>
+            			<Rectangle HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" StrokeDashArray="3 3" StrokeThickness="1" RadiusX="8" RadiusY="8" Stroke="{x:Null}" Margin="0,0,1,1">
+            				<Rectangle.Fill>
+            					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            						<GradientStop Color="#FF64665B"/>
+            						<GradientStop Color="#FF50524D" Offset="1"/>
+            						<GradientStop Color="#FF64665B" Offset="0.088"/>
+            						<GradientStop Color="#FF52534D" Offset="0.938"/>
+            					</LinearGradientBrush>
+            				</Rectangle.Fill>
+            			</Rectangle>
+            			<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="0,0,1,1">
+            				<Rectangle.Stroke>
+            					<SolidColorBrush Color="{DynamicResource Foregroundgray}"/>
+            				</Rectangle.Stroke>
+            			</Rectangle>
+            		</Grid>
+            		<Grid Grid.Column="0">
+            			<ComboBox x:Name="comboBox1" DropDownClosed="comboBox1_DropDownClosed" Style="{DynamicResource ComboBoxFeedback}" ItemContainerStyle="{DynamicResource ComboBoxItemfeedback}">
+            				<ComboBox.Foreground>
+            					<SolidColorBrush Color="{DynamicResource #235235235}"/>
+            				</ComboBox.Foreground>
+            				<ComboBoxItem Content="主要领导同志" IsEnabled="False" IsSelected="True" />
+            				<CheckBox Content="小明" Style="{DynamicResource CheckBoxfeedback}" />
+            				<CheckBox Content="武福" Style="{DynamicResource CheckBoxfeedback}" />
+            				<CheckBox Content="成贞" Style="{DynamicResource CheckBoxfeedback}" />
+            				<CheckBox Content="超文" Style="{DynamicResource CheckBoxfeedback}" />
+            				<CheckBox Content="晓平" Style="{DynamicResource CheckBoxfeedback}" />
+            				<CheckBox Content="习淼" Style="{DynamicResource CheckBoxfeedback}" />
+            				<CheckBox Content="向荣" Style="{DynamicResource CheckBoxfeedback}" />
+            				<CheckBox Content="代慧" Style="{DynamicResource CheckBoxfeedback}" />
+            				<CheckBox Content="全选" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" Style="{DynamicResource CheckBoxfeedback}" />
+            			</ComboBox>
+            			<Rectangle Margin="0,1" RadiusY="0" RadiusX="0" Stroke="{x:Null}" StrokeThickness="0.5" Width="1" HorizontalAlignment="Right">
+            				<Rectangle.Fill>
+            					<LinearGradientBrush EndPoint="1.143,0.492" StartPoint="0.029,0.492">
+            						<GradientStop Color="#FF4D4E4A" Offset="0"/>
+            						<GradientStop Color="#FFC8C4C4" Offset="1"/>
+            						<GradientStop Color="#FF464943" Offset="0.5"/>
+            						<GradientStop Color="#FFC2C2C2" Offset="0.538"/>
+            					</LinearGradientBrush>
+            				</Rectangle.Fill>
+            			</Rectangle>
+            		</Grid>
+            		<Grid Grid.Column="1">
+            			<ComboBox x:Name="comboBox2" DropDownClosed="comboBox1_DropDownClosed" Style="{DynamicResource ComboBoxMiddle}" ItemContainerStyle="{DynamicResource ComboBoxItemfeedback}">
+            				<ComboBox.Foreground>
+            					<SolidColorBrush Color="{DynamicResource #235235235}"/>
+            				</ComboBox.Foreground>
+            				<ComboBoxItem Content="市政府组织机构" IsEnabled="False" IsSelected="True" />
+            				<CheckBox Content="政府办" Style="{DynamicResource CheckBoxfeedback}"/>
+            				<CheckBox Content="发改委" Style="{DynamicResource CheckBoxfeedback}"/>
+            				<CheckBox Content="经信委" Style="{DynamicResource CheckBoxfeedback}"/>
+            				<CheckBox Content="教育局" Style="{DynamicResource CheckBoxfeedback}"/>
+            				<CheckBox Content="科技局" Style="{DynamicResource CheckBoxfeedback}"/>
+            				<CheckBox Content="国资委" Style="{DynamicResource CheckBoxfeedback}"/>
+            				<CheckBox Content="民宗局" Style="{DynamicResource CheckBoxfeedback}"/>
+            				<CheckBox Content="广电局" Style="{DynamicResource CheckBoxfeedback}"/>
+            				<CheckBox Content="体育局" Style="{DynamicResource CheckBoxfeedback}"/>
+            				<CheckBox Content="公路局" Style="{DynamicResource CheckBoxfeedback}"/>
+            				<CheckBox Content="全选" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" Style="{DynamicResource CheckBoxfeedback}"/>
+            			</ComboBox>
+            			<Rectangle Margin="0,1" RadiusY="0" RadiusX="0" Stroke="{x:Null}" StrokeThickness="0.5" Width="1" HorizontalAlignment="Right">
+            				<Rectangle.Fill>
+            					<LinearGradientBrush EndPoint="1.143,0.492" StartPoint="0.029,0.492">
+            						<GradientStop Color="#FF4D4E4A" Offset="0"/>
+            						<GradientStop Color="#FFC8C4C4" Offset="1"/>
+            						<GradientStop Color="#FF464943" Offset="0.5"/>
+            						<GradientStop Color="#FFC2C2C2" Offset="0.538"/>
+            					</LinearGradientBrush>
+            				</Rectangle.Fill>
+            			</Rectangle>
+            		</Grid>
+            		<Grid Grid.Column="2">
+            			<ComboBox x:Name="comboBox3" DropDownClosed="comboBox1_DropDownClosed" Style="{DynamicResource ComboBoxMiddle}" ItemContainerStyle="{DynamicResource ComboBoxItemfeedback}">
+            				<ComboBox.Foreground>
+            					<SolidColorBrush Color="{DynamicResource #235235235}"/>
+            				</ComboBox.Foreground>
+            				<ComboBoxItem Content="市委、群团、党派" IsEnabled="False" IsSelected="True" />
+            				<CheckBox Content="市纪委(监察局)" Style="{DynamicResource CheckBoxfeedback}"/>
+            				<CheckBox Content="市委办" Style="{DynamicResource CheckBoxfeedback}"/>
+            				<CheckBox Content="农村办" Style="{DynamicResource CheckBoxfeedback}"/>
+            				<CheckBox Content="组织部" Style="{DynamicResource CheckBoxfeedback}"/>
+            				<CheckBox Content="宣传部" Style="{DynamicResource CheckBoxfeedback}"/>
+            				<CheckBox Content="总工会" Style="{DynamicResource CheckBoxfeedback}"/>
+            				<CheckBox Content="工商联" Style="{DynamicResource CheckBoxfeedback}"/>
+            				<CheckBox Content="全选" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" Style="{DynamicResource CheckBoxfeedback}"/>
+            			</ComboBox>
+            			<Rectangle Margin="0,1" RadiusY="0" RadiusX="0" Stroke="{x:Null}" StrokeThickness="0.5" Width="1" HorizontalAlignment="Right">
+            				<Rectangle.Fill>
+            					<LinearGradientBrush EndPoint="1.143,0.492" StartPoint="0.029,0.492">
+            						<GradientStop Color="#FF4D4E4A" Offset="0"/>
+            						<GradientStop Color="#FFC8C4C4" Offset="1"/>
+            						<GradientStop Color="#FF464943" Offset="0.5"/>
+            						<GradientStop Color="#FFC2C2C2" Offset="0.538"/>
+            					</LinearGradientBrush>
+            				</Rectangle.Fill>
+            			</Rectangle>
+            		</Grid>
+            		<Grid Grid.Column="3">
+            			<ComboBox x:Name="comboBox4" DropDownClosed="comboBox1_DropDownClosed" Style="{DynamicResource ComboBoxMiddle}" Background="{x:Null}" BorderBrush="{x:Null}" ItemContainerStyle="{DynamicResource ComboBoxItemfeedback}">
+            				<ComboBox.Foreground>
+            					<SolidColorBrush Color="{DynamicResource #235235235}"/>
+            				</ComboBox.Foreground>
+            				<ComboBoxItem Content="政法机构" IsEnabled="False" IsSelected="True" />
+            				<CheckBox Content="检察院" Style="{DynamicResource CheckBoxfeedback}"/>
+            				<CheckBox Content="法院" Style="{DynamicResource CheckBoxfeedback}"/>
+            				<CheckBox Content="交警支队" Style="{DynamicResource CheckBoxfeedback}"/>
+            				<CheckBox Content="全选" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" Style="{DynamicResource CheckBoxfeedback}"/>
+
+            			</ComboBox>
+            			<Rectangle Margin="0,1" RadiusY="0" RadiusX="0" Stroke="{x:Null}" StrokeThickness="0.5" Width="1" HorizontalAlignment="Right">
+            				<Rectangle.Fill>
+            					<LinearGradientBrush EndPoint="1.143,0.492" StartPoint="0.029,0.492">
+            						<GradientStop Color="#FF4D4E4A" Offset="0"/>
+            						<GradientStop Color="#FFC8C4C4" Offset="1"/>
+            						<GradientStop Color="#FF464943" Offset="0.5"/>
+            						<GradientStop Color="#FFC2C2C2" Offset="0.538"/>
+            					</LinearGradientBrush>
+            				</Rectangle.Fill>
+            			</Rectangle>
+            		</Grid>
+            		<Grid Grid.Column="4">
+            			<ComboBox x:Name="comboBox5" DropDownClosed="comboBox1_DropDownClosed" Style="{DynamicResource ComboBoxMiddle}" ItemContainerStyle="{DynamicResource ComboBoxItemfeedback}">
+            				<ComboBox.Foreground>
+            					<SolidColorBrush Color="{DynamicResource #235235235}"/>
+            				</ComboBox.Foreground>
+            				<ComboBoxItem Content="省管单位" IsEnabled="False" IsSelected="True" />
+            				<CheckBox Content="消防支队" Style="{DynamicResource CheckBoxfeedback}"/>
+            				<CheckBox Content="水文局" Style="{DynamicResource CheckBoxfeedback}"/>
+            				<CheckBox Content="气象局" Style="{DynamicResource CheckBoxfeedback}"/>
+            				<CheckBox Content="电业局" Style="{DynamicResource CheckBoxfeedback}"/>
+            				<CheckBox Content="电信公司" Style="{DynamicResource CheckBoxfeedback}"/>
+            				<CheckBox Content="全选" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" Style="{DynamicResource CheckBoxfeedback}"/>
+            			</ComboBox>
+            			<Rectangle Margin="0,1" RadiusY="0" RadiusX="0" Stroke="{x:Null}" StrokeThickness="0.5" Width="1" HorizontalAlignment="Right">
+            				<Rectangle.Fill>
+            					<LinearGradientBrush EndPoint="1.143,0.492" StartPoint="0.029,0.492">
+            						<GradientStop Color="#FF4D4E4A" Offset="0"/>
+            						<GradientStop Color="#FFC8C4C4" Offset="1"/>
+            						<GradientStop Color="#FF464943" Offset="0.5"/>
+            						<GradientStop Color="#FFC2C2C2" Offset="0.538"/>
+            					</LinearGradientBrush>
+            				</Rectangle.Fill>
+            			</Rectangle>
+            		</Grid>
+            		<Grid Grid.Column="5">
+            			<ComboBox x:Name="comboBox6" DropDownClosed="comboBox1_DropDownClosed" Style="{DynamicResource ComboBoxlast}" Background="{x:Null}" BorderBrush="{x:Null}" ItemContainerStyle="{DynamicResource ComboBoxItemfeedback}">
+            				<ComboBox.Foreground>
+            					<SolidColorBrush Color="{DynamicResource #235235235}"/>
+            				</ComboBox.Foreground>
+            				<ComboBoxItem Content="区县、管理处" IsEnabled="False" IsSelected="True" />
+            				<CheckBox Content="全选" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" Style="{DynamicResource CheckBoxfeedback}"/>
+
+            			</ComboBox>
+            		</Grid>
+            	</Grid>
             </Grid>
             <Grid Grid.Row="2" Margin="0,0,5,0">
             	<Grid.RowDefinitions>
-            		<RowDefinition Height="50"/>
-            		<RowDefinition Height="*"/>
+            		<RowDefinition Height="55.936"/>
+            		<RowDefinition/>
             		<RowDefinition Height="50"/>
             	</Grid.RowDefinitions>
             	<Rectangle RadiusX="8" RadiusY="8" Grid.RowSpan="3">
@@ -620,33 +696,95 @@
             	<Label VerticalAlignment="Top" Content="批示区" Style="{DynamicResource Labeltopheader}"/>
             	<Grid Grid.Row="1">
             		<Grid.ColumnDefinitions>
-            			<ColumnDefinition Width="162.893"/>
+            			<ColumnDefinition Width="119.4"/>
             			<ColumnDefinition/>
             		</Grid.ColumnDefinitions>
-            		<Grid Grid.Column="0" Margin="20,5,20,5">
+            		<Grid Grid.Column="0" Width="62" Height="122">
             			<Grid.ColumnDefinitions>
-            				<ColumnDefinition Width="61.446"/>
-            				<ColumnDefinition Width="61.447"/>
+            				<ColumnDefinition Width="31" />
+            				<ColumnDefinition Width="31"/>
             			</Grid.ColumnDefinitions>
+            			<Grid Grid.ColumnSpan="2">
+            				<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="1,1,0,0">
+            					<Rectangle.Stroke>
+            						<SolidColorBrush Color="{DynamicResource #235235235}"/>
+            					</Rectangle.Stroke>
+            				</Rectangle>
+            				<Rectangle HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" StrokeDashArray="3 3" StrokeThickness="1" RadiusX="8" RadiusY="8" Stroke="{x:Null}" Margin="0,0,1,1">
+            					<Rectangle.Fill>
+            						<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            							<GradientStop Color="#FF64665B"/>
+            							<GradientStop Color="#FF50524D" Offset="1"/>
+            							<GradientStop Color="#FF64665B" Offset="0.088"/>
+            							<GradientStop Color="#FF52534D" Offset="0.938"/>
+            						</LinearGradientBrush>
+            					</Rectangle.Fill>
+            				</Rectangle>
+            				<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="0,0,1,1">
+            					<Rectangle.Stroke>
+            						<SolidColorBrush Color="{DynamicResource Foregroundgray}"/>
+            					</Rectangle.Stroke>
+            				</Rectangle>
+            			</Grid>
             			<Grid Grid.Column="0">
             				<Grid.RowDefinitions>
-            					<RowDefinition Height="25*"/>
-            					<RowDefinition Height="25*"/>
-            					<RowDefinition Height="25*"/>
-            					<RowDefinition Height="25*"/>
+            					<RowDefinition Height="30.5"/>
+            					<RowDefinition Height="30.5"/>
+            					<RowDefinition Height="30.5"/>
+            					<RowDefinition Height="30.5"/>
             				</Grid.RowDefinitions>
             				<Grid Grid.Row="0">
-            					<Button x:Name="rbtBlackInk" Content="黑" Click="rbtBlackInk_Click" Style="{DynamicResource Buttonblack}" HorizontalAlignment="Center" VerticalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Cursor="Hand"/>
+            					<Button x:Name="rbtBlackInk" Content="黑" Click="rbtBlackInk_Click" Style="{DynamicResource Buttonblack}" HorizontalAlignment="Center" VerticalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Cursor="Hand" Margin="1,1,0,1"/>
+            					<Rectangle RadiusY="0" RadiusX="0" Stroke="{x:Null}" StrokeThickness="0.5" Height="1" VerticalAlignment="Bottom" Margin="1,0">
+            						<Rectangle.Fill>
+            							<LinearGradientBrush EndPoint="0.4,0.977" StartPoint="0.4,0.082">
+            								<GradientStop Color="#FF4D4E4A" Offset="0"/>
+            								<GradientStop Color="#FFC8C4C4" Offset="1"/>
+            								<GradientStop Color="#FF464943" Offset="0.5"/>
+            								<GradientStop Color="#FFC2C2C2" Offset="0.538"/>
+            							</LinearGradientBrush>
+            						</Rectangle.Fill>
+            					</Rectangle>
             				</Grid>
             				<Grid Grid.Row="1">
-            					<Button x:Name="rbtRedInk" Content="红" Click="rbtRedInk_Click" Style="{DynamicResource Buttonred}" HorizontalAlignment="Center" VerticalAlignment="Center" Cursor="Hand"/>
+            					<Button x:Name="rbtRedInk" Content="红" Click="rbtRedInk_Click" Style="{DynamicResource Buttonred}" HorizontalAlignment="Center" VerticalAlignment="Center" Cursor="Hand" Margin="1,0,1,1"/>
+            					<Rectangle RadiusY="0" RadiusX="0" Stroke="{x:Null}" StrokeThickness="0.5" Height="1" VerticalAlignment="Bottom" Margin="1,0">
+            						<Rectangle.Fill>
+            							<LinearGradientBrush EndPoint="0.4,0.977" StartPoint="0.4,0.082">
+            								<GradientStop Color="#FF4D4E4A" Offset="0"/>
+            								<GradientStop Color="#FFC8C4C4" Offset="1"/>
+            								<GradientStop Color="#FF464943" Offset="0.5"/>
+            								<GradientStop Color="#FFC2C2C2" Offset="0.538"/>
+            							</LinearGradientBrush>
+            						</Rectangle.Fill>
+            					</Rectangle>
             				</Grid>
             				<Grid Grid.Row="2">
-            					<Button x:Name="rbtGreenInk" Content="绿" Click="rbtGreenInk_Click" Style="{DynamicResource ButtonGreen}" HorizontalAlignment="Center" VerticalAlignment="Center" Cursor="Hand"/>
+            					<Button x:Name="rbtGreenInk" Content="绿" Click="rbtGreenInk_Click" Style="{DynamicResource ButtonGreen}" HorizontalAlignment="Center" VerticalAlignment="Center" Cursor="Hand" Margin="1,0,1,1"/>
+            					<Rectangle RadiusY="0" RadiusX="0" Stroke="{x:Null}" StrokeThickness="0.5" Height="1" VerticalAlignment="Bottom" Margin="1,0">
+            						<Rectangle.Fill>
+            							<LinearGradientBrush EndPoint="0.4,0.977" StartPoint="0.4,0.082">
+            								<GradientStop Color="#FF4D4E4A" Offset="0"/>
+            								<GradientStop Color="#FFC8C4C4" Offset="1"/>
+            								<GradientStop Color="#FF464943" Offset="0.5"/>
+            								<GradientStop Color="#FFC2C2C2" Offset="0.538"/>
+            							</LinearGradientBrush>
+            						</Rectangle.Fill>
+            					</Rectangle>
             				</Grid>
             				<Grid Grid.Row="3">
-            					<Button x:Name="rbtBlueInk" Content="蓝" Click="rbtBlueInk_Click" Style="{DynamicResource Buttonblue}" HorizontalAlignment="Center" VerticalAlignment="Center" Cursor="Hand"/>
+            					<Button x:Name="rbtBlueInk" Content="蓝" Click="rbtBlueInk_Click" Style="{DynamicResource Buttonblue}" HorizontalAlignment="Center" VerticalAlignment="Center" Cursor="Hand" Margin="1,0,1,2"/>
             				</Grid>
+            				<Rectangle RadiusY="0" RadiusX="0" Stroke="{x:Null}" StrokeThickness="0.5" Width="1" HorizontalAlignment="Right" Grid.RowSpan="4" Margin="0,1">
+            					<Rectangle.Fill>
+            						<LinearGradientBrush EndPoint="1.143,0.492" StartPoint="0.029,0.492">
+            							<GradientStop Color="#FF4D4E4A" Offset="0"/>
+            							<GradientStop Color="#FFC8C4C4" Offset="1"/>
+            							<GradientStop Color="#FF464943" Offset="0.5"/>
+            							<GradientStop Color="#FFC2C2C2" Offset="0.538"/>
+            						</LinearGradientBrush>
+            					</Rectangle.Fill>
+            				</Rectangle>
             			</Grid>
             			<Grid Grid.Column="1">
             				<Grid.RowDefinitions>
@@ -656,23 +794,56 @@
             					<RowDefinition Height="25*"/>
             				</Grid.RowDefinitions>
             				<Grid Grid.Row="0">
-            					<Button x:Name="rbtThickInk" Content="粗" Click="rbtThickInk_Click" Style="{DynamicResource Buttonthick}" HorizontalAlignment="Center" VerticalAlignment="Center" Cursor="Hand"/>
+            					<Button x:Name="rbtThickInk" Content="粗" Click="rbtThickInk_Click" Style="{DynamicResource Buttonthick}" HorizontalAlignment="Center" VerticalAlignment="Center" Cursor="Hand" Margin="0,1,2,1"/>
+            					<Rectangle RadiusY="0" RadiusX="0" Stroke="{x:Null}" StrokeThickness="0.5" Height="1" VerticalAlignment="Bottom" Margin="0,0,2,0">
+            						<Rectangle.Fill>
+            							<LinearGradientBrush EndPoint="0.4,0.977" StartPoint="0.4,0.082">
+            								<GradientStop Color="#FF4D4E4A" Offset="0"/>
+            								<GradientStop Color="#FFC8C4C4" Offset="1"/>
+            								<GradientStop Color="#FF464943" Offset="0.5"/>
+            								<GradientStop Color="#FFC2C2C2" Offset="0.538"/>
+            							</LinearGradientBrush>
+            						</Rectangle.Fill>
+            					</Rectangle>
             				</Grid>
             				<Grid Grid.Row="1">
-            					<Button x:Name="rbtNormalInk" Content="普通" Click="rbtNormalInk_Click" Style="{DynamicResource ButtonLinenormal}" HorizontalAlignment="Center" VerticalAlignment="Center" Cursor="Hand"/>
+            					<Button x:Name="rbtNormalInk" Content="普通" Click="rbtNormalInk_Click" Style="{DynamicResource ButtonLinenormal}" Cursor="Hand" Margin="0,0,2,1"/>
+            					<Rectangle RadiusY="0" RadiusX="0" Stroke="{x:Null}" StrokeThickness="0.5" Height="1" VerticalAlignment="Bottom" Margin="0,0,2,0">
+            						<Rectangle.Fill>
+            							<LinearGradientBrush EndPoint="0.4,0.977" StartPoint="0.4,0.082">
+            								<GradientStop Color="#FF4D4E4A" Offset="0"/>
+            								<GradientStop Color="#FFC8C4C4" Offset="1"/>
+            								<GradientStop Color="#FF464943" Offset="0.5"/>
+            								<GradientStop Color="#FFC2C2C2" Offset="0.538"/>
+            							</LinearGradientBrush>
+            						</Rectangle.Fill>
+            					</Rectangle>
             				</Grid>
             				<Grid Grid.Row="2">
-            					<Button x:Name="rbtThinInk" Content="细" Click="rbtThinInk_Click" Style="{DynamicResource Buttonthin}" HorizontalAlignment="Center" VerticalAlignment="Center" Cursor="Hand"/>
+            					<Button x:Name="rbtThinInk" Content="细" Click="rbtThinInk_Click" Style="{DynamicResource Buttonthin}" Cursor="Hand" Margin="0,0,2,1"/>
+            					<Rectangle RadiusY="0" RadiusX="0" Stroke="{x:Null}" StrokeThickness="0.5" Height="1" VerticalAlignment="Bottom" Margin="0,0,2,0">
+            						<Rectangle.Fill>
+            							<LinearGradientBrush EndPoint="0.4,0.977" StartPoint="0.4,0.082">
+            								<GradientStop Color="#FF4D4E4A" Offset="0"/>
+            								<GradientStop Color="#FFC8C4C4" Offset="1"/>
+            								<GradientStop Color="#FF464943" Offset="0.5"/>
+            								<GradientStop Color="#FFC2C2C2" Offset="0.538"/>
+            							</LinearGradientBrush>
+            						</Rectangle.Fill>
+            					</Rectangle>
             				</Grid>
             				<Grid Grid.Row="3">
-            					<Button x:Name="rbtRubber" Content="橡皮擦" Click="rbtRubber_Click" Style="{DynamicResource Buttonerase}" HorizontalAlignment="Center" VerticalAlignment="Center" Cursor="Hand"/>
+            					<Button x:Name="rbtRubber" Content="橡皮擦" Click="rbtRubber_Click" Style="{DynamicResource Buttonerase}" Cursor="Hand" Margin="0,0,2,2"/>
             				</Grid>
             			</Grid>
             		</Grid>
             		<Grid Grid.Column="1" Margin="0,0,20,0">
             			<Rectangle RadiusY="8" RadiusX="8">
             				<Rectangle.Fill>
-            					<SolidColorBrush Color="{DynamicResource white}"/>
+            					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            						<GradientStop Color="#FF9FA090"/>
+            						<GradientStop Color="#FF9C9C8D" Offset="1"/>
+            					</LinearGradientBrush>
             				</Rectangle.Fill>
             				<Rectangle.Stroke>
             					<SolidColorBrush Color="{DynamicResource #122122122}"/>

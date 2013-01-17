@@ -93,7 +93,7 @@
                 	</Grid>
                 	<Grid Margin="21,0,38.768,2.764" Grid.Column="1" Height="220" Width="40" HorizontalAlignment="Left" VerticalAlignment="Bottom">
                 		<ListBox Background="{x:Null}" BorderBrush="{x:Null}" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
-                            <ListBoxItem Content="" Height="54"  IsSelected="True"/> <!--Style="{DynamicResource ListBoxItemEmergency}"-->
+                            <ListBoxItem Content="" Height="54" Style="{DynamicResource ListBoxItemEmergency}"/> <!--Style="{DynamicResource ListBoxItemEmergency}"-->
                             <ListBoxItem Content="" Height="54" Style="{DynamicResource ListBoxItemHuoJIng}" Cursor="Hand"/>
                 			<ListBoxItem Content="" Height="54" Style="{DynamicResource ListBoxItemYiLiao}" Cursor="Hand"/>
                 			<ListBoxItem Content="" Height="54" Style="{DynamicResource ListBoxItemWeixianyuan}" Cursor="Hand"/>
@@ -229,7 +229,7 @@
             					<Grid.RowDefinitions>
             						<RowDefinition Height="171.334"/>
             					</Grid.RowDefinitions>
-                                <CheckBox x:Name="lingdaoceng" Content="通知领导层" FontFamily="Helvetica" FontWeight="Bold" Height="31.938" VerticalAlignment="Top" Margin="0,6.003,0,0" IsChecked="True" ><!--Style="{DynamicResource CheckBoxTongzhi}"-->
+                                <CheckBox x:Name="lingdaoceng" Content="通知领导层" FontFamily="Helvetica" FontWeight="Bold" Height="31.938" VerticalAlignment="Top" Margin="0,6.003,0,0" Style="{DynamicResource CheckBoxTongzhi}" ><!--Style="{DynamicResource CheckBoxTongzhi}"-->
             						<VisualStateManager.VisualStateGroups>
             							<VisualStateGroup x:Name="SelectionStates">
             								<VisualStateGroup.Transitions>

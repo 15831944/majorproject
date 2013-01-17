@@ -135,15 +135,54 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Label VerticalAlignment="Top" Style="{DynamicResource LabelTitleLong}" Content="市民信息反馈" Grid.Row="0"/>
-                <Grid Grid.Row="1">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="33*"/>
-                        <ColumnDefinition Width="33*"/>
-                        <ColumnDefinition Width="33*"/>
-                    </Grid.ColumnDefinitions>
-                    <Button Name="btnUnRead" Content="未阅读" Grid.Column="0" Click="btnUnRead_Click"/>
-                    <Button Name="btnAlreadyRead" Content="已阅读"  Grid.Column="1" Click="btnAlreadyRead_Click"/>
-                    <Button Name="btnAlreadyComment" Content="已批示" Grid.Column="2" Click="btnAlreadyComment_Click"/>
+                <Grid Width="256" Height="30" Grid.Row="1" HorizontalAlignment="Center">
+                	<Grid>
+                		<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="1,1,0,0">
+                			<Rectangle.Stroke>
+                				<SolidColorBrush Color="{DynamicResource #235235235}"/>
+                			</Rectangle.Stroke>
+                		</Rectangle>
+                		<Rectangle HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" StrokeDashArray="3 3" StrokeThickness="1" RadiusX="8" RadiusY="8" Stroke="{x:Null}" Margin="0,0,1,1">
+                			<Rectangle.Fill>
+                				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                					<GradientStop Color="#FF64665B"/>
+                					<GradientStop Color="#FF50524D" Offset="1"/>
+                					<GradientStop Color="#FF64665B" Offset="0.088"/>
+                					<GradientStop Color="#FF52534D" Offset="0.938"/>
+                				</LinearGradientBrush>
+                			</Rectangle.Fill>
+                		</Rectangle>
+                		<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="0,0,1,1">
+                			<Rectangle.Stroke>
+                				<SolidColorBrush Color="{DynamicResource Foregroundgray}"/>
+                			</Rectangle.Stroke>
+                		</Rectangle>
+                	</Grid>
+                	<StackPanel Orientation="Horizontal">
+                		<RadioButton Content="未阅读" Style="{DynamicResource RadioButtonSpatial}" Checked="RbtnUnread_Checked" Width="88"/>
+                		<Rectangle RadiusY="0" RadiusX="0" Stroke="{x:Null}" StrokeThickness="0.5" Width="1" Height="28">
+                			<Rectangle.Fill>
+                				<LinearGradientBrush EndPoint="1.143,0.492" StartPoint="0.029,0.492">
+                					<GradientStop Color="#FF4D4E4A" Offset="0"/>
+                					<GradientStop Color="#FFC8C4C4" Offset="1"/>
+                					<GradientStop Color="#FF464943" Offset="0.5"/>
+                					<GradientStop Color="#FFC2C2C2" Offset="0.538"/>
+                				</LinearGradientBrush>
+                			</Rectangle.Fill>
+                		</Rectangle>
+                		<RadioButton Content="已阅读" Style="{DynamicResource RadioButtonSpatialMiddle}" Checked="RbtnAlreadyRead_Checked" Width="80"/>
+                		<Rectangle RadiusY="0" RadiusX="0" Stroke="{x:Null}" StrokeThickness="0.5" Width="1" Height="28">
+                			<Rectangle.Fill>
+                				<LinearGradientBrush EndPoint="1.143,0.492" StartPoint="0.029,0.492">
+                					<GradientStop Color="#FF4D4E4A" Offset="0"/>
+                					<GradientStop Color="#FFC8C4C4" Offset="1"/>
+                					<GradientStop Color="#FF464943" Offset="0.5"/>
+                					<GradientStop Color="#FFC2C2C2" Offset="0.538"/>
+                				</LinearGradientBrush>
+                			</Rectangle.Fill>
+                		</Rectangle>
+                		<RadioButton Content="已批示" Style="{DynamicResource RadioButtonSpatialLast}" Checked="RbtnAlreadyComment" Width="85.042"/>
+                	</StackPanel>
                 </Grid>
                 <Grid Margin="10" Grid.Row="2">
                     <Grid>
@@ -200,8 +239,8 @@
         <Grid Grid.Column="1" Margin="0,0,5,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="0.327*"/>
-                <RowDefinition Height="0.293*"/>
-                <RowDefinition Height="0.38*"/>
+                <RowDefinition Height="0.33*"/>
+                <RowDefinition Height="0.343*"/>
             </Grid.RowDefinitions>
             <Grid>
                 <Grid.RowDefinitions>
@@ -224,7 +263,7 @@
                     <Grid Margin="20,12,20,30" Grid.Row="1">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
-                            <RowDefinition Height="48.112"/>
+                            <RowDefinition Height="37.511"/>
                         </Grid.RowDefinitions>
                         <Grid Grid.RowSpan="2">
                             <Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="1,1,0,0">
@@ -270,6 +309,16 @@
                                         <SolidColorBrush Color="{DynamicResource #235235235}"/>
                                     </Label.Foreground>
                                 </Label>
+                                <Rectangle RadiusY="0" RadiusX="0" Stroke="{x:Null}" StrokeThickness="0.5" Width="2" HorizontalAlignment="Right" Margin="0,0,0,2">
+                                	<Rectangle.Fill>
+                                		<LinearGradientBrush EndPoint="1.143,0.492" StartPoint="0.029,0.492">
+                                			<GradientStop Color="#FF4D4E4A" Offset="0"/>
+                                			<GradientStop Color="#FFC8C4C4" Offset="1"/>
+                                			<GradientStop Color="#FF464943" Offset="0.5"/>
+                                			<GradientStop Color="#FFC2C2C2" Offset="0.538"/>
+                                		</LinearGradientBrush>
+                                	</Rectangle.Fill>
+                                </Rectangle>
                             </Grid>
                             <Grid Grid.Column="1">
                                 <Label Content="联系方式" Height="28" HorizontalAlignment="Left" Margin="10,0,0,0" x:Name="label2" VerticalAlignment="Center" >
@@ -282,8 +331,18 @@
                                         <SolidColorBrush Color="{DynamicResource #235235235}"/>
                                     </Label.Foreground>
                                 </Label>
+                                <Rectangle RadiusY="0" RadiusX="0" Stroke="{x:Null}" StrokeThickness="0.5" Width="2" HorizontalAlignment="Right" Margin="0,0,0,2">
+                                	<Rectangle.Fill>
+                                		<LinearGradientBrush EndPoint="1.143,0.492" StartPoint="0.029,0.492">
+                                			<GradientStop Color="#FF4D4E4A" Offset="0"/>
+                                			<GradientStop Color="#FFC8C4C4" Offset="1"/>
+                                			<GradientStop Color="#FF464943" Offset="0.5"/>
+                                			<GradientStop Color="#FFC2C2C2" Offset="0.538"/>
+                                		</LinearGradientBrush>
+                                	</Rectangle.Fill>
+                                </Rectangle>
                             </Grid>
-                            <Grid Grid.Column="2" HorizontalAlignment="Left">
+                            <Grid Grid.Column="2" HorizontalAlignment="Left" Width="128">
                                 <Label Content="日期" Height="28" Margin="10,0,0,0" x:Name="label3" VerticalAlignment="Center" HorizontalAlignment="Left" >
                                     <Label.Foreground>
                                         <SolidColorBrush Color="{DynamicResource #235235235}"/>
@@ -294,12 +353,32 @@
                                         <SolidColorBrush Color="{DynamicResource #235235235}"/>
                                     </Label.Foreground>
                                 </Label>
+                                <Rectangle RadiusY="0" RadiusX="0" Stroke="{x:Null}" StrokeThickness="0.5" Width="2" HorizontalAlignment="Right" Margin="0,0,0,2">
+                                	<Rectangle.Fill>
+                                		<LinearGradientBrush EndPoint="1.143,0.492" StartPoint="0.029,0.492">
+                                			<GradientStop Color="#FF4D4E4A" Offset="0"/>
+                                			<GradientStop Color="#FFC8C4C4" Offset="1"/>
+                                			<GradientStop Color="#FF464943" Offset="0.5"/>
+                                			<GradientStop Color="#FFC2C2C2" Offset="0.538"/>
+                                		</LinearGradientBrush>
+                                	</Rectangle.Fill>
+                                </Rectangle>
                             </Grid>
-                            <Grid HorizontalAlignment="Right" Width="80" Height="50.002" VerticalAlignment="Bottom" Grid.Column="4" d:LayoutOverrides="HorizontalAlignment, GridBox">
+                            <Grid HorizontalAlignment="Right" Width="80" Grid.Column="4" d:LayoutOverrides="HorizontalAlignment, GridBox">
                                 <Button Content="&lt;" Height="20" HorizontalAlignment="Left" Margin="13.671,0,0,0" x:Name="btnPrevious" VerticalAlignment="Center" Width="20" Click="btnPrevious_Click" Style="{DynamicResource ButtonFeedbacknormal}" FontFamily="Helvetica" />
                                 <Button Content="&gt;" Height="20" Margin="0,0,14.338,0" x:Name="btnNext" VerticalAlignment="Center" Click="btnNext_Click" Style="{DynamicResource ButtonFeedbacknormal}" HorizontalAlignment="Right" Width="20" FontFamily="Helvetica" />
                             </Grid>
                         </Grid>
+                        <Rectangle RadiusY="0" RadiusX="0" Stroke="{x:Null}" StrokeThickness="0.5" Height="2" VerticalAlignment="Bottom" Margin="1,0,2,0">
+                    		<Rectangle.Fill>
+                    			<LinearGradientBrush EndPoint="0.4,0.977" StartPoint="0.4,0.082">
+                    				<GradientStop Color="#FF4D4E4A" Offset="0"/>
+                    				<GradientStop Color="#FFC8C4C4" Offset="1"/>
+                    				<GradientStop Color="#FF464943" Offset="0.5"/>
+                    				<GradientStop Color="#FFC2C2C2" Offset="0.538"/>
+                    			</LinearGradientBrush>
+                    		</Rectangle.Fill>
+                    	</Rectangle>
                     </Grid>
                 </Grid>
             </Grid>
@@ -319,7 +398,7 @@
                     </Rectangle.Fill>
                 </Rectangle>
                 <Label Content="抄送部门" Style="{DynamicResource Labeltopheader}" VerticalAlignment="Top"/>
-                <Grid Grid.Row="1" Height="50" VerticalAlignment="Top">
+                <Grid Grid.Row="1" Height="30" VerticalAlignment="Top" Margin="20,0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="0.167*"/>
                         <ColumnDefinition Width="0.181*"/>
@@ -328,8 +407,30 @@
                         <ColumnDefinition Width="0.149*"/>
                         <ColumnDefinition Width="0.167*"/>
                     </Grid.ColumnDefinitions>
+                    <Grid Grid.ColumnSpan="6">
+                    	<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="1,1,0,0">
+                    		<Rectangle.Stroke>
+                    			<SolidColorBrush Color="{DynamicResource #235235235}"/>
+                    		</Rectangle.Stroke>
+                    	</Rectangle>
+                    	<Rectangle HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" StrokeDashArray="3 3" StrokeThickness="1" RadiusX="8" RadiusY="8" Stroke="{x:Null}" Margin="0,0,1,1">
+                    		<Rectangle.Fill>
+                    			<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    				<GradientStop Color="#FF64665B"/>
+                    				<GradientStop Color="#FF50524D" Offset="1"/>
+                    				<GradientStop Color="#FF64665B" Offset="0.088"/>
+                    				<GradientStop Color="#FF52534D" Offset="0.938"/>
+                    			</LinearGradientBrush>
+                    		</Rectangle.Fill>
+                    	</Rectangle>
+                    	<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="0,0,1,1">
+                    		<Rectangle.Stroke>
+                    			<SolidColorBrush Color="{DynamicResource Foregroundgray}"/>
+                    		</Rectangle.Stroke>
+                    	</Rectangle>
+                    </Grid>
                     <Grid Grid.Column="0">
-                        <ComboBox Height="23" x:Name="comboBox1" VerticalAlignment="Center" DropDownClosed="comboBox1_DropDownClosed" Style="{DynamicResource ComboBoxFeedback}" ItemContainerStyle="{DynamicResource ComboBoxItemfeedback}" HorizontalAlignment="Center">
+                        <ComboBox x:Name="comboBox1" DropDownClosed="comboBox1_DropDownClosed" Style="{DynamicResource ComboBoxFeedback}" ItemContainerStyle="{DynamicResource ComboBoxItemfeedback}">
                             <ComboBox.Foreground>
                                 <SolidColorBrush Color="{DynamicResource #235235235}"/>
                             </ComboBox.Foreground>
@@ -344,9 +445,19 @@
                             <CheckBox Content="代慧" Style="{DynamicResource CheckBoxfeedback}" />
                             <CheckBox Content="全选" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" Style="{DynamicResource CheckBoxfeedback}" />
                         </ComboBox>
+                        <Rectangle Margin="0,1" RadiusY="0" RadiusX="0" Stroke="{x:Null}" StrokeThickness="0.5" Width="1" HorizontalAlignment="Right">
+                        	<Rectangle.Fill>
+                        		<LinearGradientBrush EndPoint="1.143,0.492" StartPoint="0.029,0.492">
+                        			<GradientStop Color="#FF4D4E4A" Offset="0"/>
+                        			<GradientStop Color="#FFC8C4C4" Offset="1"/>
+                        			<GradientStop Color="#FF464943" Offset="0.5"/>
+                        			<GradientStop Color="#FFC2C2C2" Offset="0.538"/>
+                        		</LinearGradientBrush>
+                        	</Rectangle.Fill>
+                        </Rectangle>
                     </Grid>
                     <Grid Grid.Column="1">
-                        <ComboBox Height="23" x:Name="comboBox2" VerticalAlignment="Center" DropDownClosed="comboBox1_DropDownClosed" Style="{DynamicResource ComboBoxFeedback}" ItemContainerStyle="{DynamicResource ComboBoxItemfeedback}" HorizontalAlignment="Center">
+                        <ComboBox x:Name="comboBox2" DropDownClosed="comboBox1_DropDownClosed" Style="{DynamicResource ComboBoxMiddle}" ItemContainerStyle="{DynamicResource ComboBoxItemfeedback}">
                             <ComboBox.Foreground>
                                 <SolidColorBrush Color="{DynamicResource #235235235}"/>
                             </ComboBox.Foreground>
@@ -363,9 +474,19 @@
                             <CheckBox Content="公路局" Style="{DynamicResource CheckBoxfeedback}"/>
                             <CheckBox Content="全选" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" Style="{DynamicResource CheckBoxfeedback}"/>
                         </ComboBox>
+                        <Rectangle Margin="0,1" RadiusY="0" RadiusX="0" Stroke="{x:Null}" StrokeThickness="0.5" Width="1" HorizontalAlignment="Right">
+                        	<Rectangle.Fill>
+                        		<LinearGradientBrush EndPoint="1.143,0.492" StartPoint="0.029,0.492">
+                        			<GradientStop Color="#FF4D4E4A" Offset="0"/>
+                        			<GradientStop Color="#FFC8C4C4" Offset="1"/>
+                        			<GradientStop Color="#FF464943" Offset="0.5"/>
+                        			<GradientStop Color="#FFC2C2C2" Offset="0.538"/>
+                        		</LinearGradientBrush>
+                        	</Rectangle.Fill>
+                        </Rectangle>
                     </Grid>
                     <Grid Grid.Column="2">
-                        <ComboBox Height="23" x:Name="comboBox3" VerticalAlignment="Center" DropDownClosed="comboBox1_DropDownClosed" Style="{DynamicResource ComboBoxFeedback}" ItemContainerStyle="{DynamicResource ComboBoxItemfeedback}" HorizontalAlignment="Center">
+                        <ComboBox x:Name="comboBox3" DropDownClosed="comboBox1_DropDownClosed" Style="{DynamicResource ComboBoxMiddle}" ItemContainerStyle="{DynamicResource ComboBoxItemfeedback}">
                             <ComboBox.Foreground>
                                 <SolidColorBrush Color="{DynamicResource #235235235}"/>
                             </ComboBox.Foreground>
@@ -379,9 +500,19 @@
                             <CheckBox Content="工商联" Style="{DynamicResource CheckBoxfeedback}"/>
                             <CheckBox Content="全选" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" Style="{DynamicResource CheckBoxfeedback}"/>
                         </ComboBox>
+                        <Rectangle Margin="0,1" RadiusY="0" RadiusX="0" Stroke="{x:Null}" StrokeThickness="0.5" Width="1" HorizontalAlignment="Right">
+                        	<Rectangle.Fill>
+                        		<LinearGradientBrush EndPoint="1.143,0.492" StartPoint="0.029,0.492">
+                        			<GradientStop Color="#FF4D4E4A" Offset="0"/>
+                        			<GradientStop Color="#FFC8C4C4" Offset="1"/>
+                        			<GradientStop Color="#FF464943" Offset="0.5"/>
+                        			<GradientStop Color="#FFC2C2C2" Offset="0.538"/>
+                        		</LinearGradientBrush>
+                        	</Rectangle.Fill>
+                        </Rectangle>
                     </Grid>
                     <Grid Grid.Column="3">
-                        <ComboBox Height="23" x:Name="comboBox4" VerticalAlignment="Center" DropDownClosed="comboBox1_DropDownClosed" Style="{DynamicResource ComboBoxFeedback}" Background="{x:Null}" BorderBrush="{x:Null}" ItemContainerStyle="{DynamicResource ComboBoxItemfeedback}" HorizontalAlignment="Center">
+                        <ComboBox x:Name="comboBox4" DropDownClosed="comboBox1_DropDownClosed" Style="{DynamicResource ComboBoxMiddle}" Background="{x:Null}" BorderBrush="{x:Null}" ItemContainerStyle="{DynamicResource ComboBoxItemfeedback}">
                             <ComboBox.Foreground>
                                 <SolidColorBrush Color="{DynamicResource #235235235}"/>
                             </ComboBox.Foreground>
@@ -392,9 +523,19 @@
                             <CheckBox Content="全选" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" Style="{DynamicResource CheckBoxfeedback}"/>
 
                         </ComboBox>
+                        <Rectangle Margin="0,1" RadiusY="0" RadiusX="0" Stroke="{x:Null}" StrokeThickness="0.5" Width="1" HorizontalAlignment="Right">
+                        	<Rectangle.Fill>
+                        		<LinearGradientBrush EndPoint="1.143,0.492" StartPoint="0.029,0.492">
+                        			<GradientStop Color="#FF4D4E4A" Offset="0"/>
+                        			<GradientStop Color="#FFC8C4C4" Offset="1"/>
+                        			<GradientStop Color="#FF464943" Offset="0.5"/>
+                        			<GradientStop Color="#FFC2C2C2" Offset="0.538"/>
+                        		</LinearGradientBrush>
+                        	</Rectangle.Fill>
+                        </Rectangle>
                     </Grid>
                     <Grid Grid.Column="4">
-                        <ComboBox Height="23" x:Name="comboBox5" VerticalAlignment="Center" DropDownClosed="comboBox1_DropDownClosed" Style="{DynamicResource ComboBoxFeedback}" ItemContainerStyle="{DynamicResource ComboBoxItemfeedback}" HorizontalAlignment="Center">
+                        <ComboBox x:Name="comboBox5" DropDownClosed="comboBox1_DropDownClosed" Style="{DynamicResource ComboBoxMiddle}" ItemContainerStyle="{DynamicResource ComboBoxItemfeedback}">
                             <ComboBox.Foreground>
                                 <SolidColorBrush Color="{DynamicResource #235235235}"/>
                             </ComboBox.Foreground>
@@ -406,9 +547,19 @@
                             <CheckBox Content="电信公司" Style="{DynamicResource CheckBoxfeedback}"/>
                             <CheckBox Content="全选" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" Style="{DynamicResource CheckBoxfeedback}"/>
                         </ComboBox>
+                        <Rectangle Margin="0,1" RadiusY="0" RadiusX="0" Stroke="{x:Null}" StrokeThickness="0.5" Width="1" HorizontalAlignment="Right">
+                        	<Rectangle.Fill>
+                        		<LinearGradientBrush EndPoint="1.143,0.492" StartPoint="0.029,0.492">
+                        			<GradientStop Color="#FF4D4E4A" Offset="0"/>
+                        			<GradientStop Color="#FFC8C4C4" Offset="1"/>
+                        			<GradientStop Color="#FF464943" Offset="0.5"/>
+                        			<GradientStop Color="#FFC2C2C2" Offset="0.538"/>
+                        		</LinearGradientBrush>
+                        	</Rectangle.Fill>
+                        </Rectangle>
                     </Grid>
                     <Grid Grid.Column="5">
-                        <ComboBox Height="23" x:Name="comboBox6" VerticalAlignment="Center" DropDownClosed="comboBox1_DropDownClosed" Style="{DynamicResource ComboBoxFeedback}" Background="{x:Null}" BorderBrush="{x:Null}" ItemContainerStyle="{DynamicResource ComboBoxItemfeedback}" HorizontalAlignment="Center">
+                        <ComboBox x:Name="comboBox6" DropDownClosed="comboBox1_DropDownClosed" Style="{DynamicResource ComboBoxlast}" Background="{x:Null}" BorderBrush="{x:Null}" ItemContainerStyle="{DynamicResource ComboBoxItemfeedback}">
                             <ComboBox.Foreground>
                                 <SolidColorBrush Color="{DynamicResource #235235235}"/>
                             </ComboBox.Foreground>
@@ -467,7 +618,7 @@
                                         <Grid Grid.Column="2" Grid.ColumnSpan="1" d:LayoutOverrides="GridBox">
                                             <TextBlock Text="{Binding}" VerticalAlignment="Stretch">
                 								<TextBlock.Foreground>
-                									<SolidColorBrush Color="Black"/>
+                									<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
                 								</TextBlock.Foreground>
                                             </TextBlock>
                                         </Grid>
@@ -484,9 +635,9 @@
             </Grid>
             <Grid Grid.Row="2">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="69.36"/>
+                    <RowDefinition/>
+                    <RowDefinition Height="72"/>
                 </Grid.RowDefinitions>
                 <Rectangle RadiusX="8" RadiusY="8" Grid.RowSpan="3">
                     <Rectangle.Effect>
@@ -498,67 +649,162 @@
                 </Rectangle>
                 <Label VerticalAlignment="Top" Content="批示区" Style="{DynamicResource Labeltopheader}"/>
                 <Grid Grid.Row="1">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="162.893"/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
-                    <Grid Grid.Column="0" Margin="20,5,20,5">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="61.446"/>
-                            <ColumnDefinition Width="61.447"/>
-                        </Grid.ColumnDefinitions>
-                        <Grid Grid.Column="0">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="25*"/>
-                                <RowDefinition Height="25*"/>
-                                <RowDefinition Height="25*"/>
-                                <RowDefinition Height="25*"/>
-                            </Grid.RowDefinitions>
-                            <Grid Grid.Row="0">
-                                <Button x:Name="rbtBlackInk" Content="黑" Click="rbtBlackInk_Click" Style="{DynamicResource Buttonblack}" HorizontalAlignment="Center" VerticalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Cursor="Hand"/>
-                            </Grid>
-                            <Grid Grid.Row="1">
-                                <Button x:Name="rbtRedInk" Content="红" Click="rbtRedInk_Click" Style="{DynamicResource Buttonred}" HorizontalAlignment="Center" VerticalAlignment="Center" Cursor="Hand"/>
-                            </Grid>
-                            <Grid Grid.Row="2">
-                                <Button x:Name="rbtGreenInk" Content="绿" Click="rbtGreenInk_Click" Style="{DynamicResource ButtonGreen}" HorizontalAlignment="Center" VerticalAlignment="Center" Cursor="Hand"/>
-                            </Grid>
-                            <Grid Grid.Row="3">
-                                <Button x:Name="rbtBlueInk" Content="蓝" Click="rbtBlueInk_Click" Style="{DynamicResource Buttonblue}" HorizontalAlignment="Center" VerticalAlignment="Center" Cursor="Hand"/>
-                            </Grid>
-                        </Grid>
-                        <Grid Grid.Column="1">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="25*"/>
-                                <RowDefinition Height="25*"/>
-                                <RowDefinition Height="25*"/>
-                                <RowDefinition Height="25*"/>
-                            </Grid.RowDefinitions>
-                            <Grid Grid.Row="0">
-                                <Button x:Name="rbtThickInk" Content="粗" Click="rbtThickInk_Click" Style="{DynamicResource Buttonthick}" HorizontalAlignment="Center" VerticalAlignment="Center" Cursor="Hand"/>
-                            </Grid>
-                            <Grid Grid.Row="1">
-                                <Button x:Name="rbtNormalInk" Content="普通" Click="rbtNormalInk_Click" Style="{DynamicResource ButtonLinenormal}" HorizontalAlignment="Center" VerticalAlignment="Center" Cursor="Hand"/>
-                            </Grid>
-                            <Grid Grid.Row="2">
-                                <Button x:Name="rbtThinInk" Content="细" Click="rbtThinInk_Click" Style="{DynamicResource Buttonthin}" HorizontalAlignment="Center" VerticalAlignment="Center" Cursor="Hand"/>
-                            </Grid>
-                            <Grid Grid.Row="3">
-                                <Button x:Name="rbtRubber" Content="橡皮擦" Click="rbtRubber_Click" Style="{DynamicResource Buttonerase}" HorizontalAlignment="Center" VerticalAlignment="Center" Cursor="Hand"/>
-                            </Grid>
-                        </Grid>
-                    </Grid>
-                    <Grid Grid.Column="1" Margin="0,0,20,0">
-                        <Rectangle RadiusY="8" RadiusX="8" StrokeThickness="1">
-                            <Rectangle.Fill>
-                                <SolidColorBrush Color="{DynamicResource white}"/>
-                            </Rectangle.Fill>
-                            <Rectangle.Stroke>
-                                <SolidColorBrush Color="{DynamicResource #122122122}"/>
-                            </Rectangle.Stroke>
-                        </Rectangle>
-                        <InkCanvas x:Name="InkCanvasAnnotation1" MinHeight="0" MinWidth="0" Strokes="{Binding Strokes}" EditingMode="Ink" Background="{x:Null}"/>
-                    </Grid>
+                	<Grid.ColumnDefinitions>
+                		<ColumnDefinition Width="119.4"/>
+                		<ColumnDefinition/>
+                	</Grid.ColumnDefinitions>
+                	<Grid Grid.Column="0" Width="62" Height="122">
+                		<Grid.ColumnDefinitions>
+                			<ColumnDefinition Width="31" />
+                			<ColumnDefinition Width="31"/>
+                		</Grid.ColumnDefinitions>
+                		<Grid Grid.ColumnSpan="2">
+                			<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="1,1,0,0">
+                				<Rectangle.Stroke>
+                					<SolidColorBrush Color="{DynamicResource #235235235}"/>
+                				</Rectangle.Stroke>
+                			</Rectangle>
+                			<Rectangle HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" StrokeDashArray="3 3" StrokeThickness="1" RadiusX="8" RadiusY="8" Stroke="{x:Null}" Margin="0,0,1,1">
+                				<Rectangle.Fill>
+                					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                						<GradientStop Color="#FF64665B"/>
+                						<GradientStop Color="#FF50524D" Offset="1"/>
+                						<GradientStop Color="#FF64665B" Offset="0.088"/>
+                						<GradientStop Color="#FF52534D" Offset="0.938"/>
+                					</LinearGradientBrush>
+                				</Rectangle.Fill>
+                			</Rectangle>
+                			<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="0,0,1,1">
+                				<Rectangle.Stroke>
+                					<SolidColorBrush Color="{DynamicResource Foregroundgray}"/>
+                				</Rectangle.Stroke>
+                			</Rectangle>
+                		</Grid>
+                		<Grid Grid.Column="0">
+                			<Grid.RowDefinitions>
+                				<RowDefinition Height="30.5"/>
+                				<RowDefinition Height="30.5"/>
+                				<RowDefinition Height="30.5"/>
+                				<RowDefinition Height="30.5"/>
+                			</Grid.RowDefinitions>
+                			<Grid Grid.Row="0">
+                				<Button x:Name="rbtBlackInk" Content="黑" Click="rbtBlackInk_Click" Style="{DynamicResource Buttonblack}" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Cursor="Hand" Margin="1"/>
+                				<Rectangle RadiusY="0" RadiusX="0" Stroke="{x:Null}" StrokeThickness="0.5" Height="1" VerticalAlignment="Bottom" Margin="1,0">
+                					<Rectangle.Fill>
+                						<LinearGradientBrush EndPoint="0.4,0.977" StartPoint="0.4,0.082">
+                							<GradientStop Color="#FF4D4E4A" Offset="0"/>
+                							<GradientStop Color="#FFC8C4C4" Offset="1"/>
+                							<GradientStop Color="#FF464943" Offset="0.5"/>
+                							<GradientStop Color="#FFC2C2C2" Offset="0.538"/>
+                						</LinearGradientBrush>
+                					</Rectangle.Fill>
+                				</Rectangle>
+                			</Grid>
+                			<Grid Grid.Row="1">
+                				<Button x:Name="rbtRedInk" Content="红" Click="rbtRedInk_Click" Style="{DynamicResource Buttonred}" Cursor="Hand" Margin="1,0,1,1"/>
+                				<Rectangle RadiusY="0" RadiusX="0" Stroke="{x:Null}" StrokeThickness="0.5" Height="1" VerticalAlignment="Bottom" Margin="1,0">
+                					<Rectangle.Fill>
+                						<LinearGradientBrush EndPoint="0.4,0.977" StartPoint="0.4,0.082">
+                							<GradientStop Color="#FF4D4E4A" Offset="0"/>
+                							<GradientStop Color="#FFC8C4C4" Offset="1"/>
+                							<GradientStop Color="#FF464943" Offset="0.5"/>
+                							<GradientStop Color="#FFC2C2C2" Offset="0.538"/>
+                						</LinearGradientBrush>
+                					</Rectangle.Fill>
+                				</Rectangle>
+                			</Grid>
+                			<Grid Grid.Row="2">
+                				<Button x:Name="rbtGreenInk" Content="绿" Click="rbtGreenInk_Click" Style="{DynamicResource ButtonGreen}" Cursor="Hand" Margin="1"/>
+                				<Rectangle RadiusY="0" RadiusX="0" Stroke="{x:Null}" StrokeThickness="0.5" Height="1" VerticalAlignment="Bottom" Margin="1,0">
+                					<Rectangle.Fill>
+                						<LinearGradientBrush EndPoint="0.4,0.977" StartPoint="0.4,0.082">
+                							<GradientStop Color="#FF4D4E4A" Offset="0"/>
+                							<GradientStop Color="#FFC8C4C4" Offset="1"/>
+                							<GradientStop Color="#FF464943" Offset="0.5"/>
+                							<GradientStop Color="#FFC2C2C2" Offset="0.538"/>
+                						</LinearGradientBrush>
+                					</Rectangle.Fill>
+                				</Rectangle>
+                			</Grid>
+                			<Grid Grid.Row="3">
+                				<Button x:Name="rbtBlueInk" Content="蓝" Click="rbtBlueInk_Click" Style="{DynamicResource Buttonblue}" Cursor="Hand" Margin="1,0,1,2"/>
+                			</Grid>
+                			<Rectangle RadiusY="0" RadiusX="0" Stroke="{x:Null}" StrokeThickness="0.5" Width="1" HorizontalAlignment="Right" Grid.RowSpan="4" Margin="0,1">
+                				<Rectangle.Fill>
+                					<LinearGradientBrush EndPoint="1.143,0.492" StartPoint="0.029,0.492">
+                						<GradientStop Color="#FF4D4E4A" Offset="0"/>
+                						<GradientStop Color="#FFC8C4C4" Offset="1"/>
+                						<GradientStop Color="#FF464943" Offset="0.5"/>
+                						<GradientStop Color="#FFC2C2C2" Offset="0.538"/>
+                					</LinearGradientBrush>
+                				</Rectangle.Fill>
+                			</Rectangle>
+                		</Grid>
+                		<Grid Grid.Column="1">
+                			<Grid.RowDefinitions>
+                				<RowDefinition Height="25*"/>
+                				<RowDefinition Height="25*"/>
+                				<RowDefinition Height="25*"/>
+                				<RowDefinition Height="25*"/>
+                			</Grid.RowDefinitions>
+                			<Grid Grid.Row="0">
+                				<Button x:Name="rbtThickInk" Content="粗" Click="rbtThickInk_Click" Style="{DynamicResource Buttonthick}" Cursor="Hand" Margin="0,1,2,1"/>
+                				<Rectangle RadiusY="0" RadiusX="0" Stroke="{x:Null}" StrokeThickness="0.5" Height="1" VerticalAlignment="Bottom" Margin="0,0,2,0">
+                					<Rectangle.Fill>
+                						<LinearGradientBrush EndPoint="0.4,0.977" StartPoint="0.4,0.082">
+                							<GradientStop Color="#FF4D4E4A" Offset="0"/>
+                							<GradientStop Color="#FFC8C4C4" Offset="1"/>
+                							<GradientStop Color="#FF464943" Offset="0.5"/>
+                							<GradientStop Color="#FFC2C2C2" Offset="0.538"/>
+                						</LinearGradientBrush>
+                					</Rectangle.Fill>
+                				</Rectangle>
+                			</Grid>
+                			<Grid Grid.Row="1">
+                				<Button x:Name="rbtNormalInk" Content="普通" Click="rbtNormalInk_Click" Style="{DynamicResource ButtonLinenormal}" Cursor="Hand" Margin="0,1,2,1"/>
+                				<Rectangle RadiusY="0" RadiusX="0" Stroke="{x:Null}" StrokeThickness="0.5" Height="1" VerticalAlignment="Bottom" Margin="0,0,2,0">
+                					<Rectangle.Fill>
+                						<LinearGradientBrush EndPoint="0.4,0.977" StartPoint="0.4,0.082">
+                							<GradientStop Color="#FF4D4E4A" Offset="0"/>
+                							<GradientStop Color="#FFC8C4C4" Offset="1"/>
+                							<GradientStop Color="#FF464943" Offset="0.5"/>
+                							<GradientStop Color="#FFC2C2C2" Offset="0.538"/>
+                						</LinearGradientBrush>
+                					</Rectangle.Fill>
+                				</Rectangle>
+                			</Grid>
+                			<Grid Grid.Row="2">
+                				<Button x:Name="rbtThinInk" Content="细" Click="rbtThinInk_Click" Style="{DynamicResource Buttonthin}" Cursor="Hand" Margin="0,1,2,1"/>
+                				<Rectangle RadiusY="0" RadiusX="0" Stroke="{x:Null}" StrokeThickness="0.5" Height="1" VerticalAlignment="Bottom" Margin="0,0,2,0">
+                					<Rectangle.Fill>
+                						<LinearGradientBrush EndPoint="0.4,0.977" StartPoint="0.4,0.082">
+                							<GradientStop Color="#FF4D4E4A" Offset="0"/>
+                							<GradientStop Color="#FFC8C4C4" Offset="1"/>
+                							<GradientStop Color="#FF464943" Offset="0.5"/>
+                							<GradientStop Color="#FFC2C2C2" Offset="0.538"/>
+                						</LinearGradientBrush>
+                					</Rectangle.Fill>
+                				</Rectangle>
+                			</Grid>
+                			<Grid Grid.Row="3">
+                				<Button x:Name="rbtRubber" Content="橡皮擦" Click="rbtRubber_Click" Style="{DynamicResource Buttonerase}" Cursor="Hand" Margin="0,0,2,2"/>
+                			</Grid>
+                		</Grid>
+                	</Grid>
+                	<Grid Grid.Column="1" Margin="0,0,20,0">
+                		<Rectangle RadiusY="8" RadiusX="8">
+                			<Rectangle.Fill>
+                				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                					<GradientStop Color="#FF9FA090"/>
+                					<GradientStop Color="#FF9C9C8D" Offset="1"/>
+                				</LinearGradientBrush>
+                			</Rectangle.Fill>
+                			<Rectangle.Stroke>
+                				<SolidColorBrush Color="{DynamicResource #122122122}"/>
+                			</Rectangle.Stroke>
+                		</Rectangle>
+                		<InkCanvas x:Name="InkCanvasAnnotation1" MinHeight="0" MinWidth="0" Strokes="{Binding Strokes}" EditingMode="Ink" Background="{x:Null}"/>
+                	</Grid>
                 </Grid>
                 <Grid Grid.Row="2">
                     <Button Height="23" x:Name="btnCommentOK" HorizontalAlignment="Right" Margin="0,8,30,19" Width="69" Content="确 认" Click="btnCommentOK_Click" Style="{DynamicResource ButtonFeedbacknormal}"/>

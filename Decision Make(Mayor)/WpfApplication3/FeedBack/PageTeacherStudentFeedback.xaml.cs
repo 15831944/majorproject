@@ -253,7 +253,7 @@ namespace WpfApplication3.FeedBack
         	tbxSearch.Clear();// TODO: Add event handler implementation here.
         }
 
-        private void btnUnRead_Click(object sender, RoutedEventArgs e)
+        private void RbtnUnread_Checked(object sender, System.Windows.RoutedEventArgs e)
         {
             DataSetFeedbackTableAdapters.T_FeedBackTableAdapter adapter = new DataSetFeedbackTableAdapters.T_FeedBackTableAdapter();
             dtCurrent = adapter.GetData(iFeedBackType, false, false);
@@ -263,7 +263,7 @@ namespace WpfApplication3.FeedBack
             iCurrentItem = -1;
         }
 
-        private void btnAlreadyRead_Click(object sender, RoutedEventArgs e)
+        private void RbtnAlreadyRead_Checked(object sender, System.Windows.RoutedEventArgs e)
         {
             DataSetFeedbackTableAdapters.T_FeedBackTableAdapter adapter = new DataSetFeedbackTableAdapters.T_FeedBackTableAdapter();
             dtCurrent = adapter.GetData(iFeedBackType, true, false);
@@ -273,7 +273,7 @@ namespace WpfApplication3.FeedBack
             iCurrentItem = -1;
         }
 
-        private void btnAlreadyComment_Click(object sender, RoutedEventArgs e)
+        private void RbtnAlreadyComment(object sender, System.Windows.RoutedEventArgs e)
         {
             DataSetFeedbackTableAdapters.T_FeedBackTableAdapter adapter = new DataSetFeedbackTableAdapters.T_FeedBackTableAdapter();
             dtCurrent = adapter.GetData(iFeedBackType, true, true);
@@ -282,5 +282,8 @@ namespace WpfApplication3.FeedBack
             btnNext.IsEnabled = false;
             iCurrentItem = -1;
         }
+		
+		
+		
     }
 }

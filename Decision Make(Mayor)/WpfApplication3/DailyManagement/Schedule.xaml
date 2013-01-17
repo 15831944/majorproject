@@ -50,91 +50,235 @@
             </Rectangle>
             <Label Style="{DynamicResource Labeltopheader}" Content="部门链接" d:LayoutOverrides="Height" VerticalAlignment="Top"/>
             <Grid Grid.Row="1">
-                <ComboBox Height="23" Margin="20,0,20,0" x:Name="comboBox1" VerticalAlignment="Center" DropDownClosed="comboBox1_DropDownClosed" Style="{DynamicResource ComboBoxFeedback}" Background="{x:Null}" BorderBrush="{x:Null}" ItemContainerStyle="{DynamicResource ComboBoxItemfeedback}">
-                	<ComboBox.Foreground>
-                		<SolidColorBrush Color="{DynamicResource #235235235}"/>
-                	</ComboBox.Foreground>
-                    <ComboBoxItem Content="主要领导同志" IsEnabled="False" IsSelected="True" />
-                    <CheckBox Content="小明" Style="{DynamicResource CheckBoxfeedback}" />
-                    <CheckBox Content="武福" Style="{DynamicResource CheckBoxfeedback}" />
-                    <CheckBox Content="成贞" Style="{DynamicResource CheckBoxfeedback}" />
-                    <CheckBox Content="超文" Style="{DynamicResource CheckBoxfeedback}" />
-                    <CheckBox Content="晓平" Style="{DynamicResource CheckBoxfeedback}" />
-                    <CheckBox Content="习淼" Style="{DynamicResource CheckBoxfeedback}" />
-                    <CheckBox Content="向荣" Style="{DynamicResource CheckBoxfeedback}" />
-                    <CheckBox Content="代慧" Style="{DynamicResource CheckBoxfeedback}" />
-                    <CheckBox Content="全选" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" Style="{DynamicResource CheckBoxfeedback}" />
-                </ComboBox>
+                <Grid VerticalAlignment="Center" Margin="30,0">
+            		<Grid>
+            			<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="1,1,0,0">
+            				<Rectangle.Stroke>
+            					<SolidColorBrush Color="{DynamicResource #235235235}"/>
+            				</Rectangle.Stroke>
+            			</Rectangle>
+            			<Rectangle HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" StrokeDashArray="3 3" StrokeThickness="1" RadiusX="8" RadiusY="8" Stroke="{x:Null}" Margin="0,0,1,1">
+            				<Rectangle.Fill>
+            					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            						<GradientStop Color="#FF64665B"/>
+            						<GradientStop Color="#FF50524D" Offset="1"/>
+            						<GradientStop Color="#FF64665B" Offset="0.088"/>
+            						<GradientStop Color="#FF52534D" Offset="0.938"/>
+            					</LinearGradientBrush>
+            				</Rectangle.Fill>
+            			</Rectangle>
+            			<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="0,0,1,1">
+            				<Rectangle.Stroke>
+            					<SolidColorBrush Color="{DynamicResource Foregroundgray}"/>
+            				</Rectangle.Stroke>
+            			</Rectangle>
+            		</Grid>
+            		<ComboBox Height="30" x:Name="comboBox1" DropDownClosed="comboBox1_DropDownClosed" Style="{DynamicResource ComboBoxSingle}" Background="{x:Null}" BorderBrush="{x:Null}" ItemContainerStyle="{DynamicResource ComboBoxItemfeedback}">
+            			<ComboBox.Foreground>
+            				<SolidColorBrush Color="{DynamicResource #235235235}"/>
+            			</ComboBox.Foreground>
+            			<ComboBoxItem Content="主要领导同志" IsEnabled="False" IsSelected="True" />
+            			<CheckBox Content="小明" Style="{DynamicResource CheckBoxfeedback}" />
+            			<CheckBox Content="武福" Style="{DynamicResource CheckBoxfeedback}" />
+            			<CheckBox Content="成贞" Style="{DynamicResource CheckBoxfeedback}" />
+            			<CheckBox Content="超文" Style="{DynamicResource CheckBoxfeedback}" />
+            			<CheckBox Content="晓平" Style="{DynamicResource CheckBoxfeedback}" />
+            			<CheckBox Content="习淼" Style="{DynamicResource CheckBoxfeedback}" />
+            			<CheckBox Content="向荣" Style="{DynamicResource CheckBoxfeedback}" />
+            			<CheckBox Content="代慧" Style="{DynamicResource CheckBoxfeedback}" />
+            			<CheckBox Content="全选" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" Style="{DynamicResource CheckBoxfeedback}" />
+            		</ComboBox>
+            	</Grid>
             </Grid>
             <Grid Grid.Row="2">
-                <ComboBox Height="23" Margin="20,0,20,0" x:Name="comboBox2" VerticalAlignment="Center" DropDownClosed="comboBox1_DropDownClosed" Style="{DynamicResource ComboBoxFeedback}" Background="{x:Null}" BorderBrush="{x:Null}" ItemContainerStyle="{DynamicResource ComboBoxItemfeedback}">
-                	<ComboBox.Foreground>
-                		<SolidColorBrush Color="{DynamicResource #235235235}"/>
-                	</ComboBox.Foreground>
-                    <ComboBoxItem Content="市政府组织机构" IsEnabled="False" IsSelected="True" />
-                    <CheckBox Content="政府办" Style="{DynamicResource CheckBoxfeedback}"/>
-                    <CheckBox Content="发改委" Style="{DynamicResource CheckBoxfeedback}"/>
-                    <CheckBox Content="经信委" Style="{DynamicResource CheckBoxfeedback}"/>
-                    <CheckBox Content="教育局" Style="{DynamicResource CheckBoxfeedback}"/>
-                    <CheckBox Content="科技局" Style="{DynamicResource CheckBoxfeedback}"/>
-                    <CheckBox Content="国资委" Style="{DynamicResource CheckBoxfeedback}"/>
-                    <CheckBox Content="民宗局" Style="{DynamicResource CheckBoxfeedback}"/>
-                    <CheckBox Content="广电局" Style="{DynamicResource CheckBoxfeedback}"/>
-                    <CheckBox Content="体育局" Style="{DynamicResource CheckBoxfeedback}"/>
-                    <CheckBox Content="公路局" Style="{DynamicResource CheckBoxfeedback}"/>
-                    <CheckBox Content="全选" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" Style="{DynamicResource CheckBoxfeedback}" />
-                </ComboBox>
+            	<Grid VerticalAlignment="Center" Margin="30,0">
+            		<Grid>
+            			<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="1,1,0,0">
+            				<Rectangle.Stroke>
+            					<SolidColorBrush Color="{DynamicResource #235235235}"/>
+            				</Rectangle.Stroke>
+            			</Rectangle>
+            			<Rectangle HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" StrokeDashArray="3 3" StrokeThickness="1" RadiusX="8" RadiusY="8" Stroke="{x:Null}" Margin="0,0,1,1">
+            				<Rectangle.Fill>
+            					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            						<GradientStop Color="#FF64665B"/>
+            						<GradientStop Color="#FF50524D" Offset="1"/>
+            						<GradientStop Color="#FF64665B" Offset="0.088"/>
+            						<GradientStop Color="#FF52534D" Offset="0.938"/>
+            					</LinearGradientBrush>
+            				</Rectangle.Fill>
+            			</Rectangle>
+            			<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="0,0,1,1">
+            				<Rectangle.Stroke>
+            					<SolidColorBrush Color="{DynamicResource Foregroundgray}"/>
+            				</Rectangle.Stroke>
+            			</Rectangle>
+            		</Grid>
+            		<ComboBox Height="30" x:Name="comboBox2" VerticalAlignment="Center" DropDownClosed="comboBox1_DropDownClosed" Style="{DynamicResource ComboBoxSingle}" Background="{x:Null}" BorderBrush="{x:Null}" ItemContainerStyle="{DynamicResource ComboBoxItemfeedback}">
+            			<ComboBox.Foreground>
+            				<SolidColorBrush Color="{DynamicResource #235235235}"/>
+            			</ComboBox.Foreground>
+            			<ComboBoxItem Content="市政府组织机构" IsEnabled="False" IsSelected="True" />
+            			<CheckBox Content="政府办" Style="{DynamicResource CheckBoxfeedback}"/>
+            			<CheckBox Content="发改委" Style="{DynamicResource CheckBoxfeedback}"/>
+            			<CheckBox Content="经信委" Style="{DynamicResource CheckBoxfeedback}"/>
+            			<CheckBox Content="教育局" Style="{DynamicResource CheckBoxfeedback}"/>
+            			<CheckBox Content="科技局" Style="{DynamicResource CheckBoxfeedback}"/>
+            			<CheckBox Content="国资委" Style="{DynamicResource CheckBoxfeedback}"/>
+            			<CheckBox Content="民宗局" Style="{DynamicResource CheckBoxfeedback}"/>
+            			<CheckBox Content="广电局" Style="{DynamicResource CheckBoxfeedback}"/>
+            			<CheckBox Content="体育局" Style="{DynamicResource CheckBoxfeedback}"/>
+            			<CheckBox Content="公路局" Style="{DynamicResource CheckBoxfeedback}"/>
+            			<CheckBox Content="全选" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" Style="{DynamicResource CheckBoxfeedback}" />
+            		</ComboBox>
+            	</Grid>
             </Grid>
             <Grid Grid.Row="3">
-                <ComboBox Height="23" Margin="20,0,20,0" x:Name="comboBox3" VerticalAlignment="Center" DropDownClosed="comboBox1_DropDownClosed" Style="{DynamicResource ComboBoxFeedback}" Background="{x:Null}" BorderBrush="{x:Null}" ItemContainerStyle="{DynamicResource ComboBoxItemfeedback}">
-                	<ComboBox.Foreground>
-                		<SolidColorBrush Color="{DynamicResource #235235235}"/>
-                	</ComboBox.Foreground>
-                    <ComboBoxItem Content="市委、群团、党派" IsEnabled="False" IsSelected="True" />
-                    <CheckBox Content="市纪委(监察局)" Style="{DynamicResource CheckBoxfeedback}"/>
-                    <CheckBox Content="市委办" Style="{DynamicResource CheckBoxfeedback}"/>
-                    <CheckBox Content="农村办" Style="{DynamicResource CheckBoxfeedback}"/>
-                    <CheckBox Content="组织部" Style="{DynamicResource CheckBoxfeedback}"/>
-                    <CheckBox Content="宣传部" Style="{DynamicResource CheckBoxfeedback}"/>
-                    <CheckBox Content="总工会" Style="{DynamicResource CheckBoxfeedback}"/>
-                    <CheckBox Content="工商联" Style="{DynamicResource CheckBoxfeedback}"/>
-                    <CheckBox Content="全选" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" Style="{DynamicResource CheckBoxfeedback}" />
-                </ComboBox>
+            	<Grid VerticalAlignment="Center" Margin="30,0">
+            		<Grid>
+            			<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="1,1,0,0">
+            				<Rectangle.Stroke>
+            					<SolidColorBrush Color="{DynamicResource #235235235}"/>
+            				</Rectangle.Stroke>
+            			</Rectangle>
+            			<Rectangle HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" StrokeDashArray="3 3" StrokeThickness="1" RadiusX="8" RadiusY="8" Stroke="{x:Null}" Margin="0,0,1,1">
+            				<Rectangle.Fill>
+            					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            						<GradientStop Color="#FF64665B"/>
+            						<GradientStop Color="#FF50524D" Offset="1"/>
+            						<GradientStop Color="#FF64665B" Offset="0.088"/>
+            						<GradientStop Color="#FF52534D" Offset="0.938"/>
+            					</LinearGradientBrush>
+            				</Rectangle.Fill>
+            			</Rectangle>
+            			<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="0,0,1,1">
+            				<Rectangle.Stroke>
+            					<SolidColorBrush Color="{DynamicResource Foregroundgray}"/>
+            				</Rectangle.Stroke>
+            			</Rectangle>
+            		</Grid>
+            		<ComboBox Height="30" x:Name="comboBox3" VerticalAlignment="Center" DropDownClosed="comboBox1_DropDownClosed" Style="{DynamicResource ComboBoxSingle}" Background="{x:Null}" BorderBrush="{x:Null}" ItemContainerStyle="{DynamicResource ComboBoxItemfeedback}">
+            			<ComboBox.Foreground>
+            				<SolidColorBrush Color="{DynamicResource #235235235}"/>
+            			</ComboBox.Foreground>
+            			<ComboBoxItem Content="市委、群团、党派" IsEnabled="False" IsSelected="True" />
+            			<CheckBox Content="市纪委(监察局)" Style="{DynamicResource CheckBoxfeedback}"/>
+            			<CheckBox Content="市委办" Style="{DynamicResource CheckBoxfeedback}"/>
+            			<CheckBox Content="农村办" Style="{DynamicResource CheckBoxfeedback}"/>
+            			<CheckBox Content="组织部" Style="{DynamicResource CheckBoxfeedback}"/>
+            			<CheckBox Content="宣传部" Style="{DynamicResource CheckBoxfeedback}"/>
+            			<CheckBox Content="总工会" Style="{DynamicResource CheckBoxfeedback}"/>
+            			<CheckBox Content="工商联" Style="{DynamicResource CheckBoxfeedback}"/>
+            			<CheckBox Content="全选" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" Style="{DynamicResource CheckBoxfeedback}" />
+            		</ComboBox>
+            	</Grid>
             </Grid>
             <Grid Grid.Row="4">
-                <ComboBox Height="23" Margin="20,0,20,0" x:Name="comboBox4" VerticalAlignment="Center" DropDownClosed="comboBox1_DropDownClosed" Style="{DynamicResource ComboBoxFeedback}" Background="{x:Null}" BorderBrush="{x:Null}" ItemContainerStyle="{DynamicResource ComboBoxItemfeedback}">
-                	<ComboBox.Foreground>
-                		<SolidColorBrush Color="{DynamicResource #235235235}"/>
-                	</ComboBox.Foreground>
-                    <ComboBoxItem Content="政法机构" IsEnabled="False" IsSelected="True" />
-                    <CheckBox Content="检察院" Style="{DynamicResource CheckBoxfeedback}"/>
-                    <CheckBox Content="法院" Style="{DynamicResource CheckBoxfeedback}"/>
-                    <CheckBox Content="交警支队" Style="{DynamicResource CheckBoxfeedback}"/>
-                    <CheckBox Content="全选" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" Style="{DynamicResource CheckBoxfeedback}" />
-                </ComboBox>
+            	<Grid Margin="30,0" VerticalAlignment="Center">
+            		<Grid>
+            			<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="1,1,0,0">
+            				<Rectangle.Stroke>
+            					<SolidColorBrush Color="{DynamicResource #235235235}"/>
+            				</Rectangle.Stroke>
+            			</Rectangle>
+            			<Rectangle HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" StrokeDashArray="3 3" StrokeThickness="1" RadiusX="8" RadiusY="8" Stroke="{x:Null}" Margin="0,0,1,1">
+            				<Rectangle.Fill>
+            					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            						<GradientStop Color="#FF64665B"/>
+            						<GradientStop Color="#FF50524D" Offset="1"/>
+            						<GradientStop Color="#FF64665B" Offset="0.088"/>
+            						<GradientStop Color="#FF52534D" Offset="0.938"/>
+            					</LinearGradientBrush>
+            				</Rectangle.Fill>
+            			</Rectangle>
+            			<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="0,0,1,1">
+            				<Rectangle.Stroke>
+            					<SolidColorBrush Color="{DynamicResource Foregroundgray}"/>
+            				</Rectangle.Stroke>
+            			</Rectangle>
+            		</Grid>
+            		<ComboBox Height="30" x:Name="comboBox4" VerticalAlignment="Center" DropDownClosed="comboBox1_DropDownClosed" Style="{DynamicResource ComboBoxSingle}" Background="{x:Null}" BorderBrush="{x:Null}" ItemContainerStyle="{DynamicResource ComboBoxItemfeedback}">
+            			<ComboBox.Foreground>
+            				<SolidColorBrush Color="{DynamicResource #235235235}"/>
+            			</ComboBox.Foreground>
+            			<ComboBoxItem Content="政法机构" IsEnabled="False" IsSelected="True" />
+            			<CheckBox Content="检察院" Style="{DynamicResource CheckBoxfeedback}"/>
+            			<CheckBox Content="法院" Style="{DynamicResource CheckBoxfeedback}"/>
+            			<CheckBox Content="交警支队" Style="{DynamicResource CheckBoxfeedback}"/>
+            			<CheckBox Content="全选" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" Style="{DynamicResource CheckBoxfeedback}" />
+            		</ComboBox>
+            	</Grid>
             </Grid>
             <Grid Grid.Row="5">
-                <ComboBox Height="23" Margin="20,0,20,0" x:Name="comboBox5" VerticalAlignment="Center" DropDownClosed="comboBox1_DropDownClosed" Style="{DynamicResource ComboBoxFeedback}" Background="{x:Null}" BorderBrush="{x:Null}" ItemContainerStyle="{DynamicResource ComboBoxItemfeedback}">
-                    <ComboBox.Foreground>
-                        <SolidColorBrush Color="{DynamicResource #235235235}"/>
-                    </ComboBox.Foreground>
-                    <ComboBoxItem Content="省管单位" IsEnabled="False" IsSelected="True" />
-                    <CheckBox Content="消防支队" Style="{DynamicResource CheckBoxfeedback}"/>
-                    <CheckBox Content="水文局" Style="{DynamicResource CheckBoxfeedback}"/>
-                    <CheckBox Content="气象局" Style="{DynamicResource CheckBoxfeedback}"/>
-                    <CheckBox Content="电业局" Style="{DynamicResource CheckBoxfeedback}"/>
-                    <CheckBox Content="电信公司" Style="{DynamicResource CheckBoxfeedback}"/>
-                    <CheckBox Content="全选" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" Style="{DynamicResource CheckBoxfeedback}" />
-                </ComboBox>
+            	<Grid Margin="30,0" VerticalAlignment="Center">
+            		<Grid>
+            			<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="1,1,0,0">
+            				<Rectangle.Stroke>
+            					<SolidColorBrush Color="{DynamicResource #235235235}"/>
+            				</Rectangle.Stroke>
+            			</Rectangle>
+            			<Rectangle HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" StrokeDashArray="3 3" StrokeThickness="1" RadiusX="8" RadiusY="8" Stroke="{x:Null}" Margin="0,0,1,1">
+            				<Rectangle.Fill>
+            					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            						<GradientStop Color="#FF64665B"/>
+            						<GradientStop Color="#FF50524D" Offset="1"/>
+            						<GradientStop Color="#FF64665B" Offset="0.088"/>
+            						<GradientStop Color="#FF52534D" Offset="0.938"/>
+            					</LinearGradientBrush>
+            				</Rectangle.Fill>
+            			</Rectangle>
+            			<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="0,0,1,1">
+            				<Rectangle.Stroke>
+            					<SolidColorBrush Color="{DynamicResource Foregroundgray}"/>
+            				</Rectangle.Stroke>
+            			</Rectangle>
+            		</Grid>
+            		<ComboBox Height="30" x:Name="comboBox5" VerticalAlignment="Center" DropDownClosed="comboBox1_DropDownClosed" Style="{DynamicResource ComboBoxSingle}" Background="{x:Null}" BorderBrush="{x:Null}" ItemContainerStyle="{DynamicResource ComboBoxItemfeedback}">
+            			<ComboBox.Foreground>
+            				<SolidColorBrush Color="{DynamicResource #235235235}"/>
+            			</ComboBox.Foreground>
+            			<ComboBoxItem Content="省管单位" IsEnabled="False" IsSelected="True" />
+            			<CheckBox Content="消防支队" Style="{DynamicResource CheckBoxfeedback}"/>
+            			<CheckBox Content="水文局" Style="{DynamicResource CheckBoxfeedback}"/>
+            			<CheckBox Content="气象局" Style="{DynamicResource CheckBoxfeedback}"/>
+            			<CheckBox Content="电业局" Style="{DynamicResource CheckBoxfeedback}"/>
+            			<CheckBox Content="电信公司" Style="{DynamicResource CheckBoxfeedback}"/>
+            			<CheckBox Content="全选" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" Style="{DynamicResource CheckBoxfeedback}" />
+            		</ComboBox>
+            	</Grid>
             </Grid>
             <Grid Grid.Row="6">
-                <ComboBox Height="23" Margin="20,0,20,0" x:Name="comboBox6" VerticalAlignment="Center" DropDownClosed="comboBox1_DropDownClosed" Style="{DynamicResource ComboBoxFeedback}" Background="{x:Null}" BorderBrush="{x:Null}" ItemContainerStyle="{DynamicResource ComboBoxItemfeedback}">
-                    <ComboBox.Foreground>
-                        <SolidColorBrush Color="{DynamicResource #235235235}"/>
-                    </ComboBox.Foreground>
-                    <ComboBoxItem Content="区县、管理处" IsEnabled="False" IsSelected="True" />
-                    <CheckBox Content="全选" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" Style="{DynamicResource CheckBoxfeedback}" />
-                </ComboBox>
+            	<Grid Margin="30,0" VerticalAlignment="Center">
+            		<Grid>
+            			<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="1,1,0,0">
+            				<Rectangle.Stroke>
+            					<SolidColorBrush Color="{DynamicResource #235235235}"/>
+            				</Rectangle.Stroke>
+            			</Rectangle>
+            			<Rectangle HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" StrokeDashArray="3 3" StrokeThickness="1" RadiusX="8" RadiusY="8" Stroke="{x:Null}" Margin="0,0,1,1">
+            				<Rectangle.Fill>
+            					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            						<GradientStop Color="#FF64665B"/>
+            						<GradientStop Color="#FF50524D" Offset="1"/>
+            						<GradientStop Color="#FF64665B" Offset="0.088"/>
+            						<GradientStop Color="#FF52534D" Offset="0.938"/>
+            					</LinearGradientBrush>
+            				</Rectangle.Fill>
+            			</Rectangle>
+            			<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="0,0,1,1">
+            				<Rectangle.Stroke>
+            					<SolidColorBrush Color="{DynamicResource Foregroundgray}"/>
+            				</Rectangle.Stroke>
+            			</Rectangle>
+            		</Grid>
+            		<ComboBox Height="30" x:Name="comboBox6" VerticalAlignment="Center" DropDownClosed="comboBox1_DropDownClosed" Style="{DynamicResource ComboBoxSingle}" Background="{x:Null}" BorderBrush="{x:Null}" ItemContainerStyle="{DynamicResource ComboBoxItemfeedback}">
+            			<ComboBox.Foreground>
+            				<SolidColorBrush Color="{DynamicResource #235235235}"/>
+            			</ComboBox.Foreground>
+            			<ComboBoxItem Content="区县、管理处" IsEnabled="False" IsSelected="True" />
+            			<CheckBox Content="全选" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" Style="{DynamicResource CheckBoxfeedback}" />
+            		</ComboBox>
+            	</Grid>
             </Grid>
             <Grid Grid.Row="7" Margin="15,5">
                 <Grid>
@@ -182,7 +326,11 @@
                                 		</Ellipse>
                                 	</Grid>
                                 	<Grid Grid.Column="1" Grid.ColumnSpan="1">
-                                		<TextBlock Text="{Binding}" VerticalAlignment="Stretch"/>
+                                		<TextBlock Text="{Binding}" VerticalAlignment="Stretch">
+                                			<TextBlock.Foreground>
+                                				<SolidColorBrush Color="{DynamicResource OrangeColor}"/>
+                                			</TextBlock.Foreground>
+                                		</TextBlock>
                                 	</Grid>
                                 </Grid>
                             </DataTemplate>

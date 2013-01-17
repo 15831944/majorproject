@@ -28,163 +28,216 @@
             <Label VerticalAlignment="Top" Style="{DynamicResource Labeltopheader}" Content="检索"/>
             <Grid Grid.Row="1" VerticalAlignment="Top" Margin="37,20,0,0">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.138*"/>
-                    <ColumnDefinition Width="0.139*"/>
-                    <ColumnDefinition Width="0.137*"/>
-                    <ColumnDefinition Width="0.138*"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="0.49*"/>
+                    <ColumnDefinition Width="0.51*"/>
                 </Grid.ColumnDefinitions>
-                <Grid Grid.Column="0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.517*"/>
-                        <ColumnDefinition Width="152.031333333333"/>
-                        <ColumnDefinition Width="0.483*"/>
-                    </Grid.ColumnDefinitions>
-                    <ComboBox x:Name="cbbType" HorizontalAlignment="Stretch" VerticalAlignment="Top" Style="{DynamicResource ComboBoxFeedback}" Height="28" Width="150" Grid.Column="1" Margin="0.622,0,1.408,0" FontSize="13" SelectionChanged="cbbType_SelectionChanged">
-                        <ComboBox.Foreground>
-                            <SolidColorBrush Color="{DynamicResource #235235235}"/>
-                        </ComboBox.Foreground>
-                        <ComboBoxItem Content="类别" IsEnabled="False" IsSelected="True" Style="{DynamicResource ComboBoxItemCase}" />
-                        <ComboBoxItem Content="城市发展案例" Style="{DynamicResource ComboBoxItemCase}" >
-                            <ComboBoxItem.Foreground>
-                                <SolidColorBrush Color="{DynamicResource black}"/>
-                            </ComboBoxItem.Foreground>
-                        </ComboBoxItem>
-                        <ComboBoxItem Content="城市百科知识" Style="{DynamicResource ComboBoxItemCase}" >
-                            <ComboBoxItem.Foreground>
-                                <SolidColorBrush Color="{DynamicResource black}"/>
-                            </ComboBoxItem.Foreground>
-                        </ComboBoxItem>
-                        <ComboBoxItem Content="城市数据知识" Style="{DynamicResource ComboBoxItemCase}" >
-                            <ComboBoxItem.Foreground>
-                                <SolidColorBrush Color="{DynamicResource black}"/>
-                            </ComboBoxItem.Foreground>
-                        </ComboBoxItem>
-                    </ComboBox>
+                <Grid>
+                	<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="1,1,0,0">
+                		<Rectangle.Stroke>
+                			<SolidColorBrush Color="{DynamicResource #235235235}"/>
+                		</Rectangle.Stroke>
+                	</Rectangle>
+                	<Rectangle HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" StrokeDashArray="3 3" StrokeThickness="1" RadiusX="8" RadiusY="8" Stroke="{x:Null}" Margin="0,0,1,1">
+                		<Rectangle.Fill>
+                			<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                				<GradientStop Color="#FF64665B"/>
+                				<GradientStop Color="#FF50524D" Offset="1"/>
+                				<GradientStop Color="#FF64665B" Offset="0.088"/>
+                				<GradientStop Color="#FF52534D" Offset="0.938"/>
+                			</LinearGradientBrush>
+                		</Rectangle.Fill>
+                	</Rectangle>
+                	<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="0,0,1,1">
+                		<Rectangle.Stroke>
+                			<SolidColorBrush Color="{DynamicResource Foregroundgray}"/>
+                		</Rectangle.Stroke>
+                	</Rectangle>
                 </Grid>
-                <Grid Grid.Column="1">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.517*"/>
-                        <ColumnDefinition Width="152.031333333333"/>
-                        <ColumnDefinition Width="0.483*"/>
-                    </Grid.ColumnDefinitions>
-                    <ComboBox x:Name="cbbFunction" HorizontalAlignment="Stretch" VerticalAlignment="Top" Style="{DynamicResource ComboBoxFeedback}" Height="28" Width="150" Grid.Column="1" Margin="0.622,0,1.408,0" FontSize="13">
-                        <ComboBox.Foreground>
-                            <SolidColorBrush Color="{DynamicResource #235235235}"/>
-                        </ComboBox.Foreground>
-                        <ComboBoxItem Content="功能" IsEnabled="False" IsSelected="True" Style="{DynamicResource ComboBoxItemCase}" />
-                    </ComboBox>
+                <Grid>
+                	<Grid.ColumnDefinitions>
+                		<ColumnDefinition Width="0.25*"/>
+                		<ColumnDefinition Width="0.25*"/>
+                		<ColumnDefinition Width="0.25*"/>
+                		<ColumnDefinition Width="0.25*"/>
+                	</Grid.ColumnDefinitions>
+                	<Grid Grid.Column="0">
+                		<Grid.ColumnDefinitions>
+                			<ColumnDefinition/>
+                		</Grid.ColumnDefinitions>
+                		<ComboBox x:Name="cbbType" HorizontalAlignment="Stretch" Style="{DynamicResource ComboBoxFeedback}" FontSize="13" SelectionChanged="cbbType_SelectionChanged">
+                			<ComboBox.Foreground>
+                				<SolidColorBrush Color="{DynamicResource #235235235}"/>
+                			</ComboBox.Foreground>
+                			<ComboBoxItem Content="类别" IsEnabled="False" IsSelected="True" Style="{DynamicResource ComboBoxItemCase}" />
+                			<ComboBoxItem Content="城市发展案例" Style="{DynamicResource ComboBoxItemCase}" >
+                				<ComboBoxItem.Foreground>
+                					<SolidColorBrush Color="{DynamicResource black}"/>
+                				</ComboBoxItem.Foreground>
+                			</ComboBoxItem>
+                			<ComboBoxItem Content="城市百科知识" Style="{DynamicResource ComboBoxItemCase}" >
+                				<ComboBoxItem.Foreground>
+                					<SolidColorBrush Color="{DynamicResource black}"/>
+                				</ComboBoxItem.Foreground>
+                			</ComboBoxItem>
+                			<ComboBoxItem Content="城市数据知识" Style="{DynamicResource ComboBoxItemCase}" >
+                				<ComboBoxItem.Foreground>
+                					<SolidColorBrush Color="{DynamicResource black}"/>
+                				</ComboBoxItem.Foreground>
+                			</ComboBoxItem>
+                		</ComboBox>
+                		<Rectangle Margin="0,1" RadiusY="0" RadiusX="0" Stroke="{x:Null}" StrokeThickness="0.5" Width="1" HorizontalAlignment="Right">
+                			<Rectangle.Fill>
+                				<LinearGradientBrush EndPoint="1.143,0.492" StartPoint="0.029,0.492">
+                					<GradientStop Color="#FF4D4E4A" Offset="0"/>
+                					<GradientStop Color="#FFC8C4C4" Offset="1"/>
+                					<GradientStop Color="#FF464943" Offset="0.5"/>
+                					<GradientStop Color="#FFC2C2C2" Offset="0.538"/>
+                				</LinearGradientBrush>
+                			</Rectangle.Fill>
+                		</Rectangle>
+                	</Grid>
+                	<Grid Grid.Column="1">
+                		<Grid.ColumnDefinitions>
+                        
+                			<ColumnDefinition/>
+                       
+                		</Grid.ColumnDefinitions>
+                		<ComboBox x:Name="cbbFunction" HorizontalAlignment="Stretch" Style="{DynamicResource ComboBoxMiddle}" Grid.Column="1" FontSize="13">
+                			<ComboBox.Foreground>
+                				<SolidColorBrush Color="{DynamicResource #235235235}"/>
+                			</ComboBox.Foreground>
+                			<ComboBoxItem Content="功能" IsEnabled="False" IsSelected="True" Style="{DynamicResource ComboBoxItemCase}" />
+                		</ComboBox>
+                		<Rectangle Margin="0,1" RadiusY="0" RadiusX="0" Stroke="{x:Null}" StrokeThickness="0.5" Width="1" HorizontalAlignment="Right">
+                			<Rectangle.Fill>
+                				<LinearGradientBrush EndPoint="1.143,0.492" StartPoint="0.029,0.492">
+                					<GradientStop Color="#FF4D4E4A" Offset="0"/>
+                					<GradientStop Color="#FFC8C4C4" Offset="1"/>
+                					<GradientStop Color="#FF464943" Offset="0.5"/>
+                					<GradientStop Color="#FFC2C2C2" Offset="0.538"/>
+                				</LinearGradientBrush>
+                			</Rectangle.Fill>
+                		</Rectangle>
+                	</Grid>
+                	<Grid Grid.Column="2">
+                		<Grid.ColumnDefinitions>
+                        
+                			<ColumnDefinition/>
+                        
+                		</Grid.ColumnDefinitions>
+                		<ComboBox x:Name="cbbTime" HorizontalAlignment="Stretch" Style="{DynamicResource ComboBoxMiddle}" Grid.Column="1" FontSize="13">
+                			<ComboBox.Foreground>
+                				<SolidColorBrush Color="{DynamicResource #235235235}"/>
+                			</ComboBox.Foreground>
+                			<ComboBoxItem Content="时间" IsEnabled="False" IsSelected="True" Style="{DynamicResource ComboBoxItemCase}"/>
+                			<ComboBoxItem Content="2001" Style="{DynamicResource ComboBoxItemCase}" >
+                				<ComboBoxItem.Foreground>
+                					<SolidColorBrush Color="{DynamicResource black}"/>
+                				</ComboBoxItem.Foreground>
+                			</ComboBoxItem>
+                			<ComboBoxItem Content="2002" Style="{DynamicResource ComboBoxItemCase}" >
+                				<ComboBoxItem.Foreground>
+                					<SolidColorBrush Color="{DynamicResource black}"/>
+                				</ComboBoxItem.Foreground>
+                			</ComboBoxItem>
+                			<ComboBoxItem Content="2003" Style="{DynamicResource ComboBoxItemCase}" >
+                				<ComboBoxItem.Foreground>
+                					<SolidColorBrush Color="{DynamicResource black}"/>
+                				</ComboBoxItem.Foreground>
+                			</ComboBoxItem>
+                			<ComboBoxItem Content="2004" Style="{DynamicResource ComboBoxItemCase}" >
+                				<ComboBoxItem.Foreground>
+                					<SolidColorBrush Color="{DynamicResource black}"/>
+                				</ComboBoxItem.Foreground>
+                			</ComboBoxItem>
+                			<ComboBoxItem Content="2005" Style="{DynamicResource ComboBoxItemCase}" >
+                				<ComboBoxItem.Foreground>
+                					<SolidColorBrush Color="{DynamicResource black}"/>
+                				</ComboBoxItem.Foreground>
+                			</ComboBoxItem>
+                			<ComboBoxItem Content="2006" Style="{DynamicResource ComboBoxItemCase}" >
+                				<ComboBoxItem.Foreground>
+                					<SolidColorBrush Color="{DynamicResource black}"/>
+                				</ComboBoxItem.Foreground>
+                			</ComboBoxItem>
+                			<ComboBoxItem Content="2007" Style="{DynamicResource ComboBoxItemCase}" >
+                				<ComboBoxItem.Foreground>
+                					<SolidColorBrush Color="{DynamicResource black}"/>
+                				</ComboBoxItem.Foreground>
+                			</ComboBoxItem>
+                			<ComboBoxItem Content="2008" Style="{DynamicResource ComboBoxItemCase}" >
+                				<ComboBoxItem.Foreground>
+                					<SolidColorBrush Color="{DynamicResource black}"/>
+                				</ComboBoxItem.Foreground>
+                			</ComboBoxItem>
+                			<ComboBoxItem Content="2009" Style="{DynamicResource ComboBoxItemCase}" >
+                				<ComboBoxItem.Foreground>
+                					<SolidColorBrush Color="{DynamicResource black}"/>
+                				</ComboBoxItem.Foreground>
+                			</ComboBoxItem>
+                			<ComboBoxItem Content="2010" Style="{DynamicResource ComboBoxItemCase}" >
+                				<ComboBoxItem.Foreground>
+                					<SolidColorBrush Color="{DynamicResource black}"/>
+                				</ComboBoxItem.Foreground>
+                			</ComboBoxItem>
+                			<ComboBoxItem Content="2011" Style="{DynamicResource ComboBoxItemCase}" >
+                				<ComboBoxItem.Foreground>
+                					<SolidColorBrush Color="{DynamicResource black}"/>
+                				</ComboBoxItem.Foreground>
+                			</ComboBoxItem>
+                			<ComboBoxItem Content="2012" Style="{DynamicResource ComboBoxItemCase}" >
+                				<ComboBoxItem.Foreground>
+                					<SolidColorBrush Color="{DynamicResource black}"/>
+                				</ComboBoxItem.Foreground>
+                			</ComboBoxItem>
+                			<ComboBoxItem Content="2013" Style="{DynamicResource ComboBoxItemCase}" >
+                				<ComboBoxItem.Foreground>
+                					<SolidColorBrush Color="{DynamicResource black}"/>
+                				</ComboBoxItem.Foreground>
+                			</ComboBoxItem>
+                		</ComboBox>
+                		<Rectangle Margin="0,1" RadiusY="0" RadiusX="0" Stroke="{x:Null}" StrokeThickness="0.5" Width="1" HorizontalAlignment="Right">
+                			<Rectangle.Fill>
+                				<LinearGradientBrush EndPoint="1.143,0.492" StartPoint="0.029,0.492">
+                					<GradientStop Color="#FF4D4E4A" Offset="0"/>
+                					<GradientStop Color="#FFC8C4C4" Offset="1"/>
+                					<GradientStop Color="#FF464943" Offset="0.5"/>
+                					<GradientStop Color="#FFC2C2C2" Offset="0.538"/>
+                				</LinearGradientBrush>
+                			</Rectangle.Fill>
+                		</Rectangle>
+                	</Grid>
+                	<Grid Grid.Column="3">
+                		<Grid.ColumnDefinitions>
+                			<ColumnDefinition/>
+                		</Grid.ColumnDefinitions>
+                		<ComboBox x:Name="cbbArea" HorizontalAlignment="Stretch" Style="{DynamicResource ComboBoxlast}" FontSize="13">
+                			<ComboBox.Foreground>
+                				<SolidColorBrush Color="{DynamicResource #235235235}"/>
+                			</ComboBox.Foreground>
+                			<ComboBoxItem Content="地区" IsEnabled="False" IsSelected="True" Style="{DynamicResource ComboBoxItemCase}" />
+                			<ComboBoxItem Content="沈阳" Style="{DynamicResource ComboBoxItemCase}" >
+                				<ComboBoxItem.Foreground>
+                					<SolidColorBrush Color="{DynamicResource black}"/>
+                				</ComboBoxItem.Foreground>
+                			</ComboBoxItem>
+                			<ComboBoxItem Content="北京" Style="{DynamicResource ComboBoxItemCase}" >
+                				<ComboBoxItem.Foreground>
+                					<SolidColorBrush Color="{DynamicResource black}"/>
+                				</ComboBoxItem.Foreground>
+                			</ComboBoxItem>
+                			<ComboBoxItem Content="台湾" Style="{DynamicResource ComboBoxItemCase}" >
+                				<ComboBoxItem.Foreground>
+                					<SolidColorBrush Color="{DynamicResource black}"/>
+                				</ComboBoxItem.Foreground>
+                			</ComboBoxItem>
+                		</ComboBox>
+                	</Grid>
                 </Grid>
-                <Grid Grid.Column="2">
+                <Grid Grid.Column="1" Margin="20,0,0,0">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.493*"/>
-                        <ColumnDefinition Width="152.069333333333"/>
-                        <ColumnDefinition Width="0.507*"/>
-                    </Grid.ColumnDefinitions>
-                    <ComboBox x:Name="cbbTime" HorizontalAlignment="Stretch" VerticalAlignment="Top" Style="{DynamicResource ComboBoxFeedback}" Height="28" Width="150" Grid.Column="1" Margin="1.151,0,0.917,0" FontSize="13">
-                        <ComboBox.Foreground>
-                            <SolidColorBrush Color="{DynamicResource #235235235}"/>
-                        </ComboBox.Foreground>
-                        <ComboBoxItem Content="时间" IsEnabled="False" IsSelected="True" Style="{DynamicResource ComboBoxItemCase}"/>
-                        <ComboBoxItem Content="2001" Style="{DynamicResource ComboBoxItemCase}" >
-                            <ComboBoxItem.Foreground>
-                                <SolidColorBrush Color="{DynamicResource black}"/>
-                            </ComboBoxItem.Foreground>
-                        </ComboBoxItem>
-                        <ComboBoxItem Content="2002" Style="{DynamicResource ComboBoxItemCase}" >
-                            <ComboBoxItem.Foreground>
-                                <SolidColorBrush Color="{DynamicResource black}"/>
-                            </ComboBoxItem.Foreground>
-                        </ComboBoxItem>
-                        <ComboBoxItem Content="2003" Style="{DynamicResource ComboBoxItemCase}" >
-                            <ComboBoxItem.Foreground>
-                                <SolidColorBrush Color="{DynamicResource black}"/>
-                            </ComboBoxItem.Foreground>
-                        </ComboBoxItem>
-                        <ComboBoxItem Content="2004" Style="{DynamicResource ComboBoxItemCase}" >
-                            <ComboBoxItem.Foreground>
-                                <SolidColorBrush Color="{DynamicResource black}"/>
-                            </ComboBoxItem.Foreground>
-                        </ComboBoxItem>
-                        <ComboBoxItem Content="2005" Style="{DynamicResource ComboBoxItemCase}" >
-                            <ComboBoxItem.Foreground>
-                                <SolidColorBrush Color="{DynamicResource black}"/>
-                            </ComboBoxItem.Foreground>
-                        </ComboBoxItem>
-                        <ComboBoxItem Content="2006" Style="{DynamicResource ComboBoxItemCase}" >
-                            <ComboBoxItem.Foreground>
-                                <SolidColorBrush Color="{DynamicResource black}"/>
-                            </ComboBoxItem.Foreground>
-                        </ComboBoxItem>
-                        <ComboBoxItem Content="2007" Style="{DynamicResource ComboBoxItemCase}" >
-                            <ComboBoxItem.Foreground>
-                                <SolidColorBrush Color="{DynamicResource black}"/>
-                            </ComboBoxItem.Foreground>
-                        </ComboBoxItem>
-                        <ComboBoxItem Content="2008" Style="{DynamicResource ComboBoxItemCase}" >
-                            <ComboBoxItem.Foreground>
-                                <SolidColorBrush Color="{DynamicResource black}"/>
-                            </ComboBoxItem.Foreground>
-                        </ComboBoxItem>
-                        <ComboBoxItem Content="2009" Style="{DynamicResource ComboBoxItemCase}" >
-                            <ComboBoxItem.Foreground>
-                                <SolidColorBrush Color="{DynamicResource black}"/>
-                            </ComboBoxItem.Foreground>
-                        </ComboBoxItem>
-                        <ComboBoxItem Content="2010" Style="{DynamicResource ComboBoxItemCase}" >
-                            <ComboBoxItem.Foreground>
-                                <SolidColorBrush Color="{DynamicResource black}"/>
-                            </ComboBoxItem.Foreground>
-                        </ComboBoxItem>
-                        <ComboBoxItem Content="2011" Style="{DynamicResource ComboBoxItemCase}" >
-                            <ComboBoxItem.Foreground>
-                                <SolidColorBrush Color="{DynamicResource black}"/>
-                            </ComboBoxItem.Foreground>
-                        </ComboBoxItem>
-                        <ComboBoxItem Content="2012" Style="{DynamicResource ComboBoxItemCase}" >
-                            <ComboBoxItem.Foreground>
-                                <SolidColorBrush Color="{DynamicResource black}"/>
-                            </ComboBoxItem.Foreground>
-                        </ComboBoxItem>
-                        <ComboBoxItem Content="2013" Style="{DynamicResource ComboBoxItemCase}" >
-                            <ComboBoxItem.Foreground>
-                                <SolidColorBrush Color="{DynamicResource black}"/>
-                            </ComboBoxItem.Foreground>
-                        </ComboBoxItem>
-                    </ComboBox>
-                </Grid>
-                <Grid Grid.Column="3">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.519*"/>
-                        <ColumnDefinition Width="150.352"/>
-                        <ColumnDefinition Width="0.481*"/>
-                    </Grid.ColumnDefinitions>
-                    <ComboBox x:Name="cbbArea" HorizontalAlignment="Stretch" VerticalAlignment="Top" Style="{DynamicResource ComboBoxFeedback}" Height="28" Width="150" Grid.Column="1" Margin="-0.171,0,0.584,0" FontSize="13">
-                        <ComboBox.Foreground>
-                            <SolidColorBrush Color="{DynamicResource #235235235}"/>
-                        </ComboBox.Foreground>
-                        <ComboBoxItem Content="地区" IsEnabled="False" IsSelected="True" Style="{DynamicResource ComboBoxItemCase}" />
-                        <ComboBoxItem Content="沈阳" Style="{DynamicResource ComboBoxItemCase}" >
-                            <ComboBoxItem.Foreground>
-                                <SolidColorBrush Color="{DynamicResource black}"/>
-                            </ComboBoxItem.Foreground>
-                        </ComboBoxItem>
-                        <ComboBoxItem Content="北京" Style="{DynamicResource ComboBoxItemCase}" >
-                            <ComboBoxItem.Foreground>
-                                <SolidColorBrush Color="{DynamicResource black}"/>
-                            </ComboBoxItem.Foreground>
-                        </ComboBoxItem>
-                        <ComboBoxItem Content="台湾" Style="{DynamicResource ComboBoxItemCase}" >
-                            <ComboBoxItem.Foreground>
-                                <SolidColorBrush Color="{DynamicResource black}"/>
-                            </ComboBoxItem.Foreground>
-                        </ComboBoxItem>
-                    </ComboBox>
-                </Grid>
-                <Grid Grid.Column="4" Margin="20,0,0,0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="75*"/>
-                        <ColumnDefinition Width="25*"/>
+                        <ColumnDefinition Width="0.769*"/>
+                        <ColumnDefinition Width="0.231*"/>
                     </Grid.ColumnDefinitions>
                     <Grid Grid.Column="0">
                         <Grid.ColumnDefinitions>
@@ -279,27 +332,35 @@
                                 </Rectangle.Stroke>
                             </Rectangle>
                             <Rectangle HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" StrokeDashArray="3 3" StrokeThickness="1" RadiusX="8" RadiusY="8" Stroke="{x:Null}" Margin="0,0,1,1">
-                                <Rectangle.Fill>
-                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                        <GradientStop Color="#FF5D5D5D" Offset="0"/>
-                                        <GradientStop Color="#FF64665C" Offset="1"/>
-                                    </LinearGradientBrush>
-                                </Rectangle.Fill>
+                            	<Rectangle.Fill>
+                            		<SolidColorBrush Color="#FF57584F"/>
+                            	</Rectangle.Fill>
                             </Rectangle>
                             <Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="0,0,1,1">
                                 <Rectangle.Stroke>
                                     <SolidColorBrush Color="{DynamicResource Foregroundgray}"/>
                                 </Rectangle.Stroke>
                             </Rectangle>
+                            <UniformGrid Margin="1,1,2,2" Rows="15">
+                            	<Rectangle Stroke="{x:Null}" StrokeThickness="1"/>
+                            	<Rectangle Stroke="{x:Null}" StrokeThickness="1" Fill="#FF6B6D68"/>
+                            	<Rectangle Stroke="{x:Null}" StrokeThickness="1"/>
+                            	<Rectangle Stroke="{x:Null}" StrokeThickness="1" Fill="#FF6B6D68"/>
+                            	<Rectangle Stroke="{x:Null}" StrokeThickness="1"/>
+                            	<Rectangle Stroke="{x:Null}" StrokeThickness="1" Fill="#FF6B6D68"/>
+                            	<Rectangle Stroke="{x:Null}" StrokeThickness="1"/>
+                            	<Rectangle Stroke="{x:Null}" StrokeThickness="1" Fill="#FF6B6D68"/>
+                            	<Rectangle Stroke="{x:Null}" StrokeThickness="1"/>
+                            	<Rectangle Stroke="{x:Null}" StrokeThickness="1" Fill="#FF6B6D68"/>
+                            	<Rectangle Stroke="{x:Null}" StrokeThickness="1"/>
+                            	<Rectangle Stroke="{x:Null}" StrokeThickness="1" Fill="#FF6B6D68"/>
+                            	<Rectangle Stroke="{x:Null}" StrokeThickness="1"/>
+                            	<Rectangle Stroke="{x:Null}" StrokeThickness="1" Fill="#FF6B6D68"/>
+                            </UniformGrid>
                         </Grid>
-                        <DataGrid AutoGenerateColumns="False" CanUserAddRows="False" ItemsSource="{Binding}" CanUserDeleteRows="False" CanUserResizeColumns="False" HorizontalAlignment="Stretch" x:Name="dataGridSearchResult" VerticalAlignment="Stretch" Foreground="#F1000019" FontSize="14" SelectionChanged="dataGridSearchResult_SelectionChanged" SelectionMode="Single" Background="{x:Null}" BorderBrush="{x:Null}" Margin="5,5,5,0" >
-                            <DataGrid.ColumnHeaderStyle>
-                                <Style TargetType="{x:Type DataGridColumnHeader}">
-                                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
-                                </Style>
-                            </DataGrid.ColumnHeaderStyle>
+                        <DataGrid AutoGenerateColumns="False" CanUserAddRows="False" ItemsSource="{Binding}" CanUserDeleteRows="False" CanUserResizeColumns="False" HorizontalAlignment="Stretch" x:Name="dataGridSearchResult" VerticalAlignment="Stretch" Foreground="#F0F0F0" FontSize="14" SelectionChanged="dataGridSearchResult_SelectionChanged" SelectionMode="Single" Background="#008f8f80" BorderBrush="{x:Null}" Margin="0,2.25,5,6" RowBackground="#00FFFFFF" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderCase}" RowHeaderStyle="{DynamicResource DataGridRowHeaderCase}" CellStyle="{DynamicResource DataGridCellStyle3}" ItemsPanel="{DynamicResource ItemsPanelTemplate1}">
                             <DataGrid.Columns>
-                                <DataGridTextColumn Header="项目名称" Width="40*" Binding="{Binding CaseTitle}"/>
+                                <DataGridTextColumn Header="项目名称" Width="40*" Binding="{Binding CaseTitle}" DragIndicatorStyle="{DynamicResource DataGridColumnHeaderStyle1}"/>
                                 <DataGridTextColumn Header="创建时间" Width="15*" Binding="{Binding CreateTime}"/>
                                 <DataGridTemplateColumn Header="推荐程度" Width="15*" >
                                     <DataGridTemplateColumn.CellTemplate>
