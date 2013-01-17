@@ -133,6 +133,8 @@
     <Compile Include="Control\CxHelp.xaml.cs">
       <DependentUpon>CxHelp.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CreateChart\ChartHelper.cs" />
+    <Compile Include="CreateChart\ChartInformation.cs" />
     <Compile Include="DailyManagement\Schedule.xaml.cs">
       <DependentUpon>Schedule.xaml</DependentUpon>
     </Compile>

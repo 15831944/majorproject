@@ -167,7 +167,7 @@
                 </Grid>
             </Grid>
             <Grid Grid.Row="1" Name="gridMiddle">
-                <Grid Name="gridMap">
+                <Grid Name="gridMap" Visibility="Visible">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="90*"/>
                         <RowDefinition Height="10*"/>
@@ -181,9 +181,9 @@
                         </Rectangle.Fill>
                     </Rectangle>
                     <Label Style="{DynamicResource Labeltopheader}" VerticalAlignment="Top" FontFamily="Helvetica" FontSize="14" FontWeight="Bold" Content="业绩比较"/>
-                    <TabControl Margin="20,40,20,20" Style="{DynamicResource TabControlSubContent}">
+                    <TabControl Name="tabcontrolMap" Margin="20,40,20,20" Style="{DynamicResource TabControlSubContent}">
                         <TabItem Header="市域视图" Style="{DynamicResource TabItem2ndmenuMIddle}" Margin="10,0,-10,0">
-                            <Grid>
+                            <Grid Name="gridMap1">
                                 <Grid Grid.Row="0" x:Name="shiyu" Visibility="Visible">
                                     <Image Source="/WpfApplication3;component/Images/shiyu.jpg" />
                                     <TextBox TextWrapping="Wrap" x:Name="llable" Background="{x:Null}" FontWeight="Bold" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="{x:Null}" Margin="654.75,333.5,0,0">
@@ -196,16 +196,16 @@
                             </Grid>
                         </TabItem>
                         <TabItem Header="辖区视图" Style="{DynamicResource TabItem2ndmenuMIddle}">
-                            <Grid>
+                            <Grid Name="gridMap2">
                                 <Grid Grid.Row="0" x:Name="xiaqu" HorizontalAlignment="Center" VerticalAlignment="Center">
                                     <Image Source="/WpfApplication3;component/Images/xiaqu.png" />
                                 </Grid>
                             </Grid>
                         </TabItem>
                         <TabItem Header="三维视图" Style="{DynamicResource TabItem2ndmenuMIddle}">
-                            <Grid>
+                            <Grid Name="gridMap3">
                                 <Grid Grid.Row="0" x:Name="sanwei">
-                                    <Image Source="/WpfApplication3;component/Images/sanwei.png" />
+                                    <WebBrowser Name="webbrowser3D" />
                                 </Grid>
                             </Grid>
                         </TabItem>
@@ -240,8 +240,121 @@
 
                         </UniformGrid>
 
-                        <Slider x:Name="slider"  IsSnapToTickEnabled="True"  TickPlacement="TopLeft" Value="2" SmallChange="1" Maximum="4" ValueChanged="slider_ValueChanged" Margin="0,22,0,-22" />
+                        <Slider x:Name="sliderMap"  IsSnapToTickEnabled="True"  TickPlacement="TopLeft" Value="2" SmallChange="1" Maximum="4" ValueChanged="slider_ValueChanged" Margin="0,22,0,-22" />
 
+                    </Grid>
+                </Grid>
+                <Grid Name="gridGraph" Visibility="Hidden">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="70*"/>
+                        <ColumnDefinition Width="30*"/>
+                    </Grid.ColumnDefinitions>
+                    <Rectangle RadiusY="8" RadiusX="8" StrokeThickness="2" Grid.RowSpan="2" Grid.ColumnSpan="2">
+                        <Rectangle.Effect>
+                            <DropShadowEffect/>
+                        </Rectangle.Effect>
+                        <Rectangle.Fill>
+                            <SolidColorBrush Color="{DynamicResource Mainbg}"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Label Style="{DynamicResource Labeltopheader}" VerticalAlignment="Top" FontFamily="Helvetica" FontSize="14" FontWeight="Bold" Content="折线图" Grid.ColumnSpan="2"/>
+                    <Grid Grid.Column="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="90*"/>
+                            <RowDefinition Height="10*"/>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0">
+                            <Grid Name="gridGraphContent" Margin="20,50,20,20">
+                                
+                            </Grid>
+                        </Grid>
+                        <Grid VerticalAlignment="Top" Grid.Row="1" HorizontalAlignment="Center" Width="250">
+                            <UniformGrid Columns="5" Rows="1"  VerticalAlignment="Top">
+                                <TextBlock Text="1980" TextAlignment="Left">
+                			<TextBlock.Foreground>
+                				<SolidColorBrush Color="{DynamicResource black}"/>
+                			</TextBlock.Foreground>
+                                </TextBlock>
+                                <TextBlock Text="1990" TextAlignment="Left">
+                			<TextBlock.Foreground>
+                				<SolidColorBrush Color="{DynamicResource black}"/>
+                			</TextBlock.Foreground>
+                                </TextBlock>
+                                <TextBlock Text="2000" TextAlignment="Center">
+                			<TextBlock.Foreground>
+                				<SolidColorBrush Color="{DynamicResource black}"/>
+                			</TextBlock.Foreground>
+                                </TextBlock>
+                                <TextBlock Text="2010" TextAlignment="Right">
+                			<TextBlock.Foreground>
+                				<SolidColorBrush Color="{DynamicResource black}"/>
+                			</TextBlock.Foreground>
+                                </TextBlock>
+                                <TextBlock Text="2012" TextAlignment="Right">
+                			<TextBlock.Foreground>
+                				<SolidColorBrush Color="{DynamicResource black}"/>
+                			</TextBlock.Foreground>
+                                </TextBlock>
+
+                            </UniformGrid>
+
+                            <Slider x:Name="slider"  IsSnapToTickEnabled="True"  TickPlacement="TopLeft" Value="2" SmallChange="1" Maximum="4" ValueChanged="slider_ValueChanged" Margin="0,22,0,-22" />
+
+                        </Grid>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50*"/>
+                            <RowDefinition Height="50*"/>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0" Margin="10,50,10,10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="20*"/>
+                                <RowDefinition Height="20*"/>
+                                <RowDefinition Height="20*"/>
+                                <RowDefinition Height="20*"/>
+                                <RowDefinition Height="20*"/>
+                            </Grid.RowDefinitions>
+                            <Label Content="经济子系统" Grid.Row="0"/>
+                            <Button Name="btnBrokenLine1" Grid.Row="1" Content="净迁移率" Click="btnBrokenLine1_Click" />
+                            <Button Name="btnBrokenLine2" Grid.Row="2" Content="千人拥有病床数" Click="btnBrokenLine2_Click" />
+                            <Button Name="btnBrokenLine3" Grid.Row="3" Content="人均住房使用面积" Click="btnBrokenLine3_Click" />
+                            <Button Name="btnBrokenLine4" Grid.Row="4" Content="普通中学人数比重" Click="btnBrokenLine4_Click" />
+                        </Grid>
+                        <Grid Grid.Row="1" Margin="10,10,10,10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="80*"/>
+                                <RowDefinition Height="20*"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0" Margin="5">
+                                <ListBox Name="lbxGraph" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                                    <ListBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <Grid Margin="5,10,5,10">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="70*"/>
+                                                    <ColumnDefinition Width="30*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Grid Grid.Column="0">
+                                                    <TextBlock Text="{Binding lblContent}"/>
+                                                </Grid>
+                                                <Grid Grid.Column="1">
+                                                    <Button Click="btnGraphClear_Click" Tag="{Binding index}"/>
+                                                </Grid>
+                                            </Grid>
+                                        </DataTemplate>
+                                    </ListBox.ItemTemplate>
+                                </ListBox>
+                            </Grid>
+                            <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50*"/>
+                                    <ColumnDefinition Width="50*"/>
+                                </Grid.ColumnDefinitions>
+                                <Button Name="btnGraphSelectAll" Content="全部" Grid.Column="0" Click="btnGraphSelectAll_Click" />
+                                <Button Name="btnGraphClearAll" Content="清除" Grid.Column="1" Click="btnGraphClearAll_Click" />
+                            </Grid>
+                        </Grid>
                     </Grid>
                 </Grid>
             </Grid>
@@ -252,53 +365,21 @@
                 <RowDefinition Height="0.356*"/>
                 <RowDefinition Height="0.344*"/>
             </Grid.RowDefinitions>
-            <Grid Name="gridRightTop" Grid.Row="0" Margin="0,0,0,7">
-                <Grid Name="gridBrokenLineGraph" MouseDown="gridBrokenLineGraph_MouseDown">
-                    <Rectangle RadiusY="8" RadiusX="8" StrokeThickness="2">
-                        <Rectangle.Effect>
-                            <DropShadowEffect/>
-                        </Rectangle.Effect>
-                        <Rectangle.Fill>
-                            <SolidColorBrush Color="{DynamicResource Mainbg}"/>
-                        </Rectangle.Fill>
-                    </Rectangle>
-                    <Label Style="{DynamicResource Labeltopheader}" VerticalAlignment="Top" FontFamily="Helvetica" FontSize="16" FontWeight="Bold" Content="折线图"/>
-                    <Grid Margin="10,35,10,10">
-                        <vc:Chart Name="chartRightTop" xmlns:vc="clr-namespace:Visifire.Charts;assembly=WPFVisifire.Charts" BorderThickness="0" Theme="Theme1" View3D="True" ToolBarEnabled="False" Watermark="False" >
-                            <vc:Chart.AxesX>
-                                <vc:Axis Title="时间" />
-                            </vc:Chart.AxesX>
-                            <vc:Chart.AxesY>
-                                <vc:Axis Title="净迁移率" Enabled="True" StartFromZero="True" AxisType="Primary" AxisMaximum="100" Interval="20"/>
-                            </vc:Chart.AxesY>
-                            <vc:Chart.Series>
-                                <vc:DataSeries LegendText="浦东新区" RenderAs="Line" AxisYType="Primary" >
-                                    <vc:DataSeries.DataPoints>
-                                        <vc:DataPoint AxisXLabel="Jul 07" YValue="90" />
-                                        <vc:DataPoint AxisXLabel="Aug 07" YValue="80" />
-                                        <vc:DataPoint AxisXLabel="Sep 07" YValue="70" />
-                                        <vc:DataPoint AxisXLabel="Nov 07" YValue="80" />
-                                        <vc:DataPoint AxisXLabel="Jan 08" YValue="60" />
-                                        <vc:DataPoint AxisXLabel="Feb 08" YValue="100" />
-                                    </vc:DataSeries.DataPoints>
-                                </vc:DataSeries>
-                                <vc:DataSeries LegendText="嘉定区" RenderAs="Line" AxisYType="Primary" >
-                                    <vc:DataSeries.DataPoints>
-                                        <vc:DataPoint AxisXLabel="Jul 07" YValue="70" />
-                                        <vc:DataPoint AxisXLabel="Aug 07" YValue="90" />
-                                        <vc:DataPoint AxisXLabel="Sep 07" YValue="60" />
-                                        <vc:DataPoint AxisXLabel="Nov 07" YValue="50" />
-                                        <vc:DataPoint AxisXLabel="Jan 08" YValue="80" />
-                                        <vc:DataPoint AxisXLabel="Feb 08" YValue="70" />
-                                    </vc:DataSeries.DataPoints>
-                                </vc:DataSeries>
-                            </vc:Chart.Series>
-                        </vc:Chart>
-                    </Grid>
+            <Grid Name="gridRightTop" Grid.Row="0" Margin="0,0,0,7" MouseDown="gridRightTop_MouseDown">
+                <Rectangle RadiusY="8" RadiusX="8" StrokeThickness="2">
+                    <Rectangle.Effect>
+                        <DropShadowEffect/>
+                    </Rectangle.Effect>
+                    <Rectangle.Fill>
+                        <SolidColorBrush Color="{DynamicResource Mainbg}"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <Label Name="lblRightTopTitle" Style="{DynamicResource Labeltopheader}" VerticalAlignment="Top" FontFamily="Helvetica" FontSize="16" FontWeight="Bold" Content="折线图"/>
+                <Grid Name="gridRightTopContent" Margin="10,35,10,10">
                 </Grid>
             </Grid>
             <Grid Grid.Row="1" Margin="0,0,0,7" Name="gridRightMiddle" >
-                <Grid Name="gridPieGraph" MouseDown="gridPieGraph_MouseDown">
+                <Grid Name="gridPieGraph" >
                     <Rectangle RadiusY="8" RadiusX="8" StrokeThickness="2">
                         <Rectangle.Effect>
                             <DropShadowEffect/>
@@ -307,33 +388,8 @@
                             <SolidColorBrush Color="{DynamicResource Mainbg}"/>
                         </Rectangle.Fill>
                     </Rectangle>
-                    <Label Style="{DynamicResource Labeltopheader}" VerticalAlignment="Top" FontFamily="Helvetica" FontSize="16" FontWeight="Bold" Content="饼状图"/>
-                    <Grid Margin="10,35,10,10">
-                        <vc:Chart Name="chartRightMiddle" xmlns:vc="clr-namespace:Visifire.Charts;assembly=WPFVisifire.Charts" BorderThickness="0" Theme="Theme1" View3D="True" ToolBarEnabled="False" Watermark="False" >
-                            <vc:Chart.AxesY>
-                                <vc:Axis AxisMaximum="100" Interval="20" StartFromZero="True" AxisType="Primary" />
-                            </vc:Chart.AxesY>
-                            <vc:Chart.Series>
-                                <vc:DataSeries LegendText="十一五期末（预计）" RenderAs="Column" AxisYType="Primary" >
-                                    <vc:DataSeries.DataPoints>
-                                        <vc:DataPoint AxisXLabel="Wall-Mart" YValue="10" />
-                                        <vc:DataPoint AxisXLabel="Exxon Mobil" YValue="25" />
-                                        <vc:DataPoint AxisXLabel="Shell" YValue="45" />
-                                        <vc:DataPoint AxisXLabel="BP" YValue="70" />
-                                        <vc:DataPoint AxisXLabel="General Motors" YValue="90" />
-                                    </vc:DataSeries.DataPoints>
-                                </vc:DataSeries>
-                                <vc:DataSeries LegendText="十五期末" RenderAs="Column" AxisYType="Primary" >
-                                    <vc:DataSeries.DataPoints>
-                                        <vc:DataPoint AxisXLabel="Wall-Mart" YValue="8" />
-                                        <vc:DataPoint AxisXLabel="Exxon Mobil" YValue="23" />
-                                        <vc:DataPoint AxisXLabel="Shell" YValue="40" />
-                                        <vc:DataPoint AxisXLabel="BP" YValue="56" />
-                                        <vc:DataPoint AxisXLabel="General Motors" YValue="80" />
-                                    </vc:DataSeries.DataPoints>
-                                </vc:DataSeries>
-                            </vc:Chart.Series>
-                        </vc:Chart>
+                    <Label Style="{DynamicResource Labeltopheader}" VerticalAlignment="Top" FontFamily="Helvetica" FontSize="16" FontWeight="Bold" Content="柱状图"/>
+                    <Grid Name="gridRightMiddleContent" Margin="10,35,10,10">
                     </Grid>
                 </Grid>
             </Grid>
