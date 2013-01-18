@@ -2128,7 +2128,7 @@
             	<Grid.Effect>
             		<DropShadowEffect/>
             	</Grid.Effect>
-                <Rectangle RadiusX="8" RadiusY="8" Height="970" Style="{DynamicResource RectangleStyle1}">
+                <Rectangle RadiusX="8" RadiusY="8" Height="970" Style="{DynamicResource RectangleStyle1}" Grid.RowSpan="2" Margin="0,0,0,-30">
                 	<Rectangle.Fill>
                 		<SolidColorBrush Color="{DynamicResource Mainbg}"/>
                 	</Rectangle.Fill>
