@@ -2623,6 +2623,18 @@
 									<VisualState x:Name="Indeterminate"/>
 								</VisualStateGroup>
 							</VisualStateManager.VisualStateGroups>
+							<Grid x:Name="grid" Grid.ColumnSpan="2" Margin="1" Visibility="Hidden">
+								<Rectangle x:Name="rectangle" HorizontalAlignment="Stretch" Width="Auto" RadiusX="0" RadiusY="0" Grid.ColumnSpan="1" Stroke="{x:Null}" Opacity="1" Grid.Column="0" Visibility="Visible" Margin="0">
+									<Rectangle.Fill>
+										<SolidColorBrush Color="{DynamicResource MouseOverColor}"/>
+									</Rectangle.Fill>
+								</Rectangle>
+								<Rectangle x:Name="rectangle1" Margin="0" RadiusY="8" RadiusX="8" Stroke="{x:Null}" HorizontalAlignment="Stretch" Width="Auto" Visibility="Visible">
+									<Rectangle.Fill>
+										<SolidColorBrush Color="{DynamicResource MouseOverColor}"/>
+									</Rectangle.Fill>
+								</Rectangle>
+							</Grid>
 							<Grid Grid.Column="1" Grid.ColumnSpan="1">
 								<Path x:Name="path" Data="M10.795,0 L10.795,9.3698717 0,9.3698717 0,9.348744 z" Height="8.3" RenderTransformOrigin="0.499999989555954,0.452180356480349" Stretch="Fill" Width="9.5" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,4,6" Fill="DarkGray" >
 									<Path.Effect>
@@ -2637,18 +2649,6 @@
 										</TransformGroup>
 									</Path.RenderTransform>
 								</Path>
-							</Grid>
-							<Grid x:Name="grid" Grid.ColumnSpan="2" Margin="1" Visibility="Hidden">
-								<Rectangle x:Name="rectangle" HorizontalAlignment="Stretch" Width="Auto" RadiusX="0" RadiusY="0" Grid.ColumnSpan="1" Stroke="{x:Null}" Opacity="1" Grid.Column="0" Visibility="Visible" Margin="0,0,10,0">
-									<Rectangle.Fill>
-										<SolidColorBrush Color="{DynamicResource MouseOverColor}"/>
-									</Rectangle.Fill>
-								</Rectangle>
-								<Rectangle x:Name="rectangle1" Margin="0" RadiusY="8" RadiusX="8" Stroke="{x:Null}" HorizontalAlignment="Stretch" Width="Auto" Visibility="Visible">
-									<Rectangle.Fill>
-										<SolidColorBrush Color="{DynamicResource MouseOverColor}"/>
-									</Rectangle.Fill>
-								</Rectangle>
 							</Grid>
 						</Grid>
 						<ControlTemplate.Triggers>
@@ -2807,7 +2807,7 @@
 									</Border>
 								</Microsoft_Windows_Themes:SystemDropShadowChrome>
 							</Popup>
-							<ToggleButton Grid.ColumnSpan="2" IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" Style="{StaticResource ComboBoxReadonlyToggleButton}" Cursor="Hand"/>
+							<ToggleButton Grid.ColumnSpan="2" IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" Style="{DynamicResource ToggleButtonFirst}" Cursor="Hand"/>
 							<ContentPresenter ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}" ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}" Content="{TemplateBinding SelectionBoxItem}" ContentStringFormat="{TemplateBinding SelectionBoxItemStringFormat}" IsHitTestVisible="false" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="15,0,12,0" Cursor="Hand"/>
 						</Grid>
 						<ControlTemplate.Triggers>
@@ -5631,7 +5631,7 @@
 									</Border>
 								</Microsoft_Windows_Themes:SystemDropShadowChrome>
 							</Popup>
-							<ToggleButton Grid.ColumnSpan="2" IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" Style="{StaticResource ComboBoxReadonlyToggleButton}" Cursor="Hand"/>
+							<ToggleButton Grid.ColumnSpan="2" IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" Style="{DynamicResource ToggleButtonLast}" Cursor="Hand"/>
 							<ContentPresenter ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}" ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}" Content="{TemplateBinding SelectionBoxItem}" ContentStringFormat="{TemplateBinding SelectionBoxItemStringFormat}" IsHitTestVisible="false" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="15,0,12,0" Cursor="Hand"/>
 						</Grid>
 						<ControlTemplate.Triggers>
@@ -5938,6 +5938,188 @@
 							<Trigger Property="IsGrouping" Value="true">
 								<Setter Property="ScrollViewer.CanContentScroll" Value="false"/>
 							</Trigger>
+						</ControlTemplate.Triggers>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Style x:Key="ToggleButtonFirst" TargetType="{x:Type ToggleButton}">
+			<Setter Property="OverridesDefaultStyle" Value="true"/>
+			<Setter Property="IsTabStop" Value="false"/>
+			<Setter Property="Focusable" Value="false"/>
+			<Setter Property="ClickMode" Value="Press"/>
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="{x:Type ToggleButton}">
+						<Grid>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition/>
+								<ColumnDefinition Width="24.467"/>
+							</Grid.ColumnDefinitions>
+							<VisualStateManager.VisualStateGroups>
+								<VisualStateGroup x:Name="CommonStates">
+									<VisualState x:Name="Normal"/>
+									<VisualState x:Name="MouseOver"/>
+									<VisualState x:Name="Pressed"/>
+									<VisualState x:Name="Disabled"/>
+								</VisualStateGroup>
+								<VisualStateGroup x:Name="FocusStates">
+									<VisualState x:Name="Unfocused"/>
+									<VisualState x:Name="Focused"/>
+								</VisualStateGroup>
+								<VisualStateGroup x:Name="CheckStates">
+									<VisualState x:Name="Checked">
+										
+										<Storyboard>
+											<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="path">
+												<EasingColorKeyFrame KeyTime="0" Value="{StaticResource OrangeColor}"/>
+											</ColorAnimationUsingKeyFrames>
+											<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Effect).(DropShadowEffect.ShadowDepth)" Storyboard.TargetName="path">
+												<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+											</DoubleAnimationUsingKeyFrames>
+											<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Effect).(DropShadowEffect.BlurRadius)" Storyboard.TargetName="path">
+												<EasingDoubleKeyFrame KeyTime="0" Value="5"/>
+											</DoubleAnimationUsingKeyFrames>
+											<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="rectangle">
+												<DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+											</ObjectAnimationUsingKeyFrames>
+											<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="rectangle1">
+												<DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+											</ObjectAnimationUsingKeyFrames>
+											<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="grid">
+												<DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+											</ObjectAnimationUsingKeyFrames>
+										</Storyboard>
+										
+									</VisualState>
+									<VisualState x:Name="Unchecked"/>
+									<VisualState x:Name="Indeterminate"/>
+								</VisualStateGroup>
+							</VisualStateManager.VisualStateGroups>
+							<Grid x:Name="grid" Grid.ColumnSpan="2" Margin="1" Visibility="Hidden">
+								<Rectangle x:Name="rectangle" HorizontalAlignment="Stretch" Width="Auto" RadiusX="0" RadiusY="0" Grid.ColumnSpan="1" Stroke="{x:Null}" Opacity="1" Grid.Column="0" Visibility="Visible" Margin="10,0,0,0">
+									<Rectangle.Fill>
+										<SolidColorBrush Color="{DynamicResource MouseOverColor}"/>
+									</Rectangle.Fill>
+								</Rectangle>
+								<Rectangle x:Name="rectangle1" Margin="0" RadiusY="8" RadiusX="8" Stroke="{x:Null}" HorizontalAlignment="Stretch" Width="Auto" Visibility="Visible">
+									<Rectangle.Fill>
+										<SolidColorBrush Color="{DynamicResource MouseOverColor}"/>
+									</Rectangle.Fill>
+								</Rectangle>
+							</Grid>
+							<Grid Grid.Column="1" Grid.ColumnSpan="1">
+								<Path x:Name="path" Data="M10.795,0 L10.795,9.3698717 0,9.3698717 0,9.348744 z" Height="8.3" RenderTransformOrigin="0.499999989555954,0.452180356480349" Stretch="Fill" Width="9.5" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,4,6" Fill="DarkGray" >
+									<Path.Effect>
+										<DropShadowEffect BlurRadius="1" ShadowDepth="1" Direction="370"/>
+									</Path.Effect>
+									<Path.RenderTransform>
+										<TransformGroup>
+											<ScaleTransform/>
+											<SkewTransform AngleX="30"/>
+											<RotateTransform Angle="60"/>
+											<TranslateTransform/>
+										</TransformGroup>
+									</Path.RenderTransform>
+								</Path>
+							</Grid>
+						</Grid>
+						<ControlTemplate.Triggers>
+							<Trigger Property="IsChecked" Value="true">
+								<Setter Property="Foreground" Value="#FFF0A032"/>
+							</Trigger>
+							<Trigger Property="IsEnabled" Value="false"/>
+						</ControlTemplate.Triggers>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Style x:Key="ToggleButtonLast" TargetType="{x:Type ToggleButton}">
+			<Setter Property="OverridesDefaultStyle" Value="true"/>
+			<Setter Property="IsTabStop" Value="false"/>
+			<Setter Property="Focusable" Value="false"/>
+			<Setter Property="ClickMode" Value="Press"/>
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="{x:Type ToggleButton}">
+						<Grid>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition/>
+								<ColumnDefinition Width="24.467"/>
+							</Grid.ColumnDefinitions>
+							<VisualStateManager.VisualStateGroups>
+								<VisualStateGroup x:Name="CommonStates">
+									<VisualState x:Name="Normal"/>
+									<VisualState x:Name="MouseOver"/>
+									<VisualState x:Name="Pressed"/>
+									<VisualState x:Name="Disabled"/>
+								</VisualStateGroup>
+								<VisualStateGroup x:Name="FocusStates">
+									<VisualState x:Name="Unfocused"/>
+									<VisualState x:Name="Focused"/>
+								</VisualStateGroup>
+								<VisualStateGroup x:Name="CheckStates">
+									<VisualState x:Name="Checked">
+										
+										<Storyboard>
+											<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="path">
+												<EasingColorKeyFrame KeyTime="0" Value="{StaticResource OrangeColor}"/>
+											</ColorAnimationUsingKeyFrames>
+											<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Effect).(DropShadowEffect.ShadowDepth)" Storyboard.TargetName="path">
+												<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+											</DoubleAnimationUsingKeyFrames>
+											<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Effect).(DropShadowEffect.BlurRadius)" Storyboard.TargetName="path">
+												<EasingDoubleKeyFrame KeyTime="0" Value="5"/>
+											</DoubleAnimationUsingKeyFrames>
+											<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="rectangle">
+												<DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+											</ObjectAnimationUsingKeyFrames>
+											<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="rectangle1">
+												<DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+											</ObjectAnimationUsingKeyFrames>
+											<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="grid">
+												<DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+											</ObjectAnimationUsingKeyFrames>
+										</Storyboard>
+										
+									</VisualState>
+									<VisualState x:Name="Unchecked"/>
+									<VisualState x:Name="Indeterminate"/>
+								</VisualStateGroup>
+							</VisualStateManager.VisualStateGroups>
+							<Grid x:Name="grid" Grid.ColumnSpan="2" Margin="1" Visibility="Hidden">
+								<Rectangle x:Name="rectangle" HorizontalAlignment="Stretch" Width="Auto" RadiusX="0" RadiusY="0" Grid.ColumnSpan="1" Stroke="{x:Null}" Opacity="1" Grid.Column="0" Visibility="Visible" Margin="0,0,10,0">
+									<Rectangle.Fill>
+										<SolidColorBrush Color="{DynamicResource MouseOverColor}"/>
+									</Rectangle.Fill>
+								</Rectangle>
+								<Rectangle x:Name="rectangle1" Margin="0" RadiusY="8" RadiusX="8" Stroke="{x:Null}" HorizontalAlignment="Stretch" Width="Auto" Visibility="Visible">
+									<Rectangle.Fill>
+										<SolidColorBrush Color="{DynamicResource MouseOverColor}"/>
+									</Rectangle.Fill>
+								</Rectangle>
+							</Grid>
+							<Grid Grid.Column="1" Grid.ColumnSpan="1">
+								<Path x:Name="path" Data="M10.795,0 L10.795,9.3698717 0,9.3698717 0,9.348744 z" Height="8.3" RenderTransformOrigin="0.499999989555954,0.452180356480349" Stretch="Fill" Width="9.5" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,4,6" Fill="DarkGray" >
+									<Path.Effect>
+										<DropShadowEffect BlurRadius="1" ShadowDepth="1" Direction="370"/>
+									</Path.Effect>
+									<Path.RenderTransform>
+										<TransformGroup>
+											<ScaleTransform/>
+											<SkewTransform AngleX="30"/>
+											<RotateTransform Angle="60"/>
+											<TranslateTransform/>
+										</TransformGroup>
+									</Path.RenderTransform>
+								</Path>
+							</Grid>
+						</Grid>
+						<ControlTemplate.Triggers>
+							<Trigger Property="IsChecked" Value="true">
+								<Setter Property="Foreground" Value="#FFF0A032"/>
+							</Trigger>
+							<Trigger Property="IsEnabled" Value="false"/>
 						</ControlTemplate.Triggers>
 					</ControlTemplate>
 				</Setter.Value>
