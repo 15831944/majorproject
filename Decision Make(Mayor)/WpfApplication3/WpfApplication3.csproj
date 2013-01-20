@@ -522,6 +522,7 @@
     <Resource Include="Cam.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="CutImages\图像\back.png" />
     <Resource Include="CutImages\图像\FeiJing.png" />
     <Resource Include="CutImages\图像\Fushe.png" />
     <Resource Include="CutImages\图像\HuoJing.png" />

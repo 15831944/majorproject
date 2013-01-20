@@ -6346,5 +6346,132 @@
 				</Setter.Value>
 			</Setter>
 		</Style>
+		<Style x:Key="CheckBoxMute" TargetType="{x:Type CheckBox}">
+			<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+			<Setter Property="Background" Value="{StaticResource CheckBoxFillNormal}"/>
+			<Setter Property="BorderBrush" Value="{StaticResource CheckBoxStroke}"/>
+			<Setter Property="BorderThickness" Value="1"/>
+			<Setter Property="FocusVisualStyle" Value="{StaticResource EmptyCheckBoxFocusVisual}"/>
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="{x:Type CheckBox}">
+						<Grid Margin="4,0,13,0">
+							<VisualStateManager.VisualStateGroups>
+								<VisualStateGroup x:Name="CheckStates">
+									<VisualState x:Name="Checked">
+										<Storyboard>
+											<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="grid">
+												<DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
+											</ObjectAnimationUsingKeyFrames>
+										</Storyboard>
+									</VisualState>
+									<VisualState x:Name="Unchecked"/>
+									<VisualState x:Name="Indeterminate"/>
+								</VisualStateGroup>
+							</VisualStateManager.VisualStateGroups>
+							<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="0" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+							<Grid HorizontalAlignment="Center" Width="13.78" Height="15.237" VerticalAlignment="Center">
+								<Rectangle Fill="#FFF4F4F5" Width="1" Height="5" HorizontalAlignment="Left" Margin="0,5.121,0,5.116"/>
+								<Path Data="M4.9380003,0 L4.9380003,7.6116668 4.9379998,15.073667 0,10.063482 0,7.6116668 0,7.4580001 0,5.0075536 z" Fill="#FFF4F4F5" HorizontalAlignment="Left" Margin="1.243,0,0,0" Stretch="Fill" Width="4.938" />
+								<Grid x:Name="grid" Width="10" Height="10" HorizontalAlignment="Right" VerticalAlignment="Center">
+									<ed:Arc Fill="{x:Null}" HorizontalAlignment="Stretch" Height="6" Margin="0.937,2.126,3.063,1.874" VerticalAlignment="Stretch" Width="Auto" RenderTransformOrigin="0.5,0.5">
+										<ed:Arc.RenderTransform>
+											<TransformGroup>
+												<ScaleTransform/>
+												<SkewTransform/>
+												<RotateTransform Angle="45"/>
+												<TranslateTransform/>
+											</TransformGroup>
+										</ed:Arc.RenderTransform>
+										<ed:Arc.Stroke>
+											<SolidColorBrush Color="#FFFFFF"/>
+										</ed:Arc.Stroke>
+									</ed:Arc>
+									<ed:Arc Fill="{x:Null}" HorizontalAlignment="Stretch" Height="10" Margin="0" VerticalAlignment="Stretch" Width="Auto" RenderTransformOrigin="0.5,0.5">
+										<ed:Arc.RenderTransform>
+											<TransformGroup>
+												<ScaleTransform/>
+												<SkewTransform/>
+												<RotateTransform Angle="45"/>
+												<TranslateTransform/>
+											</TransformGroup>
+										</ed:Arc.RenderTransform>
+										<ed:Arc.Stroke>
+											<SolidColorBrush Color="#FFFFFF"/>
+										</ed:Arc.Stroke>
+									</ed:Arc>
+								</Grid>
+							</Grid>
+						</Grid>
+						<ControlTemplate.Triggers>
+							<Trigger Property="HasContent" Value="true">
+								<Setter Property="FocusVisualStyle" Value="{StaticResource CheckRadioFocusVisual}"/>
+								<Setter Property="Padding" Value="4,0,0,0"/>
+							</Trigger>
+							<Trigger Property="IsEnabled" Value="false">
+								<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+							</Trigger>
+						</ControlTemplate.Triggers>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Style x:Key="ButtonReturn" TargetType="{x:Type Button}">
+			<Setter Property="FocusVisualStyle" Value="{StaticResource ButtonFocusVisual}"/>
+			<Setter Property="Background" Value="{StaticResource ButtonNormalBackground}"/>
+			<Setter Property="BorderBrush" Value="{StaticResource ButtonNormalBorder}"/>
+			<Setter Property="BorderThickness" Value="1"/>
+			<Setter Property="Foreground" Value="#f0f0f0"/>
+			<Setter Property="HorizontalContentAlignment" Value="Center"/>
+			<Setter Property="VerticalContentAlignment" Value="Center"/>
+			<Setter Property="Padding" Value="1"/>
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="{x:Type Button}">
+						<Grid>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="24.75"/>
+								<ColumnDefinition Width="*"/>
+							</Grid.ColumnDefinitions>
+							<VisualStateManager.VisualStateGroups>
+								<VisualStateGroup x:Name="CommonStates">
+									<VisualState x:Name="Normal"/>
+									<VisualState x:Name="MouseOver"/>
+									<VisualState x:Name="Pressed">
+										<Storyboard>
+											<ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="rectangle1">
+												<EasingThicknessKeyFrame KeyTime="0" Value="-0.1,-1,0.1,1"/>
+											</ThicknessAnimationUsingKeyFrames>
+											<ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="rectangle2">
+												<EasingThicknessKeyFrame KeyTime="0" Value="0.1,1,-0.1,-1"/>
+											</ThicknessAnimationUsingKeyFrames>
+											<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
+												<EasingColorKeyFrame KeyTime="0" Value="{StaticResource MouseOverColor}"/>
+											</ColorAnimationUsingKeyFrames>
+										</Storyboard>
+									</VisualState>
+									<VisualState x:Name="Disabled"/>
+								</VisualStateGroup>
+							</VisualStateManager.VisualStateGroups>
+							<Rectangle x:Name="rectangle2" Fill="#FFB4B5A7" RadiusY="6" RadiusX="6" Margin="-0.1,-0.7,0.1,0.7" Grid.ColumnSpan="2"/>
+							<Rectangle x:Name="rectangle1" Fill="#FF434342" RadiusY="6" RadiusX="6" Margin="0.2,1,-0.2,-1" Grid.ColumnSpan="2"/>
+							<Rectangle x:Name="rectangle" HorizontalAlignment="Stretch" Height="Auto" RadiusY="6" RadiusX="6" VerticalAlignment="Stretch" Width="Auto" Cursor="Hand" Fill="#FF575850" Grid.ColumnSpan="2"/>
+							<ContentPresenter Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Cursor="Hand" Grid.Column="1" HorizontalAlignment="Left"/>
+							<Image Source="CutImages/图像/back.png" Stretch="Fill" Width="15" Height="15"/>
+						</Grid>
+						<ControlTemplate.Triggers>
+							<Trigger Property="IsKeyboardFocused" Value="true"/>
+							<Trigger Property="IsPressed" Value="true">
+								<Setter Property="Foreground" Value="#F0A032"/>
+							</Trigger>
+							<Trigger Property="ToggleButton.IsChecked" Value="true"/>
+							<Trigger Property="IsEnabled" Value="false">
+								<Setter Property="Foreground" Value="#ADADAD"/>
+							</Trigger>
+						</ControlTemplate.Triggers>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
 	</Application.Resources>
 </Application>

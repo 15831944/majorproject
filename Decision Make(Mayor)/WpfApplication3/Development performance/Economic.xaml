@@ -244,7 +244,7 @@
 
                     </Grid>
                 </Grid>
-                <Grid Name="gridGraph">
+                <Grid Name="gridGraph" Visibility="Hidden">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="70*"/>
                         <ColumnDefinition Width="30*"/>
@@ -340,10 +340,10 @@
                         					<SolidColorBrush Color="{DynamicResource #235235235}"/>
                         				</ComboBox.Foreground>
                         				<ComboBoxItem Content="经济子系统" IsEnabled="False" IsSelected="True" />
-                        				<CheckBox x:Name="ckb1" Content="净迁移率" Style="{DynamicResource CheckBoxfeedback}" Checked="ckb1_Checked" />
-                        				<CheckBox x:Name="ckb2" Content="千人拥有病床数" Style="{DynamicResource CheckBoxfeedback}" Checked="ckb2_Checked" />
-                        				<CheckBox x:Name="ckb3" Content="人均住房使用面积" Style="{DynamicResource CheckBoxfeedback}" Checked="ckb3_Checked" />
-                        				<CheckBox x:Name="ckb4" Content="普通中学人数比重" Style="{DynamicResource CheckBoxfeedback}" Checked="ckb4_Checked" />
+                        				<CheckBox x:Name="ckb1" Content="净迁移率" Style="{DynamicResource CheckBoxfeedback}" Checked="ckb1_Checked" Unchecked="ckb1_Unchecked" />
+                        				<CheckBox x:Name="ckb2" Content="千人拥有病床数" Style="{DynamicResource CheckBoxfeedback}" Checked="ckb2_Checked" Unchecked="ckb2_Unchecked" />
+                        				<CheckBox x:Name="ckb3" Content="人均住房使用面积" Style="{DynamicResource CheckBoxfeedback}" Checked="ckb3_Checked" Unchecked="ckb3_Unchecked" />
+                        				<CheckBox x:Name="ckb4" Content="普通中学人数比重" Style="{DynamicResource CheckBoxfeedback}" Checked="ckb4_Checked" Unchecked="ckb4_Unchecked" />
                         			</ComboBox>
                         		</Grid>
                         	</StackPanel>

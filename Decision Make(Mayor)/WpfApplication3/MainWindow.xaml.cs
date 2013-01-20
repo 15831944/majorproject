@@ -470,28 +470,28 @@ namespace WpfApplication3
         }
       
 
-        public void menu6_1_Selected(object sender, System.Windows.RoutedEventArgs e)
+        public void menu6_1_PreviewMouseDown(object sender, System.Windows.RoutedEventArgs e)
 		{
 			// TODO: Add event handler implementation here.
 			PageShiGuZaiHai m_PageShiGuZaiHai = new PageShiGuZaiHai(1);//自然灾害
             FrameMiddleContent.Navigate(m_PageShiGuZaiHai);
 
 		}
-        private void menu6_2_Selected(object sender, System.Windows.RoutedEventArgs e)
+        private void menu6_2_PreviewMouseDown(object sender, System.Windows.RoutedEventArgs e)
         {
             // TODO: Add event handler implementation here.
             PageShiGuZaiHai m_PageShiGuZaiHai = new PageShiGuZaiHai(2);//社会安全
             FrameMiddleContent.Navigate(m_PageShiGuZaiHai);
 
         }
-        private void menu6_3_Selected(object sender, System.Windows.RoutedEventArgs e)
+        private void menu6_3_PreviewMouseDown(object sender, System.Windows.RoutedEventArgs e)
         {
             // TODO: Add event handler implementation here.
             PageShiGuZaiHai m_PageShiGuZaiHai = new PageShiGuZaiHai(3);//事故灾害
             FrameMiddleContent.Navigate(m_PageShiGuZaiHai);
 
         }
-        private void menu6_4_Selected(object sender, System.Windows.RoutedEventArgs e)
+        private void menu6_4_PreviewMouseDown(object sender, System.Windows.RoutedEventArgs e)
         {
             // TODO: Add event handler implementation here.
             PageShiGuZaiHai m_PageShiGuZaiHai = new PageShiGuZaiHai(4);//
@@ -499,7 +499,7 @@ namespace WpfApplication3
 
         }
 
-		private void menu7_1_Selected(object sender, System.Windows.RoutedEventArgs e)
+		private void menu7_1_PreviewMouseDown(object sender, System.Windows.RoutedEventArgs e)
 		{
 			// TODO: Add event handler implementation here.
 			FeedBack.PageTeacherStudentFeedback m_PageTeacherStudentFeedback = new FeedBack.PageTeacherStudentFeedback(1);
@@ -508,33 +508,33 @@ namespace WpfApplication3
 			
 		}
 
-		private void menu4_2_Selected(object sender, System.Windows.RoutedEventArgs e)
+		private void menu4_2_PreviewMouseDown(object sender, System.Windows.RoutedEventArgs e)
 		{
 			// TODO: Add event handler implementation here.
 			Communicate.PageDocIssue m_PageDocIssue = new Communicate.PageDocIssue();
             FrameMiddleContent.Navigate(m_PageDocIssue);
 		}
 
-		private void menu8_1_Selected(object sender, System.Windows.RoutedEventArgs e)//重大项目
+		private void menu8_1_PreviewMouseDown(object sender, System.Windows.RoutedEventArgs e)//重大项目
 		{
 			// TODO: Add event handler implementation here.
 			LargeProject.PageProject m_PageProject = new LargeProject.PageProject(1);
             FrameMiddleContent.Navigate(m_PageProject);
 
 		}
-        private void menu8_2_Selected(object sender, RoutedEventArgs e)
+        private void menu8_2_PreviewMouseDown(object sender, RoutedEventArgs e)
         {
             LargeProject.PageProject m_PageProject = new LargeProject.PageProject(2);
             FrameMiddleContent.Navigate(m_PageProject);
         }
 
-        private void menu8_3_Selected(object sender, RoutedEventArgs e)
+        private void menu8_3_PreviewMouseDown(object sender, RoutedEventArgs e)
         {
             LargeProject.PageProject m_PageProject = new LargeProject.PageProject(3);
             FrameMiddleContent.Navigate(m_PageProject);
         }
 		
-		private void menu5_1_Selected(object sender, System.Windows.RoutedEventArgs e)
+		private void menu5_1_PreviewMouseDown(object sender, System.Windows.RoutedEventArgs e)
 		{
 			// TODO: Add event handler implementation here.
 			
@@ -542,14 +542,14 @@ namespace WpfApplication3
             FrameMiddleContent.Navigate(m_PageCase);
 		}
 
-		private void menu4_3_Selected(object sender, System.Windows.RoutedEventArgs e)
+		private void menu4_3_PreviewMouseDown(object sender, System.Windows.RoutedEventArgs e)
 		{
 			// TODO: Add event handler implementation here.
             DailyManagement.VideoConferencing m_VideoConferencing = new DailyManagement.VideoConferencing();
             FrameMiddleContent.Navigate(m_VideoConferencing);
 		}
 
-		private void menu4_1_Selected(object sender, System.Windows.RoutedEventArgs e)
+		private void menu4_1_PreviewMouseDown(object sender, System.Windows.RoutedEventArgs e)
 		{
 			// TODO: Add event handler implementation here.
 			DailyManagement.Schedule m_Schedule = new DailyManagement.Schedule();
@@ -557,12 +557,12 @@ namespace WpfApplication3
 
 		}
 
-		private void menutitle_Selected(object sender, System.Windows.RoutedEventArgs e)
+		private void menutitle_PreviewMouseDown(object sender, System.Windows.RoutedEventArgs e)
 		{
 			// TODO: Add event handler implementation here.
 		}
 
-        private void menu2_2_Selected(object sender, RoutedEventArgs e)
+        private void menu2_2_PreviewMouseDown(object sender, RoutedEventArgs e)
         {
             //ResourcesAndManpower.PageOrganizationStructure m_OrganizationStructure = new ResourcesAndManpower.PageOrganizationStructure();
             //FrameMiddleContent.Navigate(m_OrganizationStructure);
@@ -570,42 +570,42 @@ namespace WpfApplication3
             FrameMiddleContent.Navigate(m_OrganizationStructure);
         }
 
-        private void menu2_1_Selected(object sender, RoutedEventArgs e)
+        private void menu2_1_PreviewMouseDown(object sender, RoutedEventArgs e)
         {
             ResourcesAndManpower.PageSpatialResource m_Page = new ResourcesAndManpower.PageSpatialResource();
             FrameMiddleContent.Navigate(m_Page);
         }
 
-        private void menu2_3_Selected(object sender, RoutedEventArgs e)
+        private void menu2_3_PreviewMouseDown(object sender, RoutedEventArgs e)
         {
             
         }
 
-        private void menu2_4_Selected(object sender, RoutedEventArgs e)
+        private void menu2_4_PreviewMouseDown(object sender, RoutedEventArgs e)
         {
             ResourcesAndManpower.PageFinacialReource m_Page = new ResourcesAndManpower.PageFinacialReource();
             FrameMiddleContent.Navigate(m_Page);
         }
 
-        private void menu5_2_Selected(object sender, RoutedEventArgs e)
+        private void menu5_2_PreviewMouseDown(object sender, RoutedEventArgs e)
         {
             Case.PageCase m_PageCase = new Case.PageCase(2);
             FrameMiddleContent.Navigate(m_PageCase);
         }
 
-        private void menu5_3_Selected(object sender, RoutedEventArgs e)
+        private void menu5_3_PreviewMouseDown(object sender, RoutedEventArgs e)
         {
             Case.PageCase m_PageCase = new Case.PageCase(3);
             FrameMiddleContent.Navigate(m_PageCase);
         }
 
-        private void menu7_2_Selected(object sender, RoutedEventArgs e)
+        private void menu7_2_PreviewMouseDown(object sender, RoutedEventArgs e)
         {
             FeedBack.PageTeacherStudentFeedback m_PageTeacherStudentFeedback = new FeedBack.PageTeacherStudentFeedback(2);
             FrameMiddleContent.Navigate(m_PageTeacherStudentFeedback);
         }
 
-        private void menu7_3_Selected(object sender, RoutedEventArgs e)
+        private void menu7_3_PreviewMouseDown(object sender, RoutedEventArgs e)
         {
             FeedBack.PageTeacherStudentFeedback m_PageTeacherStudentFeedback = new FeedBack.PageTeacherStudentFeedback(3);
             FrameMiddleContent.Navigate(m_PageTeacherStudentFeedback);
@@ -623,6 +623,17 @@ namespace WpfApplication3
             keybd_event(VK_VOLUME_MUTE, MapVirtualKey(VK_VOLUME_MUTE, 0), KEYEVENTF_EXTENDEDKEY | KEYEVENTF_KEYUP, 0);
         }
 
+        private void ckbMute_Checked(object sender, System.Windows.RoutedEventArgs e)
+        {
+            keybd_event(VK_VOLUME_MUTE, MapVirtualKey(VK_VOLUME_MUTE, 0), KEYEVENTF_EXTENDEDKEY, 0);
+            keybd_event(VK_VOLUME_MUTE, MapVirtualKey(VK_VOLUME_MUTE, 0), KEYEVENTF_EXTENDEDKEY | KEYEVENTF_KEYUP, 0);
+		}
+
+        private void ckbMute_Unchecked(object sender, System.Windows.RoutedEventArgs e)
+        {
+            keybd_event(VK_VOLUME_MUTE, MapVirtualKey(VK_VOLUME_MUTE, 0), KEYEVENTF_EXTENDEDKEY, 0);
+            keybd_event(VK_VOLUME_MUTE, MapVirtualKey(VK_VOLUME_MUTE, 0), KEYEVENTF_EXTENDEDKEY | KEYEVENTF_KEYUP, 0);
+        }
 
     }
 }

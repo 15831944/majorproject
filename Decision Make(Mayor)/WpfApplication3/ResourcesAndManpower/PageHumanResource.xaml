@@ -238,7 +238,7 @@
         				<Rectangle StrokeThickness="1" Height="1" VerticalAlignment="Center" Fill="#FF89897D" d:LayoutOverrides="Height"/>
         			</Grid>
         		</Grid>
-                <Button Content="返回，做成减号即可" Height="23" HorizontalAlignment="Left" Margin="510,29,0,0" Name="button1" VerticalAlignment="Top" Width="127" Click="button1_Click" Grid.Column="1" />
+                <Button Content="返回" Height="23" HorizontalAlignment="Left" Margin="844.333,0,0,22.167" Name="button1" VerticalAlignment="Bottom" Width="63.333" Click="button1_Click" Grid.Column="1" Style="{DynamicResource ButtonReturn}" />
             </Grid>
         </Grid>
         <!--部门列表-->
