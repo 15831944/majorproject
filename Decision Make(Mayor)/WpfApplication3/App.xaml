@@ -6301,7 +6301,7 @@
 			<Setter Property="Template">
 				<Setter.Value>
 					<ControlTemplate TargetType="{x:Type ListBoxItem}">
-						<Grid x:Name="Bd" Background="{TemplateBinding Background}" Height="35" SnapsToDevicePixels="true" Width="125">
+						<Grid x:Name="Bd" Background="{TemplateBinding Background}" Height="35" SnapsToDevicePixels="true" Width="Auto">
 							<VisualStateManager.VisualStateGroups>
 								<VisualStateGroup x:Name="CommonStates">
 									<VisualState x:Name="Normal"/>
