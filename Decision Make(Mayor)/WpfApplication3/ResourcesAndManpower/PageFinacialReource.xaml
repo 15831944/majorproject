@@ -152,7 +152,8 @@
         			</TextBlock>
                         
         		</UniformGrid>
-        	</Grid> 
+        	</Grid> 
+
 <Grid Grid.Row="1">
 	<Grid.ColumnDefinitions>
 		<ColumnDefinition Width="0.5*"/>
