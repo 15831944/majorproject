@@ -1052,58 +1052,6 @@ namespace WpfApplication3.Development_performance
             lbxGraph.ItemsSource = listGraphItems;
         }
 
-        private void btnBrokenLine1_Click(object sender, RoutedEventArgs e)
-        {
-            foreach (listboxitemGraph item in listGraphItems)
-            {
-                if (item.index == 0)
-                    return;
-            }
-            listGraphItems.Add(new listboxitemGraph() { index = 0, lblContent = "净迁移率" });
-            lbxGraph.ItemsSource = listGraphItems;
-
-            refreshGraphAndListBox();
-
-        }
-
-        private void btnBrokenLine2_Click(object sender, RoutedEventArgs e)
-        {
-            foreach (listboxitemGraph item in listGraphItems)
-            {
-                if (item.index == 1)
-                    return;
-            }
-            listGraphItems.Add(new listboxitemGraph() { index = 1, lblContent = "千人拥有病床数" });
-            lbxGraph.ItemsSource = listGraphItems;
-            refreshGraphAndListBox();
-        }
-
-        private void btnBrokenLine3_Click(object sender, RoutedEventArgs e)
-        {
-            foreach (listboxitemGraph item in listGraphItems)
-            {
-                if (item.index == 2)
-                    return;
-            }
-            listGraphItems.Add(new listboxitemGraph() { index = 2, lblContent = "人均住房使用面积" });
-            lbxGraph.ItemsSource = listGraphItems;
-
-            refreshGraphAndListBox();
-        }
-
-        private void btnBrokenLine4_Click(object sender, RoutedEventArgs e)
-        {
-            foreach (listboxitemGraph item in listGraphItems)
-            {
-                if (item.index == 3)
-                    return;
-            }
-            listGraphItems.Add(new listboxitemGraph() { index = 3, lblContent = "普通中学人数比重" });
-            lbxGraph.ItemsSource = listGraphItems;
-
-            refreshGraphAndListBox();
-        }
-
         private void btnGraphClear_Click(object sender, RoutedEventArgs e)
         {
             Button btn = sender as Button;
@@ -1132,6 +1080,58 @@ namespace WpfApplication3.Development_performance
         private void btnGraphClearAll_Click(object sender, RoutedEventArgs e)
         {
             listGraphItems.Clear();
+            refreshGraphAndListBox();
+        }
+
+        private void ckb1_Checked(object sender, System.Windows.RoutedEventArgs e)
+        {
+            foreach (listboxitemGraph item in listGraphItems)
+            {
+                if (item.index == 0)
+                    return;
+            }
+            listGraphItems.Add(new listboxitemGraph() { index = 0, lblContent = "净迁移率" });
+            lbxGraph.ItemsSource = listGraphItems;
+
+            refreshGraphAndListBox();
+
+        }
+
+        private void ckb2_Checked(object sender, System.Windows.RoutedEventArgs e)
+        {
+            foreach (listboxitemGraph item in listGraphItems)
+            {
+                if (item.index == 1)
+                    return;
+            }
+            listGraphItems.Add(new listboxitemGraph() { index = 1, lblContent = "千人拥有病床数" });
+            lbxGraph.ItemsSource = listGraphItems;
+            refreshGraphAndListBox();
+        }
+
+        private void ckb3_Checked(object sender, System.Windows.RoutedEventArgs e)
+        {
+            foreach (listboxitemGraph item in listGraphItems)
+            {
+                if (item.index == 2)
+                    return;
+            }
+            listGraphItems.Add(new listboxitemGraph() { index = 2, lblContent = "人均住房使用面积" });
+            lbxGraph.ItemsSource = listGraphItems;
+
+            refreshGraphAndListBox();
+        }
+
+        private void ckb4_Checked(object sender, System.Windows.RoutedEventArgs e)
+        {
+            foreach (listboxitemGraph item in listGraphItems)
+            {
+                if (item.index == 3)
+                    return;
+            }
+            listGraphItems.Add(new listboxitemGraph() { index = 3, lblContent = "普通中学人数比重" });
+            lbxGraph.ItemsSource = listGraphItems;
+
             refreshGraphAndListBox();
         }
 

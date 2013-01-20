@@ -302,32 +302,126 @@
 
                         </Grid>
                     </Grid>
-                    <Grid Grid.Column="1">
+                    <Grid Grid.Column="1" Margin="0,50,0,0">
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="50*"/>
-                            <RowDefinition Height="50*"/>
+                            <RowDefinition Height="0.216*"/>
+                            <RowDefinition Height="0.784*"/>
                         </Grid.RowDefinitions>
-                        <Grid Grid.Row="0" Margin="10,50,10,10">
+                        <Grid Grid.Row="0" Margin="20,50,20,0" VerticalAlignment="Top">
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="20*"/>
-                                <RowDefinition Height="20*"/>
-                                <RowDefinition Height="20*"/>
-                                <RowDefinition Height="20*"/>
-                                <RowDefinition Height="20*"/>
+                                <RowDefinition/>
                             </Grid.RowDefinitions>
-                            <Label Content="经济子系统" Grid.Row="0"/>
-                            <Button Name="btnBrokenLine1" Grid.Row="1" Content="净迁移率" Click="btnBrokenLine1_Click" />
-                            <Button Name="btnBrokenLine2" Grid.Row="2" Content="千人拥有病床数" Click="btnBrokenLine2_Click" />
-                            <Button Name="btnBrokenLine3" Grid.Row="3" Content="人均住房使用面积" Click="btnBrokenLine3_Click" />
-                            <Button Name="btnBrokenLine4" Grid.Row="4" Content="普通中学人数比重" Click="btnBrokenLine4_Click" />
+                        	<Grid>
+                        		<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="1,1,0,0">
+                        			<Rectangle.Stroke>
+                        				<SolidColorBrush Color="{DynamicResource #235235235}"/>
+                        			</Rectangle.Stroke>
+                        		</Rectangle>
+                        		<Rectangle HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" StrokeDashArray="3 3" StrokeThickness="1" RadiusX="8" RadiusY="8" Stroke="{x:Null}" Margin="0,0,1,1">
+                        			<Rectangle.Fill>
+                        				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        					<GradientStop Color="#FF64665B"/>
+                        					<GradientStop Color="#FF50524D" Offset="1"/>
+                        					<GradientStop Color="#FF64665B" Offset="0.088"/>
+                        					<GradientStop Color="#FF52534D" Offset="0.938"/>
+                        				</LinearGradientBrush>
+                        			</Rectangle.Fill>
+                        		</Rectangle>
+                        		<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="0,0,1,1">
+                        			<Rectangle.Stroke>
+                        				<SolidColorBrush Color="{DynamicResource Foregroundgray}"/>
+                        			</Rectangle.Stroke>
+                        		</Rectangle>
+                        	</Grid>
+                        	<StackPanel Orientation="Vertical" d:LayoutOverrides="Height">
+                        		<Grid VerticalAlignment="Center">
+                        			<ComboBox Height="30" x:Name="comboBox1" Style="{DynamicResource ComboBoxSingle}" Background="{x:Null}" BorderBrush="{x:Null}" ItemContainerStyle="{DynamicResource ComboBoxItemfeedback}">
+                        				<ComboBox.Foreground>
+                        					<SolidColorBrush Color="{DynamicResource #235235235}"/>
+                        				</ComboBox.Foreground>
+                        				<ComboBoxItem Content="经济子系统" IsEnabled="False" IsSelected="True" />
+                        				<CheckBox x:Name="ckb1" Content="净迁移率" Style="{DynamicResource CheckBoxfeedback}" Checked="ckb1_Checked" />
+                        				<CheckBox x:Name="ckb2" Content="千人拥有病床数" Style="{DynamicResource CheckBoxfeedback}" Checked="ckb2_Checked" />
+                        				<CheckBox x:Name="ckb3" Content="人均住房使用面积" Style="{DynamicResource CheckBoxfeedback}" Checked="ckb3_Checked" />
+                        				<CheckBox x:Name="ckb4" Content="普通中学人数比重" Style="{DynamicResource CheckBoxfeedback}" Checked="ckb4_Checked" />
+                        			</ComboBox>
+                        		</Grid>
+                        		<Rectangle RadiusY="0" RadiusX="0" Stroke="{x:Null}" StrokeThickness="0.5" Height="1" Margin="1,0,2,0">
+                        			<Rectangle.Fill>
+                        				<LinearGradientBrush EndPoint="0.4,0.977" StartPoint="0.4,0.082">
+                        					<GradientStop Color="#FF4D4E4A" Offset="0"/>
+                        					<GradientStop Color="#FFC8C4C4" Offset="1"/>
+                        					<GradientStop Color="#FF464943" Offset="0.5"/>
+                        					<GradientStop Color="#FFC2C2C2" Offset="0.538"/>
+                        				</LinearGradientBrush>
+                        			</Rectangle.Fill>
+                        		</Rectangle>
+                        		<Grid VerticalAlignment="Center">
+                        			<ComboBox Height="30" x:Name="comboBox2" Style="{DynamicResource ComboBoxSingle}" Background="{x:Null}" BorderBrush="{x:Null}" ItemContainerStyle="{DynamicResource ComboBoxItemfeedback}">
+                        				<ComboBox.Foreground>
+                        					<SolidColorBrush Color="{DynamicResource #235235235}"/>
+                        				</ComboBox.Foreground>
+                        				<ComboBoxItem Content="社会子系统" IsEnabled="False" IsSelected="True" />
+                        				<CheckBox x:Name="ckb5" Content="净迁移率" Style="{DynamicResource CheckBoxfeedback}" Checked="ckb1_Checked" />
+                        				<CheckBox x:Name="ckb6" Content="千人拥有病床数" Style="{DynamicResource CheckBoxfeedback}" Checked="ckb2_Checked" />
+                        				<CheckBox x:Name="ckb7" Content="人均住房使用面积" Style="{DynamicResource CheckBoxfeedback}" Checked="ckb3_Checked" />
+                        				<CheckBox x:Name="ckb8" Content="普通中学人数比重" Style="{DynamicResource CheckBoxfeedback}" Checked="ckb4_Checked" />
+                        			</ComboBox>
+                        		</Grid>
+                        		<Rectangle RadiusY="0" RadiusX="0" Stroke="{x:Null}" StrokeThickness="0.5" Height="1" Margin="1,0,2,0">
+                        			<Rectangle.Fill>
+                        				<LinearGradientBrush EndPoint="0.4,0.977" StartPoint="0.4,0.082">
+                        					<GradientStop Color="#FF4D4E4A" Offset="0"/>
+                        					<GradientStop Color="#FFC8C4C4" Offset="1"/>
+                        					<GradientStop Color="#FF464943" Offset="0.5"/>
+                        					<GradientStop Color="#FFC2C2C2" Offset="0.538"/>
+                        				</LinearGradientBrush>
+                        			</Rectangle.Fill>
+                        		</Rectangle>
+                        		<Grid VerticalAlignment="Center">
+                        			<ComboBox Height="30" x:Name="comboBox3" Style="{DynamicResource ComboBoxSingle}" Background="{x:Null}" BorderBrush="{x:Null}" ItemContainerStyle="{DynamicResource ComboBoxItemfeedback}">
+                        				<ComboBox.Foreground>
+                        					<SolidColorBrush Color="{DynamicResource #235235235}"/>
+                        				</ComboBox.Foreground>
+                        				<ComboBoxItem Content="生态子系统" IsEnabled="False" IsSelected="True" />
+                        				<CheckBox x:Name="ckb9" Content="净迁移率" Style="{DynamicResource CheckBoxfeedback}" Checked="ckb1_Checked" />
+                        				<CheckBox x:Name="ckb10" Content="千人拥有病床数" Style="{DynamicResource CheckBoxfeedback}" Checked="ckb2_Checked" />
+                        				<CheckBox x:Name="ckb11" Content="人均住房使用面积" Style="{DynamicResource CheckBoxfeedback}" Checked="ckb3_Checked" />
+                        				<CheckBox x:Name="ckb12" Content="普通中学人数比重" Style="{DynamicResource CheckBoxfeedback}" Checked="ckb4_Checked" />
+                        			</ComboBox>
+                        		</Grid>
+                        	</StackPanel>
                         </Grid>
-                        <Grid Grid.Row="1" Margin="10,10,10,10">
+                        <Grid Grid.Row="1" Margin="20,10,20,30">
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="80*"/>
-                                <RowDefinition Height="20*"/>
+                                <RowDefinition Height="0.943*"/>
+                                <RowDefinition Height="0.057*"/>
                             </Grid.RowDefinitions>
+                            <Grid Grid.RowSpan="2">
+                            	<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="1,1,0,0">
+                            		<Rectangle.Stroke>
+                            			<SolidColorBrush Color="{DynamicResource #235235235}"/>
+                            		</Rectangle.Stroke>
+                            	</Rectangle>
+                            	<Rectangle HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" StrokeDashArray="3 3" StrokeThickness="1" RadiusX="8" RadiusY="8" Stroke="{x:Null}" Margin="0,0,1,1">
+                            		<Rectangle.Fill>
+                            			<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            				<GradientStop Color="#FF5D5D5D" Offset="0"/>
+                            				<GradientStop Color="#FF64665C" Offset="1"/>
+                            			</LinearGradientBrush>
+                            		</Rectangle.Fill>
+                            	</Rectangle>
+                            	<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="0,0,1,1">
+                            		<Rectangle.Stroke>
+                            			<SolidColorBrush Color="{DynamicResource Foregroundgray}"/>
+                            		</Rectangle.Stroke>
+                            	</Rectangle>
+                            </Grid>
                             <Grid Grid.Row="0" Margin="5">
-                                <ListBox Name="lbxGraph" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                                <ListBox x:Name="lbxGraph" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" Background="{x:Null}" BorderBrush="{x:Null}" ItemContainerStyle="{DynamicResource ListBoxItemStyle1}">
+                                	<ListBox.Foreground>
+                                		<SolidColorBrush Color="#FFEBEBD8"/>
+                                	</ListBox.Foreground>
                                     <ListBox.ItemTemplate>
                                         <DataTemplate>
                                             <Grid Margin="5,10,5,10">
@@ -339,21 +433,27 @@
                                                     <TextBlock Text="{Binding lblContent}"/>
                                                 </Grid>
                                                 <Grid Grid.Column="1">
-                                                    <Button Click="btnGraphClear_Click" Tag="{Binding index}"/>
+                                                    <Button Click="btnGraphClear_Click" Tag="{Binding index}" Style="{DynamicResource ButtonRemove}"/>
                                                 </Grid>
                                             </Grid>
                                         </DataTemplate>
                                     </ListBox.ItemTemplate>
                                 </ListBox>
                             </Grid>
-                            <Grid Grid.Row="1">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="50*"/>
-                                    <ColumnDefinition Width="50*"/>
-                                </Grid.ColumnDefinitions>
-                                <Button Name="btnGraphSelectAll" Content="全部" Grid.Column="0" Click="btnGraphSelectAll_Click" />
-                                <Button Name="btnGraphClearAll" Content="清除" Grid.Column="1" Click="btnGraphClearAll_Click" />
-                            </Grid>
+                            <StackPanel Grid.Row="1" Orientation="Horizontal">
+                            	<Button x:Name="btnGraphSelectAll" Content="全部" Click="btnGraphSelectAll_Click" Style="{DynamicResource ButtonAll}" Height="30" VerticalAlignment="Center" HorizontalAlignment="Left" Width="119.5" />
+                            	<Rectangle Margin="0,0,0,2" RadiusY="0" RadiusX="0" Stroke="{x:Null}" StrokeThickness="0.5" Width="2">
+                            		<Rectangle.Fill>
+                            			<LinearGradientBrush EndPoint="1.143,0.492" StartPoint="0.029,0.492">
+                            				<GradientStop Color="#FF4D4E4A" Offset="0"/>
+                            				<GradientStop Color="#FFC8C4C4" Offset="1"/>
+                            				<GradientStop Color="#FF464943" Offset="0.5"/>
+                            				<GradientStop Color="#FFC2C2C2" Offset="0.538"/>
+                            			</LinearGradientBrush>
+                            		</Rectangle.Fill>
+                            	</Rectangle>
+                            	<Button x:Name="btnGraphClearAll" Content="清除" Click="btnGraphClearAll_Click" Style="{DynamicResource ButtonRemoveAll}" HorizontalAlignment="Right" Height="31.022" Width="119.5" />
+                            </StackPanel>
                         </Grid>
                     </Grid>
                 </Grid>
