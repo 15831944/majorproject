@@ -399,8 +399,8 @@ namespace WpfApplication3.Development_performance
             //--------------------------------------------------------------------------------------------
 
             listGraphItems = new List<listboxitemGraph>();
-			ckb1.IsChecked =true;
-			lbxGraph.ItemsSource = listGraphItems;
+            //ckb1.IsChecked =true;
+            lbxGraph.ItemsSource = listGraphItems;
 
             ChartHelper ch = new ChartHelper();
             ciEconomic1.dsc.Clear();
@@ -1015,6 +1015,14 @@ namespace WpfApplication3.Development_performance
                     Chart m_chart = ch.CreateChart(ciEconomic1);
                     gridGraphContent.Children.Clear();
                     gridGraphContent.Children.Add(m_chart);
+
+                    gridRightTopContent.Children.Clear();
+                    Image m_image = new Image();
+                    Uri m_uri = new Uri("/Images/shiyu.jpg",UriKind.RelativeOrAbsolute);
+                    BitmapImage bitmap = new BitmapImage(m_uri);
+                    m_image.Source = bitmap;
+                    gridRightTopContent.Children.Add(m_image);
+                    
                 }
                 else if (lblRightTopTitle.Content.ToString()=="城市图")
                 {

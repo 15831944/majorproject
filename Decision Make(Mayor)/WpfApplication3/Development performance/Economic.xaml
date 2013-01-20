@@ -167,7 +167,7 @@
                 </Grid>
             </Grid>
             <Grid Grid.Row="1" Name="gridMiddle">
-                <Grid Name="gridMap" Visibility="Visible">
+                <Grid Name="gridMap" Visibility="Hidden">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="90*"/>
                         <RowDefinition Height="10*"/>
@@ -244,7 +244,7 @@
 
                     </Grid>
                 </Grid>
-                <Grid Name="gridGraph" Visibility="Hidden">
+                <Grid Name="gridGraph" Visibility="Visible">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="70*"/>
                         <ColumnDefinition Width="30*"/>
