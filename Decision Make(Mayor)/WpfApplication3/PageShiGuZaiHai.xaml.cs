@@ -133,7 +133,7 @@ namespace WpfApplication3
                     break;
                 case 4://公共卫生
                     tbx_ShiJianShiShiGengXin.Text = "事件实时更新\r\n发生时间：2012年12月21日，13：00\r\n发生地点：邯郸路大白树立交路口\r\n事件情况：";
-                    tbx_ShiJianQingKuang.Text = "（v1212211322）路面出现不明空气污染物。\r\n（v1212211400）多名围观群众开始呕吐失去意识。\r\n（v1212211430）受感染群众开始病变，袭击路人。\r\n（v1212211454）消防特警赶到现场开始隔离感染群众。\r\n（v1212211510）卫生研究所确定污染气体为丧尸病毒。";
+                    tbx_ShiJianQingKuang.Text = "（v1212211322）路面出现不明空气污染物。\r\n（v1212211400）多名围观群众开始呕吐失去意识。\r\n（v1212211430）污染物扩散，事态升级。\r\n（v1212211454）消防特警赶到现场开始疏散群众，封锁事故区域。\r\n（v1212211510）卫生研究所确定污染气体为苯。";
                     break;
             }
             DirectoryInfo di = new DirectoryInfo(System.Environment.CurrentDirectory);
