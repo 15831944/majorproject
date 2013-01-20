@@ -2189,6 +2189,7 @@
                         </ComboBoxItem>
                     </ComboBox>
                     <Image Height="186" HorizontalAlignment="Left" x:Name="imageTVCover" Stretch="Fill" VerticalAlignment="Top" Width="280" Source="Images/TVCover.jpg" MouseLeftButtonDown="imageTVCover_MouseLeftButtonDown" Margin="6.5,8,0,0" />
+                    <Button Content="mute" Height="23" HorizontalAlignment="Left" Margin="225,194,0,0" Name="btn_mute" VerticalAlignment="Top" Width="57" Click="btn_mute_Click" />
                 </Grid>
                 <Grid x:Name="RssNews" Grid.Row="1" Margin="0">
                     <ListView x:Name="Rsslist" ItemTemplate="{DynamicResource DataTemplate1}" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Margin="0" />

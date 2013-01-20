@@ -16,6 +16,7 @@ using System.Diagnostics;
 using System.Xml;
 using WpfZhihui;
 using WpfApplication3.Language;
+using System.Runtime.InteropServices;
 
 namespace WpfApplication3
 {
@@ -24,6 +25,18 @@ namespace WpfApplication3
     /// </summary>
     public partial class MainWindow : Window
     {
+        //调用系统音量
+        [DllImport("user32.dll")]
+        static extern void keybd_event(byte bVk, byte bScan, UInt32 dwFlags, UInt32 dwExtraInfo);
+
+        [DllImport("user32.dll")]
+        static extern Byte MapVirtualKey(UInt32 uCode, UInt32 uMapType);
+        private const byte VK_VOLUME_MUTE = 0xAD;
+        private const byte VK_VOLUME_DOWN = 0xAE;
+        private const byte VK_VOLUME_UP = 0xAF;
+        private const UInt32 KEYEVENTF_EXTENDEDKEY = 0x0001;
+        private const UInt32 KEYEVENTF_KEYUP = 0x0002;
+
         string strPATH;
         private List<NewsItem> items = new List<NewsItem>();
         //-------------------------------------------------------------
@@ -601,6 +614,13 @@ namespace WpfApplication3
         private void FrameMiddleContent_Navigated(object sender, System.Windows.Navigation.NavigationEventArgs e)
         {
 
+        }
+
+        private void btn_mute_Click(object sender, RoutedEventArgs e)
+        {
+            //静音切换 
+            keybd_event(VK_VOLUME_MUTE, MapVirtualKey(VK_VOLUME_MUTE, 0), KEYEVENTF_EXTENDEDKEY, 0);
+            keybd_event(VK_VOLUME_MUTE, MapVirtualKey(VK_VOLUME_MUTE, 0), KEYEVENTF_EXTENDEDKEY | KEYEVENTF_KEYUP, 0);
         }
 
 
