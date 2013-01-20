@@ -361,8 +361,8 @@
                         <DataGrid AutoGenerateColumns="False" CanUserAddRows="False" ItemsSource="{Binding}" CanUserDeleteRows="False" CanUserResizeColumns="False" HorizontalAlignment="Stretch" x:Name="dataGridSearchResult" VerticalAlignment="Stretch" Foreground="#F0F0F0" FontSize="14" SelectionChanged="dataGridSearchResult_SelectionChanged" SelectionMode="Single" Background="#008f8f80" BorderBrush="{x:Null}" Margin="0,2.25,5,6" RowBackground="#00FFFFFF" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderCase}" RowHeaderStyle="{DynamicResource DataGridRowHeaderCase}" CellStyle="{DynamicResource DataGridCellStyle3}" ItemsPanel="{DynamicResource ItemsPanelTemplate1}">
                             <DataGrid.Columns>
                                 <DataGridTextColumn Header="项目名称" Width="40*" Binding="{Binding CaseTitle}" DragIndicatorStyle="{DynamicResource DataGridColumnHeaderStyle1}"/>
-                                <DataGridTextColumn Header="创建时间" Width="15*" Binding="{Binding CreateTime}"/>
-                                <DataGridTemplateColumn Header="推荐程度" Width="15*" >
+                                <DataGridTextColumn Header="创建时间" Width="10*" Binding="{Binding CreateTime}"/>
+                                <DataGridTemplateColumn Header="推荐程度" Width="20*" >
                                     <DataGridTemplateColumn.CellTemplate>
                                         <DataTemplate>
                                             <StackPanel Orientation="Horizontal">

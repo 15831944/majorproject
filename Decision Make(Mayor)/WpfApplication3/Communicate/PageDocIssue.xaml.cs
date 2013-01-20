@@ -216,7 +216,7 @@ namespace WpfApplication3.Communicate
 				}
 				else
 				{
-					listboxDocsType2.ItemsSource = dtDocs;
+					listboxDocsType3.ItemsSource = dtDocs;
 				}
 			}
 
