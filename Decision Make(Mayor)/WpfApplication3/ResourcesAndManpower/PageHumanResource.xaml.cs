@@ -102,5 +102,11 @@ namespace WpfApplication3.ResourcesAndManpower
             WindowHuman wh = new WindowHuman();
             wh.Show();
         }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            ResourcesAndManpower.PageOrgnization m_Page = new ResourcesAndManpower.PageOrgnization();
+            this.NavigationService.Navigate(m_Page);
+        }
     }
 }
