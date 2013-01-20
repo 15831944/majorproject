@@ -6315,7 +6315,7 @@
 									<VisualState x:Name="Disabled"/>
 								</VisualStateGroup>
 							</VisualStateManager.VisualStateGroups>
-							<Rectangle x:Name="rectangle" Stroke="{x:Null}" Visibility="Hidden">
+							<Rectangle x:Name="rectangle" Stroke="{x:Null}" Visibility="Hidden" Margin="-2,0,0,0">
 								<Rectangle.Fill>
 									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
 										<GradientStop Color="#FF393939" Offset="0"/>

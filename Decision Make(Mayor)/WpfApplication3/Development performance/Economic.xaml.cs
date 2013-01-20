@@ -1061,6 +1061,23 @@ namespace WpfApplication3.Development_performance
                 if (item.index == i)
                 {
                     listGraphItems.Remove(item);
+					switch(i)
+					{
+						case 0:
+							ckb1.IsChecked=false;
+							break;
+						case 1:
+							ckb2.IsChecked=false;
+							break;
+						case 2:
+							ckb3.IsChecked=false;
+							break;
+						case 3:
+							ckb4.IsChecked=false;
+							break;
+						default:
+							break;
+					}
                     break;
                 }
             }
@@ -1070,28 +1087,39 @@ namespace WpfApplication3.Development_performance
         private void btnGraphSelectAll_Click(object sender, RoutedEventArgs e)
         {
             listGraphItems.Clear();
-            listGraphItems.Add(new listboxitemGraph() { index = 0, lblContent = "净迁移率" });
-            listGraphItems.Add(new listboxitemGraph() { index = 1, lblContent = "千人拥有病床数" });
-            listGraphItems.Add(new listboxitemGraph() { index = 2, lblContent = "人均住房使用面积" });
-            listGraphItems.Add(new listboxitemGraph() { index = 3, lblContent = "普通中学人数比重" });
+			ckb1.IsChecked=true;
+			ckb2.IsChecked=true;
+			ckb3.IsChecked=true;
+			ckb4.IsChecked=true;
             refreshGraphAndListBox();
         }
 
         private void btnGraphClearAll_Click(object sender, RoutedEventArgs e)
         {
             listGraphItems.Clear();
+			ckb1.IsChecked=false;
+			ckb2.IsChecked=false;
+			ckb3.IsChecked=false;
+			ckb4.IsChecked=false;
             refreshGraphAndListBox();
         }
 
         private void ckb1_Checked(object sender, System.Windows.RoutedEventArgs e)
-        {
-            foreach (listboxitemGraph item in listGraphItems)
-            {
-                if (item.index == 0)
-                    return;
+        {	
+			if(ckb2.IsChecked==true)
+			{
+				foreach (listboxitemGraph item in listGraphItems)
+				{
+					if (item.index == 0)
+						return;
+				}
+				listGraphItems.Add(new listboxitemGraph() { index = 0, lblContent = "净迁移率" });
             }
-            listGraphItems.Add(new listboxitemGraph() { index = 0, lblContent = "净迁移率" });
-            lbxGraph.ItemsSource = listGraphItems;
+			else
+			{
+				listGraphItems.Remove(new listboxitemGraph() { index = 0, lblContent = "净迁移率" });
+			}
+				lbxGraph.ItemsSource = listGraphItems;
 
             refreshGraphAndListBox();
 
@@ -1099,41 +1127,65 @@ namespace WpfApplication3.Development_performance
 
         private void ckb2_Checked(object sender, System.Windows.RoutedEventArgs e)
         {
-            foreach (listboxitemGraph item in listGraphItems)
-            {
-                if (item.index == 1)
-                    return;
+			if(ckb2.IsChecked==true)
+			{
+				foreach (listboxitemGraph item in listGraphItems)
+				{
+					if (item.index == 1)
+						return;
+				}
+				listGraphItems.Add(new listboxitemGraph() { index = 1, lblContent = "千人拥有病床数" });
             }
-            listGraphItems.Add(new listboxitemGraph() { index = 1, lblContent = "千人拥有病床数" });
-            lbxGraph.ItemsSource = listGraphItems;
+			else
+			{
+				listGraphItems.Remove(new listboxitemGraph() { index = 1, lblContent = "千人拥有病床数" });
+			}
+			lbxGraph.ItemsSource = listGraphItems;
             refreshGraphAndListBox();
         }
 
         private void ckb3_Checked(object sender, System.Windows.RoutedEventArgs e)
         {
-            foreach (listboxitemGraph item in listGraphItems)
-            {
-                if (item.index == 2)
-                    return;
+			if(ckb3.IsChecked==true)
+			{
+				foreach (listboxitemGraph item in listGraphItems)
+				{
+					if (item.index == 2)
+						return;
+				}
+				listGraphItems.Add(new listboxitemGraph() { index = 2, lblContent = "人均住房使用面积" });
             }
-            listGraphItems.Add(new listboxitemGraph() { index = 2, lblContent = "人均住房使用面积" });
-            lbxGraph.ItemsSource = listGraphItems;
+			else
+			{
+				listGraphItems.Remove(new listboxitemGraph() { index = 2, lblContent = "人均住房使用面积" });
+
+			}
+				lbxGraph.ItemsSource = listGraphItems;
 
             refreshGraphAndListBox();
         }
 
         private void ckb4_Checked(object sender, System.Windows.RoutedEventArgs e)
         {
-            foreach (listboxitemGraph item in listGraphItems)
-            {
-                if (item.index == 3)
-                    return;
+			if(ckb4.IsChecked==true)
+			{
+				foreach (listboxitemGraph item in listGraphItems)
+				{
+					if (item.index == 3)
+						return;
+				}
+				listGraphItems.Add(new listboxitemGraph() { index = 3, lblContent = "普通中学人数比重" });
             }
-            listGraphItems.Add(new listboxitemGraph() { index = 3, lblContent = "普通中学人数比重" });
-            lbxGraph.ItemsSource = listGraphItems;
+			else
+			{
+				listGraphItems.Remove(new listboxitemGraph() { index = 3, lblContent = "普通中学人数比重" });
+			}
+			
+			lbxGraph.ItemsSource = listGraphItems;
 
             refreshGraphAndListBox();
         }
+		
 
     }
 }
