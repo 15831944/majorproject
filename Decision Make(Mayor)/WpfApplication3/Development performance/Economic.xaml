@@ -335,7 +335,7 @@
                         	</Grid>
                         	<StackPanel Orientation="Vertical" d:LayoutOverrides="Height">
                         		<Grid VerticalAlignment="Center">
-                        			<ComboBox Height="30" x:Name="comboBox1" Style="{DynamicResource ComboBoxSingle}" Background="{x:Null}" BorderBrush="{x:Null}" ItemContainerStyle="{DynamicResource ComboBoxItemfeedback}" DropDownClosed="comboBox1_DropDownClosed">
+                        			<ComboBox Height="30" x:Name="comboBox1" Style="{DynamicResource ComboBoxSingle}" Background="{x:Null}" BorderBrush="{x:Null}" ItemContainerStyle="{DynamicResource ComboBoxItemfeedback}">
                         				<ComboBox.Foreground>
                         					<SolidColorBrush Color="{DynamicResource #235235235}"/>
                         				</ComboBox.Foreground>
