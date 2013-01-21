@@ -430,7 +430,7 @@
         
         
         <!--右下角图片-->
-	<Grid Grid.Column="1" Margin="20,55,20,40">
+	<Grid Grid.Column="1" Margin="20,55,0,40" HorizontalAlignment="Left" Width="590">
 		<Grid.RowDefinitions>
 			<RowDefinition/>
 			<RowDefinition/>
@@ -465,8 +465,32 @@
 		</Label>
 		<Image x:Name="Yusuanbili" Grid.Row="0"/>
 		<Image x:Name="Zhichubili" Grid.Row="1"/>
-		<Image Source="/WpfApplication3;component/CutImages/图像/mayor resource-12.png" Stretch="Fill" Grid.RowSpan="2" Width="525" Height="515"/>
-	</Grid>
+        <Image Source="/WpfApplication3;component/CutImages/图像/mayor resource-12_new.png" Stretch="Fill" Width="525" Margin="32,60,32,66" />
+        <vc:Chart Name="expend_chart" Rendered="chart_Rendered" xmlns:vc="clr-namespace:Visifire.Charts;assembly=WPFVisifire.Charts" Background="#43516B" BorderBrush="#43516B" View3D="False" AnimationEnabled="True" ToolBarEnabled="True" ColorSet="VisiAqua" Bevel="False" Margin="1,18,295,20" Grid.Row="1">
+            <vc:Chart.Series>
+                <vc:DataSeries RenderAs="Doughnut" AxisYType="Primary" Bevel="True">
+                    <vc:DataSeries.DataPoints>
+                        <vc:DataPoint AxisXLabel="公共积累" YValue="80" />
+                        <vc:DataPoint AxisXLabel="公共消费" YValue="15" />
+                        <vc:DataPoint AxisXLabel="转移" YValue="5" />
+                    </vc:DataSeries.DataPoints>
+                </vc:DataSeries>
+            </vc:Chart.Series>
+        </vc:Chart>
+        <vc:Chart Name="budget_chart" Rendered="chart_Rendered" xmlns:vc="clr-namespace:Visifire.Charts;assembly=WPFVisifire.Charts" Background="#43516B" BorderBrush="#43516B" View3D="False" AnimationEnabled="True" ToolBarEnabled="True" ColorSet="VisiOrange" Bevel="False" Margin="295,18,1,20" Grid.Row="1">
+            <vc:Chart.Series>
+                <vc:DataSeries RenderAs="Doughnut" AxisYType="Secondary" Bevel="True">
+                    <vc:DataSeries.DataPoints>
+                        <vc:DataPoint AxisXLabel="公共积累" YValue="50" />
+                        <vc:DataPoint AxisXLabel="公共消费" YValue="15" />
+                        <vc:DataPoint AxisXLabel="转移" YValue="35" />
+                    </vc:DataSeries.DataPoints>
+                </vc:DataSeries>
+            </vc:Chart.Series>
+        </vc:Chart>
+                <Label Content="支出比例" Grid.Row="1" Height="28" HorizontalAlignment="Left" Margin="407,158,0,0" Name="label7" VerticalAlignment="Top" Foreground="#FFE2AB29" FontSize="14" FontWeight="Bold" />
+                <Label Content="预算比例" Grid.Row="1" Height="28" HorizontalAlignment="Left" Margin="115,157,0,0" Name="label8" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Foreground="#FF2DBAB0" />
+            </Grid>
         
 </Grid>
         

@@ -12,6 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Media.Animation;
+using Visifire.Charts;
 
 namespace WpfApplication3.ResourcesAndManpower
 {
@@ -100,6 +101,17 @@ namespace WpfApplication3.ResourcesAndManpower
 		
               
 
+        }
+
+        private void chart_Rendered(object sender, EventArgs e)
+        {
+                   
+            Chart c = sender as Chart;
+            Legend legend = c.Legends[0];
+            Grid root = legend.Parent as Grid;
+            int i = root.Children.Count;
+            root.Children.RemoveAt(i - 6);
+            root.Children.RemoveAt(i - 6);
         }
     }
 }
