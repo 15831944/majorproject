@@ -1010,11 +1010,8 @@ namespace WpfApplication3.Development_performance
                     lblRightTopTitle.Content = "城市图";
                     gridGraph.Visibility = System.Windows.Visibility.Visible;
                     gridMap.Visibility = System.Windows.Visibility.Hidden;
-                    gridRightTopContent.Children.Clear();
-                    ChartHelper ch = new ChartHelper();
-                    Chart m_chart = ch.CreateChart(ciEconomic1);
-                    gridGraphContent.Children.Clear();
-                    gridGraphContent.Children.Add(m_chart);
+                    ckb1.IsChecked = true;
+                    refreshGraphAndListBox();
 
                     gridRightTopContent.Children.Clear();
                     Image m_image = new Image();
