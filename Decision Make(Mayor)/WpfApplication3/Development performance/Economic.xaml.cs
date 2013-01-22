@@ -1003,7 +1003,7 @@ namespace WpfApplication3.Development_performance
 
         private void gridRightTop_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            if (e.ClickCount == 2)
+            if (e.ClickCount == 1)
             {
                 if (lblRightTopTitle.Content.ToString()=="折线图")
                 {

@@ -29,10 +29,10 @@ namespace WpfApplication3.ResourcesAndManpower
             List<string> viceList = new List<string>
             {
 				"局长：许健",
-                "副局长 朱学军",
-                "副局长 蔡赞石",
-                "副局长 陈会润",
-                "总规划师 刘伟"
+                "副局长：朱学军",
+                "副局长：蔡赞石",
+                "副局长：陈会润",
+                "总规划师：刘伟"
             };
             listLeader.ItemsSource = viceList;
 
@@ -90,21 +90,40 @@ namespace WpfApplication3.ResourcesAndManpower
             }
         }
 
-        private void JuZhang_Click(object sender, RoutedEventArgs e)
-        {
-            WindowHuman wh = new WindowHuman();
-            wh.Show();
-        }
-
         private void Leader_Click(object sender, RoutedEventArgs e)
         {
             string content = (sender as Button).Content.ToString();
-            WindowHuman wh = new WindowHuman();
-            wh.Show();
+            lb_name.Content = content;
+            img_leader.Source = new BitmapImage(new Uri("/Images/photos/" + content + ".jpg", UriKind.Relative));
+            switch (content)
+            {
+                case "局长：许健":
+                    lb_email.Content = "E-mail: xujian@governmentpudong.gov";
+                    break;
+                case "副局长：朱学军":
+                    lb_email.Content = "E-mail: zhuxuejun@governmentpudong.gov";
+                    break;
+                case "副局长：蔡赞石":
+                    lb_email.Content = "E-mail: caizanshi@governmentpudong.gov";
+                    break;
+                case "副局长：陈会润":
+                    lb_email.Content = "E-mail: chenhuirun@governmentpudong.gov";
+                    break;
+                case "总规划师：刘伟":
+                    lb_email.Content = "E-mail: liuwei@governmentpudong.gov";
+                    break;
+            }
         }
 
-        private void button1_Click(object sender, RoutedEventArgs e)
+        //private void button1_Click(object sender, RoutedEventArgs e)
+        //{//返回键
+        //    ResourcesAndManpower.PageOrgnization m_Page = new ResourcesAndManpower.PageOrgnization();
+        //    this.NavigationService.Navigate(m_Page);
+        //}
+
+        private void txb_MouseDown(object sender, MouseButtonEventArgs e)
         {
+            //单击区长 返回
             ResourcesAndManpower.PageOrgnization m_Page = new ResourcesAndManpower.PageOrgnization();
             this.NavigationService.Navigate(m_Page);
         }

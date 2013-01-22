@@ -94,12 +94,12 @@
         						</Rectangle.Stroke>
         					</Rectangle>
         					<Rectangle HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" StrokeDashArray="3 3" StrokeThickness="1" RadiusX="8" RadiusY="8" Stroke="{x:Null}" Margin="0,0,1,1" Fill="#FF89897D"/>
-        					<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="0,0,1,1">
+                            <Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="0,0,1,1"  Name="rect_warden">
         						<Rectangle.Stroke>
         							<SolidColorBrush Color="{DynamicResource Foregroundgray}"/>
         						</Rectangle.Stroke>
         					</Rectangle>
-        					<TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="姜樑" VerticalAlignment="Center">
+        					<TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="姜樑" VerticalAlignment="Center" MouseDown="txb_MouseDown">
         						<TextBlock.Foreground>
         							<SolidColorBrush Color="{DynamicResource #235235235}"/>
         						</TextBlock.Foreground>
@@ -238,8 +238,71 @@
         				<Rectangle StrokeThickness="1" Height="1" VerticalAlignment="Center" Fill="#FF89897D" d:LayoutOverrides="Height"/>
         			</Grid>
         		</Grid>
-                <Button Content="返回" Height="23" HorizontalAlignment="Left" Margin="844.333,0,0,22.167" Name="button1" VerticalAlignment="Bottom" Width="63.333" Click="button1_Click" Grid.Column="1" Style="{DynamicResource ButtonReturn}" />
+                <Grid  Name="grid_intro" Margin="11,542,665,6" Grid.ColumnSpan="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="35.114" />
+                        <RowDefinition Height="225*" />
+                    </Grid.RowDefinitions>
+                    <Rectangle RadiusY="8" RadiusX="8" StrokeThickness="2" Grid.RowSpan="2" Margin="0,0,6,6">
+                        <Rectangle.Effect>
+                            <DropShadowEffect />
+                        </Rectangle.Effect>
+                        <Rectangle.Fill>
+                            <SolidColorBrush Color="{DynamicResource Mainbg}" />
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Label Style="{DynamicResource Labeltopheader}" Content="简介" Margin="0,0,14,2" d:LayoutOverrides="Height" />
+                    <Grid Margin="6,3,14,18" Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="212*" />
+                            <ColumnDefinition Width="300*" />
+                        </Grid.ColumnDefinitions>
+                        <Image Name="img_leader" Source="/WpfApplication3;component/Images/photos/彭崧.jpg" Stretch="Fill" Margin="7" />
+                        <Grid Grid.Column="1" Margin="40,0,0,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <Label x:Name="lb_department" Content="土地规划管理局" Grid.Row="0">
+                                <Label.Foreground>
+                                    <SolidColorBrush Color="{DynamicResource #229229229}" />
+                                </Label.Foreground>
+                            </Label>
+                            <Label x:Name="lb_name" Content="副区长：彭崧" Grid.Row="1">
+                                <Label.Foreground>
+                                    <SolidColorBrush Color="{DynamicResource #229229229}" />
+                                </Label.Foreground>
+                            </Label>
+                            <Label x:Name="lb_telntex" Content="tel: 1277777777     tex:021-3243434" Grid.Row="2">
+                                <Label.Foreground>
+                                    <SolidColorBrush Color="{DynamicResource #229229229}" />
+                                </Label.Foreground>
+                            </Label>
+                            <Label x:Name="lb_email" Content="e-mail: pengsong@governmentpudong.gov" Grid.Row="3">
+                                <Label.Foreground>
+                                    <SolidColorBrush Color="{DynamicResource #229229229}" />
+                                </Label.Foreground>
+                            </Label>
+                            <Grid Grid.Row="4">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="62.074" />
+                                    <ColumnDefinition Width="63.499" />
+                                    <ColumnDefinition Width="63.232" />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <Button Content="电话" Style="{DynamicResource ButtonFeedbacknormal}" HorizontalAlignment="Center" VerticalAlignment="Center" Height="23" Width="35" />
+                                <Button Content="邮件" Style="{DynamicResource ButtonFeedbacknormal}" Grid.Column="1" Width="35" Height="25" />
+                                <Button Content="传真" Style="{DynamicResource ButtonFeedbacknormal}" Grid.Column="2" Width="35" Height="25" />
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </Grid>
+                <!--<Button Content="返回" Height="23" HorizontalAlignment="Left" Margin="844.333,0,0,22.167" Name="button1" VerticalAlignment="Bottom" Width="63.333" Click="button1_Click" Grid.Column="1" Style="{DynamicResource ButtonReturn}" />-->
             </Grid>
+            <!--人员信息-->
         </Grid>
         <!--部门列表-->
         

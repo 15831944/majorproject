@@ -719,13 +719,19 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Images\photos\副局长：朱学军.jpg" />
+    <Resource Include="Images\photos\副局长：蔡赞石.jpg" />
+    <Resource Include="Images\photos\副局长：陈会润.jpg" />
+    <Resource Include="Images\photos\局长：许健.jpg" />
+    <Resource Include="Images\photos\彭崧.jpg" />
+    <Resource Include="Images\photos\总规划师：刘伟.jpg" />
+    <Resource Include="Images\sence1.png" />
+    <Resource Include="Images\solute1.png" />
     <Resource Include="Images\construct1.jpg" />
     <Resource Include="Images\construct2.jpg" />
     <Resource Include="Images\construct3.jpg" />
-    <Resource Include="Images\sence1.png" />
     <Resource Include="Images\sence2.png" />
     <Resource Include="Images\sence3.png" />
-    <Resource Include="Images\solute1.png" />
     <Resource Include="Images\solute2.png" />
     <Resource Include="Images\solute3.png" />
     <Resource Include="Images\StarLevel5.jpg" />
