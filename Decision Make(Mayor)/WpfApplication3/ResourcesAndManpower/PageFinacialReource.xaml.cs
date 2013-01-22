@@ -37,7 +37,7 @@ namespace WpfApplication3.ResourcesAndManpower
         private double zhuanyiyusuan = 0.6;
         private double zhuanyizhichu = 0.3;
 
-        private double[] jindutiao = { 0.911, 0.8, 0.7, 0.75, 0.5, 0.6, 0.3 , 0.8,  0.3 ,0.7, 0.75, 0.5, 0.6};
+        private double[] jindutiao = { 0.911, 0.8, 0.7, 0.75, 0.5, 0.6, 0.3 , 0.8,  0.3 ,0.7, 0.75, 0.5, 0.6,0.8,  0.5 ,0.15, 0.15, 0.05, 0.35};
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
@@ -47,17 +47,23 @@ namespace WpfApplication3.ResourcesAndManpower
 
             double[] upperWidth={rectangle0.ActualWidth,
 			 rectangle2_Copy.ActualWidth,
-		 rectangle3_Copy.ActualWidth,
+		 	rectangle3_Copy.ActualWidth,
 			rectangle4_Copy.ActualWidth,
 			rectangle5_Copy.ActualWidth,
 			rectangle6_Copy.ActualWidth,
 			rectangle7_Copy.ActualWidth,
 			rectangle2_Copy1.ActualWidth,
-		 rectangle3_Copy1.ActualWidth,
+		 	rectangle3_Copy1.ActualWidth,
 			rectangle4_Copy1.ActualWidth,
 			rectangle5_Copy1.ActualWidth,
 			rectangle6_Copy1.ActualWidth,
-			rectangle7_Copy1.ActualWidth};
+			rectangle7_Copy1.ActualWidth,
+			rectangle2_Copy2.ActualWidth,
+		 	rectangle3_Copy2.ActualWidth,
+			rectangle4_Copy2.ActualWidth,
+			rectangle5_Copy2.ActualWidth,
+			rectangle6_Copy2.ActualWidth,
+			rectangle7_Copy2.ActualWidth};
 			
             rectangle0.Name = "rectangle0";
             rectangle1.Name = "rectangle1";
@@ -68,6 +74,7 @@ namespace WpfApplication3.ResourcesAndManpower
             rectangle5.Name = "rectangle5";
             rectangle6.Name = "rectangle6";
             rectangle7.Name = "rectangle7";
+			
  			label1.Content=(jindutiao[1]*100)+"%";
  			label2.Content=(jindutiao[2]*100)+"%";
  			label3.Content=(jindutiao[3]*100)+"%";
@@ -80,10 +87,17 @@ namespace WpfApplication3.ResourcesAndManpower
  			label4_Copy.Content=(jindutiao[10]*100)+"%";
  			label5_Copy.Content=(jindutiao[11]*100)+"%";
  			label6_Copy.Content=(jindutiao[12]*100)+"%";
+			label9.Content=(jindutiao[13]*100)+"%";
+ 			label10.Content=(jindutiao[14]*100)+"%";
+ 			label11.Content=(jindutiao[15]*100)+"%";
+ 			label12.Content=(jindutiao[16]*100)+"%";
+ 			label13.Content=(jindutiao[17]*100)+"%";
+ 			label14.Content=(jindutiao[18]*100)+"%";
+
 			
 
 			
-			for (int i = 0; i < 13; i++)
+			for (int i = 0; i < 19; i++)
             {
                 DoubleAnimation myDoubleAnimation = new DoubleAnimation();
                 myDoubleAnimation.From = 0;

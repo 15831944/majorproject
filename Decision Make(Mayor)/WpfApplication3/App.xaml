@@ -6473,5 +6473,6 @@
 				</Setter.Value>
 			</Setter>
 		</Style>
+		<Color x:Key="Colorlightblue">#FF69BDDF</Color>
 	</Application.Resources>
 </Application>
