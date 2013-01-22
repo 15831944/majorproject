@@ -32,7 +32,7 @@ namespace WpfApplication3.FeedBack
             InitializeComponent();
             iFeedBackType = i;
             DataSetFeedbackTableAdapters.T_FeedBackTableAdapter adapter = new DataSetFeedbackTableAdapters.T_FeedBackTableAdapter();
-            dtCurrent = adapter.GetData(iFeedBackType,true,false);
+            dtCurrent = adapter.GetData(iFeedBackType,true,false,true);
             listboxFeedback.ItemsSource = dtCurrent;
             btnPrevious.IsEnabled = false;
             btnNext.IsEnabled = false;
@@ -256,7 +256,7 @@ namespace WpfApplication3.FeedBack
         private void RbtnUnread_Checked(object sender, System.Windows.RoutedEventArgs e)
         {
             DataSetFeedbackTableAdapters.T_FeedBackTableAdapter adapter = new DataSetFeedbackTableAdapters.T_FeedBackTableAdapter();
-            dtCurrent = adapter.GetData(iFeedBackType, false, false);
+            dtCurrent = adapter.GetData(iFeedBackType, false, false,true);
             listboxFeedback.ItemsSource = dtCurrent;
             btnPrevious.IsEnabled = false;
             btnNext.IsEnabled = false;
@@ -266,7 +266,7 @@ namespace WpfApplication3.FeedBack
         private void RbtnAlreadyRead_Checked(object sender, System.Windows.RoutedEventArgs e)
         {
             DataSetFeedbackTableAdapters.T_FeedBackTableAdapter adapter = new DataSetFeedbackTableAdapters.T_FeedBackTableAdapter();
-            dtCurrent = adapter.GetData(iFeedBackType, true, false);
+            dtCurrent = adapter.GetData(iFeedBackType, true, false,true);
             listboxFeedback.ItemsSource = dtCurrent;
             btnPrevious.IsEnabled = false;
             btnNext.IsEnabled = false;
@@ -276,7 +276,7 @@ namespace WpfApplication3.FeedBack
         private void RbtnAlreadyComment(object sender, System.Windows.RoutedEventArgs e)
         {
             DataSetFeedbackTableAdapters.T_FeedBackTableAdapter adapter = new DataSetFeedbackTableAdapters.T_FeedBackTableAdapter();
-            dtCurrent = adapter.GetData(iFeedBackType, true, true);
+            dtCurrent = adapter.GetData(iFeedBackType, true, true,true);
             listboxFeedback.ItemsSource = dtCurrent;
             btnPrevious.IsEnabled = false;
             btnNext.IsEnabled = false;
