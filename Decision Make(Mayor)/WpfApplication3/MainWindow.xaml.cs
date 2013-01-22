@@ -635,15 +635,5 @@ namespace WpfApplication3
             keybd_event(VK_VOLUME_MUTE, MapVirtualKey(VK_VOLUME_MUTE, 0), KEYEVENTF_EXTENDEDKEY | KEYEVENTF_KEYUP, 0);
         }
 
-        private void menutitle1_Selected(object sender, System.Windows.RoutedEventArgs e)
-        {
-        	// TODO: Add event handler implementation here.
-        }
-
-        private void menu8_PreviewMouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
-        {
-        	// TODO: Add event handler implementation here.
-        }
-
     }
 }
