@@ -225,11 +225,17 @@
         			</Grid>
             
         			<TextBlock Grid.Row="0" TextWrapping="Wrap" x:Name="BriefIntro" Margin="10">
+                        <Run>简介：办公室</Run>
+                        <LineBreak/>
+                        <Run>下设政策研究室、外事办，主要负责土地规划局的日常运转，同时，研究上级政策，部署本地工作，并且负责对外交流。</Run>                 
         				<TextBlock.Foreground>
         					<SolidColorBrush Color="{DynamicResource #229229229}"/>
         				</TextBlock.Foreground>
         			</TextBlock>
         			<TextBlock Grid.Row="1" TextWrapping="Wrap" x:Name="Address" Margin="10">
+                        <TextBlock.Text>
+                            联系方式：北京西路99号　|　邮政编码：200003 | 联系电话：021- 6319 3188 转 01
+                        </TextBlock.Text>
         				<TextBlock.Foreground>
         					<SolidColorBrush Color="{DynamicResource #229229229}"/>
         				</TextBlock.Foreground>

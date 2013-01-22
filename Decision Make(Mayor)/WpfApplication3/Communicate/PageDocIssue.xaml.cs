@@ -25,9 +25,9 @@ namespace WpfApplication3.Communicate
     {
         bool IsRead;
         int DocType;
+        int OrderType;//1:时间正序   2：时间倒序
         int iFirstDocId;
         DataSetDoc.T_DocDataTable dtDocs;
-        DataSetDoc.T_DocDataTable dtLatestDocs;
 //        DataSetDoc.T_DocDataTable dtCurrent;
 //		DataSetDoc.T_DocDataTable dtLatestCurrent;
 		
@@ -36,26 +36,57 @@ namespace WpfApplication3.Communicate
         {
             InitializeComponent();
             dtDocs = new DataSetDoc.T_DocDataTable();
-            dtLatestDocs = new DataSetDoc.T_DocDataTable();
-//            dtCurrent = new DataSetDoc.T_DocDataTable();
             this.InkCanvasAnnotation1.IsEnabled = false;
+            OrderType = 1;
             iFirstDocId = -1;
         }
 
+        private void typejudge()
+        {
+            if (Already.IsSelected == true)
+            {
+                IsRead = true;
+                if (DocType1.IsSelected == true)
+                {
+                    DocType = 1;
+                }
+                else
+                {
+                    if (DocType2.IsSelected == true)
+                    {
+                        DocType = 2;
+                    }
+                    else
+                    {
+                        DocType = 3;
+                    }
+                }
+            }
+            else
+            {
+                IsRead = false;
+                if (DocType4.IsSelected == true)
+                {
+                    DocType = 1;
+                }
+                else
+                {
+                    if (DocType5.IsSelected == true)
+                    {
+                        DocType = 2;
+                    }
+                    else
+                    {
+                        DocType = 3;
+                    }
+                }
+            }
+                
+        }
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            IsRead = false;
-            for(DocType = 1;DocType<4;DocType++)
-			{
-				listboxLatestDocsRefresh(IsRead);
-            	listboxDocsRefresh(IsRead,DocType);
-			}
-			IsRead=true;
-			for(DocType = 1;DocType<4;DocType++)
-			{
-				listboxLatestDocsRefresh(IsRead);
-            	listboxDocsRefresh(IsRead,DocType);
-			}
+            typejudge();
+            listboxDocsRefresh(IsRead, DocType,OrderType);
             if (iFirstDocId != -1)
                 ShowDoc(iFirstDocId);
         }
@@ -185,107 +216,30 @@ namespace WpfApplication3.Communicate
             MessageBox.Show("批示保存成功！");
         }
 
-        private void listboxLatestDocsRefresh(bool Isread)
-        {
-            //IsRead
-            DataSetDocTableAdapters.T_DocTableAdapter adapter = new DataSetDocTableAdapters.T_DocTableAdapter();
-            dtLatestDocs = adapter.GetLatestDataByState(Isread);
-//			dtLatestCurrent=dtLatestDocs;
-			if(Isread==true)
-            	listboxLatestDocsIsRead.ItemsSource = dtLatestDocs;
-			else
-				listboxLatestDocsNotRead.ItemsSource = dtLatestDocs;
 
-        }
 
-        private void listboxDocsRefresh(bool Isread,int Doctype)
+        private void listboxDocsRefresh(bool Isread, int Doctype, int Ordertype)
         {
             //IsRead&&DocType
             DataSetDocTableAdapters.T_DocTableAdapter adapter = new DataSetDocTableAdapters.T_DocTableAdapter();
-            dtDocs = adapter.GetDataByDocStateAndDocType(Isread, Doctype);
-//			dtCurrent=dtDocs;
-			if(Isread==true)
-			{
-				if(Doctype==1)
-				{
-					listboxDocsType1.ItemsSource = dtDocs;
-				}
-				else if(Doctype==2)
-				{
-					listboxDocsType2.ItemsSource = dtDocs;
-				}
-				else
-				{
-					listboxDocsType3.ItemsSource = dtDocs;
-				}
-			}
+            switch (OrderType) { 
+                case 1:
+                    dtDocs = adapter.GetDataByStateNTypeOrderbyDateASC(Isread, Doctype);
+                    break;
+                case 2:
+                    dtDocs = adapter.GetDataByStateNTypeOrderbyDateDESC(Isread, Doctype);
+                    break;
+            }
+            listboxDocs.ItemsSource = dtDocs;
 
-			else
-			{
-				if(Doctype==1)
-				{
-					listboxDocsType4.ItemsSource = dtDocs;
-				}
-				else if(Doctype==2)
-				{
-					listboxDocsType5.ItemsSource = dtDocs;
-				}
-				else
-				{
-					listboxDocsType6.ItemsSource = dtDocs;
-				}
-			}
             if (iFirstDocId == -1 && dtDocs.Count > 0 && Isread == true)
                 iFirstDocId = dtDocs[0].Id;
         }
-       private void btnSend_Click(object sender, RoutedEventArgs e)
+        private void btnSend_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("发送成功！");
         }
 		
-
-        private void GridDocType1_Loaded(object sender, System.Windows.RoutedEventArgs e)
-        {
-			listboxDocsRefresh(true,1);
-        }
-
-        private void GridDocType2_Loaded(object sender, System.Windows.RoutedEventArgs e)
-        {
-			listboxDocsRefresh(true,2);
-        }
-
-        private void GridDocType3_Loaded(object sender, System.Windows.RoutedEventArgs e)
-        {
-			listboxDocsRefresh(true,3);
-        }
-
-        private void GridDocType4_Loaded(object sender, System.Windows.RoutedEventArgs e)
-        {
-			listboxDocsRefresh(false,1);
-        }
-
-        private void GridDocType5_Loaded(object sender, System.Windows.RoutedEventArgs e)
-        {
-			listboxDocsRefresh(false,2);
-        }
-
-        private void GridDocType6_Loaded(object sender, System.Windows.RoutedEventArgs e)
-        {
-			listboxDocsRefresh(false,3);
-        }
-
-        private void GridAlready_Loaded(object sender, System.Windows.RoutedEventArgs e)
-        {
-			listboxLatestDocsRefresh(true);
-            listboxDocsRefresh(true,1);
-        }
-
-        private void GridNotYet_Loaded(object sender, System.Windows.RoutedEventArgs e)
-        {
-        	// TODO: Add event handler implementation here.
-			listboxLatestDocsRefresh(false);
-            listboxDocsRefresh(false,1);
-        }
 
         private void tbxSearch_GotMouseCapture(object sender, System.Windows.Input.MouseEventArgs e)
         {
@@ -363,6 +317,25 @@ namespace WpfApplication3.Communicate
             this.InkCanvasAnnotation1.IsEnabled = true;
             adapter.UpdateState(true, id);
         }
-		
+
+        private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            typejudge();
+            listboxDocsRefresh(IsRead, DocType,OrderType);
+        }
+
+        private void btn_OrderByDateASC_Click(object sender, RoutedEventArgs e)
+        {
+            OrderType = 1;
+            typejudge();
+            listboxDocsRefresh(IsRead, DocType, OrderType);
+        }
+        private void btn_OrderByDateDESC_Click(object sender, RoutedEventArgs e)
+        {
+            OrderType = 2;
+            typejudge();
+            listboxDocsRefresh(IsRead, DocType, OrderType);
+        }
+
     }
 }
