@@ -81,7 +81,7 @@
         		<Grid.RowDefinitions>
         			<RowDefinition Height="892"/>
         		</Grid.RowDefinitions>
-        		<Grid Margin="40,60.316,0,0" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top">
+        		<Grid Margin="112,60.316,0,0" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top">
         			<Grid HorizontalAlignment="Center" Height="34" VerticalAlignment="Top" Width="300" d:LayoutOverrides="VerticalAlignment, GridBox">
         				<Grid.ColumnDefinitions>
         					<ColumnDefinition Width="0.5*"/>
@@ -192,7 +192,7 @@
         				</Grid>
         			</Grid>
         		</Grid>
-        		<Grid Width="500" Height="500" HorizontalAlignment="Left" d:LayoutOverrides="Width" VerticalAlignment="Top" Grid.Column="1" Margin="336,246,0,0">
+        		<Grid Width="500" Height="500" HorizontalAlignment="Left" d:LayoutOverrides="Width" VerticalAlignment="Top" Grid.Column="1" Margin="408,246,0,0">
         			<Grid.RowDefinitions>
         				<RowDefinition/>
         				<RowDefinition/>
@@ -238,27 +238,45 @@
         				<Rectangle StrokeThickness="1" Height="1" VerticalAlignment="Center" Fill="#FF89897D" d:LayoutOverrides="Height"/>
         			</Grid>
         		</Grid>
-                <Grid  Name="grid_intro" Margin="11,542,665,6" Grid.ColumnSpan="2">
+        		<Grid Margin="127.079,296.335,-32.879,390.665">
+        			<Grid.ColumnDefinitions>
+        				<ColumnDefinition Width="0.5*"/>
+        				<ColumnDefinition Width="0.5*"/>
+        			</Grid.ColumnDefinitions>
+        			<Rectangle StrokeThickness="1" Width="1" HorizontalAlignment="Center" Grid.ColumnSpan="2" Fill="#FF89897D" d:LayoutOverrides="GridBox"/>
+        			<Rectangle StrokeThickness="1" Height="1" VerticalAlignment="Top" Fill="#FF89897D" d:LayoutOverrides="Height" Grid.Column="1"/>
+        		</Grid>
+                <Grid  Name="grid_intro" Margin="15,504,-234.913,0" VerticalAlignment="Top" Height="280.5" Width="476">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="35.114" />
-                        <RowDefinition Height="225*" />
+                        <RowDefinition />
                     </Grid.RowDefinitions>
-                    <Rectangle RadiusY="8" RadiusX="8" StrokeThickness="2" Grid.RowSpan="2" Margin="0,0,6,6">
-                        <Rectangle.Effect>
-                            <DropShadowEffect />
-                        </Rectangle.Effect>
-                        <Rectangle.Fill>
-                            <SolidColorBrush Color="{DynamicResource Mainbg}" />
-                        </Rectangle.Fill>
-                    </Rectangle>
-                    <Label Style="{DynamicResource Labeltopheader}" Content="简介" Margin="0,0,14,2" d:LayoutOverrides="Height" />
-                    <Grid Margin="6,3,14,18" Grid.Row="1">
+                    <Grid>
+                    	<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="1,1,0,0">
+                    		<Rectangle.Stroke>
+                    			<SolidColorBrush Color="{DynamicResource #235235235}"/>
+                    		</Rectangle.Stroke>
+                    	</Rectangle>
+                    	<Rectangle HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" StrokeDashArray="3 3" StrokeThickness="1" RadiusX="8" RadiusY="8" Stroke="{x:Null}" Margin="0,0,1,1">
+                    		<Rectangle.Fill>
+                    			<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    				<GradientStop Color="#FF575852" Offset="1"/>
+                    				<GradientStop Color="#FF64665C"/>
+                    			</LinearGradientBrush>
+                    		</Rectangle.Fill>
+                    	</Rectangle>
+                    	<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="0,0,1,1">
+                    		<Rectangle.Stroke>
+                    			<SolidColorBrush Color="{DynamicResource Foregroundgray}"/>
+                    		</Rectangle.Stroke>
+                    	</Rectangle>
+                    </Grid>
+                    <Grid Margin="28,31.114,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="214" Width="462.113">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="212*" />
-                            <ColumnDefinition Width="300*" />
+                            <ColumnDefinition Width="0.302*" />
+                            <ColumnDefinition Width="0.698*" />
                         </Grid.ColumnDefinitions>
-                        <Image Name="img_leader" Source="/WpfApplication3;component/Images/photos/彭崧.jpg" Stretch="Fill" Margin="7" />
-                        <Grid Grid.Column="1" Margin="40,0,0,0">
+                        <Image x:Name="img_leader" Source="/WpfApplication3;component/Images/photos/彭崧.jpg" Stretch="Fill" Width="130" Height="170" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                        <Grid Grid.Column="1" Margin="20,0,0,0">
                             <Grid.RowDefinitions>
                                 <RowDefinition />
                                 <RowDefinition />
