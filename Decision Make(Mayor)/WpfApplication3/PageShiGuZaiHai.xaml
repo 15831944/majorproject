@@ -134,7 +134,7 @@
             				<Grid Margin="0">
             					<Label Content="自然灾害应急预案" Height="34" HorizontalAlignment="Left" Margin="5,5,0,0" x:Name="label_YingJiYuAn_Title" VerticalAlignment="Top" Width="124" d:LayoutOverrides="HorizontalAlignment" FontSize="14" FontFamily="Helvetica" FontWeight="Bold" Foreground="#FFEDEDED" />
             					<TabControl Style="{DynamicResource TabControlSubContent}" Background="{x:Null}">
-            						<TabItem Header="组织实施" Style="{DynamicResource TabItem2ndmenuMIddle}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200,0,-200,0">
+            						<TabItem Header="组织实施" Style="{DynamicResource TabItem2ndmenuMIddle}" VerticalAlignment="Top" Margin="220.677,0,-220.677,0">
             							<Grid x:Name="Gridzzss" Loaded="Gridzzss_Loaded">
             								<TextBlock x:Name="textBlockzzss" Text="TextBlock" >
             									<TextBlock.Foreground>
@@ -143,12 +143,12 @@
             								</TextBlock>
             							</Grid>
             						</TabItem>
-            						<TabItem Header="扑救方法" Style="{DynamicResource TabItem2ndmenuMIddle}" HorizontalAlignment="Left" Margin="210,0,-210,0" Width="96" VerticalAlignment="Top">
+            						<TabItem Header="扑救方法" Style="{DynamicResource TabItem2ndmenuMIddle}" Margin="220.004,0,-220.005,0" Width="96" VerticalAlignment="Top">
             							<Grid x:Name="Gridpjff" Loaded="Gridpjff_Loaded">
             								<TextBlock x:Name="textBlockbjff" Text="TextBlock" Foreground="Black" />
             							</Grid>
             						</TabItem>
-            						<TabItem Header="注意事项" Style="{DynamicResource TabItem2ndmenuMIddle}" Margin="220,0,-220,0" HorizontalAlignment="Left" Width="96" VerticalAlignment="Top">
+            						<TabItem Header="注意事项" Style="{DynamicResource TabItem2ndmenuMIddle}" Margin="220,0,-220,0" Width="96" VerticalAlignment="Top">
             							<Grid x:Name="Gridzysx" Loaded="Gridzysx_Loaded">
             								<TextBlock x:Name="textBlockzysx" Text="TextBlock" Foreground="Black" />
             							</Grid>

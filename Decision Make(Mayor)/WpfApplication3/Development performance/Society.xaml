@@ -160,14 +160,14 @@
 							</Grid>
 						</Grid>
 					</TabItem>
-					<TabItem Header="辖区视图" Style="{DynamicResource TabItem2ndmenuMIddle}">
+					<TabItem Header="辖区视图" Style="{DynamicResource TabItem2ndmenuMIddle}" Margin="7,0,-7,0">
 						<Grid>
 							<Grid Grid.Row="0" x:Name="xiaqu">
 								<Image Source="/WpfApplication3;component/Images/xiaqu.png" />
 							</Grid>
 						</Grid>
 					</TabItem>
-					<TabItem Header="三维视图" Style="{DynamicResource TabItem2ndmenuMIddle}">
+					<TabItem Header="三维视图" Style="{DynamicResource TabItem2ndmenuMIddle}" Margin="3,0,-3,0">
 						<Grid>
 							<Grid Grid.Row="0" x:Name="sanwei">
 								<Image Source="/WpfApplication3;component/Images/sanwei.png" />

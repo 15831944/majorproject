@@ -324,13 +324,14 @@ namespace WpfApplication3.Communicate
             listboxDocsRefresh(IsRead, DocType,OrderType);
         }
 
-        private void btn_OrderByDateASC_Click(object sender, RoutedEventArgs e)
+		private void ckbDate_Checked(object sender, System.Windows.RoutedEventArgs e)
         {
             OrderType = 1;
             typejudge();
             listboxDocsRefresh(IsRead, DocType, OrderType);
         }
-        private void btn_OrderByDateDESC_Click(object sender, RoutedEventArgs e)
+
+        private void ckbDate_Unchecked(object sender, System.Windows.RoutedEventArgs e)
         {
             OrderType = 2;
             typejudge();

@@ -146,9 +146,9 @@
             					<RowDefinition/>
             				</Grid.RowDefinitions>
             				<TabControl Style="{DynamicResource TabControlSubContent}" Background="{x:Null}" BorderBrush="{x:Null}" Grid.RowSpan="2" SelectionChanged="TabControl_SelectionChanged" Height="780" VerticalAlignment="Top">
-            					<TabItem x:Name="DocType1" Header="行政文件" Style="{DynamicResource TabItem2ndmenuMIddle}"></TabItem>
-            					<TabItem x:Name="DocType2" Header="法规文件" Style="{DynamicResource TabItem2ndmenuMIddle}"></TabItem>
-            					<TabItem x:Name="DocType3" Header="公开文件" Style="{DynamicResource TabItem2ndmenuMIddle}">
+            					<TabItem x:Name="DocType1" Header="行政文件" Style="{DynamicResource TabItem2ndmenuMIddle}" Margin="6.993,0,-6.993,0"></TabItem>
+            					<TabItem x:Name="DocType2" Header="法规文件" Style="{DynamicResource TabItem2ndmenuMIddle}" Margin="7.162,0,-7.162,0"></TabItem>
+            					<TabItem x:Name="DocType3" Header="公开文件" Style="{DynamicResource TabItem2ndmenuMIddle}" Margin="4,0,-4,0">
             					</TabItem>
             				</TabControl>
             			</Grid>
@@ -170,10 +170,7 @@
             		</Grid>
             	</TabItem>
         	</TabControl>
-            <Button Content="提交日期升序" HorizontalAlignment="Left" Margin="26,0,0,60" Name="btn_OrderByDate1" Width="75" Click="btn_OrderByDateASC_Click" Height="23" VerticalAlignment="Bottom" />
-            <Button Content="提交日期降序" HorizontalAlignment="Left" Margin="132,0,0,60" Name="btn_OrderByDate2" Width="75" Click="btn_OrderByDateDESC_Click"  Height="23" VerticalAlignment="Bottom" />
-            <Button Content="提交日期升序" HorizontalAlignment="Left" Margin="251,0,0,60" Name="btn_OrderByDate3" Width="75" Click="btn_OrderByDateASC_Click" Height="23" VerticalAlignment="Bottom"  />
-            <ListBox x:Name="listboxDocs" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" BorderBrush="{x:Null}" BorderThickness="0" Background="{x:Null}" Margin="20,127,20,107">
+            <ListBox x:Name="listboxDocs" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" BorderBrush="{x:Null}" BorderThickness="0" Background="{x:Null}" Margin="20.5,127,19.5,107">
                 <ListBox.ItemContainerStyle>
                     <Style TargetType="{x:Type ListBoxItem}">
                         <Setter Property="Background" Value="Transparent" />
@@ -210,6 +207,31 @@
             			<Button x:Name="btnSearch" VerticalAlignment="Center" Content="搜索" Click="btnSearch_Click" Style="{DynamicResource ButtonFeedbacknormal}" Width="69" Height="23" HorizontalAlignment="Center"/>
             		</Grid>
             	</Grid>
+            </Grid>
+            <Grid Height="26" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,94.665,20.665,0">
+            	<Grid>
+            		<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="1,1,0,0">
+            			<Rectangle.Stroke>
+            				<SolidColorBrush Color="{DynamicResource #235235235}"/>
+            			</Rectangle.Stroke>
+            		</Rectangle>
+            		<Rectangle HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" StrokeDashArray="3 3" StrokeThickness="1" RadiusX="8" RadiusY="8" Stroke="{x:Null}" Margin="0,0,1,1">
+            			<Rectangle.Fill>
+            				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            					<GradientStop Color="#FF64665B"/>
+            					<GradientStop Color="#FF50524D" Offset="1"/>
+            					<GradientStop Color="#FF64665B" Offset="0.088"/>
+            					<GradientStop Color="#FF52534D" Offset="0.938"/>
+            				</LinearGradientBrush>
+            			</Rectangle.Fill>
+            		</Rectangle>
+            		<Rectangle HorizontalAlignment="Stretch" Height="Auto" RadiusY="8" RadiusX="8" StrokeThickness="1" VerticalAlignment="Stretch" Width="Auto" Margin="0,0,1,1">
+            			<Rectangle.Stroke>
+            				<SolidColorBrush Color="{DynamicResource Foregroundgray}"/>
+            			</Rectangle.Stroke>
+            		</Rectangle>
+            	</Grid>
+            	<CheckBox x:Name="ckbDate" Content="日期" HorizontalAlignment="Center" d:LayoutOverrides="Height" Style="{DynamicResource CheckBoxDate}" Checked="ckbDate_Checked" Unchecked="ckbDate_Unchecked" Foreground="#FFEBEBC9" VerticalAlignment="Center" Margin="10,0,8,0"/>
             </Grid>
         </Grid>
         <Grid Grid.Column="1">

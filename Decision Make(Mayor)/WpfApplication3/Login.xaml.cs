@@ -105,21 +105,33 @@ namespace WpfApplication3
 
         }
 
-        private void comboBox1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+//        private void comboBox1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+//        {
+//            LanguageHelper lh = new LanguageHelper();
+//            switch (comboBox1.SelectedIndex)
+//            {
+//                case 0:
+//                    lh.setLanguage("zh-CN");
+//                    break;
+//                case 1:
+//                    lh.setLanguage("en-US");
+//                    break;
+//                default:
+//                    lh.setLanguage("zh-CN");
+//                    break;
+//            }
+//        }
+		
+        private void btn_zhcn_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             LanguageHelper lh = new LanguageHelper();
-            switch (comboBox1.SelectedIndex)
-            {
-                case 0:
-                    lh.setLanguage("zh-CN");
-                    break;
-                case 1:
-                    lh.setLanguage("en-US");
-                    break;
-                default:
-                    lh.setLanguage("zh-CN");
-                    break;
-            }
+            lh.setLanguage("zh-CN");
+        }
+
+        private void btn_en_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            LanguageHelper lh = new LanguageHelper();
+			lh.setLanguage("en-US");
         }
 
     }

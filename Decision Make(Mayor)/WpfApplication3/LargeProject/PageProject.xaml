@@ -137,7 +137,7 @@
         		<Label VerticalAlignment="Top" Style="{DynamicResource Labeltopheader}" Content="项目进度"/>
 
         		<TabControl Grid.Row="1" SelectionChanged="TabControl_SelectionChanged" x:Name="TabProject" Margin="10" Background="{x:Null}" BorderBrush="{x:Null}" Style="{DynamicResource TabControlSubContent}">
-        			<TabItem Header="建设情况" x:Name="ConsTab" Style="{DynamicResource TabItem2ndmenuMIddle}" Margin="50,0,-50,0">
+        			<TabItem Header="建设情况" x:Name="ConsTab" Style="{DynamicResource TabItem2ndmenuMIddle}" Margin="62.5,0,-62.5,0">
         				<Grid x:Name="ConstrutGrid">
         					<Grid.ColumnDefinitions>
         						<ColumnDefinition Width="0.769*"/>
@@ -156,7 +156,7 @@
         					<Label Content="Label" Grid.Column="1" Height="28" HorizontalAlignment="Center" Margin="0,12,0,0" x:Name="label6" VerticalAlignment="Top" />
         				</Grid>
         			</TabItem>
-        			<TabItem Header="经费使用" x:Name="FeeTab" Style="{DynamicResource TabItem2ndmenuMIddle}" Margin="60,0,-60,0">
+        			<TabItem Header="经费使用" x:Name="FeeTab" Style="{DynamicResource TabItem2ndmenuMIddle}" Margin="56.5,0,-56.5,0">
         				<Grid x:Name="FeeGrid">
         					<Grid.ColumnDefinitions>
         						<ColumnDefinition Width="50*"/>

@@ -2012,7 +2012,7 @@
                 			</ListBoxItem.Foreground>
                 		</ListBoxItem>
                 	</ListBox>
-                	<ListBoxItem x:Name="menutitle8" Content="重大项目" Height="70" Style="{DynamicResource ListBoxItemMainMenu}" FontSize="16"/>
+                	<ListBoxItem x:Name="menutitle8" Content="重大项目" Height="70" Style="{DynamicResource ListBoxItemMainMenu}" FontSize="16" PreviewMouseDown="menutitle8_PreviewMouseDown"/>
                 	<ListBox x:Name="menu8" Background="{x:Null}" BorderBrush="{x:Null}" Style="{DynamicResource ListBoxMenu}" Width="292" BorderThickness="0" Margin="-2,0,0,0" Visibility="Collapsed">
                 		<ListBoxItem x:Name="menu8_1" Content="世博会项目" Style="{DynamicResource ListBoxMainMenuSubmenu}" Height="70" FontSize="16" PreviewMouseDown="menu8_1_PreviewMouseDown">
                 			<ListBoxItem.Foreground>
