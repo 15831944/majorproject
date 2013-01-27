@@ -6463,10 +6463,27 @@
 							</VisualStateManager.VisualStateGroups>
 							<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="0" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
 							<Grid HorizontalAlignment="Center" Width="13.78" Height="15.237" VerticalAlignment="Center">
-								<Rectangle Fill="#FFF4F4F5" Width="1" Height="5" HorizontalAlignment="Left" Margin="0,5.121,0,5.116"/>
-								<Path Data="M4.9380003,0 L4.9380003,7.6116668 4.9379998,15.073667 0,10.063482 0,7.6116668 0,7.4580001 0,5.0075536 z" Fill="#FFF4F4F5" HorizontalAlignment="Left" Margin="1.243,0,0,0" Stretch="Fill" Width="4.938" />
+								<Rectangle Width="1" Height="5" HorizontalAlignment="Left" Margin="0,5.121,0,5.116">
+									<Rectangle.Fill>
+										<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+											<GradientStop Color="#FF323232" Offset="1"/>
+											<GradientStop Color="#FF505050"/>
+										</LinearGradientBrush>
+									</Rectangle.Fill>
+								</Rectangle>
+								<Path Data="M4.9380003,0 L4.9380003,7.6116668 4.9379998,15.073667 0,10.063482 0,7.6116668 0,7.4580001 0,5.0075536 z" HorizontalAlignment="Left" Margin="1.243,0,0,0" Stretch="Fill" Width="4.938" >
+									<Path.Fill>
+										<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+											<GradientStop Color="#FF323232" Offset="1"/>
+											<GradientStop Color="#FF505050"/>
+										</LinearGradientBrush>
+									</Path.Fill>
+								</Path>
 								<Grid x:Name="grid" Width="10" Height="10" HorizontalAlignment="Right" VerticalAlignment="Center">
-									<ed:Arc Fill="{x:Null}" HorizontalAlignment="Stretch" Height="6" Margin="0.937,2.126,3.063,1.874" VerticalAlignment="Stretch" Width="Auto" RenderTransformOrigin="0.5,0.5">
+									<ed:Arc HorizontalAlignment="Stretch" Height="6" Margin="0.937,2.126,3.063,1.874" VerticalAlignment="Stretch" Width="Auto" RenderTransformOrigin="0.5,0.5">
+										<ed:Arc.Stroke>
+											<SolidColorBrush Color="#FF323232"/>
+										</ed:Arc.Stroke>
 										<ed:Arc.RenderTransform>
 											<TransformGroup>
 												<ScaleTransform/>
@@ -6475,11 +6492,11 @@
 												<TranslateTransform/>
 											</TransformGroup>
 										</ed:Arc.RenderTransform>
-										<ed:Arc.Stroke>
-											<SolidColorBrush Color="#FFFFFF"/>
-										</ed:Arc.Stroke>
 									</ed:Arc>
-									<ed:Arc Fill="{x:Null}" HorizontalAlignment="Stretch" Height="10" Margin="0" VerticalAlignment="Stretch" Width="Auto" RenderTransformOrigin="0.5,0.5">
+									<ed:Arc HorizontalAlignment="Stretch" Height="10" Margin="0" VerticalAlignment="Stretch" Width="Auto" RenderTransformOrigin="0.5,0.5">
+										<ed:Arc.Stroke>
+											<SolidColorBrush Color="#FF323232"/>
+										</ed:Arc.Stroke>
 										<ed:Arc.RenderTransform>
 											<TransformGroup>
 												<ScaleTransform/>
@@ -6488,9 +6505,6 @@
 												<TranslateTransform/>
 											</TransformGroup>
 										</ed:Arc.RenderTransform>
-										<ed:Arc.Stroke>
-											<SolidColorBrush Color="#FFFFFF"/>
-										</ed:Arc.Stroke>
 									</ed:Arc>
 								</Grid>
 							</Grid>
