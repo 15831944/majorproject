@@ -6,7 +6,7 @@
     mc:Ignorable="d"
 	x:Class="WpfApplication3.Login"
 	x:Name="Window"
-	Title="Login"
+	Title="市长桌面系统"
 	Width="1920" Height="1080" WindowState="Maximized" WindowStyle="SingleBorderWindow">
     <Window.Resources>
         <Color x:Key="loginbg">#FFB1CCDE</Color>
