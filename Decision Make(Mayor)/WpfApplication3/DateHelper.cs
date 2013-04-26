@@ -132,7 +132,17 @@ namespace WpfApplication3
             return DateTime.Now.Day.ToString();     //日期
         }
         public string getTime() {
-            return DateTime.Now.Hour.ToString() + ":" + DateTime.Now.Minute.ToString();        //"获取时间  hh：mm"
+            string minute = DateTime.Now.Minute.ToString();
+            if (minute.Length != 2)
+            {
+                minute = '0' + minute;
+            }
+            string hour = DateTime.Now.Hour.ToString();
+            if (hour.Length != 2)
+            {
+                hour = '0' + hour;
+            }
+            return hour + ":" +minute;        //"获取时间  hh：mm"
         }
     }
 }
